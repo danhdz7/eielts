@@ -1,7 +1,7 @@
 // Service worker: chạy offline. Tăng số VERSION mỗi lần sửa app để máy cập nhật.
-var VERSION = "ielts-v1";
-var SHELL = ["./", "./index.html", "./manifest.json", "./questions.json", "./words.json", "./dialogues.json",
-  "./icons/icon-192.png", "./icons/icon-512.png", "./icons/apple-touch-icon.png"];
+var VERSION = "ielts-v4";
+var SHELL = ["./", "./index.html", "./manifest.json", "./questions.json", "./words.json", "./dialogues.json", "./exam.json", "./scenarios.json",
+  "./icon-192.png", "./icon-512.png", "./apple-touch-icon.png"];
 
 self.addEventListener("install", function (e) {
   e.waitUntil(caches.open(VERSION).then(function (c) {
