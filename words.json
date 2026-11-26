@@ -1,0 +1,7212 @@
+[
+{
+"word": "wake up",
+"pos": "phrase",
+"vi": "thức dậy",
+"example": "I wake up at six every morning.",
+"topic": "Daily routine"
+},
+{
+"word": "get up",
+"pos": "phrase",
+"vi": "ra khỏi giường",
+"example": "They get up early on weekdays.",
+"topic": "Daily routine"
+},
+{
+"word": "alarm",
+"pos": "noun",
+"vi": "chuông báo thức",
+"example": "My alarm rings at seven o'clock.",
+"topic": "Daily routine"
+},
+{
+"word": "stretch",
+"pos": "verb",
+"vi": "vươn vai",
+"example": "I stretch my arms after waking up.",
+"topic": "Daily routine"
+},
+{
+"word": "yawn",
+"pos": "verb",
+"vi": "ngáp",
+"example": "People yawn when they feel very sleepy.",
+"topic": "Daily routine"
+},
+{
+"word": "brush",
+"pos": "verb",
+"vi": "đánh (răng), chải",
+"example": "I brush my teeth twice a day.",
+"topic": "Daily routine"
+},
+{
+"word": "wash",
+"pos": "verb",
+"vi": "rửa",
+"example": "Please wash your face with cold water.",
+"topic": "Daily routine"
+},
+{
+"word": "shower",
+"pos": "noun",
+"vi": "tắm vòi sen",
+"example": "I take a quick shower before work.",
+"topic": "Daily routine"
+},
+{
+"word": "bath",
+"pos": "noun",
+"vi": "bồn tắm",
+"example": "She likes a warm bath at night.",
+"topic": "Daily routine"
+},
+{
+"word": "towel",
+"pos": "noun",
+"vi": "khăn tắm",
+"example": "I dry my hair with a towel.",
+"topic": "Daily routine"
+},
+{
+"word": "comb",
+"pos": "verb",
+"vi": "chải tóc",
+"example": "I comb my hair in the bathroom.",
+"topic": "Daily routine"
+},
+{
+"word": "shave",
+"pos": "verb",
+"vi": "cạo râu",
+"example": "Men often shave in the morning.",
+"topic": "Daily routine"
+},
+{
+"word": "get dressed",
+"pos": "phrase",
+"vi": "mặc quần áo",
+"example": "I get dressed right after my shower.",
+"topic": "Daily routine"
+},
+{
+"word": "breakfast",
+"pos": "noun",
+"vi": "bữa sáng",
+"example": "We eat breakfast together at seven.",
+"topic": "Daily routine"
+},
+{
+"word": "coffee",
+"pos": "noun",
+"vi": "cà phê",
+"example": "I drink hot coffee every morning.",
+"topic": "Daily routine"
+},
+{
+"word": "prepare",
+"pos": "verb",
+"vi": "chuẩn bị",
+"example": "I prepare my lunch box at home.",
+"topic": "Daily routine"
+},
+{
+"word": "pack",
+"pos": "verb",
+"vi": "đóng gói, xếp đồ",
+"example": "I pack my bag before leaving.",
+"topic": "Daily routine"
+},
+{
+"word": "leave",
+"pos": "verb",
+"vi": "rời đi",
+"example": "I leave home at eight o'clock.",
+"topic": "Daily routine"
+},
+{
+"word": "commute",
+"pos": "verb",
+"vi": "đi lại (đi làm/học)",
+"example": "Many people commute to the city daily.",
+"topic": "Daily routine"
+},
+{
+"word": "traffic",
+"pos": "noun",
+"vi": "giao thông",
+"example": "The morning traffic is always very heavy.",
+"topic": "Daily routine"
+},
+{
+"word": "bus",
+"pos": "noun",
+"vi": "xe buýt",
+"example": "I catch the bus near my house.",
+"topic": "Daily routine"
+},
+{
+"word": "arrive",
+"pos": "verb",
+"vi": "đến nơi",
+"example": "I arrive at the office on time.",
+"topic": "Daily routine"
+},
+{
+"word": "work",
+"pos": "verb",
+"vi": "làm việc",
+"example": "I work from nine to five.",
+"topic": "Daily routine"
+},
+{
+"word": "study",
+"pos": "verb",
+"vi": "học tập",
+"example": "Students study hard for their exams.",
+"topic": "Daily routine"
+},
+{
+"word": "check",
+"pos": "verb",
+"vi": "kiểm tra",
+"example": "I check my emails every morning.",
+"topic": "Daily routine"
+},
+{
+"word": "email",
+"pos": "noun",
+"vi": "thư điện tử",
+"example": "I send an email to my boss.",
+"topic": "Daily routine"
+},
+{
+"word": "meeting",
+"pos": "noun",
+"vi": "cuộc họp",
+"example": "We have a team meeting at ten.",
+"topic": "Daily routine"
+},
+{
+"word": "break",
+"pos": "noun",
+"vi": "giờ nghỉ giải lao",
+"example": "Let us take a short break now.",
+"topic": "Daily routine"
+},
+{
+"word": "lunch",
+"pos": "noun",
+"vi": "bữa trưa",
+"example": "I eat lunch at the canteen.",
+"topic": "Daily routine"
+},
+{
+"word": "nap",
+"pos": "noun",
+"vi": "giấc ngủ trưa ngắn",
+"example": "A short nap gives me more energy.",
+"topic": "Daily routine"
+},
+{
+"word": "finish",
+"pos": "verb",
+"vi": "hoàn thành, kết thúc",
+"example": "I finish my work at five.",
+"topic": "Daily routine"
+},
+{
+"word": "return",
+"pos": "verb",
+"vi": "trở về",
+"example": "I return home before it gets dark.",
+"topic": "Daily routine"
+},
+{
+"word": "exercise",
+"pos": "verb",
+"vi": "tập thể dục",
+"example": "I exercise at the gym after work.",
+"topic": "Daily routine"
+},
+{
+"word": "jog",
+"pos": "verb",
+"vi": "chạy bộ chậm",
+"example": "They jog in the park every evening.",
+"topic": "Daily routine"
+},
+{
+"word": "walk",
+"pos": "verb",
+"vi": "đi bộ",
+"example": "I walk my dog in the afternoon.",
+"topic": "Daily routine"
+},
+{
+"word": "shop",
+"pos": "verb",
+"vi": "mua sắm",
+"example": "We shop for groceries on Sundays.",
+"topic": "Daily routine"
+},
+{
+"word": "cook",
+"pos": "verb",
+"vi": "nấu ăn",
+"example": "I cook dinner for my family.",
+"topic": "Daily routine"
+},
+{
+"word": "dinner",
+"pos": "noun",
+"vi": "bữa tối",
+"example": "We have dinner at seven o'clock.",
+"topic": "Daily routine"
+},
+{
+"word": "dish",
+"pos": "noun",
+"vi": "món ăn, đĩa",
+"example": "This is my favorite dish for dinner.",
+"topic": "Daily routine"
+},
+{
+"word": "clean",
+"pos": "verb",
+"vi": "dọn dẹp",
+"example": "I clean the kitchen after eating.",
+"topic": "Daily routine"
+},
+{
+"word": "sweep",
+"pos": "verb",
+"vi": "quét nhà",
+"example": "I sweep the floor every evening.",
+"topic": "Daily routine"
+},
+{
+"word": "laundry",
+"pos": "noun",
+"vi": "việc giặt giũ",
+"example": "I do the laundry on Saturday mornings.",
+"topic": "Daily routine"
+},
+{
+"word": "iron",
+"pos": "verb",
+"vi": "ủi, là quần áo",
+"example": "I iron my shirt for work.",
+"topic": "Daily routine"
+},
+{
+"word": "relax",
+"pos": "verb",
+"vi": "thư giãn",
+"example": "I relax on the sofa after dinner.",
+"topic": "Daily routine"
+},
+{
+"word": "watch",
+"pos": "verb",
+"vi": "xem",
+"example": "We watch television together at night.",
+"topic": "Daily routine"
+},
+{
+"word": "read",
+"pos": "verb",
+"vi": "đọc",
+"example": "I read a book before sleeping.",
+"topic": "Daily routine"
+},
+{
+"word": "listen",
+"pos": "verb",
+"vi": "lắng nghe",
+"example": "I listen to music while cooking.",
+"topic": "Daily routine"
+},
+{
+"word": "surf",
+"pos": "verb",
+"vi": "lướt (mạng)",
+"example": "Teenagers often surf the internet at night.",
+"topic": "Daily routine"
+},
+{
+"word": "homework",
+"pos": "noun",
+"vi": "bài tập về nhà",
+"example": "I do my homework after dinner.",
+"topic": "Daily routine"
+},
+{
+"word": "diary",
+"pos": "noun",
+"vi": "nhật ký",
+"example": "I write in my diary every night.",
+"topic": "Daily routine"
+},
+{
+"word": "tired",
+"pos": "adjective",
+"vi": "mệt mỏi",
+"example": "I feel very tired after work.",
+"topic": "Daily routine"
+},
+{
+"word": "busy",
+"pos": "adjective",
+"vi": "bận rộn",
+"example": "My daily schedule is very busy.",
+"topic": "Daily routine"
+},
+{
+"word": "free",
+"pos": "adjective",
+"vi": "rảnh rỗi",
+"example": "I am free on Sunday afternoons.",
+"topic": "Daily routine"
+},
+{
+"word": "early",
+"pos": "adverb",
+"vi": "sớm",
+"example": "I always go to bed early.",
+"topic": "Daily routine"
+},
+{
+"word": "late",
+"pos": "adverb",
+"vi": "muộn",
+"example": "Do not stay up too late tonight.",
+"topic": "Daily routine"
+},
+{
+"word": "usually",
+"pos": "adverb",
+"vi": "thường xuyên",
+"example": "I usually drink tea after lunch.",
+"topic": "Daily routine"
+},
+{
+"word": "sometimes",
+"pos": "adverb",
+"vi": "thỉnh thoảng",
+"example": "I sometimes eat out with friends.",
+"topic": "Daily routine"
+},
+{
+"word": "bedtime",
+"pos": "noun",
+"vi": "giờ đi ngủ",
+"example": "My bedtime is around ten thirty.",
+"topic": "Daily routine"
+},
+{
+"word": "sleep",
+"pos": "verb",
+"vi": "ngủ",
+"example": "I sleep for eight hours every night.",
+"topic": "Daily routine"
+},
+{
+"word": "dream",
+"pos": "verb",
+"vi": "mơ",
+"example": "I often dream about my childhood.",
+"topic": "Daily routine"
+},
+{
+"word": "friend",
+"pos": "noun",
+"vi": "bạn bè",
+"example": "She is my best friend at school.",
+"topic": "Friends and relationships"
+},
+{
+"word": "friendship",
+"pos": "noun",
+"vi": "tình bạn",
+"example": "True friendship lasts for a lifetime.",
+"topic": "Friends and relationships"
+},
+{
+"word": "classmate",
+"pos": "noun",
+"vi": "bạn cùng lớp",
+"example": "My classmate helps me with math.",
+"topic": "Friends and relationships"
+},
+{
+"word": "colleague",
+"pos": "noun",
+"vi": "đồng nghiệp",
+"example": "I have lunch with my colleague daily.",
+"topic": "Friends and relationships"
+},
+{
+"word": "neighbor",
+"pos": "noun",
+"vi": "hàng xóm",
+"example": "Our neighbor is very kind and helpful.",
+"topic": "Friends and relationships"
+},
+{
+"word": "partner",
+"pos": "noun",
+"vi": "bạn đời, đối tác",
+"example": "He is a supportive life partner.",
+"topic": "Friends and relationships"
+},
+{
+"word": "couple",
+"pos": "noun",
+"vi": "cặp đôi",
+"example": "They are a very happy couple.",
+"topic": "Friends and relationships"
+},
+{
+"word": "boyfriend",
+"pos": "noun",
+"vi": "bạn trai",
+"example": "Her boyfriend is tall and funny.",
+"topic": "Friends and relationships"
+},
+{
+"word": "girlfriend",
+"pos": "noun",
+"vi": "bạn gái",
+"example": "My girlfriend loves watching romantic movies.",
+"topic": "Friends and relationships"
+},
+{
+"word": "relative",
+"pos": "noun",
+"vi": "họ hàng",
+"example": "We visit a relative every weekend.",
+"topic": "Friends and relationships"
+},
+{
+"word": "meet",
+"pos": "verb",
+"vi": "gặp gỡ",
+"example": "Let us meet at the coffee shop.",
+"topic": "Friends and relationships"
+},
+{
+"word": "introduce",
+"pos": "verb",
+"vi": "giới thiệu",
+"example": "Please introduce me to your brother.",
+"topic": "Friends and relationships"
+},
+{
+"word": "greet",
+"pos": "verb",
+"vi": "chào hỏi",
+"example": "We greet each other with a smile.",
+"topic": "Friends and relationships"
+},
+{
+"word": "chat",
+"pos": "verb",
+"vi": "trò chuyện",
+"example": "I love to chat with my friends.",
+"topic": "Friends and relationships"
+},
+{
+"word": "talk",
+"pos": "verb",
+"vi": "nói chuyện",
+"example": "We talk about our plans every day.",
+"topic": "Friends and relationships"
+},
+{
+"word": "share",
+"pos": "verb",
+"vi": "chia sẻ",
+"example": "Good friends always share their secrets.",
+"topic": "Friends and relationships"
+},
+{
+"word": "trust",
+"pos": "verb",
+"vi": "tin tưởng",
+"example": "I trust my best friend completely.",
+"topic": "Friends and relationships"
+},
+{
+"word": "support",
+"pos": "verb",
+"vi": "ủng hộ, hỗ trợ",
+"example": "True friends support you in hard times.",
+"topic": "Friends and relationships"
+},
+{
+"word": "help",
+"pos": "verb",
+"vi": "giúp đỡ",
+"example": "I always help my friends move house.",
+"topic": "Friends and relationships"
+},
+{
+"word": "care",
+"pos": "verb",
+"vi": "quan tâm",
+"example": "I care about your feelings very much.",
+"topic": "Friends and relationships"
+},
+{
+"word": "respect",
+"pos": "verb",
+"vi": "tôn trọng",
+"example": "We must respect each other's opinions.",
+"topic": "Friends and relationships"
+},
+{
+"word": "understand",
+"pos": "verb",
+"vi": "thấu hiểu",
+"example": "My close friends understand me well.",
+"topic": "Friends and relationships"
+},
+{
+"word": "forgive",
+"pos": "verb",
+"vi": "tha thứ",
+"example": "It is hard to forgive a lie.",
+"topic": "Friends and relationships"
+},
+{
+"word": "apologize",
+"pos": "verb",
+"vi": "xin lỗi",
+"example": "You should apologize for being rude.",
+"topic": "Friends and relationships"
+},
+{
+"word": "argue",
+"pos": "verb",
+"vi": "tranh cãi",
+"example": "Brothers and sisters often argue at home.",
+"topic": "Friends and relationships"
+},
+{
+"word": "fight",
+"pos": "verb",
+"vi": "cãi nhau, đánh nhau",
+"example": "Close friends rarely fight over small things.",
+"topic": "Friends and relationships"
+},
+{
+"word": "miss",
+"pos": "verb",
+"vi": "nhớ nhung",
+"example": "I miss my old school friends.",
+"topic": "Friends and relationships"
+},
+{
+"word": "invite",
+"pos": "verb",
+"vi": "mời",
+"example": "I will invite them to my party.",
+"topic": "Friends and relationships"
+},
+{
+"word": "visit",
+"pos": "verb",
+"vi": "đến thăm",
+"example": "We visit our grandparents every month.",
+"topic": "Friends and relationships"
+},
+{
+"word": "hang out",
+"pos": "phrase",
+"vi": "đi chơi",
+"example": "Teenagers like to hang out at malls.",
+"topic": "Friends and relationships"
+},
+{
+"word": "get along",
+"pos": "phrase",
+"vi": "hòa thuận",
+"example": "I get along well with my coworkers.",
+"topic": "Friends and relationships"
+},
+{
+"word": "keep in touch",
+"pos": "phrase",
+"vi": "giữ liên lạc",
+"example": "We still keep in touch by phone.",
+"topic": "Friends and relationships"
+},
+{
+"word": "fall in love",
+"pos": "phrase",
+"vi": "phải lòng, yêu",
+"example": "People often fall in love at university.",
+"topic": "Friends and relationships"
+},
+{
+"word": "break up",
+"pos": "phrase",
+"vi": "chia tay",
+"example": "Sad couples sometimes decide to break up.",
+"topic": "Friends and relationships"
+},
+{
+"word": "date",
+"pos": "verb",
+"vi": "hẹn hò",
+"example": "They want to date for a year.",
+"topic": "Friends and relationships"
+},
+{
+"word": "marry",
+"pos": "verb",
+"vi": "kết hôn",
+"example": "He plans to marry her next year.",
+"topic": "Friends and relationships"
+},
+{
+"word": "wedding",
+"pos": "noun",
+"vi": "đám cưới",
+"example": "Their wedding was small and beautiful.",
+"topic": "Friends and relationships"
+},
+{
+"word": "marriage",
+"pos": "noun",
+"vi": "hôn nhân",
+"example": "A happy marriage requires love and patience.",
+"topic": "Friends and relationships"
+},
+{
+"word": "divorce",
+"pos": "noun",
+"vi": "ly hôn",
+"example": "A divorce is hard for everyone.",
+"topic": "Friends and relationships"
+},
+{
+"word": "close",
+"pos": "adjective",
+"vi": "thân thiết",
+"example": "We have been close friends for years.",
+"topic": "Friends and relationships"
+},
+{
+"word": "friendly",
+"pos": "adjective",
+"vi": "thân thiện",
+"example": "Everyone in this town is very friendly.",
+"topic": "Friends and relationships"
+},
+{
+"word": "kind",
+"pos": "adjective",
+"vi": "tốt bụng",
+"example": "She is a very kind person.",
+"topic": "Friends and relationships"
+},
+{
+"word": "honest",
+"pos": "adjective",
+"vi": "trung thực",
+"example": "Always be honest with your loved ones.",
+"topic": "Friends and relationships"
+},
+{
+"word": "loyal",
+"pos": "adjective",
+"vi": "trung thành",
+"example": "A loyal friend never leaves you alone.",
+"topic": "Friends and relationships"
+},
+{
+"word": "funny",
+"pos": "adjective",
+"vi": "hài hước",
+"example": "My uncle tells very funny stories.",
+"topic": "Friends and relationships"
+},
+{
+"word": "polite",
+"pos": "adjective",
+"vi": "lịch sự",
+"example": "It is important to be polite.",
+"topic": "Friends and relationships"
+},
+{
+"word": "rude",
+"pos": "adjective",
+"vi": "thô lỗ",
+"example": "Never be rude to your elders.",
+"topic": "Friends and relationships"
+},
+{
+"word": "selfish",
+"pos": "adjective",
+"vi": "ích kỷ",
+"example": "Nobody likes a selfish friend.",
+"topic": "Friends and relationships"
+},
+{
+"word": "jealous",
+"pos": "adjective",
+"vi": "ghen tị",
+"example": "Do not feel jealous of her success.",
+"topic": "Friends and relationships"
+},
+{
+"word": "lonely",
+"pos": "adjective",
+"vi": "cô đơn",
+"example": "I feel lonely in a new city.",
+"topic": "Friends and relationships"
+},
+{
+"word": "shy",
+"pos": "adjective",
+"vi": "nhút nhát",
+"example": "He is too shy to speak.",
+"topic": "Friends and relationships"
+},
+{
+"word": "outgoing",
+"pos": "adjective",
+"vi": "hướng ngoại, cởi mở",
+"example": "She is an outgoing and cheerful girl.",
+"topic": "Friends and relationships"
+},
+{
+"word": "generous",
+"pos": "adjective",
+"vi": "hào phóng",
+"example": "My aunt is always very generous.",
+"topic": "Friends and relationships"
+},
+{
+"word": "patient",
+"pos": "adjective",
+"vi": "kiên nhẫn",
+"example": "You need to be patient with children.",
+"topic": "Friends and relationships"
+},
+{
+"word": "secret",
+"pos": "noun",
+"vi": "bí mật",
+"example": "Can you keep a secret for me?",
+"topic": "Friends and relationships"
+},
+{
+"word": "advice",
+"pos": "noun",
+"vi": "lời khuyên",
+"example": "She gives me great advice every time.",
+"topic": "Friends and relationships"
+},
+{
+"word": "memory",
+"pos": "noun",
+"vi": "kỷ niệm",
+"example": "That trip is my favorite memory.",
+"topic": "Friends and relationships"
+},
+{
+"word": "gift",
+"pos": "noun",
+"vi": "món quà",
+"example": "I bought a nice gift for him.",
+"topic": "Friends and relationships"
+},
+{
+"word": "hug",
+"pos": "verb",
+"vi": "ôm",
+"example": "Friends often hug when they say goodbye.",
+"topic": "Friends and relationships"
+},
+{
+"word": "smile",
+"pos": "verb",
+"vi": "mỉm cười",
+"example": "Always smile when you meet new people.",
+"topic": "Friends and relationships"
+},
+{
+"word": "apartment",
+"pos": "noun",
+"vi": "căn hộ",
+"example": "I live in a small apartment downtown.",
+"topic": "Home and furniture"
+},
+{
+"word": "armchair",
+"pos": "noun",
+"vi": "ghế bành",
+"example": "My grandfather sits in his favorite armchair.",
+"topic": "Home and furniture"
+},
+{
+"word": "attic",
+"pos": "noun",
+"vi": "gác mái",
+"example": "We keep old boxes in the attic.",
+"topic": "Home and furniture"
+},
+{
+"word": "balcony",
+"pos": "noun",
+"vi": "ban công",
+"example": "She drinks coffee on the balcony every morning.",
+"topic": "Home and furniture"
+},
+{
+"word": "basement",
+"pos": "noun",
+"vi": "tầng hầm",
+"example": "The washing machine is in the basement.",
+"topic": "Home and furniture"
+},
+{
+"word": "bathroom",
+"pos": "noun",
+"vi": "phòng tắm",
+"example": "The bathroom has a large white bathtub.",
+"topic": "Home and furniture"
+},
+{
+"word": "bathtub",
+"pos": "noun",
+"vi": "bồn tắm",
+"example": "I like to relax in the bathtub.",
+"topic": "Home and furniture"
+},
+{
+"word": "bedroom",
+"pos": "noun",
+"vi": "phòng ngủ",
+"example": "My bedroom has a big sunny window.",
+"topic": "Home and furniture"
+},
+{
+"word": "blanket",
+"pos": "noun",
+"vi": "cái chăn",
+"example": "Please give me another warm blanket.",
+"topic": "Home and furniture"
+},
+{
+"word": "bookshelf",
+"pos": "noun",
+"vi": "giá sách",
+"example": "That wooden bookshelf is full of novels.",
+"topic": "Home and furniture"
+},
+{
+"word": "cabinet",
+"pos": "noun",
+"vi": "tủ có ngăn",
+"example": "Put the clean plates in the cabinet.",
+"topic": "Home and furniture"
+},
+{
+"word": "carpet",
+"pos": "noun",
+"vi": "thảm trải sàn",
+"example": "The red carpet feels very soft today.",
+"topic": "Home and furniture"
+},
+{
+"word": "ceiling",
+"pos": "noun",
+"vi": "trần nhà",
+"example": "There is a bright light on the ceiling.",
+"topic": "Home and furniture"
+},
+{
+"word": "chair",
+"pos": "noun",
+"vi": "cái ghế",
+"example": "Please pull up a chair and sit.",
+"topic": "Home and furniture"
+},
+{
+"word": "chimney",
+"pos": "noun",
+"vi": "ống khói",
+"example": "Smoke comes out of the brick chimney.",
+"topic": "Home and furniture"
+},
+{
+"word": "closet",
+"pos": "noun",
+"vi": "tủ quần áo",
+"example": "Hang your winter coat in the closet.",
+"topic": "Home and furniture"
+},
+{
+"word": "comfortable",
+"pos": "adjective",
+"vi": "thoải mái",
+"example": "This new blue sofa is very comfortable.",
+"topic": "Home and furniture"
+},
+{
+"word": "couch",
+"pos": "noun",
+"vi": "ghế trường kỷ",
+"example": "We watch movies together on the couch.",
+"topic": "Home and furniture"
+},
+{
+"word": "cupboard",
+"pos": "noun",
+"vi": "tủ chén bát",
+"example": "The sugar is in the kitchen cupboard.",
+"topic": "Home and furniture"
+},
+{
+"word": "curtain",
+"pos": "noun",
+"vi": "rèm cửa",
+"example": "Open the curtain to let light in.",
+"topic": "Home and furniture"
+},
+{
+"word": "cushion",
+"pos": "noun",
+"vi": "gối tựa",
+"example": "Put a soft cushion behind your back.",
+"topic": "Home and furniture"
+},
+{
+"word": "decorate",
+"pos": "verb",
+"vi": "trang trí",
+"example": "We want to decorate the living room.",
+"topic": "Home and furniture"
+},
+{
+"word": "desk",
+"pos": "noun",
+"vi": "bàn làm việc",
+"example": "My laptop is on the wooden desk.",
+"topic": "Home and furniture"
+},
+{
+"word": "dining room",
+"pos": "noun",
+"vi": "phòng ăn",
+"example": "Our family eats dinner in the dining room.",
+"topic": "Home and furniture"
+},
+{
+"word": "dishwasher",
+"pos": "noun",
+"vi": "máy rửa bát",
+"example": "Please put the dirty bowls in the dishwasher.",
+"topic": "Home and furniture"
+},
+{
+"word": "doorway",
+"pos": "noun",
+"vi": "ô cửa",
+"example": "He stood quietly in the open doorway.",
+"topic": "Home and furniture"
+},
+{
+"word": "drawer",
+"pos": "noun",
+"vi": "ngăn kéo",
+"example": "I keep my keys in the top drawer.",
+"topic": "Home and furniture"
+},
+{
+"word": "fence",
+"pos": "noun",
+"vi": "hàng rào",
+"example": "They painted the garden fence white yesterday.",
+"topic": "Home and furniture"
+},
+{
+"word": "fireplace",
+"pos": "noun",
+"vi": "lò sưởi",
+"example": "We sit near the warm fireplace tonight.",
+"topic": "Home and furniture"
+},
+{
+"word": "flat",
+"pos": "noun",
+"vi": "căn hộ",
+"example": "She rents a nice flat near work.",
+"topic": "Home and furniture"
+},
+{
+"word": "floor",
+"pos": "noun",
+"vi": "sàn nhà",
+"example": "Please sweep the dirty kitchen floor now.",
+"topic": "Home and furniture"
+},
+{
+"word": "fridge",
+"pos": "noun",
+"vi": "tủ lạnh",
+"example": "There is fresh milk in the fridge.",
+"topic": "Home and furniture"
+},
+{
+"word": "furnish",
+"pos": "verb",
+"vi": "trang bị nội thất",
+"example": "They need money to furnish their house.",
+"topic": "Home and furniture"
+},
+{
+"word": "furniture",
+"pos": "noun",
+"vi": "đồ nội thất",
+"example": "We bought some modern furniture last week.",
+"topic": "Home and furniture"
+},
+{
+"word": "garage",
+"pos": "noun",
+"vi": "nhà để xe",
+"example": "My father parks his car in the garage.",
+"topic": "Home and furniture"
+},
+{
+"word": "garden",
+"pos": "noun",
+"vi": "khu vườn",
+"example": "She grows roses in her back garden.",
+"topic": "Home and furniture"
+},
+{
+"word": "hallway",
+"pos": "noun",
+"vi": "hành lang",
+"example": "Leave your wet shoes in the hallway.",
+"topic": "Home and furniture"
+},
+{
+"word": "heater",
+"pos": "noun",
+"vi": "máy sưởi",
+"example": "Turn on the heater because it is cold.",
+"topic": "Home and furniture"
+},
+{
+"word": "kitchen",
+"pos": "noun",
+"vi": "nhà bếp",
+"example": "My mother is cooking in the kitchen.",
+"topic": "Home and furniture"
+},
+{
+"word": "lamp",
+"pos": "noun",
+"vi": "đèn bàn",
+"example": "Turn on the lamp so you can read.",
+"topic": "Home and furniture"
+},
+{
+"word": "living room",
+"pos": "noun",
+"vi": "phòng khách",
+"example": "Our guests are waiting in the living room.",
+"topic": "Home and furniture"
+},
+{
+"word": "mattress",
+"pos": "noun",
+"vi": "tấm nệm",
+"example": "I need a new mattress for my bed.",
+"topic": "Home and furniture"
+},
+{
+"word": "microwave",
+"pos": "noun",
+"vi": "lò vi sóng",
+"example": "Heat the soup in the microwave quickly.",
+"topic": "Home and furniture"
+},
+{
+"word": "mirror",
+"pos": "noun",
+"vi": "cái gương",
+"example": "She looked at herself in the mirror.",
+"topic": "Home and furniture"
+},
+{
+"word": "modern",
+"pos": "adjective",
+"vi": "hiện đại",
+"example": "They live in a very modern house.",
+"topic": "Home and furniture"
+},
+{
+"word": "move in",
+"pos": "phrase",
+"vi": "dọn vào ở",
+"example": "We will move in next Monday morning.",
+"topic": "Home and furniture"
+},
+{
+"word": "neighborhood",
+"pos": "noun",
+"vi": "khu dân cư",
+"example": "This is a quiet and safe neighborhood.",
+"topic": "Home and furniture"
+},
+{
+"word": "oven",
+"pos": "noun",
+"vi": "lò nướng",
+"example": "The bread is baking in the oven.",
+"topic": "Home and furniture"
+},
+{
+"word": "pillow",
+"pos": "noun",
+"vi": "cái gối",
+"example": "I like to sleep on a soft pillow.",
+"topic": "Home and furniture"
+},
+{
+"word": "porch",
+"pos": "noun",
+"vi": "hiên nhà",
+"example": "They sat outside on the front porch.",
+"topic": "Home and furniture"
+},
+{
+"word": "rent",
+"pos": "verb",
+"vi": "thuê",
+"example": "We want to rent a bigger house.",
+"topic": "Home and furniture"
+},
+{
+"word": "roof",
+"pos": "noun",
+"vi": "mái nhà",
+"example": "The heavy rain hit the metal roof.",
+"topic": "Home and furniture"
+},
+{
+"word": "rug",
+"pos": "noun",
+"vi": "tấm thảm nhỏ",
+"example": "There is a round rug near the door.",
+"topic": "Home and furniture"
+},
+{
+"word": "shelf",
+"pos": "noun",
+"vi": "cái kệ",
+"example": "Put the heavy dictionary on the shelf.",
+"topic": "Home and furniture"
+},
+{
+"word": "sink",
+"pos": "noun",
+"vi": "bồn rửa",
+"example": "Wash your hands in the bathroom sink.",
+"topic": "Home and furniture"
+},
+{
+"word": "sofa",
+"pos": "noun",
+"vi": "ghế sô pha",
+"example": "Three people can sit on this sofa.",
+"topic": "Home and furniture"
+},
+{
+"word": "stairs",
+"pos": "noun",
+"vi": "cầu thang",
+"example": "Be careful when walking down the stairs.",
+"topic": "Home and furniture"
+},
+{
+"word": "tidy",
+"pos": "adjective",
+"vi": "gọn gàng",
+"example": "Please keep your bedroom clean and tidy.",
+"topic": "Home and furniture"
+},
+{
+"word": "wardrobe",
+"pos": "noun",
+"vi": "tủ quần áo lớn",
+"example": "My dresses are hanging in the wardrobe.",
+"topic": "Home and furniture"
+},
+{
+"word": "accessory",
+"pos": "noun",
+"vi": "phụ kiện",
+"example": "A good bag is a great accessory.",
+"topic": "Clothes and fashion"
+},
+{
+"word": "belt",
+"pos": "noun",
+"vi": "thắt lưng",
+"example": "He wears a brown leather belt daily.",
+"topic": "Clothes and fashion"
+},
+{
+"word": "blouse",
+"pos": "noun",
+"vi": "áo sơ mi nữ",
+"example": "She bought a white silk blouse today.",
+"topic": "Clothes and fashion"
+},
+{
+"word": "boot",
+"pos": "noun",
+"vi": "giày bốt",
+"example": "One leather boot is missing a lace.",
+"topic": "Clothes and fashion"
+},
+{
+"word": "brand",
+"pos": "noun",
+"vi": "thương hiệu",
+"example": "This shoe brand is very popular here.",
+"topic": "Clothes and fashion"
+},
+{
+"word": "button",
+"pos": "noun",
+"vi": "cúc áo",
+"example": "A button fell off my blue shirt.",
+"topic": "Clothes and fashion"
+},
+{
+"word": "cap",
+"pos": "noun",
+"vi": "mũ lưỡi trai",
+"example": "He wears a baseball cap in summer.",
+"topic": "Clothes and fashion"
+},
+{
+"word": "casual",
+"pos": "adjective",
+"vi": "thường ngày",
+"example": "I prefer casual clothes on the weekend.",
+"topic": "Clothes and fashion"
+},
+{
+"word": "coat",
+"pos": "noun",
+"vi": "áo khoác dài",
+"example": "Wear your warm coat in the snow.",
+"topic": "Clothes and fashion"
+},
+{
+"word": "collar",
+"pos": "noun",
+"vi": "cổ áo",
+"example": "The shirt collar is a bit tight.",
+"topic": "Clothes and fashion"
+},
+{
+"word": "cotton",
+"pos": "noun",
+"vi": "vải bông",
+"example": "This summer dress is made of cotton.",
+"topic": "Clothes and fashion"
+},
+{
+"word": "denim",
+"pos": "noun",
+"vi": "vải bò",
+"example": "I love wearing my blue denim jacket.",
+"topic": "Clothes and fashion"
+},
+{
+"word": "design",
+"pos": "noun",
+"vi": "thiết kế",
+"example": "I really like the design of this dress.",
+"topic": "Clothes and fashion"
+},
+{
+"word": "dress",
+"pos": "noun",
+"vi": "váy liền",
+"example": "She wore a red dress to the party.",
+"topic": "Clothes and fashion"
+},
+{
+"word": "dress up",
+"pos": "phrase",
+"vi": "ăn mặc đẹp",
+"example": "We need to dress up for dinner.",
+"topic": "Clothes and fashion"
+},
+{
+"word": "earring",
+"pos": "noun",
+"vi": "bông tai",
+"example": "She lost one gold earring last night.",
+"topic": "Clothes and fashion"
+},
+{
+"word": "fabric",
+"pos": "noun",
+"vi": "chất liệu vải",
+"example": "This soft fabric feels great on skin.",
+"topic": "Clothes and fashion"
+},
+{
+"word": "fashion",
+"pos": "noun",
+"vi": "thời trang",
+"example": "She reads magazines about fashion every week.",
+"topic": "Clothes and fashion"
+},
+{
+"word": "fashionable",
+"pos": "adjective",
+"vi": "hợp thời trang",
+"example": "Young people want to buy fashionable shoes.",
+"topic": "Clothes and fashion"
+},
+{
+"word": "fit",
+"pos": "verb",
+"vi": "vừa vặn",
+"example": "These new black jeans fit me well.",
+"topic": "Clothes and fashion"
+},
+{
+"word": "formal",
+"pos": "adjective",
+"vi": "trang trọng",
+"example": "Men must wear formal suits at work.",
+"topic": "Clothes and fashion"
+},
+{
+"word": "glove",
+"pos": "noun",
+"vi": "găng tay",
+"example": "I cannot find my left winter glove.",
+"topic": "Clothes and fashion"
+},
+{
+"word": "handbag",
+"pos": "noun",
+"vi": "túi xách tay",
+"example": "She put her wallet in her handbag.",
+"topic": "Clothes and fashion"
+},
+{
+"word": "hat",
+"pos": "noun",
+"vi": "cái mũ",
+"example": "Put on your hat before going outside.",
+"topic": "Clothes and fashion"
+},
+{
+"word": "heel",
+"pos": "noun",
+"vi": "gót giày",
+"example": "The heel of my shoe broke yesterday.",
+"topic": "Clothes and fashion"
+},
+{
+"word": "hoodie",
+"pos": "noun",
+"vi": "áo nỉ có mũ",
+"example": "He wears a gray hoodie to school.",
+"topic": "Clothes and fashion"
+},
+{
+"word": "jacket",
+"pos": "noun",
+"vi": "áo khoác ngắn",
+"example": "Take a light jacket because it is windy.",
+"topic": "Clothes and fashion"
+},
+{
+"word": "jeans",
+"pos": "noun",
+"vi": "quần bò",
+"example": "I wear blue jeans almost every day.",
+"topic": "Clothes and fashion"
+},
+{
+"word": "jewelry",
+"pos": "noun",
+"vi": "trang sức",
+"example": "She rarely wears expensive gold jewelry.",
+"topic": "Clothes and fashion"
+},
+{
+"word": "jumper",
+"pos": "noun",
+"vi": "áo len chui đầu",
+"example": "Put on a warm jumper this morning.",
+"topic": "Clothes and fashion"
+},
+{
+"word": "leather",
+"pos": "noun",
+"vi": "chất liệu da",
+"example": "These black boots are made of leather.",
+"topic": "Clothes and fashion"
+},
+{
+"word": "loose",
+"pos": "adjective",
+"vi": "rộng rãi",
+"example": "I like wearing loose clothes at home.",
+"topic": "Clothes and fashion"
+},
+{
+"word": "match",
+"pos": "verb",
+"vi": "hợp với nhau",
+"example": "Your red shoes match your handbag well.",
+"topic": "Clothes and fashion"
+},
+{
+"word": "necklace",
+"pos": "noun",
+"vi": "vòng cổ",
+"example": "He gave her a silver necklace yesterday.",
+"topic": "Clothes and fashion"
+},
+{
+"word": "outfit",
+"pos": "noun",
+"vi": "bộ trang phục",
+"example": "That is a very nice summer outfit.",
+"topic": "Clothes and fashion"
+},
+{
+"word": "pajamas",
+"pos": "noun",
+"vi": "đồ ngủ",
+"example": "I put on my pajamas before bed.",
+"topic": "Clothes and fashion"
+},
+{
+"word": "pants",
+"pos": "noun",
+"vi": "quần dài",
+"example": "These black pants are too long now.",
+"topic": "Clothes and fashion"
+},
+{
+"word": "pattern",
+"pos": "noun",
+"vi": "họa tiết",
+"example": "I like the floral pattern on it.",
+"topic": "Clothes and fashion"
+},
+{
+"word": "pocket",
+"pos": "noun",
+"vi": "túi áo quần",
+"example": "Keep your phone in your front pocket.",
+"topic": "Clothes and fashion"
+},
+{
+"word": "put on",
+"pos": "phrase",
+"vi": "mặc vào",
+"example": "Please put on your shoes right now.",
+"topic": "Clothes and fashion"
+},
+{
+"word": "raincoat",
+"pos": "noun",
+"vi": "áo mưa",
+"example": "Bring a raincoat because it might rain.",
+"topic": "Clothes and fashion"
+},
+{
+"word": "sandal",
+"pos": "noun",
+"vi": "dép xăng đan",
+"example": "One sandal broke on the sandy beach.",
+"topic": "Clothes and fashion"
+},
+{
+"word": "scarf",
+"pos": "noun",
+"vi": "khăn quàng cổ",
+"example": "She tied a warm scarf around her neck.",
+"topic": "Clothes and fashion"
+},
+{
+"word": "shirt",
+"pos": "noun",
+"vi": "áo sơ mi",
+"example": "He wore a clean white shirt today.",
+"topic": "Clothes and fashion"
+},
+{
+"word": "shoe",
+"pos": "noun",
+"vi": "chiếc giày",
+"example": "I need to tie my left shoe.",
+"topic": "Clothes and fashion"
+},
+{
+"word": "shorts",
+"pos": "noun",
+"vi": "quần đùi",
+"example": "Boys often wear shorts in hot weather.",
+"topic": "Clothes and fashion"
+},
+{
+"word": "size",
+"pos": "noun",
+"vi": "kích cỡ",
+"example": "Do you have this in size medium?",
+"topic": "Clothes and fashion"
+},
+{
+"word": "skirt",
+"pos": "noun",
+"vi": "chân váy",
+"example": "She bought a short black skirt yesterday.",
+"topic": "Clothes and fashion"
+},
+{
+"word": "sleeve",
+"pos": "noun",
+"vi": "tay áo",
+"example": "There is ink on my shirt sleeve.",
+"topic": "Clothes and fashion"
+},
+{
+"word": "account",
+"pos": "noun",
+"vi": "tài khoản",
+"example": "I want to open a new bank account.",
+"topic": "Money and banking"
+},
+{
+"word": "afford",
+"pos": "verb",
+"vi": "đủ khả năng chi trả",
+"example": "We cannot afford a new car right now.",
+"topic": "Money and banking"
+},
+{
+"word": "amount",
+"pos": "noun",
+"vi": "số tiền, số lượng",
+"example": "Please pay the full amount today.",
+"topic": "Money and banking"
+},
+{
+"word": "ATM",
+"pos": "noun",
+"vi": "máy rút tiền tự động",
+"example": "I need to find an ATM now.",
+"topic": "Money and banking"
+},
+{
+"word": "balance",
+"pos": "noun",
+"vi": "số dư tài khoản",
+"example": "Check your balance before you buy it.",
+"topic": "Money and banking"
+},
+{
+"word": "bank",
+"pos": "noun",
+"vi": "ngân hàng",
+"example": "The bank closes at five every day.",
+"topic": "Money and banking"
+},
+{
+"word": "bill",
+"pos": "noun",
+"vi": "hóa đơn",
+"example": "I have to pay the electricity bill.",
+"topic": "Money and banking"
+},
+{
+"word": "borrow",
+"pos": "verb",
+"vi": "vay, mượn",
+"example": "Can I borrow ten dollars from you?",
+"topic": "Money and banking"
+},
+{
+"word": "budget",
+"pos": "noun",
+"vi": "ngân sách",
+"example": "We have a strict budget this month.",
+"topic": "Money and banking"
+},
+{
+"word": "buy",
+"pos": "verb",
+"vi": "mua",
+"example": "I want to buy a new phone.",
+"topic": "Money and banking"
+},
+{
+"word": "card",
+"pos": "noun",
+"vi": "thẻ",
+"example": "Do you accept a credit card here?",
+"topic": "Money and banking"
+},
+{
+"word": "cash",
+"pos": "noun",
+"vi": "tiền mặt",
+"example": "I prefer to pay in cash.",
+"topic": "Money and banking"
+},
+{
+"word": "cashier",
+"pos": "noun",
+"vi": "thu ngân",
+"example": "Give the money to the cashier.",
+"topic": "Money and banking"
+},
+{
+"word": "cent",
+"pos": "noun",
+"vi": "xu",
+"example": "I do not have a single cent.",
+"topic": "Money and banking"
+},
+{
+"word": "change",
+"pos": "noun",
+"vi": "tiền thừa, tiền lẻ",
+"example": "Keep the change for your good service.",
+"topic": "Money and banking"
+},
+{
+"word": "charge",
+"pos": "verb",
+"vi": "tính phí",
+"example": "They charge five dollars for delivery.",
+"topic": "Money and banking"
+},
+{
+"word": "cheap",
+"pos": "adjective",
+"vi": "rẻ",
+"example": "This restaurant is very good and cheap.",
+"topic": "Money and banking"
+},
+{
+"word": "coin",
+"pos": "noun",
+"vi": "đồng xu",
+"example": "I found a silver coin on the floor.",
+"topic": "Money and banking"
+},
+{
+"word": "cost",
+"pos": "verb",
+"vi": "có giá là",
+"example": "These shoes cost fifty dollars.",
+"topic": "Money and banking"
+},
+{
+"word": "credit",
+"pos": "noun",
+"vi": "tín dụng",
+"example": "She has a very good credit score.",
+"topic": "Money and banking"
+},
+{
+"word": "currency",
+"pos": "noun",
+"vi": "tiền tệ",
+"example": "What is the local currency here?",
+"topic": "Money and banking"
+},
+{
+"word": "customer",
+"pos": "noun",
+"vi": "khách hàng",
+"example": "The bank helps every customer quickly.",
+"topic": "Money and banking"
+},
+{
+"word": "debt",
+"pos": "noun",
+"vi": "khoản nợ",
+"example": "He wants to pay off his debt.",
+"topic": "Money and banking"
+},
+{
+"word": "deposit",
+"pos": "verb",
+"vi": "gửi tiền vào",
+"example": "I need to deposit some money today.",
+"topic": "Money and banking"
+},
+{
+"word": "discount",
+"pos": "noun",
+"vi": "giảm giá",
+"example": "Students get a ten percent discount.",
+"topic": "Money and banking"
+},
+{
+"word": "dollar",
+"pos": "noun",
+"vi": "đô la",
+"example": "This bottle of water costs one dollar.",
+"topic": "Money and banking"
+},
+{
+"word": "earn",
+"pos": "verb",
+"vi": "kiếm tiền",
+"example": "I earn enough money to live well.",
+"topic": "Money and banking"
+},
+{
+"word": "exchange",
+"pos": "verb",
+"vi": "đổi tiền",
+"example": "Where can I exchange my money?",
+"topic": "Money and banking"
+},
+{
+"word": "expensive",
+"pos": "adjective",
+"vi": "đắt tiền",
+"example": "That watch is too expensive for me.",
+"topic": "Money and banking"
+},
+{
+"word": "fee",
+"pos": "noun",
+"vi": "lệ phí",
+"example": "There is no fee for this service.",
+"topic": "Money and banking"
+},
+{
+"word": "finance",
+"pos": "noun",
+"vi": "tài chính",
+"example": "She works in the finance department.",
+"topic": "Money and banking"
+},
+{
+"word": "income",
+"pos": "noun",
+"vi": "thu nhập",
+"example": "His monthly income is quite high.",
+"topic": "Money and banking"
+},
+{
+"word": "insurance",
+"pos": "noun",
+"vi": "bảo hiểm",
+"example": "You should buy travel insurance soon.",
+"topic": "Money and banking"
+},
+{
+"word": "interest",
+"pos": "noun",
+"vi": "tiền lãi",
+"example": "This savings account pays high interest.",
+"topic": "Money and banking"
+},
+{
+"word": "invest",
+"pos": "verb",
+"vi": "đầu tư",
+"example": "They plan to invest in real estate.",
+"topic": "Money and banking"
+},
+{
+"word": "lend",
+"pos": "verb",
+"vi": "cho vay",
+"example": "Can you lend me some money?",
+"topic": "Money and banking"
+},
+{
+"word": "loan",
+"pos": "noun",
+"vi": "khoản vay",
+"example": "He applied for a car loan.",
+"topic": "Money and banking"
+},
+{
+"word": "money",
+"pos": "noun",
+"vi": "tiền",
+"example": "Time is more important than money.",
+"topic": "Money and banking"
+},
+{
+"word": "note",
+"pos": "noun",
+"vi": "tờ tiền giấy",
+"example": "Do you have a ten dollar note?",
+"topic": "Money and banking"
+},
+{
+"word": "owe",
+"pos": "verb",
+"vi": "nợ",
+"example": "I owe you twenty dollars for lunch.",
+"topic": "Money and banking"
+},
+{
+"word": "pay",
+"pos": "verb",
+"vi": "trả tiền",
+"example": "I will pay for dinner tonight.",
+"topic": "Money and banking"
+},
+{
+"word": "payment",
+"pos": "noun",
+"vi": "sự thanh toán",
+"example": "We accept online payment for all orders.",
+"topic": "Money and banking"
+},
+{
+"word": "poor",
+"pos": "adjective",
+"vi": "nghèo",
+"example": "Many poor people need financial help.",
+"topic": "Money and banking"
+},
+{
+"word": "price",
+"pos": "noun",
+"vi": "giá cả",
+"example": "The price of food is rising.",
+"topic": "Money and banking"
+},
+{
+"word": "profit",
+"pos": "noun",
+"vi": "lợi nhuận",
+"example": "The company made a big profit.",
+"topic": "Money and banking"
+},
+{
+"word": "purse",
+"pos": "noun",
+"vi": "ví nữ",
+"example": "She put the coins in her purse.",
+"topic": "Money and banking"
+},
+{
+"word": "receipt",
+"pos": "noun",
+"vi": "biên lai",
+"example": "Please keep your receipt for returns.",
+"topic": "Money and banking"
+},
+{
+"word": "refund",
+"pos": "noun",
+"vi": "tiền hoàn lại",
+"example": "I would like a full refund please.",
+"topic": "Money and banking"
+},
+{
+"word": "rich",
+"pos": "adjective",
+"vi": "giàu có",
+"example": "He became rich from his business.",
+"topic": "Money and banking"
+},
+{
+"word": "salary",
+"pos": "noun",
+"vi": "tiền lương",
+"example": "She receives her salary on Friday.",
+"topic": "Money and banking"
+},
+{
+"word": "save",
+"pos": "verb",
+"vi": "tiết kiệm",
+"example": "Try to save money every month.",
+"topic": "Money and banking"
+},
+{
+"word": "sell",
+"pos": "verb",
+"vi": "bán",
+"example": "They sell fresh fruit at the market.",
+"topic": "Money and banking"
+},
+{
+"word": "spend",
+"pos": "verb",
+"vi": "chi tiêu",
+"example": "Do not spend all your money.",
+"topic": "Money and banking"
+},
+{
+"word": "tax",
+"pos": "noun",
+"vi": "thuế",
+"example": "Everyone must pay income tax yearly.",
+"topic": "Money and banking"
+},
+{
+"word": "transfer",
+"pos": "verb",
+"vi": "chuyển khoản",
+"example": "I will transfer the money tomorrow.",
+"topic": "Money and banking"
+},
+{
+"word": "wallet",
+"pos": "noun",
+"vi": "ví nam",
+"example": "He forgot his wallet at home.",
+"topic": "Money and banking"
+},
+{
+"word": "withdraw",
+"pos": "verb",
+"vi": "rút tiền",
+"example": "I need to withdraw some cash now.",
+"topic": "Money and banking"
+},
+{
+"word": "ache",
+"pos": "noun",
+"vi": "cơn đau",
+"example": "I have a bad ache in my back.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "allergy",
+"pos": "noun",
+"vi": "dị ứng",
+"example": "She has a severe peanut allergy.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "ambulance",
+"pos": "noun",
+"vi": "xe cứu thương",
+"example": "Call an ambulance right now please.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "appointment",
+"pos": "noun",
+"vi": "cuộc hẹn khám",
+"example": "I have a doctor appointment tomorrow.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "bandage",
+"pos": "noun",
+"vi": "băng gạc",
+"example": "Put a clean bandage on the cut.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "bleed",
+"pos": "verb",
+"vi": "chảy máu",
+"example": "My finger began to bleed badly.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "blood",
+"pos": "noun",
+"vi": "máu",
+"example": "The nurse took a blood sample.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "bone",
+"pos": "noun",
+"vi": "xương",
+"example": "He broke a bone in his arm.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "breathe",
+"pos": "verb",
+"vi": "thở",
+"example": "Take a deep breath and breathe slowly.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "burn",
+"pos": "noun",
+"vi": "vết bỏng",
+"example": "Put cold water on the burn.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "cancer",
+"pos": "noun",
+"vi": "ung thư",
+"example": "Doctors are working to cure cancer.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "check-up",
+"pos": "noun",
+"vi": "kiểm tra sức khỏe",
+"example": "You should get a yearly check-up.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "clinic",
+"pos": "noun",
+"vi": "phòng khám",
+"example": "I went to the local clinic today.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "cold",
+"pos": "noun",
+"vi": "cảm lạnh",
+"example": "I think I have a bad cold.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "cough",
+"pos": "noun",
+"vi": "cơn ho",
+"example": "He has a dry cough today.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "cream",
+"pos": "noun",
+"vi": "kem bôi",
+"example": "Apply this cream to your skin.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "cure",
+"pos": "verb",
+"vi": "chữa khỏi",
+"example": "This medicine can cure the infection.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "cut",
+"pos": "noun",
+"vi": "vết cắt",
+"example": "Wash the cut with warm water.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "dentist",
+"pos": "noun",
+"vi": "nha sĩ",
+"example": "I visit my dentist twice a year.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "disease",
+"pos": "noun",
+"vi": "bệnh tật",
+"example": "This disease spreads very quickly.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "dizzy",
+"pos": "adjective",
+"vi": "chóng mặt",
+"example": "I feel dizzy when I stand up.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "doctor",
+"pos": "noun",
+"vi": "bác sĩ",
+"example": "The doctor will see you now.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "dose",
+"pos": "noun",
+"vi": "liều lượng",
+"example": "Take one dose after every meal.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "drug",
+"pos": "noun",
+"vi": "thuốc",
+"example": "This new drug helps reduce pain.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "emergency",
+"pos": "noun",
+"vi": "trường hợp khẩn cấp",
+"example": "Go to the emergency room immediately.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "examine",
+"pos": "verb",
+"vi": "khám bệnh",
+"example": "The doctor will examine your throat.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "fever",
+"pos": "noun",
+"vi": "cơn sốt",
+"example": "The child has a high fever.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "flu",
+"pos": "noun",
+"vi": "bệnh cúm",
+"example": "Many people catch the flu in winter.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "heal",
+"pos": "verb",
+"vi": "lành lại",
+"example": "Your broken leg will heal soon.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "heart",
+"pos": "noun",
+"vi": "tim",
+"example": "Exercise is good for your heart.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "hospital",
+"pos": "noun",
+"vi": "bệnh viện",
+"example": "She stayed in the hospital overnight.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "hurt",
+"pos": "verb",
+"vi": "bị đau",
+"example": "My back and neck hurt today.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "ill",
+"pos": "adjective",
+"vi": "ốm, bệnh",
+"example": "He feels too ill to work.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "illness",
+"pos": "noun",
+"vi": "căn bệnh",
+"example": "She recovered from a serious illness.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "infection",
+"pos": "noun",
+"vi": "sự nhiễm trùng",
+"example": "Clean the wound to prevent infection.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "injection",
+"pos": "noun",
+"vi": "mũi tiêm",
+"example": "The nurse gave me an injection.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "injury",
+"pos": "noun",
+"vi": "chấn thương",
+"example": "He has a bad knee injury.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "medicine",
+"pos": "noun",
+"vi": "thuốc",
+"example": "Take your medicine twice a day.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "nurse",
+"pos": "noun",
+"vi": "y tá",
+"example": "The nurse checked my temperature.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "operation",
+"pos": "noun",
+"vi": "ca phẫu thuật",
+"example": "My father needs a heart operation.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "pain",
+"pos": "noun",
+"vi": "cơn đau",
+"example": "I have a sharp pain here.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "painful",
+"pos": "adjective",
+"vi": "đau đớn",
+"example": "The injection was not very painful.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "pharmacy",
+"pos": "noun",
+"vi": "hiệu thuốc",
+"example": "Buy this medicine at the pharmacy.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "pill",
+"pos": "noun",
+"vi": "viên thuốc",
+"example": "Swallow this pill with some water.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "prescription",
+"pos": "noun",
+"vi": "đơn thuốc",
+"example": "You need a prescription for this.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "recover",
+"pos": "verb",
+"vi": "hồi phục",
+"example": "I hope you recover very soon.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "rest",
+"pos": "verb",
+"vi": "nghỉ ngơi",
+"example": "You need to rest in bed.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "sick",
+"pos": "adjective",
+"vi": "ốm, buồn nôn",
+"example": "I feel sick after eating that.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "skin",
+"pos": "noun",
+"vi": "da",
+"example": "Protect your skin from the sun.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "sore",
+"pos": "adjective",
+"vi": "đau rát",
+"example": "I have a very sore throat.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "stomach",
+"pos": "noun",
+"vi": "dạ dày, bụng",
+"example": "My stomach feels much better now.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "surgery",
+"pos": "noun",
+"vi": "phẫu thuật",
+"example": "The surgery was a complete success.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "symptom",
+"pos": "noun",
+"vi": "triệu chứng",
+"example": "A fever is a common symptom.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "tablet",
+"pos": "noun",
+"vi": "viên thuốc nén",
+"example": "Take one tablet before you sleep.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "temperature",
+"pos": "noun",
+"vi": "thân nhiệt",
+"example": "The nurse will take your temperature.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "treat",
+"pos": "verb",
+"vi": "điều trị",
+"example": "Doctors treat many patients every day.",
+"topic": "Hospitals and medicine"
+},
+{
+"word": "increase",
+"pos": "verb",
+"vi": "tăng",
+"example": "The number of tourists will increase next year.",
+"topic": "IELTS Writing Task 1"
+},
+{
+"word": "rise",
+"pos": "verb",
+"vi": "tăng lên",
+"example": "House prices began to rise in 2020.",
+"topic": "IELTS Writing Task 1"
+},
+{
+"word": "grow",
+"pos": "verb",
+"vi": "tăng trưởng",
+"example": "The population continued to grow slowly.",
+"topic": "IELTS Writing Task 1"
+},
+{
+"word": "climb",
+"pos": "verb",
+"vi": "leo lên, tăng dần",
+"example": "Sales climb every summer.",
+"topic": "IELTS Writing Task 1"
+},
+{
+"word": "decrease",
+"pos": "verb",
+"vi": "giảm",
+"example": "The use of coal will decrease over time.",
+"topic": "IELTS Writing Task 1"
+},
+{
+"word": "decline",
+"pos": "verb",
+"vi": "suy giảm",
+"example": "The number of students began to decline.",
+"topic": "IELTS Writing Task 1"
+},
+{
+"word": "drop",
+"pos": "verb",
+"vi": "giảm mạnh, tụt xuống",
+"example": "Temperatures drop sharply at night.",
+"topic": "IELTS Writing Task 1"
+},
+{
+"word": "fall",
+"pos": "verb",
+"vi": "giảm, rơi xuống",
+"example": "Oil prices fall when supply is high.",
+"topic": "IELTS Writing Task 1"
+},
+{
+"word": "surge",
+"pos": "verb",
+"vi": "tăng vọt",
+"example": "Online sales surge during the holidays.",
+"topic": "IELTS Writing Task 1"
+},
+{
+"word": "plummet",
+"pos": "verb",
+"vi": "giảm mạnh, lao dốc",
+"example": "Prices plummet when demand collapses.",
+"topic": "IELTS Writing Task 1"
+},
+{
+"word": "fluctuate",
+"pos": "verb",
+"vi": "dao động",
+"example": "Prices fluctuate between 20 and 30 dollars.",
+"topic": "IELTS Writing Task 1"
+},
+{
+"word": "remain stable",
+"pos": "verb phrase",
+"vi": "giữ ổn định",
+"example": "The unemployment rate will remain stable this year.",
+"topic": "IELTS Writing Task 1"
+},
+{
+"word": "level off",
+"pos": "verb phrase",
+"vi": "ổn định lại sau biến động",
+"example": "The graph shows sales level off after June.",
+"topic": "IELTS Writing Task 1"
+},
+{
+"word": "plateau",
+"pos": "noun",
+"vi": "giai đoạn đi ngang, chững lại",
+"example": "The figures reached a plateau in 2015.",
+"topic": "IELTS Writing Task 1"
+},
+{
+"word": "peak",
+"pos": "noun",
+"vi": "đỉnh, mức cao nhất",
+"example": "Sales reached a peak in December.",
+"topic": "IELTS Writing Task 1"
+},
+{
+"word": "slight",
+"pos": "adj",
+"vi": "nhẹ, không đáng kể",
+"example": "There was a slight rise in the price.",
+"topic": "IELTS Writing Task 1"
+},
+{
+"word": "gradual",
+"pos": "adj",
+"vi": "từ từ, dần dần",
+"example": "The graph shows a gradual increase.",
+"topic": "IELTS Writing Task 1"
+},
+{
+"word": "steady",
+"pos": "adj",
+"vi": "đều đặn, ổn định",
+"example": "The company enjoyed steady growth.",
+"topic": "IELTS Writing Task 1"
+},
+{
+"word": "sharp",
+"pos": "adj",
+"vi": "mạnh, đột ngột",
+"example": "There was a sharp fall in profits.",
+"topic": "IELTS Writing Task 1"
+},
+{
+"word": "dramatic",
+"pos": "adj",
+"vi": "mạnh mẽ, ấn tượng",
+"example": "The chart shows a dramatic change.",
+"topic": "IELTS Writing Task 1"
+},
+{
+"word": "significant",
+"pos": "adj",
+"vi": "đáng kể",
+"example": "There was a significant increase in sales.",
+"topic": "IELTS Writing Task 1"
+},
+{
+"word": "substantial",
+"pos": "adj",
+"vi": "lớn, đáng kể",
+"example": "The company made a substantial profit.",
+"topic": "IELTS Writing Task 1"
+},
+{
+"word": "minimal",
+"pos": "adj",
+"vi": "tối thiểu, rất nhỏ",
+"example": "The change in price was minimal.",
+"topic": "IELTS Writing Task 1"
+},
+{
+"word": "marginal",
+"pos": "adj",
+"vi": "nhỏ, không đáng kể",
+"example": "There was only a marginal difference between the two.",
+"topic": "IELTS Writing Task 1"
+},
+{
+"word": "rapidly",
+"pos": "adv",
+"vi": "nhanh chóng",
+"example": "The city is growing rapidly.",
+"topic": "IELTS Writing Task 1"
+},
+{
+"word": "quickly",
+"pos": "adv",
+"vi": "nhanh",
+"example": "Sales fell quickly after the new law.",
+"topic": "IELTS Writing Task 1"
+},
+{
+"word": "swiftly",
+"pos": "adv",
+"vi": "mau lẹ",
+"example": "The government acted swiftly to help farmers.",
+"topic": "IELTS Writing Task 1"
+},
+{
+"word": "slowly",
+"pos": "adv",
+"vi": "chậm",
+"example": "The population is slowly declining.",
+"topic": "IELTS Writing Task 1"
+},
+{
+"word": "gradually",
+"pos": "adv",
+"vi": "dần dần",
+"example": "Prices gradually returned to normal.",
+"topic": "IELTS Writing Task 1"
+},
+{
+"word": "steadily",
+"pos": "adv",
+"vi": "đều đặn",
+"example": "Exports rose steadily over ten years.",
+"topic": "IELTS Writing Task 1"
+},
+{
+"word": "suddenly",
+"pos": "adv",
+"vi": "đột ngột",
+"example": "Sales suddenly dropped in March.",
+"topic": "IELTS Writing Task 1"
+},
+{
+"word": "proportion",
+"pos": "noun",
+"vi": "tỷ lệ, phần",
+"example": "The proportion of women in the group is high.",
+"topic": "IELTS Writing Task 1"
+},
+{
+"word": "percentage",
+"pos": "noun",
+"vi": "tỷ lệ phần trăm",
+"example": "A large percentage of students walk to school.",
+"topic": "IELTS Writing Task 1"
+},
+{
+"word": "ratio",
+"pos": "noun",
+"vi": "tỷ số",
+"example": "The ratio of men to women is two to one.",
+"topic": "IELTS Writing Task 1"
+},
+{
+"word": "majority",
+"pos": "noun",
+"vi": "đa số",
+"example": "The majority of people prefer cheaper phones.",
+"topic": "IELTS Writing Task 1"
+},
+{
+"word": "minority",
+"pos": "noun",
+"vi": "thiểu số",
+"example": "Only a small minority use paper tickets.",
+"topic": "IELTS Writing Task 1"
+},
+{
+"word": "figure",
+"pos": "noun",
+"vi": "con số",
+"example": "The figure for 2019 was 40 percent.",
+"topic": "IELTS Writing Task 1"
+},
+{
+"word": "data",
+"pos": "noun",
+"vi": "dữ liệu",
+"example": "The data shows a clear trend.",
+"topic": "IELTS Writing Task 1"
+},
+{
+"word": "statistic",
+"pos": "noun",
+"vi": "số liệu thống kê",
+"example": "This statistic surprised many people.",
+"topic": "IELTS Writing Task 1"
+},
+{
+"word": "trend",
+"pos": "noun",
+"vi": "xu hướng",
+"example": "The graph shows an upward trend.",
+"topic": "IELTS Writing Task 1"
+},
+{
+"word": "overall",
+"pos": "adv",
+"vi": "nhìn chung",
+"example": "Overall, the number of users increased.",
+"topic": "IELTS Writing Task 1"
+},
+{
+"word": "good",
+"pos": "adj",
+"vi": "tốt",
+"example": "This is a good book for beginners.",
+"topic": "Confusable word pairs"
+},
+{
+"word": "goods",
+"pos": "noun",
+"vi": "hàng hóa",
+"example": "The shop sells goods from many countries.",
+"topic": "Confusable word pairs"
+},
+{
+"word": "means",
+"pos": "noun",
+"vi": "phương tiện, cách thức",
+"example": "Bus is the cheapest means of transport.",
+"topic": "Confusable word pairs"
+},
+{
+"word": "custom",
+"pos": "noun",
+"vi": "phong tục",
+"example": "It is a custom to take off shoes at home.",
+"topic": "Confusable word pairs"
+},
+{
+"word": "customs",
+"pos": "noun",
+"vi": "hải quan, phong tục",
+"example": "We showed our passports at customs.",
+"topic": "Confusable word pairs"
+},
+{
+"word": "play",
+"pos": "noun",
+"vi": "vở kịch (danh từ)",
+"example": "We watched a play at the theatre.",
+"topic": "Confusable word pairs"
+},
+{
+"word": "plays",
+"pos": "noun",
+"vi": "các vở kịch",
+"example": "He wrote three plays last year.",
+"topic": "Confusable word pairs"
+},
+{
+"word": "minute",
+"pos": "noun",
+"vi": "phút",
+"example": "Please wait one minute.",
+"topic": "Confusable word pairs"
+},
+{
+"word": "minutes",
+"pos": "noun",
+"vi": "biên bản cuộc họp, các phút",
+"example": "She took the minutes at the meeting.",
+"topic": "Confusable word pairs"
+},
+{
+"word": "works",
+"pos": "noun",
+"vi": "tác phẩm, công trình",
+"example": "The museum shows works by famous artists.",
+"topic": "Confusable word pairs"
+},
+{
+"word": "damage",
+"pos": "noun",
+"vi": "thiệt hại",
+"example": "The storm caused serious damage.",
+"topic": "Confusable word pairs"
+},
+{
+"word": "damages",
+"pos": "noun",
+"vi": "tiền bồi thường",
+"example": "The court ordered him to pay damages.",
+"topic": "Confusable word pairs"
+},
+{
+"word": "paper",
+"pos": "noun",
+"vi": "giấy",
+"example": "I need a sheet of paper.",
+"topic": "Confusable word pairs"
+},
+{
+"word": "papers",
+"pos": "noun",
+"vi": "tài liệu, báo, giấy tờ",
+"example": "Please bring your papers to the office.",
+"topic": "Confusable word pairs"
+},
+{
+"word": "light",
+"pos": "noun",
+"vi": "ánh sáng",
+"example": "The room has plenty of natural light.",
+"topic": "Confusable word pairs"
+},
+{
+"word": "lights",
+"pos": "noun",
+"vi": "đèn",
+"example": "Turn off the lights when you leave.",
+"topic": "Confusable word pairs"
+},
+{
+"word": "irons",
+"pos": "noun",
+"vi": "cùm, gậy sắt",
+"example": "The prisoner was kept in irons.",
+"topic": "Confusable word pairs"
+},
+{
+"word": "bring",
+"pos": "verb",
+"vi": "mang (bring - brought - brought)",
+"example": "Please bring your passport tomorrow.",
+"topic": "Irregular verbs"
+},
+{
+"word": "come",
+"pos": "verb",
+"vi": "đến (come - came - come)",
+"example": "Please come to my house tonight.",
+"topic": "Irregular verbs"
+},
+{
+"word": "do",
+"pos": "verb",
+"vi": "làm (do - did - done)",
+"example": "I do my homework every evening.",
+"topic": "Irregular verbs"
+},
+{
+"word": "dig",
+"pos": "verb",
+"vi": "đào (dig - dug - dug)",
+"example": "They dig a hole in the garden.",
+"topic": "Irregular verbs"
+},
+{
+"word": "draw",
+"pos": "verb",
+"vi": "vẽ (draw - drew - drawn)",
+"example": "She likes to draw animals.",
+"topic": "Irregular verbs"
+},
+{
+"word": "have",
+"pos": "verb",
+"vi": "có (have - had - had)",
+"example": "I have two brothers.",
+"topic": "Irregular verbs"
+},
+{
+"word": "hear",
+"pos": "verb",
+"vi": "nghe thấy (hear - heard - heard)",
+"example": "I can hear music from next door.",
+"topic": "Irregular verbs"
+},
+{
+"word": "swim",
+"pos": "verb",
+"vi": "bơi (swim - swam - swum)",
+"example": "I swim every Sunday morning.",
+"topic": "Irregular verbs"
+},
+{
+"word": "teach",
+"pos": "verb",
+"vi": "dạy (teach - taught - taught)",
+"example": "She will teach English next year.",
+"topic": "Irregular verbs"
+},
+{
+"word": "wear",
+"pos": "verb",
+"vi": "mặc (wear - wore - worn)",
+"example": "You must wear a helmet.",
+"topic": "Irregular verbs"
+},
+{
+"word": "throw",
+"pos": "verb",
+"vi": "ném (throw - threw - thrown)",
+"example": "Do not throw rubbish on the street.",
+"topic": "Irregular verbs"
+},
+{
+"word": "keep",
+"pos": "verb",
+"vi": "giữ (keep - kept - kept)",
+"example": "Please keep this receipt.",
+"topic": "Irregular verbs"
+},
+{
+"word": "put",
+"pos": "verb",
+"vi": "đặt (put - put - put)",
+"example": "Please put your bag on the table.",
+"topic": "Irregular verbs"
+},
+{
+"word": "send",
+"pos": "verb",
+"vi": "gửi (send - sent - sent)",
+"example": "I will send you an email tonight.",
+"topic": "Irregular verbs"
+},
+{
+"word": "stand",
+"pos": "verb",
+"vi": "đứng (stand - stood - stood)",
+"example": "Please stand in line.",
+"topic": "Irregular verbs"
+},
+{
+"word": "stick",
+"pos": "verb",
+"vi": "dán, dính (stick - stuck - stuck)",
+"example": "Stick the label on the box.",
+"topic": "Irregular verbs"
+},
+{
+"word": "be",
+"pos": "verb",
+"vi": "thì, là, ở (be - was/were - been)",
+"example": "I want to be a nurse.",
+"topic": "Irregular verbs"
+},
+{
+"word": "begin",
+"pos": "verb",
+"vi": "bắt đầu (begin - began - begun)",
+"example": "The class will begin at nine.",
+"topic": "Irregular verbs"
+},
+{
+"word": "build",
+"pos": "verb",
+"vi": "xây (build - built - built)",
+"example": "They plan to build a new school.",
+"topic": "Irregular verbs"
+},
+{
+"word": "catch",
+"pos": "verb",
+"vi": "bắt (catch - caught - caught)",
+"example": "I run to catch the bus.",
+"topic": "Irregular verbs"
+},
+{
+"word": "choose",
+"pos": "verb",
+"vi": "chọn (choose - chose - chosen)",
+"example": "You can choose any color you like.",
+"topic": "Irregular verbs"
+},
+{
+"word": "drink",
+"pos": "verb",
+"vi": "uống (drink - drank - drunk)",
+"example": "I drink water every morning.",
+"topic": "Irregular verbs"
+},
+{
+"word": "drive",
+"pos": "verb",
+"vi": "lái xe (drive - drove - driven)",
+"example": "My father can drive a truck.",
+"topic": "Irregular verbs"
+},
+{
+"word": "eat",
+"pos": "verb",
+"vi": "ăn (eat - ate - eaten)",
+"example": "We eat dinner at seven.",
+"topic": "Irregular verbs"
+},
+{
+"word": "feel",
+"pos": "verb",
+"vi": "cảm thấy (feel - felt - felt)",
+"example": "I feel tired after work.",
+"topic": "Irregular verbs"
+},
+{
+"word": "find",
+"pos": "verb",
+"vi": "tìm thấy (find - found - found)",
+"example": "I cannot find my keys.",
+"topic": "Irregular verbs"
+},
+{
+"word": "fly",
+"pos": "verb",
+"vi": "bay (fly - flew - flown)",
+"example": "Birds fly south in winter.",
+"topic": "Irregular verbs"
+},
+{
+"word": "forget",
+"pos": "verb",
+"vi": "quên (forget - forgot - forgotten)",
+"example": "Do not forget your homework.",
+"topic": "Irregular verbs"
+},
+{
+"word": "get",
+"pos": "verb",
+"vi": "nhận, trở nên (get - got - got)",
+"example": "I get up at six every day.",
+"topic": "Irregular verbs"
+},
+{
+"word": "give",
+"pos": "verb",
+"vi": "cho, đưa (give - gave - given)",
+"example": "Please give me your phone number.",
+"topic": "Irregular verbs"
+},
+{
+"word": "go",
+"pos": "verb",
+"vi": "đi (go - went - gone)",
+"example": "I go to school by bike.",
+"topic": "Irregular verbs"
+},
+{
+"word": "know",
+"pos": "verb",
+"vi": "biết (know - knew - known)",
+"example": "I know her very well.",
+"topic": "Irregular verbs"
+},
+{
+"word": "lose",
+"pos": "verb",
+"vi": "mất, thua (lose - lost - lost)",
+"example": "Do not lose your ticket.",
+"topic": "Irregular verbs"
+},
+{
+"word": "make",
+"pos": "verb",
+"vi": "làm ra, tạo (make - made - made)",
+"example": "I make coffee every morning.",
+"topic": "Irregular verbs"
+},
+{
+"word": "ride",
+"pos": "verb",
+"vi": "cưỡi, đi xe đạp (ride - rode - ridden)",
+"example": "I ride a bike to work.",
+"topic": "Irregular verbs"
+},
+{
+"word": "run",
+"pos": "verb",
+"vi": "chạy (run - ran - run)",
+"example": "I run in the park every morning.",
+"topic": "Irregular verbs"
+},
+{
+"word": "say",
+"pos": "verb",
+"vi": "nói (say - said - said)",
+"example": "What did you say?",
+"topic": "Irregular verbs"
+},
+{
+"word": "see",
+"pos": "verb",
+"vi": "nhìn thấy (see - saw - seen)",
+"example": "I see my teacher every Monday.",
+"topic": "Irregular verbs"
+},
+{
+"word": "sing",
+"pos": "verb",
+"vi": "hát (sing - sang - sung)",
+"example": "She likes to sing in the shower.",
+"topic": "Irregular verbs"
+},
+{
+"word": "sit",
+"pos": "verb",
+"vi": "ngồi (sit - sat - sat)",
+"example": "Please sit down.",
+"topic": "Irregular verbs"
+},
+{
+"word": "speak",
+"pos": "verb",
+"vi": "nói (speak - spoke - spoken)",
+"example": "Can you speak English?",
+"topic": "Irregular verbs"
+},
+{
+"word": "take",
+"pos": "verb",
+"vi": "lấy, mất (take - took - taken)",
+"example": "Take an umbrella with you.",
+"topic": "Irregular verbs"
+},
+{
+"word": "tell",
+"pos": "verb",
+"vi": "kể, bảo (tell - told - told)",
+"example": "Please tell me the truth.",
+"topic": "Irregular verbs"
+},
+{
+"word": "think",
+"pos": "verb",
+"vi": "nghĩ (think - thought - thought)",
+"example": "I think it is a good idea.",
+"topic": "Irregular verbs"
+},
+{
+"word": "win",
+"pos": "verb",
+"vi": "thắng (win - won - won)",
+"example": "Our team hopes to win the match.",
+"topic": "Irregular verbs"
+},
+{
+"word": "write",
+"pos": "verb",
+"vi": "viết (write - wrote - written)",
+"example": "Please write your name here.",
+"topic": "Irregular verbs"
+},
+{
+"word": "wake",
+"pos": "verb",
+"vi": "thức dậy (wake - woke - woken)",
+"example": "I wake up at six every day.",
+"topic": "Irregular verbs"
+},
+{
+"word": "steal",
+"pos": "verb",
+"vi": "ăn cắp (steal - stole - stolen)",
+"example": "Someone tried to steal my bike.",
+"topic": "Irregular verbs"
+},
+{
+"word": "hold",
+"pos": "verb",
+"vi": "cầm, tổ chức (hold - held - held)",
+"example": "Please hold my bag for a moment.",
+"topic": "Irregular verbs"
+},
+{
+"word": "hide",
+"pos": "verb",
+"vi": "trốn, giấu (hide - hid - hidden)",
+"example": "The children hide behind the door.",
+"topic": "Irregular verbs"
+},
+{
+"word": "lead",
+"pos": "verb",
+"vi": "dẫn dắt (lead - led - led)",
+"example": "She will lead the team.",
+"topic": "Irregular verbs"
+},
+{
+"word": "let",
+"pos": "verb",
+"vi": "cho phép (let - let - let)",
+"example": "Please let me help you.",
+"topic": "Irregular verbs"
+},
+{
+"word": "I got it",
+"pos": "phrase",
+"vi": "tôi hiểu rồi",
+"example": "You do not need to explain again, I got it.",
+"topic": "Daily phrases"
+},
+{
+"word": "No worries",
+"pos": "phrase",
+"vi": "đừng lo",
+"example": "Sorry I am late. No worries, we just started.",
+"topic": "Daily phrases"
+},
+{
+"word": "Absolutely",
+"pos": "phrase",
+"vi": "chính xác luôn",
+"example": "Do you agree with me? Absolutely.",
+"topic": "Daily phrases"
+},
+{
+"word": "I'm on it",
+"pos": "phrase",
+"vi": "tôi đang làm đây",
+"example": "The report is late, but I'm on it.",
+"topic": "Daily phrases"
+},
+{
+"word": "Sounds good",
+"pos": "phrase",
+"vi": "nghe ổn đấy",
+"example": "Let's meet at seven. Sounds good.",
+"topic": "Daily phrases"
+},
+{
+"word": "Not really",
+"pos": "phrase",
+"vi": "không hẳn vậy",
+"example": "Are you hungry? Not really.",
+"topic": "Daily phrases"
+},
+{
+"word": "What's up",
+"pos": "phrase",
+"vi": "có chuyện gì vậy",
+"example": "Hi Tom, what's up?",
+"topic": "Daily phrases"
+},
+{
+"word": "I'm good",
+"pos": "phrase",
+"vi": "tôi ổn mà",
+"example": "Do you want some tea? No thanks, I'm good.",
+"topic": "Daily phrases"
+},
+{
+"word": "I'm starving",
+"pos": "phrase",
+"vi": "tôi đói quá",
+"example": "I did not eat lunch, so I'm starving.",
+"topic": "Daily phrases"
+},
+{
+"word": "Same here",
+"pos": "phrase",
+"vi": "tôi cũng vậy",
+"example": "I am really tired. Same here.",
+"topic": "Daily phrases"
+},
+{
+"word": "Long time no see",
+"pos": "phrase",
+"vi": "lâu rồi không gặp",
+"example": "Hi Anna, long time no see!",
+"topic": "Daily phrases"
+},
+{
+"word": "You bet",
+"pos": "phrase",
+"vi": "chắc chắn rồi",
+"example": "Will you come to the party? You bet.",
+"topic": "Daily phrases"
+},
+{
+"word": "Take care",
+"pos": "phrase",
+"vi": "bảo trọng nhé",
+"example": "Goodbye and take care of yourself.",
+"topic": "Daily phrases"
+},
+{
+"word": "Good job",
+"pos": "phrase",
+"vi": "làm tốt lắm",
+"example": "You passed the test. Good job.",
+"topic": "Daily phrases"
+},
+{
+"word": "What a pity",
+"pos": "phrase",
+"vi": "thật tiếc quá",
+"example": "You cannot come? What a pity.",
+"topic": "Daily phrases"
+},
+{
+"word": "No way",
+"pos": "phrase",
+"vi": "không đời nào",
+"example": "He won the lottery? No way.",
+"topic": "Daily phrases"
+},
+{
+"word": "I doubt it",
+"pos": "phrase",
+"vi": "tôi nghi lắm",
+"example": "Will it rain tomorrow? I doubt it.",
+"topic": "Daily phrases"
+},
+{
+"word": "It's up to you",
+"pos": "phrase",
+"vi": "tùy bạn thôi",
+"example": "Pizza or noodles? It's up to you.",
+"topic": "Daily phrases"
+},
+{
+"word": "Don't worry",
+"pos": "phrase",
+"vi": "đừng lo",
+"example": "Don't worry, everything will be fine.",
+"topic": "Daily phrases"
+},
+{
+"word": "Come on",
+"pos": "phrase",
+"vi": "thôi mà, nhanh lên",
+"example": "Come on, we will be late.",
+"topic": "Daily phrases"
+},
+{
+"word": "You're welcome",
+"pos": "phrase",
+"vi": "không có gì",
+"example": "Thank you for your help. You're welcome.",
+"topic": "Daily phrases"
+},
+{
+"word": "After you",
+"pos": "phrase",
+"vi": "mời bạn trước",
+"example": "He opened the door and said after you.",
+"topic": "Daily phrases"
+},
+{
+"word": "I'm lost",
+"pos": "phrase",
+"vi": "tôi bị lạc rồi",
+"example": "I'm lost, can you show me the way?",
+"topic": "Daily phrases"
+},
+{
+"word": "So what",
+"pos": "phrase",
+"vi": "thì sao, rồi sao",
+"example": "I made a mistake. So what, everyone does.",
+"topic": "Daily phrases"
+},
+{
+"word": "Go for it",
+"pos": "phrase",
+"vi": "cứ làm đi",
+"example": "You want to apply for the job? Go for it.",
+"topic": "Daily phrases"
+},
+{
+"word": "Are you serious",
+"pos": "phrase",
+"vi": "bạn nghiêm túc chứ",
+"example": "You are moving abroad? Are you serious?",
+"topic": "Daily phrases"
+},
+{
+"word": "No problem",
+"pos": "phrase",
+"vi": "không vấn đề gì",
+"example": "Can you help me? No problem.",
+"topic": "Daily phrases"
+},
+{
+"word": "It's not bad",
+"pos": "phrase",
+"vi": "cũng không tệ",
+"example": "How is the food? It's not bad.",
+"topic": "Daily phrases"
+},
+{
+"word": "I'm tired",
+"pos": "phrase",
+"vi": "tôi mệt rồi",
+"example": "It was a long day and I'm tired.",
+"topic": "Daily phrases"
+},
+{
+"word": "Forget it",
+"pos": "phrase",
+"vi": "quên đi",
+"example": "It is not important, forget it.",
+"topic": "Daily phrases"
+},
+{
+"word": "Never mind",
+"pos": "phrase",
+"vi": "không sao đâu",
+"example": "I lost the pen. Never mind, I have another.",
+"topic": "Daily phrases"
+},
+{
+"word": "Just relax",
+"pos": "phrase",
+"vi": "cứ thư giãn đi",
+"example": "Don't be nervous, just relax.",
+"topic": "Daily phrases"
+},
+{
+"word": "I'll try",
+"pos": "phrase",
+"vi": "tôi sẽ cố",
+"example": "Can you finish today? I'll try.",
+"topic": "Daily phrases"
+},
+{
+"word": "Lucky you",
+"pos": "phrase",
+"vi": "bạn may mắn thật",
+"example": "You got a free ticket? Lucky you.",
+"topic": "Daily phrases"
+},
+{
+"word": "I'm broke",
+"pos": "phrase",
+"vi": "tôi cháy túi rồi",
+"example": "I cannot go out because I'm broke.",
+"topic": "Daily phrases"
+},
+{
+"word": "Keep it up",
+"pos": "phrase",
+"vi": "cứ phát huy nhé",
+"example": "Your English is improving. Keep it up.",
+"topic": "Daily phrases"
+},
+{
+"word": "I'm busy",
+"pos": "phrase",
+"vi": "tôi đang bận",
+"example": "Call me later, I'm busy now.",
+"topic": "Daily phrases"
+},
+{
+"word": "I don't care",
+"pos": "phrase",
+"vi": "tôi không quan tâm",
+"example": "Red or blue? I don't care.",
+"topic": "Daily phrases"
+},
+{
+"word": "Help yourself",
+"pos": "phrase",
+"vi": "cứ tự nhiên nhé",
+"example": "There is cake on the table, help yourself.",
+"topic": "Daily phrases"
+},
+{
+"word": "Hold on a minute",
+"pos": "phrase",
+"vi": "chờ một chút",
+"example": "Hold on a minute, I will get a pen.",
+"topic": "Daily phrases"
+},
+{
+"word": "I'm in",
+"pos": "phrase",
+"vi": "tôi tham gia",
+"example": "Are you coming to the trip? I'm in.",
+"topic": "Daily phrases"
+},
+{
+"word": "I'm out",
+"pos": "phrase",
+"vi": "tôi không tham gia",
+"example": "It is too expensive, so I'm out.",
+"topic": "Daily phrases"
+},
+{
+"word": "Don't be shy",
+"pos": "phrase",
+"vi": "đừng ngại",
+"example": "Don't be shy, ask any question.",
+"topic": "Daily phrases"
+},
+{
+"word": "I'm not kidding",
+"pos": "phrase",
+"vi": "tôi không đùa đâu",
+"example": "I really passed. I'm not kidding.",
+"topic": "Daily phrases"
+},
+{
+"word": "Not yet",
+"pos": "phrase",
+"vi": "vẫn chưa",
+"example": "Have you eaten? Not yet.",
+"topic": "Daily phrases"
+},
+{
+"word": "Don't blame me",
+"pos": "phrase",
+"vi": "đừng đổ lỗi cho tôi",
+"example": "It was not my fault, don't blame me.",
+"topic": "Daily phrases"
+},
+{
+"word": "Wait a minute",
+"pos": "phrase",
+"vi": "chờ một phút",
+"example": "Wait a minute, I forgot my keys.",
+"topic": "Daily phrases"
+},
+{
+"word": "That's weird",
+"pos": "phrase",
+"vi": "kỳ cục thật",
+"example": "My phone turned off by itself. That's weird.",
+"topic": "Daily phrases"
+},
+{
+"word": "It's okay",
+"pos": "phrase",
+"vi": "không sao đâu",
+"example": "Sorry for the noise. It's okay.",
+"topic": "Daily phrases"
+},
+{
+"word": "Don't mention it",
+"pos": "phrase",
+"vi": "đừng bận tâm, không có gì",
+"example": "Thanks a lot. Don't mention it.",
+"topic": "Daily phrases"
+},
+{
+"word": "I'm on my way",
+"pos": "phrase",
+"vi": "tôi đang trên đường tới",
+"example": "Wait for me, I'm on my way.",
+"topic": "Daily phrases"
+},
+{
+"word": "Be careful",
+"pos": "phrase",
+"vi": "cẩn thận nhé",
+"example": "The floor is wet, be careful.",
+"topic": "Daily phrases"
+},
+{
+"word": "Let me help you",
+"pos": "phrase",
+"vi": "để tôi giúp bạn",
+"example": "That box is heavy. Let me help you.",
+"topic": "Daily phrases"
+},
+{
+"word": "That's enough",
+"pos": "phrase",
+"vi": "thế là đủ rồi",
+"example": "Stop shouting, that's enough.",
+"topic": "Daily phrases"
+},
+{
+"word": "I got stuck",
+"pos": "phrase",
+"vi": "tôi bị kẹt rồi",
+"example": "I got stuck in traffic for an hour.",
+"topic": "Daily phrases"
+},
+{
+"word": "I'm full",
+"pos": "phrase",
+"vi": "tôi no rồi",
+"example": "No more rice, thanks, I'm full.",
+"topic": "Daily phrases"
+},
+{
+"word": "That's awesome",
+"pos": "phrase",
+"vi": "tuyệt vời",
+"example": "You got the job? That's awesome.",
+"topic": "Daily phrases"
+},
+{
+"word": "What a surprise",
+"pos": "phrase",
+"vi": "bất ngờ thật",
+"example": "You are here? What a surprise.",
+"topic": "Daily phrases"
+},
+{
+"word": "I'm sorry to hear that",
+"pos": "phrase",
+"vi": "tôi rất tiếc khi nghe vậy",
+"example": "Your dog is sick? I'm sorry to hear that.",
+"topic": "Daily phrases"
+},
+{
+"word": "I'm not ready",
+"pos": "phrase",
+"vi": "tôi chưa sẵn sàng",
+"example": "Wait a little, I'm not ready.",
+"topic": "Daily phrases"
+},
+{
+"word": "That's interesting",
+"pos": "phrase",
+"vi": "thú vị đấy",
+"example": "He lived in five countries. That's interesting.",
+"topic": "Daily phrases"
+},
+{
+"word": "Believe me",
+"pos": "phrase",
+"vi": "tin tôi đi",
+"example": "It is a great film, believe me.",
+"topic": "Daily phrases"
+},
+{
+"word": "I knew it",
+"pos": "phrase",
+"vi": "tôi biết mà",
+"example": "You lost your keys again? I knew it.",
+"topic": "Daily phrases"
+},
+{
+"word": "I can't believe it",
+"pos": "phrase",
+"vi": "tôi không thể tin được",
+"example": "We won the prize? I can't believe it.",
+"topic": "Daily phrases"
+},
+{
+"word": "You'll see",
+"pos": "phrase",
+"vi": "rồi bạn sẽ thấy",
+"example": "Trust me, you'll see.",
+"topic": "Daily phrases"
+},
+{
+"word": "I'm impressed",
+"pos": "phrase",
+"vi": "tôi ấn tượng đấy",
+"example": "Your English is so good. I'm impressed.",
+"topic": "Daily phrases"
+},
+{
+"word": "Not my problem",
+"pos": "phrase",
+"vi": "không phải việc của tôi",
+"example": "He lost his ticket, but it is not my problem.",
+"topic": "Daily phrases"
+},
+{
+"word": "Don't push me",
+"pos": "phrase",
+"vi": "đừng ép tôi",
+"example": "I need more time, don't push me.",
+"topic": "Daily phrases"
+},
+{
+"word": "It's complicated",
+"pos": "phrase",
+"vi": "phức tạp lắm",
+"example": "Are you two dating? It's complicated.",
+"topic": "Daily phrases"
+},
+{
+"word": "You choose",
+"pos": "phrase",
+"vi": "bạn chọn đi",
+"example": "Where shall we eat? You choose.",
+"topic": "Daily phrases"
+},
+{
+"word": "I need a break",
+"pos": "phrase",
+"vi": "tôi cần nghỉ một chút",
+"example": "I have studied for hours, I need a break.",
+"topic": "Daily phrases"
+},
+{
+"word": "Good luck",
+"pos": "phrase",
+"vi": "chúc may mắn",
+"example": "You have an exam tomorrow? Good luck.",
+"topic": "Daily phrases"
+},
+{
+"word": "Poor you",
+"pos": "phrase",
+"vi": "tội bạn",
+"example": "You have to work on Sunday? Poor you.",
+"topic": "Daily phrases"
+},
+{
+"word": "No doubt",
+"pos": "phrase",
+"vi": "không nghi ngờ gì nữa",
+"example": "He is the best player, no doubt.",
+"topic": "Daily phrases"
+},
+{
+"word": "You nailed it",
+"pos": "phrase",
+"vi": "bạn làm quá chuẩn luôn",
+"example": "Your speech was perfect. You nailed it.",
+"topic": "Daily phrases"
+},
+{
+"word": "You're the best",
+"pos": "phrase",
+"vi": "bạn là nhất",
+"example": "Thank you for your help. You're the best.",
+"topic": "Daily phrases"
+},
+{
+"word": "Let me be honest",
+"pos": "phrase",
+"vi": "để tôi nói thật nhé",
+"example": "Let me be honest, I did not like the film.",
+"topic": "Daily phrases"
+},
+{
+"word": "No chance",
+"pos": "phrase",
+"vi": "không đời nào, không có cơ hội",
+"example": "Can I borrow your car? No chance.",
+"topic": "Daily phrases"
+},
+{
+"word": "That's a deal",
+"pos": "phrase",
+"vi": "nhất trí vậy nhé",
+"example": "You pay today and I pay tomorrow. That's a deal.",
+"topic": "Daily phrases"
+},
+{
+"word": "adolescence",
+"pos": "noun",
+"vi": "tuổi thanh thiếu niên",
+"example": "Adolescence is a time of big changes.",
+"topic": "Growing up"
+},
+{
+"word": "adulthood",
+"pos": "noun",
+"vi": "tuổi trưởng thành",
+"example": "He reached adulthood at eighteen.",
+"topic": "Growing up"
+},
+{
+"word": "conflict",
+"pos": "noun",
+"vi": "xung đột, mâu thuẫn",
+"example": "There is often conflict between teenagers and parents.",
+"topic": "Growing up"
+},
+{
+"word": "connection",
+"pos": "noun",
+"vi": "mối liên hệ",
+"example": "There is a strong connection between mother and child.",
+"topic": "Growing up"
+},
+{
+"word": "instinct",
+"pos": "noun",
+"vi": "bản năng",
+"example": "A mother has a natural instinct to protect her baby.",
+"topic": "Growing up"
+},
+{
+"word": "parent",
+"pos": "noun",
+"vi": "cha hoặc mẹ",
+"example": "Every parent wants the best for their child.",
+"topic": "Growing up"
+},
+{
+"word": "sibling",
+"pos": "noun",
+"vi": "anh chị em ruột",
+"example": "My sibling and I share a room.",
+"topic": "Growing up"
+},
+{
+"word": "teenager",
+"pos": "noun",
+"vi": "thiếu niên",
+"example": "A teenager needs more sleep than an adult.",
+"topic": "Growing up"
+},
+{
+"word": "upbringing",
+"pos": "noun",
+"vi": "sự nuôi dạy",
+"example": "She had a happy upbringing in a small town.",
+"topic": "Growing up"
+},
+{
+"word": "extended family",
+"pos": "noun phrase",
+"vi": "đại gia đình",
+"example": "My extended family meets every New Year.",
+"topic": "Growing up"
+},
+{
+"word": "close-knit",
+"pos": "adj",
+"vi": "gắn bó khăng khít",
+"example": "We live in a close-knit community.",
+"topic": "Growing up"
+},
+{
+"word": "rewarding",
+"pos": "adj",
+"vi": "đáng làm, bổ ích",
+"example": "Teaching children is a rewarding job.",
+"topic": "Growing up"
+},
+{
+"word": "nurture",
+"pos": "verb",
+"vi": "nuôi dưỡng",
+"example": "Parents nurture their children with love.",
+"topic": "Growing up"
+},
+{
+"word": "endure",
+"pos": "verb",
+"vi": "chịu đựng, kéo dài",
+"example": "A true friendship will endure for many years.",
+"topic": "Growing up"
+},
+{
+"word": "ability",
+"pos": "noun",
+"vi": "khả năng",
+"example": "She has the ability to learn languages quickly.",
+"topic": "Development"
+},
+{
+"word": "behaviour",
+"pos": "noun",
+"vi": "hành vi, cách cư xử",
+"example": "The teacher praised the children for good behaviour.",
+"topic": "Development"
+},
+{
+"word": "consequence",
+"pos": "noun",
+"vi": "hậu quả",
+"example": "Every action has a consequence.",
+"topic": "Development"
+},
+{
+"word": "growth",
+"pos": "noun",
+"vi": "sự tăng trưởng",
+"example": "Good food is important for a child's growth.",
+"topic": "Development"
+},
+{
+"word": "imagination",
+"pos": "noun",
+"vi": "trí tưởng tượng",
+"example": "Children have a rich imagination.",
+"topic": "Development"
+},
+{
+"word": "infant",
+"pos": "noun",
+"vi": "trẻ sơ sinh",
+"example": "An infant needs milk every few hours.",
+"topic": "Development"
+},
+{
+"word": "knowledge",
+"pos": "noun",
+"vi": "kiến thức",
+"example": "Reading increases your knowledge.",
+"topic": "Development"
+},
+{
+"word": "maturity",
+"pos": "noun",
+"vi": "sự trưởng thành",
+"example": "He showed great maturity for his age.",
+"topic": "Development"
+},
+{
+"word": "skill",
+"pos": "noun",
+"vi": "kỹ năng",
+"example": "Communication is an important skill.",
+"topic": "Development"
+},
+{
+"word": "stage",
+"pos": "noun",
+"vi": "giai đoạn",
+"example": "Childhood is the first stage of life.",
+"topic": "Development"
+},
+{
+"word": "toddler",
+"pos": "noun",
+"vi": "trẻ mới biết đi",
+"example": "A toddler learns to walk at about one year old.",
+"topic": "Development"
+},
+{
+"word": "independent",
+"pos": "adj",
+"vi": "độc lập",
+"example": "I want to be independent from my parents.",
+"topic": "Development"
+},
+{
+"word": "mature",
+"pos": "adj",
+"vi": "chín chắn",
+"example": "She is very mature for a fifteen-year-old.",
+"topic": "Development"
+},
+{
+"word": "acquire",
+"pos": "verb",
+"vi": "thu được, tiếp thu",
+"example": "Children acquire language very fast.",
+"topic": "Development"
+},
+{
+"word": "imitate",
+"pos": "verb",
+"vi": "bắt chước",
+"example": "Small children imitate their parents.",
+"topic": "Development"
+},
+{
+"word": "abstract",
+"pos": "adj",
+"vi": "trừu tượng",
+"example": "Freedom is an abstract idea.",
+"topic": "Development"
+},
+{
+"word": "anxiety",
+"pos": "noun",
+"vi": "sự lo âu",
+"example": "Exams can cause a lot of anxiety.",
+"topic": "Keeping fit"
+},
+{
+"word": "depression",
+"pos": "noun",
+"vi": "chứng trầm cảm",
+"example": "Long hours of work can lead to depression.",
+"topic": "Keeping fit"
+},
+{
+"word": "diagnosis",
+"pos": "noun",
+"vi": "sự chẩn đoán",
+"example": "The doctor gave a clear diagnosis.",
+"topic": "Keeping fit"
+},
+{
+"word": "fast food",
+"pos": "noun",
+"vi": "đồ ăn nhanh",
+"example": "Too much fast food is bad for your health.",
+"topic": "Keeping fit"
+},
+{
+"word": "harm",
+"pos": "noun",
+"vi": "tác hại",
+"example": "Smoking does great harm to your lungs.",
+"topic": "Keeping fit"
+},
+{
+"word": "health",
+"pos": "noun",
+"vi": "sức khỏe",
+"example": "Your health is more important than money.",
+"topic": "Keeping fit"
+},
+{
+"word": "heart attack",
+"pos": "noun",
+"vi": "cơn đau tim",
+"example": "A heart attack is a medical emergency.",
+"topic": "Keeping fit"
+},
+{
+"word": "ingredient",
+"pos": "noun",
+"vi": "nguyên liệu",
+"example": "Fresh ingredients make the soup taste better.",
+"topic": "Keeping fit"
+},
+{
+"word": "insomnia",
+"pos": "noun",
+"vi": "chứng mất ngủ",
+"example": "Stress can cause insomnia.",
+"topic": "Keeping fit"
+},
+{
+"word": "intake",
+"pos": "noun",
+"vi": "lượng ăn vào",
+"example": "You should reduce your sugar intake.",
+"topic": "Keeping fit"
+},
+{
+"word": "junk food",
+"pos": "noun",
+"vi": "đồ ăn vặt không lành mạnh",
+"example": "Avoid junk food before bed.",
+"topic": "Keeping fit"
+},
+{
+"word": "muscle",
+"pos": "noun",
+"vi": "cơ bắp",
+"example": "Exercise helps build muscle.",
+"topic": "Keeping fit"
+},
+{
+"word": "nutrient",
+"pos": "noun",
+"vi": "chất dinh dưỡng",
+"example": "Vegetables are full of nutrients.",
+"topic": "Keeping fit"
+},
+{
+"word": "portion",
+"pos": "noun",
+"vi": "phần ăn",
+"example": "The portion at this restaurant is too big.",
+"topic": "Keeping fit"
+},
+{
+"word": "risk",
+"pos": "noun",
+"vi": "rủi ro, nguy cơ",
+"example": "Smoking increases the risk of cancer.",
+"topic": "Keeping fit"
+},
+{
+"word": "stroke",
+"pos": "noun",
+"vi": "đột quỵ",
+"example": "High blood pressure can cause a stroke.",
+"topic": "Keeping fit"
+},
+{
+"word": "treatment",
+"pos": "noun",
+"vi": "sự điều trị",
+"example": "The patient is receiving treatment at the hospital.",
+"topic": "Keeping fit"
+},
+{
+"word": "therapy",
+"pos": "noun",
+"vi": "liệu pháp",
+"example": "She goes to therapy once a week.",
+"topic": "Keeping fit"
+},
+{
+"word": "weight",
+"pos": "noun",
+"vi": "cân nặng",
+"example": "He has lost weight since he started running.",
+"topic": "Keeping fit"
+},
+{
+"word": "chronic",
+"pos": "adj",
+"vi": "mãn tính",
+"example": "He suffers from chronic back pain.",
+"topic": "Keeping fit"
+},
+{
+"word": "harmful",
+"pos": "adj",
+"vi": "có hại",
+"example": "Sugar can be harmful to your teeth.",
+"topic": "Keeping fit"
+},
+{
+"word": "infectious",
+"pos": "adj",
+"vi": "lây nhiễm",
+"example": "The flu is an infectious disease.",
+"topic": "Keeping fit"
+},
+{
+"word": "obese",
+"pos": "adj",
+"vi": "béo phì",
+"example": "Obese people have a higher risk of heart disease.",
+"topic": "Keeping fit"
+},
+{
+"word": "overweight",
+"pos": "adj",
+"vi": "thừa cân",
+"example": "Many people are overweight because they sit all day.",
+"topic": "Keeping fit"
+},
+{
+"word": "regular",
+"pos": "adj",
+"vi": "đều đặn",
+"example": "Regular exercise keeps you healthy.",
+"topic": "Keeping fit"
+},
+{
+"word": "moderate",
+"pos": "adj",
+"vi": "vừa phải",
+"example": "Moderate exercise is good for the heart.",
+"topic": "Keeping fit"
+},
+{
+"word": "avoid",
+"pos": "verb",
+"vi": "tránh",
+"example": "You should avoid sugary drinks.",
+"topic": "Keeping fit"
+},
+{
+"word": "maintain",
+"pos": "verb",
+"vi": "duy trì",
+"example": "It is hard to maintain a healthy weight.",
+"topic": "Keeping fit"
+},
+{
+"word": "recommend",
+"pos": "verb",
+"vi": "đề xuất, khuyên",
+"example": "Doctors recommend eight hours of sleep.",
+"topic": "Keeping fit"
+},
+{
+"word": "skip",
+"pos": "verb",
+"vi": "bỏ qua",
+"example": "Do not skip breakfast.",
+"topic": "Keeping fit"
+},
+{
+"word": "trigger",
+"pos": "verb",
+"vi": "gây ra, kích hoạt",
+"example": "Stress can trigger headaches.",
+"topic": "Keeping fit"
+},
+{
+"word": "activity",
+"pos": "noun",
+"vi": "hoạt động",
+"example": "Swimming is my favourite activity.",
+"topic": "Lifestyles"
+},
+{
+"word": "attitude",
+"pos": "noun",
+"vi": "thái độ",
+"example": "A positive attitude helps you succeed.",
+"topic": "Lifestyles"
+},
+{
+"word": "competition",
+"pos": "noun",
+"vi": "cuộc thi, sự cạnh tranh",
+"example": "There is strong competition for this job.",
+"topic": "Lifestyles"
+},
+{
+"word": "creativity",
+"pos": "noun",
+"vi": "sự sáng tạo",
+"example": "Art classes encourage creativity.",
+"topic": "Lifestyles"
+},
+{
+"word": "goal",
+"pos": "noun",
+"vi": "mục tiêu",
+"example": "My goal is to speak English fluently.",
+"topic": "Lifestyles"
+},
+{
+"word": "hobby",
+"pos": "noun",
+"vi": "sở thích",
+"example": "My hobby is taking photos.",
+"topic": "Lifestyles"
+},
+{
+"word": "leisure",
+"pos": "noun",
+"vi": "thời gian rảnh",
+"example": "I read books in my leisure time.",
+"topic": "Lifestyles"
+},
+{
+"word": "lifestyle",
+"pos": "noun",
+"vi": "lối sống",
+"example": "A healthy lifestyle includes exercise and good food.",
+"topic": "Lifestyles"
+},
+{
+"word": "opportunity",
+"pos": "noun",
+"vi": "cơ hội",
+"example": "Studying abroad is a great opportunity.",
+"topic": "Lifestyles"
+},
+{
+"word": "personality",
+"pos": "noun",
+"vi": "tính cách",
+"example": "She has a friendly personality.",
+"topic": "Lifestyles"
+},
+{
+"word": "priority",
+"pos": "noun",
+"vi": "sự ưu tiên",
+"example": "Safety is our first priority.",
+"topic": "Lifestyles"
+},
+{
+"word": "pressure",
+"pos": "noun",
+"vi": "áp lực",
+"example": "Students feel a lot of pressure before exams.",
+"topic": "Lifestyles"
+},
+{
+"word": "optimist",
+"pos": "noun",
+"vi": "người lạc quan",
+"example": "An optimist always looks on the bright side.",
+"topic": "Lifestyles"
+},
+{
+"word": "pessimist",
+"pos": "noun",
+"vi": "người bi quan",
+"example": "A pessimist expects the worst.",
+"topic": "Lifestyles"
+},
+{
+"word": "bored",
+"pos": "adj",
+"vi": "chán",
+"example": "I was bored during the long lesson.",
+"topic": "Lifestyles"
+},
+{
+"word": "positive",
+"pos": "adj",
+"vi": "tích cực",
+"example": "Try to stay positive.",
+"topic": "Lifestyles"
+},
+{
+"word": "negative",
+"pos": "adj",
+"vi": "tiêu cực",
+"example": "Negative thoughts make you tired.",
+"topic": "Lifestyles"
+},
+{
+"word": "achieve",
+"pos": "verb",
+"vi": "đạt được",
+"example": "You can achieve anything if you work hard.",
+"topic": "Lifestyles"
+},
+{
+"word": "motivate",
+"pos": "verb",
+"vi": "tạo động lực",
+"example": "A good teacher knows how to motivate students.",
+"topic": "Lifestyles"
+},
+{
+"word": "participate",
+"pos": "verb",
+"vi": "tham gia",
+"example": "All students must participate in the class.",
+"topic": "Lifestyles"
+},
+{
+"word": "regret",
+"pos": "verb",
+"vi": "hối tiếc",
+"example": "I regret not studying harder.",
+"topic": "Lifestyles"
+},
+{
+"word": "satisfy",
+"pos": "verb",
+"vi": "làm hài lòng",
+"example": "The service did not satisfy the customers.",
+"topic": "Lifestyles"
+},
+{
+"word": "college",
+"pos": "noun",
+"vi": "trường cao đẳng, đại học",
+"example": "She goes to college in Hanoi.",
+"topic": "Student life"
+},
+{
+"word": "exam",
+"pos": "noun",
+"vi": "kỳ thi",
+"example": "I have an exam on Monday.",
+"topic": "Student life"
+},
+{
+"word": "grade",
+"pos": "noun",
+"vi": "điểm số, lớp",
+"example": "He got a good grade in math.",
+"topic": "Student life"
+},
+{
+"word": "graduation",
+"pos": "noun",
+"vi": "lễ tốt nghiệp",
+"example": "Graduation day was very happy.",
+"topic": "Student life"
+},
+{
+"word": "grant",
+"pos": "noun",
+"vi": "học bổng, khoản trợ cấp",
+"example": "She received a grant to study abroad.",
+"topic": "Student life"
+},
+{
+"word": "kindergarten",
+"pos": "noun",
+"vi": "trường mẫu giáo",
+"example": "My son goes to kindergarten.",
+"topic": "Student life"
+},
+{
+"word": "lecturer",
+"pos": "noun",
+"vi": "giảng viên",
+"example": "The lecturer gave an interesting talk.",
+"topic": "Student life"
+},
+{
+"word": "library",
+"pos": "noun",
+"vi": "thư viện",
+"example": "I study in the library every evening.",
+"topic": "Student life"
+},
+{
+"word": "primary school",
+"pos": "noun",
+"vi": "trường tiểu học",
+"example": "Children start primary school at six.",
+"topic": "Student life"
+},
+{
+"word": "secondary school",
+"pos": "noun",
+"vi": "trường trung học",
+"example": "I finished secondary school in 2020.",
+"topic": "Student life"
+},
+{
+"word": "project",
+"pos": "noun",
+"vi": "dự án, bài tập nhóm",
+"example": "We are working on a science project.",
+"topic": "Student life"
+},
+{
+"word": "research",
+"pos": "noun",
+"vi": "nghiên cứu",
+"example": "The research shows that sleep helps memory.",
+"topic": "Student life"
+},
+{
+"word": "syllabus",
+"pos": "noun",
+"vi": "đề cương môn học",
+"example": "The syllabus lists all the topics.",
+"topic": "Student life"
+},
+{
+"word": "thesis",
+"pos": "noun",
+"vi": "luận văn",
+"example": "He is writing his thesis on climate change.",
+"topic": "Student life"
+},
+{
+"word": "topic",
+"pos": "noun",
+"vi": "chủ đề",
+"example": "Choose a topic for your essay.",
+"topic": "Student life"
+},
+{
+"word": "university",
+"pos": "noun",
+"vi": "trường đại học",
+"example": "She wants to study at a university in Canada.",
+"topic": "Student life"
+},
+{
+"word": "academic",
+"pos": "adj",
+"vi": "thuộc học thuật",
+"example": "Academic writing needs clear structure.",
+"topic": "Student life"
+},
+{
+"word": "relevant",
+"pos": "adj",
+"vi": "liên quan",
+"example": "Please give only relevant information.",
+"topic": "Student life"
+},
+{
+"word": "postgraduate",
+"pos": "adj",
+"vi": "sau đại học",
+"example": "He is a postgraduate student.",
+"topic": "Student life"
+},
+{
+"word": "analyse",
+"pos": "verb",
+"vi": "phân tích",
+"example": "Students analyse the data in class.",
+"topic": "Student life"
+},
+{
+"word": "conduct",
+"pos": "verb",
+"vi": "tiến hành",
+"example": "Scientists conduct experiments every day.",
+"topic": "Student life"
+},
+{
+"word": "overcome",
+"pos": "verb",
+"vi": "vượt qua",
+"example": "She wants to overcome her fear of speaking English.",
+"topic": "Student life"
+},
+{
+"word": "review",
+"pos": "verb",
+"vi": "ôn tập, xem lại",
+"example": "I review my notes before every test.",
+"topic": "Student life"
+},
+{
+"word": "struggle",
+"pos": "verb",
+"vi": "vật lộn, gặp khó khăn",
+"example": "Many students struggle with grammar.",
+"topic": "Student life"
+},
+{
+"word": "accuracy",
+"pos": "noun",
+"vi": "độ chính xác",
+"example": "Accuracy is important in a test.",
+"topic": "Communication"
+},
+{
+"word": "communication",
+"pos": "noun",
+"vi": "sự giao tiếp",
+"example": "Good communication solves many problems.",
+"topic": "Communication"
+},
+{
+"word": "dialect",
+"pos": "noun",
+"vi": "phương ngữ",
+"example": "People in the north speak a different dialect.",
+"topic": "Communication"
+},
+{
+"word": "fluency",
+"pos": "noun",
+"vi": "sự trôi chảy",
+"example": "Fluency comes from daily practice.",
+"topic": "Communication"
+},
+{
+"word": "hesitation",
+"pos": "noun",
+"vi": "sự do dự, ngập ngừng",
+"example": "He answered without hesitation.",
+"topic": "Communication"
+},
+{
+"word": "language barrier",
+"pos": "noun",
+"vi": "rào cản ngôn ngữ",
+"example": "The language barrier made it hard to talk.",
+"topic": "Communication"
+},
+{
+"word": "mother tongue",
+"pos": "noun",
+"vi": "tiếng mẹ đẻ",
+"example": "My mother tongue is Vietnamese.",
+"topic": "Communication"
+},
+{
+"word": "native speaker",
+"pos": "noun",
+"vi": "người bản ngữ",
+"example": "She speaks like a native speaker.",
+"topic": "Communication"
+},
+{
+"word": "pronunciation",
+"pos": "noun",
+"vi": "cách phát âm",
+"example": "Her pronunciation is very clear.",
+"topic": "Communication"
+},
+{
+"word": "sign language",
+"pos": "noun",
+"vi": "ngôn ngữ ký hiệu",
+"example": "He learned sign language to talk with his sister.",
+"topic": "Communication"
+},
+{
+"word": "vocabulary",
+"pos": "noun",
+"vi": "vốn từ vựng",
+"example": "Reading helps you build your vocabulary.",
+"topic": "Communication"
+},
+{
+"word": "sophisticated",
+"pos": "adj",
+"vi": "tinh vi, tinh tế",
+"example": "The phone has a sophisticated camera.",
+"topic": "Communication"
+},
+{
+"word": "spontaneous",
+"pos": "adj",
+"vi": "tự phát, ngẫu hứng",
+"example": "It was a spontaneous decision.",
+"topic": "Communication"
+},
+{
+"word": "clarify",
+"pos": "verb",
+"vi": "làm rõ",
+"example": "Could you clarify what you mean?",
+"topic": "Communication"
+},
+{
+"word": "communicate",
+"pos": "verb",
+"vi": "giao tiếp",
+"example": "We communicate by phone and email.",
+"topic": "Communication"
+},
+{
+"word": "conclude",
+"pos": "verb",
+"vi": "kết luận",
+"example": "Scientists conclude that exercise is good for the mind.",
+"topic": "Communication"
+},
+{
+"word": "confirm",
+"pos": "verb",
+"vi": "xác nhận",
+"example": "Please confirm your booking by email.",
+"topic": "Communication"
+},
+{
+"word": "define",
+"pos": "verb",
+"vi": "định nghĩa",
+"example": "Can you define this word for me?",
+"topic": "Communication"
+},
+{
+"word": "demonstrate",
+"pos": "verb",
+"vi": "chứng minh, trình bày",
+"example": "The teacher will demonstrate the experiment.",
+"topic": "Communication"
+},
+{
+"word": "explain",
+"pos": "verb",
+"vi": "giải thích",
+"example": "Please explain this rule again.",
+"topic": "Communication"
+},
+{
+"word": "imply",
+"pos": "verb",
+"vi": "ngụ ý",
+"example": "His silence may imply that he disagrees.",
+"topic": "Communication"
+},
+{
+"word": "indicate",
+"pos": "verb",
+"vi": "chỉ ra",
+"example": "The results indicate a clear trend.",
+"topic": "Communication"
+},
+{
+"word": "suggest",
+"pos": "verb",
+"vi": "gợi ý",
+"example": "I suggest we meet at six.",
+"topic": "Communication"
+},
+{
+"word": "translate",
+"pos": "verb",
+"vi": "dịch",
+"example": "Can you translate this sentence into English?",
+"topic": "Communication"
+},
+{
+"word": "attraction",
+"pos": "noun",
+"vi": "điểm thu hút",
+"example": "The old temple is a popular tourist attraction.",
+"topic": "Tourism"
+},
+{
+"word": "community",
+"pos": "noun",
+"vi": "cộng đồng",
+"example": "The festival brings the whole community together.",
+"topic": "Tourism"
+},
+{
+"word": "countryside",
+"pos": "noun",
+"vi": "miền quê",
+"example": "I love the quiet countryside.",
+"topic": "Tourism"
+},
+{
+"word": "inhabitant",
+"pos": "noun",
+"vi": "cư dân",
+"example": "The island has only fifty inhabitants.",
+"topic": "Tourism"
+},
+{
+"word": "journey",
+"pos": "noun",
+"vi": "chuyến đi",
+"example": "The journey to Hue took six hours.",
+"topic": "Tourism"
+},
+{
+"word": "landscape",
+"pos": "noun",
+"vi": "phong cảnh",
+"example": "The mountain landscape is beautiful.",
+"topic": "Tourism"
+},
+{
+"word": "tourism",
+"pos": "noun",
+"vi": "ngành du lịch",
+"example": "Tourism creates many jobs.",
+"topic": "Tourism"
+},
+{
+"word": "tourist",
+"pos": "noun",
+"vi": "khách du lịch",
+"example": "Every tourist wants to visit the beach.",
+"topic": "Tourism"
+},
+{
+"word": "trip",
+"pos": "noun",
+"vi": "chuyến đi ngắn",
+"example": "We took a trip to the mountains.",
+"topic": "Tourism"
+},
+{
+"word": "village",
+"pos": "noun",
+"vi": "ngôi làng",
+"example": "My grandparents live in a small village.",
+"topic": "Tourism"
+},
+{
+"word": "adventurous",
+"pos": "adj",
+"vi": "thích phiêu lưu",
+"example": "She is an adventurous traveller.",
+"topic": "Tourism"
+},
+{
+"word": "breathtaking",
+"pos": "adj",
+"vi": "đẹp đến ngỡ ngàng",
+"example": "The view from the top is breathtaking.",
+"topic": "Tourism"
+},
+{
+"word": "coastal",
+"pos": "adj",
+"vi": "ven biển",
+"example": "They live in a coastal town.",
+"topic": "Tourism"
+},
+{
+"word": "cosmopolitan",
+"pos": "adj",
+"vi": "quốc tế, đa văn hóa",
+"example": "Singapore is a cosmopolitan city.",
+"topic": "Tourism"
+},
+{
+"word": "diverse",
+"pos": "adj",
+"vi": "đa dạng",
+"example": "The country has a diverse culture.",
+"topic": "Tourism"
+},
+{
+"word": "foreign",
+"pos": "adj",
+"vi": "nước ngoài",
+"example": "I want to learn a foreign language.",
+"topic": "Tourism"
+},
+{
+"word": "local",
+"pos": "adj",
+"vi": "địa phương",
+"example": "I like to eat local food when I travel.",
+"topic": "Tourism"
+},
+{
+"word": "peaceful",
+"pos": "adj",
+"vi": "yên bình",
+"example": "The lake is very peaceful in the morning.",
+"topic": "Tourism"
+},
+{
+"word": "picturesque",
+"pos": "adj",
+"vi": "đẹp như tranh",
+"example": "We stayed in a picturesque village.",
+"topic": "Tourism"
+},
+{
+"word": "quaint",
+"pos": "adj",
+"vi": "cổ kính, xinh xắn",
+"example": "The street is full of quaint little shops.",
+"topic": "Tourism"
+},
+{
+"word": "remote",
+"pos": "adj",
+"vi": "xa xôi, hẻo lánh",
+"example": "They live in a remote mountain village.",
+"topic": "Tourism"
+},
+{
+"word": "rural",
+"pos": "adj",
+"vi": "thuộc nông thôn",
+"example": "Rural life is slower than city life.",
+"topic": "Tourism"
+},
+{
+"word": "scenic",
+"pos": "adj",
+"vi": "có cảnh đẹp",
+"example": "We took the scenic route along the coast.",
+"topic": "Tourism"
+},
+{
+"word": "stunning",
+"pos": "adj",
+"vi": "tuyệt đẹp",
+"example": "The beach is stunning at sunset.",
+"topic": "Tourism"
+},
+{
+"word": "traditional",
+"pos": "adj",
+"vi": "truyền thống",
+"example": "We cooked a traditional meal.",
+"topic": "Tourism"
+},
+{
+"word": "unspoilt",
+"pos": "adj",
+"vi": "còn nguyên sơ",
+"example": "The island is still unspoilt.",
+"topic": "Tourism"
+},
+{
+"word": "urban",
+"pos": "adj",
+"vi": "thuộc đô thị",
+"example": "Urban areas are often crowded.",
+"topic": "Tourism"
+},
+{
+"word": "age",
+"pos": "noun",
+"vi": "thời đại, tuổi",
+"example": "We live in the age of technology.",
+"topic": "History"
+},
+{
+"word": "archaeologist",
+"pos": "noun",
+"vi": "nhà khảo cổ",
+"example": "The archaeologist found an old coin.",
+"topic": "History"
+},
+{
+"word": "century",
+"pos": "noun",
+"vi": "thế kỷ",
+"example": "The twenty-first century began in 2001.",
+"topic": "History"
+},
+{
+"word": "decade",
+"pos": "noun",
+"vi": "thập kỷ",
+"example": "The city changed a lot in the last decade.",
+"topic": "History"
+},
+{
+"word": "era",
+"pos": "noun",
+"vi": "kỷ nguyên",
+"example": "The 1990s were a new era for Vietnam.",
+"topic": "History"
+},
+{
+"word": "evidence",
+"pos": "noun",
+"vi": "bằng chứng",
+"example": "There is no evidence that he was there.",
+"topic": "History"
+},
+{
+"word": "pioneer",
+"pos": "noun",
+"vi": "người tiên phong",
+"example": "She was a pioneer in medicine.",
+"topic": "History"
+},
+{
+"word": "ancient",
+"pos": "adj",
+"vi": "cổ đại",
+"example": "We visited an ancient temple.",
+"topic": "History"
+},
+{
+"word": "historical",
+"pos": "adj",
+"vi": "thuộc lịch sử",
+"example": "Hue is a famous historical city.",
+"topic": "History"
+},
+{
+"word": "prehistoric",
+"pos": "adj",
+"vi": "thời tiền sử",
+"example": "The museum has prehistoric tools.",
+"topic": "History"
+},
+{
+"word": "previously",
+"pos": "adv",
+"vi": "trước đây",
+"example": "He previously worked in a bank.",
+"topic": "History"
+},
+{
+"word": "formerly",
+"pos": "adv",
+"vi": "trước kia",
+"example": "Ho Chi Minh City was formerly called Saigon.",
+"topic": "History"
+},
+{
+"word": "subsequently",
+"pos": "adv",
+"vi": "sau đó",
+"example": "He was subsequently promoted to manager.",
+"topic": "History"
+},
+{
+"word": "span",
+"pos": "verb",
+"vi": "trải dài",
+"example": "His career spans forty years.",
+"topic": "History"
+},
+{
+"word": "erode",
+"pos": "verb",
+"vi": "xói mòn",
+"example": "The sea will erode the coast over time.",
+"topic": "History"
+},
+{
+"word": "nostalgic",
+"pos": "adj",
+"vi": "hoài niệm",
+"example": "Old songs make me feel nostalgic.",
+"topic": "History"
+},
+{
+"word": "agriculture",
+"pos": "noun",
+"vi": "nông nghiệp",
+"example": "Agriculture is important in the Mekong Delta.",
+"topic": "Natural world"
+},
+{
+"word": "crop",
+"pos": "noun",
+"vi": "cây trồng, vụ mùa",
+"example": "Rice is the main crop in this region.",
+"topic": "Natural world"
+},
+{
+"word": "disaster",
+"pos": "noun",
+"vi": "thảm họa",
+"example": "The flood was a terrible disaster.",
+"topic": "Natural world"
+},
+{
+"word": "ecology",
+"pos": "noun",
+"vi": "sinh thái học",
+"example": "She studies the ecology of the forest.",
+"topic": "Natural world"
+},
+{
+"word": "evolution",
+"pos": "noun",
+"vi": "sự tiến hóa",
+"example": "The evolution of animals took millions of years.",
+"topic": "Natural world"
+},
+{
+"word": "extinction",
+"pos": "noun",
+"vi": "sự tuyệt chủng",
+"example": "Many species face extinction.",
+"topic": "Natural world"
+},
+{
+"word": "fauna",
+"pos": "noun",
+"vi": "hệ động vật",
+"example": "The island has unique fauna.",
+"topic": "Natural world"
+},
+{
+"word": "flora",
+"pos": "noun",
+"vi": "hệ thực vật",
+"example": "The flora of the rainforest is very rich.",
+"topic": "Natural world"
+},
+{
+"word": "habitat",
+"pos": "noun",
+"vi": "môi trường sống",
+"example": "Forests are the habitat of many animals.",
+"topic": "Natural world"
+},
+{
+"word": "insect",
+"pos": "noun",
+"vi": "côn trùng",
+"example": "An insect landed on my arm.",
+"topic": "Natural world"
+},
+{
+"word": "predator",
+"pos": "noun",
+"vi": "động vật săn mồi",
+"example": "The lion is a powerful predator.",
+"topic": "Natural world"
+},
+{
+"word": "prey",
+"pos": "noun",
+"vi": "con mồi",
+"example": "The tiger hunts its prey at night.",
+"topic": "Natural world"
+},
+{
+"word": "species",
+"pos": "noun",
+"vi": "loài",
+"example": "This species lives only in Vietnam.",
+"topic": "Natural world"
+},
+{
+"word": "soil",
+"pos": "noun",
+"vi": "đất",
+"example": "Rice grows well in wet soil.",
+"topic": "Natural world"
+},
+{
+"word": "vegetation",
+"pos": "noun",
+"vi": "thảm thực vật",
+"example": "The vegetation in the north is thick.",
+"topic": "Natural world"
+},
+{
+"word": "arid",
+"pos": "adj",
+"vi": "khô cằn",
+"example": "Arid land is hard to farm.",
+"topic": "Natural world"
+},
+{
+"word": "endangered",
+"pos": "adj",
+"vi": "có nguy cơ tuyệt chủng",
+"example": "The tiger is an endangered animal.",
+"topic": "Natural world"
+},
+{
+"word": "extinct",
+"pos": "adj",
+"vi": "đã tuyệt chủng",
+"example": "Dinosaurs became extinct long ago.",
+"topic": "Natural world"
+},
+{
+"word": "native",
+"pos": "adj",
+"vi": "bản địa",
+"example": "Kangaroos are native to Australia.",
+"topic": "Natural world"
+},
+{
+"word": "tropical",
+"pos": "adj",
+"vi": "nhiệt đới",
+"example": "Vietnam has a tropical climate.",
+"topic": "Natural world"
+},
+{
+"word": "vulnerable",
+"pos": "adj",
+"vi": "dễ bị tổn thương",
+"example": "Young animals are vulnerable to predators.",
+"topic": "Natural world"
+},
+{
+"word": "wild",
+"pos": "adj",
+"vi": "hoang dã",
+"example": "Wild animals should not be kept as pets.",
+"topic": "Natural world"
+},
+{
+"word": "adapt",
+"pos": "verb",
+"vi": "thích nghi",
+"example": "Animals adapt to their environment.",
+"topic": "Natural world"
+},
+{
+"word": "cultivate",
+"pos": "verb",
+"vi": "canh tác, trồng trọt",
+"example": "Farmers cultivate rice in the delta.",
+"topic": "Natural world"
+},
+{
+"word": "domesticated",
+"pos": "adj",
+"vi": "được thuần hóa",
+"example": "The dog is a domesticated animal.",
+"topic": "Natural world"
+},
+{
+"word": "asteroid",
+"pos": "noun",
+"vi": "tiểu hành tinh",
+"example": "An asteroid is a small rock in space.",
+"topic": "Space"
+},
+{
+"word": "astronaut",
+"pos": "noun",
+"vi": "phi hành gia",
+"example": "The astronaut lived in space for six months.",
+"topic": "Space"
+},
+{
+"word": "atmosphere",
+"pos": "noun",
+"vi": "khí quyển, bầu không khí",
+"example": "The atmosphere protects us from the sun.",
+"topic": "Space"
+},
+{
+"word": "crater",
+"pos": "noun",
+"vi": "miệng hố",
+"example": "There is a big crater on the moon.",
+"topic": "Space"
+},
+{
+"word": "debris",
+"pos": "noun",
+"vi": "mảnh vỡ",
+"example": "Space debris can damage satellites.",
+"topic": "Space"
+},
+{
+"word": "exploration",
+"pos": "noun",
+"vi": "sự thám hiểm",
+"example": "Space exploration costs a lot of money.",
+"topic": "Space"
+},
+{
+"word": "galaxy",
+"pos": "noun",
+"vi": "thiên hà",
+"example": "Our galaxy has billions of stars.",
+"topic": "Space"
+},
+{
+"word": "gravity",
+"pos": "noun",
+"vi": "trọng lực",
+"example": "There is less gravity on the moon.",
+"topic": "Space"
+},
+{
+"word": "orbit",
+"pos": "noun",
+"vi": "quỹ đạo",
+"example": "The earth makes one orbit around the sun each year.",
+"topic": "Space"
+},
+{
+"word": "planet",
+"pos": "noun",
+"vi": "hành tinh",
+"example": "Mars is the fourth planet from the sun.",
+"topic": "Space"
+},
+{
+"word": "radiation",
+"pos": "noun",
+"vi": "bức xạ",
+"example": "Too much radiation is dangerous.",
+"topic": "Space"
+},
+{
+"word": "rocket",
+"pos": "noun",
+"vi": "tên lửa",
+"example": "The rocket took off at noon.",
+"topic": "Space"
+},
+{
+"word": "satellite",
+"pos": "noun",
+"vi": "vệ tinh",
+"example": "The satellite sends weather data to the earth.",
+"topic": "Space"
+},
+{
+"word": "solar system",
+"pos": "noun",
+"vi": "hệ mặt trời",
+"example": "There are eight planets in the solar system.",
+"topic": "Space"
+},
+{
+"word": "space station",
+"pos": "noun",
+"vi": "trạm vũ trụ",
+"example": "Astronauts work on the space station.",
+"topic": "Space"
+},
+{
+"word": "surface",
+"pos": "noun",
+"vi": "bề mặt",
+"example": "The moon has a rough surface.",
+"topic": "Space"
+},
+{
+"word": "universe",
+"pos": "noun",
+"vi": "vũ trụ",
+"example": "The universe is very large.",
+"topic": "Space"
+},
+{
+"word": "weightlessness",
+"pos": "noun",
+"vi": "trạng thái không trọng lượng",
+"example": "Weightlessness makes astronauts float.",
+"topic": "Space"
+},
+{
+"word": "lunar",
+"pos": "adj",
+"vi": "thuộc mặt trăng",
+"example": "The lunar surface is dusty.",
+"topic": "Space"
+},
+{
+"word": "unmanned",
+"pos": "adj",
+"vi": "không người lái",
+"example": "An unmanned spacecraft visited Mars.",
+"topic": "Space"
+},
+{
+"word": "explore",
+"pos": "verb",
+"vi": "khám phá",
+"example": "Scientists want to explore other planets.",
+"topic": "Space"
+},
+{
+"word": "float",
+"pos": "verb",
+"vi": "nổi, lơ lửng",
+"example": "Astronauts float inside the spacecraft.",
+"topic": "Space"
+},
+{
+"word": "rotate",
+"pos": "verb",
+"vi": "quay",
+"example": "The earth rotates once every day.",
+"topic": "Space"
+},
+{
+"word": "brick",
+"pos": "noun",
+"vi": "gạch",
+"example": "The house is made of red brick.",
+"topic": "Design and building"
+},
+{
+"word": "concrete",
+"pos": "noun",
+"vi": "bê tông",
+"example": "The bridge is built of concrete.",
+"topic": "Design and building"
+},
+{
+"word": "construction",
+"pos": "noun",
+"vi": "sự xây dựng",
+"example": "Construction of the new road started last month.",
+"topic": "Design and building"
+},
+{
+"word": "elevator",
+"pos": "noun",
+"vi": "thang máy",
+"example": "Take the elevator to the tenth floor.",
+"topic": "Design and building"
+},
+{
+"word": "engineering",
+"pos": "noun",
+"vi": "kỹ thuật",
+"example": "He studies civil engineering.",
+"topic": "Design and building"
+},
+{
+"word": "innovation",
+"pos": "noun",
+"vi": "sự đổi mới",
+"example": "Innovation drives economic growth.",
+"topic": "Design and building"
+},
+{
+"word": "invention",
+"pos": "noun",
+"vi": "phát minh",
+"example": "The phone is a great invention.",
+"topic": "Design and building"
+},
+{
+"word": "landmark",
+"pos": "noun",
+"vi": "địa danh nổi tiếng",
+"example": "The tower is a famous landmark of the city.",
+"topic": "Design and building"
+},
+{
+"word": "skyscraper",
+"pos": "noun",
+"vi": "nhà chọc trời",
+"example": "The skyscraper is over 400 metres tall.",
+"topic": "Design and building"
+},
+{
+"word": "staircase",
+"pos": "noun",
+"vi": "cầu thang",
+"example": "The staircase is very narrow.",
+"topic": "Design and building"
+},
+{
+"word": "steel",
+"pos": "noun",
+"vi": "thép",
+"example": "The frame is made of steel.",
+"topic": "Design and building"
+},
+{
+"word": "structure",
+"pos": "noun",
+"vi": "cấu trúc, công trình",
+"example": "The structure is strong enough to survive storms.",
+"topic": "Design and building"
+},
+{
+"word": "timber",
+"pos": "noun",
+"vi": "gỗ xây dựng",
+"example": "The old house is built of timber.",
+"topic": "Design and building"
+},
+{
+"word": "conventional",
+"pos": "adj",
+"vi": "thông thường, truyền thống",
+"example": "Conventional energy is cheap but dirty.",
+"topic": "Design and building"
+},
+{
+"word": "cosy",
+"pos": "adj",
+"vi": "ấm cúng",
+"example": "The small room is warm and cosy.",
+"topic": "Design and building"
+},
+{
+"word": "futuristic",
+"pos": "adj",
+"vi": "mang tính tương lai",
+"example": "The new station has a futuristic design.",
+"topic": "Design and building"
+},
+{
+"word": "high-rise",
+"pos": "adj",
+"vi": "cao tầng",
+"example": "High-rise buildings are common in big cities.",
+"topic": "Design and building"
+},
+{
+"word": "innovative",
+"pos": "adj",
+"vi": "đổi mới, sáng tạo",
+"example": "The company is known for innovative ideas.",
+"topic": "Design and building"
+},
+{
+"word": "spacious",
+"pos": "adj",
+"vi": "rộng rãi",
+"example": "The apartment is spacious and bright.",
+"topic": "Design and building"
+},
+{
+"word": "typical",
+"pos": "adj",
+"vi": "điển hình",
+"example": "This is a typical Vietnamese house.",
+"topic": "Design and building"
+},
+{
+"word": "demolish",
+"pos": "verb",
+"vi": "phá dỡ",
+"example": "They will demolish the old building next week.",
+"topic": "Design and building"
+},
+{
+"word": "renovate",
+"pos": "verb",
+"vi": "cải tạo, sửa sang",
+"example": "We plan to renovate our kitchen.",
+"topic": "Design and building"
+},
+{
+"word": "construct",
+"pos": "verb",
+"vi": "xây dựng",
+"example": "They plan to construct a bridge over the river.",
+"topic": "Design and building"
+},
+{
+"word": "invent",
+"pos": "verb",
+"vi": "phát minh",
+"example": "Scientists invent new machines every year.",
+"topic": "Design and building"
+},
+{
+"word": "technology",
+"pos": "noun",
+"vi": "công nghệ",
+"example": "Technology has changed our daily life.",
+"topic": "Information technology"
+},
+{
+"word": "laptop",
+"pos": "noun",
+"vi": "máy tính xách tay",
+"example": "I take my laptop to class every day.",
+"topic": "Information technology"
+},
+{
+"word": "monitor",
+"pos": "noun",
+"vi": "màn hình máy tính",
+"example": "The monitor is too small for me.",
+"topic": "Information technology"
+},
+{
+"word": "patent",
+"pos": "noun",
+"vi": "bằng sáng chế",
+"example": "The company holds a patent for the device.",
+"topic": "Information technology"
+},
+{
+"word": "prototype",
+"pos": "noun",
+"vi": "mẫu thử",
+"example": "The engineers built a prototype of the car.",
+"topic": "Information technology"
+},
+{
+"word": "remote control",
+"pos": "noun",
+"vi": "điều khiển từ xa",
+"example": "Where is the remote control?",
+"topic": "Information technology"
+},
+{
+"word": "telecommunications",
+"pos": "noun",
+"vi": "viễn thông",
+"example": "He works in telecommunications.",
+"topic": "Information technology"
+},
+{
+"word": "compact",
+"pos": "adj",
+"vi": "nhỏ gọn",
+"example": "This is a compact camera.",
+"topic": "Information technology"
+},
+{
+"word": "digital",
+"pos": "adj",
+"vi": "kỹ thuật số",
+"example": "I take digital photos.",
+"topic": "Information technology"
+},
+{
+"word": "cutting-edge",
+"pos": "adj",
+"vi": "tiên tiến",
+"example": "The lab uses cutting-edge technology.",
+"topic": "Information technology"
+},
+{
+"word": "portable",
+"pos": "adj",
+"vi": "di động",
+"example": "A portable charger is very useful.",
+"topic": "Information technology"
+},
+{
+"word": "up-to-date",
+"pos": "adj",
+"vi": "cập nhật",
+"example": "Keep your software up-to-date.",
+"topic": "Information technology"
+},
+{
+"word": "user-friendly",
+"pos": "adj",
+"vi": "dễ sử dụng",
+"example": "The app is simple and user-friendly.",
+"topic": "Information technology"
+},
+{
+"word": "virtual",
+"pos": "adj",
+"vi": "ảo",
+"example": "I attended a virtual meeting.",
+"topic": "Information technology"
+},
+{
+"word": "access",
+"pos": "verb",
+"vi": "truy cập",
+"example": "I can access my emails on my phone.",
+"topic": "Information technology"
+},
+{
+"word": "display",
+"pos": "verb",
+"vi": "hiển thị",
+"example": "The screen can display photos in high quality.",
+"topic": "Information technology"
+},
+{
+"word": "operate",
+"pos": "verb",
+"vi": "vận hành",
+"example": "Do you know how to operate this machine?",
+"topic": "Information technology"
+},
+{
+"word": "revolutionise",
+"pos": "verb",
+"vi": "tạo ra cuộc cách mạng",
+"example": "The internet revolutionises the way we work.",
+"topic": "Information technology"
+},
+{
+"word": "scroll",
+"pos": "verb",
+"vi": "cuộn",
+"example": "I scroll through my phone before bed.",
+"topic": "Information technology"
+},
+{
+"word": "store",
+"pos": "verb",
+"vi": "lưu trữ",
+"example": "The phone can store thousands of photos.",
+"topic": "Information technology"
+},
+{
+"word": "culture",
+"pos": "noun",
+"vi": "văn hóa",
+"example": "Food is an important part of our culture.",
+"topic": "Modern world"
+},
+{
+"word": "diversity",
+"pos": "noun",
+"vi": "sự đa dạng",
+"example": "The city is proud of its cultural diversity.",
+"topic": "Modern world"
+},
+{
+"word": "globalisation",
+"pos": "noun",
+"vi": "toàn cầu hóa",
+"example": "Globalisation has made the world smaller.",
+"topic": "Modern world"
+},
+{
+"word": "icon",
+"pos": "noun",
+"vi": "biểu tượng",
+"example": "She is a fashion icon.",
+"topic": "Modern world"
+},
+{
+"word": "identity",
+"pos": "noun",
+"vi": "bản sắc, danh tính",
+"example": "Language is part of our national identity.",
+"topic": "Modern world"
+},
+{
+"word": "impact",
+"pos": "noun",
+"vi": "tác động",
+"example": "Social media has a big impact on young people.",
+"topic": "Modern world"
+},
+{
+"word": "influence",
+"pos": "noun",
+"vi": "ảnh hưởng",
+"example": "Friends have a strong influence on teenagers.",
+"topic": "Modern world"
+},
+{
+"word": "industry",
+"pos": "noun",
+"vi": "ngành công nghiệp",
+"example": "The tourism industry is growing fast.",
+"topic": "Modern world"
+},
+{
+"word": "isolation",
+"pos": "noun",
+"vi": "sự cô lập",
+"example": "Many old people suffer from isolation.",
+"topic": "Modern world"
+},
+{
+"word": "population",
+"pos": "noun",
+"vi": "dân số",
+"example": "The population of the city is ten million.",
+"topic": "Modern world"
+},
+{
+"word": "prediction",
+"pos": "noun",
+"vi": "dự đoán",
+"example": "His prediction about the weather was correct.",
+"topic": "Modern world"
+},
+{
+"word": "statistics",
+"pos": "noun",
+"vi": "số liệu thống kê",
+"example": "The statistics show that crime is falling.",
+"topic": "Modern world"
+},
+{
+"word": "ageing",
+"pos": "adj",
+"vi": "già đi, lão hóa",
+"example": "An ageing population needs more hospitals.",
+"topic": "Modern world"
+},
+{
+"word": "ethnic",
+"pos": "adj",
+"vi": "thuộc dân tộc",
+"example": "Vietnam has many ethnic groups.",
+"topic": "Modern world"
+},
+{
+"word": "multicultural",
+"pos": "adj",
+"vi": "đa văn hóa",
+"example": "London is a multicultural city.",
+"topic": "Modern world"
+},
+{
+"word": "long-term",
+"pos": "adj",
+"vi": "dài hạn",
+"example": "We need a long-term plan.",
+"topic": "Modern world"
+},
+{
+"word": "short-term",
+"pos": "adj",
+"vi": "ngắn hạn",
+"example": "This is only a short-term solution.",
+"topic": "Modern world"
+},
+{
+"word": "wealthy",
+"pos": "adj",
+"vi": "giàu có",
+"example": "A wealthy family lives next door.",
+"topic": "Modern world"
+},
+{
+"word": "worldwide",
+"pos": "adv",
+"vi": "trên toàn thế giới",
+"example": "The song became popular worldwide.",
+"topic": "Modern world"
+},
+{
+"word": "contribute",
+"pos": "verb",
+"vi": "đóng góp",
+"example": "Everyone should contribute to the project.",
+"topic": "Modern world"
+},
+{
+"word": "dominate",
+"pos": "verb",
+"vi": "thống trị",
+"example": "Big companies dominate the market.",
+"topic": "Modern world"
+},
+{
+"word": "migrate",
+"pos": "verb",
+"vi": "di cư",
+"example": "Many workers migrate to the city for jobs.",
+"topic": "Modern world"
+},
+{
+"word": "benefit",
+"pos": "noun",
+"vi": "lợi ích",
+"example": "Walking has many benefits.",
+"topic": "Urban life"
+},
+{
+"word": "challenge",
+"pos": "noun",
+"vi": "thử thách",
+"example": "Learning a new language is a big challenge.",
+"topic": "Urban life"
+},
+{
+"word": "compromise",
+"pos": "noun",
+"vi": "sự thỏa hiệp",
+"example": "We reached a compromise after a long talk.",
+"topic": "Urban life"
+},
+{
+"word": "difficulty",
+"pos": "noun",
+"vi": "khó khăn",
+"example": "I have difficulty understanding fast speech.",
+"topic": "Urban life"
+},
+{
+"word": "dilemma",
+"pos": "noun",
+"vi": "tình thế tiến thoái lưỡng nan",
+"example": "I am in a dilemma about which job to take.",
+"topic": "Urban life"
+},
+{
+"word": "infrastructure",
+"pos": "noun",
+"vi": "cơ sở hạ tầng",
+"example": "The city needs better infrastructure.",
+"topic": "Urban life"
+},
+{
+"word": "issue",
+"pos": "noun",
+"vi": "vấn đề",
+"example": "Pollution is a serious issue.",
+"topic": "Urban life"
+},
+{
+"word": "migrant",
+"pos": "noun",
+"vi": "người di cư",
+"example": "Many migrants work in big cities.",
+"topic": "Urban life"
+},
+{
+"word": "obstacle",
+"pos": "noun",
+"vi": "trở ngại",
+"example": "Lack of money is the main obstacle.",
+"topic": "Urban life"
+},
+{
+"word": "overpopulation",
+"pos": "noun",
+"vi": "tình trạng quá tải dân số",
+"example": "Overpopulation causes traffic problems.",
+"topic": "Urban life"
+},
+{
+"word": "poverty",
+"pos": "noun",
+"vi": "sự nghèo đói",
+"example": "The government wants to reduce poverty.",
+"topic": "Urban life"
+},
+{
+"word": "slum",
+"pos": "noun",
+"vi": "khu ổ chuột",
+"example": "Many families live in the slum near the river.",
+"topic": "Urban life"
+},
+{
+"word": "solution",
+"pos": "noun",
+"vi": "giải pháp",
+"example": "We need a solution to the traffic problem.",
+"topic": "Urban life"
+},
+{
+"word": "adequate",
+"pos": "adj",
+"vi": "đủ, thỏa đáng",
+"example": "The city has no adequate public transport.",
+"topic": "Urban life"
+},
+{
+"word": "crowded",
+"pos": "adj",
+"vi": "đông đúc",
+"example": "The bus was very crowded this morning.",
+"topic": "Urban life"
+},
+{
+"word": "decent",
+"pos": "adj",
+"vi": "tươm tất, khá tốt",
+"example": "Everyone deserves a decent home.",
+"topic": "Urban life"
+},
+{
+"word": "developing",
+"pos": "adj",
+"vi": "đang phát triển",
+"example": "Vietnam is a developing country.",
+"topic": "Urban life"
+},
+{
+"word": "address",
+"pos": "verb",
+"vi": "giải quyết",
+"example": "The mayor promised to address the problem.",
+"topic": "Urban life"
+},
+{
+"word": "adjust",
+"pos": "verb",
+"vi": "điều chỉnh, thích nghi",
+"example": "It took me a month to adjust to city life.",
+"topic": "Urban life"
+},
+{
+"word": "cause",
+"pos": "verb",
+"vi": "gây ra",
+"example": "Heavy traffic can cause air pollution.",
+"topic": "Urban life"
+},
+{
+"word": "deal with",
+"pos": "verb phrase",
+"vi": "đối phó, giải quyết",
+"example": "How do you deal with stress?",
+"topic": "Urban life"
+},
+{
+"word": "deteriorate",
+"pos": "verb",
+"vi": "xấu đi",
+"example": "The air quality will deteriorate in winter.",
+"topic": "Urban life"
+},
+{
+"word": "enhance",
+"pos": "verb",
+"vi": "nâng cao",
+"example": "Parks enhance the quality of life.",
+"topic": "Urban life"
+},
+{
+"word": "tackle",
+"pos": "verb",
+"vi": "xử lý, giải quyết",
+"example": "The government must tackle unemployment.",
+"topic": "Urban life"
+},
+{
+"word": "transform",
+"pos": "verb",
+"vi": "biến đổi",
+"example": "Technology can transform our lives.",
+"topic": "Urban life"
+},
+{
+"word": "worsen",
+"pos": "verb",
+"vi": "làm trầm trọng thêm",
+"example": "The traffic will worsen in the evening.",
+"topic": "Urban life"
+},
+{
+"word": "regulate",
+"pos": "verb",
+"vi": "quản lý, điều chỉnh",
+"example": "The government should regulate prices.",
+"topic": "Urban life"
+},
+{
+"word": "resolve",
+"pos": "verb",
+"vi": "giải quyết",
+"example": "We must resolve this problem quickly.",
+"topic": "Urban life"
+},
+{
+"word": "acid rain",
+"pos": "noun",
+"vi": "mưa axit",
+"example": "Acid rain damages forests.",
+"topic": "Green issues"
+},
+{
+"word": "climate change",
+"pos": "noun",
+"vi": "biến đổi khí hậu",
+"example": "Climate change is a global problem.",
+"topic": "Green issues"
+},
+{
+"word": "contamination",
+"pos": "noun",
+"vi": "sự ô nhiễm",
+"example": "The contamination of the river killed the fish.",
+"topic": "Green issues"
+},
+{
+"word": "deforestation",
+"pos": "noun",
+"vi": "nạn phá rừng",
+"example": "Deforestation destroys animal habitats.",
+"topic": "Green issues"
+},
+{
+"word": "ecosystem",
+"pos": "noun",
+"vi": "hệ sinh thái",
+"example": "A coral reef is a rich ecosystem.",
+"topic": "Green issues"
+},
+{
+"word": "emission",
+"pos": "noun",
+"vi": "khí thải",
+"example": "Cars produce harmful emissions.",
+"topic": "Green issues"
+},
+{
+"word": "erosion",
+"pos": "noun",
+"vi": "sự xói mòn",
+"example": "Cutting trees leads to soil erosion.",
+"topic": "Green issues"
+},
+{
+"word": "fertilizer",
+"pos": "noun",
+"vi": "phân bón",
+"example": "Farmers use fertilizer to grow more rice.",
+"topic": "Green issues"
+},
+{
+"word": "food chain",
+"pos": "noun",
+"vi": "chuỗi thức ăn",
+"example": "Small fish are at the bottom of the food chain.",
+"topic": "Green issues"
+},
+{
+"word": "greenhouse gas",
+"pos": "noun",
+"vi": "khí nhà kính",
+"example": "Factories release greenhouse gas into the air.",
+"topic": "Green issues"
+},
+{
+"word": "pollutant",
+"pos": "noun",
+"vi": "chất gây ô nhiễm",
+"example": "Smoke is a common pollutant.",
+"topic": "Green issues"
+},
+{
+"word": "threat",
+"pos": "noun",
+"vi": "mối đe dọa",
+"example": "Plastic is a threat to sea animals.",
+"topic": "Green issues"
+},
+{
+"word": "beneficial",
+"pos": "adj",
+"vi": "có lợi",
+"example": "Exercise is beneficial to your health.",
+"topic": "Green issues"
+},
+{
+"word": "environmental",
+"pos": "adj",
+"vi": "thuộc môi trường",
+"example": "Environmental education should start early.",
+"topic": "Green issues"
+},
+{
+"word": "feasible",
+"pos": "adj",
+"vi": "khả thi",
+"example": "The plan is feasible and cheap.",
+"topic": "Green issues"
+},
+{
+"word": "irreversible",
+"pos": "adj",
+"vi": "không thể đảo ngược",
+"example": "Some damage to nature is irreversible.",
+"topic": "Green issues"
+},
+{
+"word": "sustainable",
+"pos": "adj",
+"vi": "bền vững",
+"example": "We need sustainable energy.",
+"topic": "Green issues"
+},
+{
+"word": "recyclable",
+"pos": "adj",
+"vi": "có thể tái chế",
+"example": "Glass bottles are recyclable.",
+"topic": "Green issues"
+},
+{
+"word": "viable",
+"pos": "adj",
+"vi": "khả thi, có thể tồn tại",
+"example": "Solar power is a viable option.",
+"topic": "Green issues"
+},
+{
+"word": "worthwhile",
+"pos": "adj",
+"vi": "đáng giá",
+"example": "It is worthwhile to save energy.",
+"topic": "Green issues"
+},
+{
+"word": "devastating",
+"pos": "adj",
+"vi": "tàn phá nặng nề",
+"example": "The storm had a devastating effect on farms.",
+"topic": "Green issues"
+},
+{
+"word": "unprecedented",
+"pos": "adj",
+"vi": "chưa từng có",
+"example": "The heat was unprecedented this year.",
+"topic": "Green issues"
+},
+{
+"word": "contaminate",
+"pos": "verb",
+"vi": "làm ô nhiễm",
+"example": "Waste can contaminate drinking water.",
+"topic": "Green issues"
+},
+{
+"word": "dispose of",
+"pos": "verb phrase",
+"vi": "vứt bỏ, xử lý",
+"example": "Please dispose of your rubbish properly.",
+"topic": "Green issues"
+},
+{
+"word": "dump",
+"pos": "verb",
+"vi": "đổ, vứt bỏ",
+"example": "Factories dump waste into the river.",
+"topic": "Green issues"
+},
+{
+"word": "threaten",
+"pos": "verb",
+"vi": "đe dọa",
+"example": "Pollution threatens the health of children.",
+"topic": "Green issues"
+},
+{
+"word": "confront",
+"pos": "verb",
+"vi": "đối mặt",
+"example": "We must confront the problem of waste.",
+"topic": "Green issues"
+},
+{
+"word": "biofuel",
+"pos": "noun",
+"vi": "nhiên liệu sinh học",
+"example": "Biofuel comes from plants.",
+"topic": "Energy"
+},
+{
+"word": "carbon dioxide",
+"pos": "noun",
+"vi": "khí cacbonic",
+"example": "Trees absorb carbon dioxide.",
+"topic": "Energy"
+},
+{
+"word": "crisis",
+"pos": "noun",
+"vi": "cuộc khủng hoảng",
+"example": "The country faces an energy crisis.",
+"topic": "Energy"
+},
+{
+"word": "electricity",
+"pos": "noun",
+"vi": "điện",
+"example": "Electricity prices rose again this year.",
+"topic": "Energy"
+},
+{
+"word": "fossil fuel",
+"pos": "noun",
+"vi": "nhiên liệu hóa thạch",
+"example": "Coal and oil are fossil fuel.",
+"topic": "Energy"
+},
+{
+"word": "hybrid",
+"pos": "noun",
+"vi": "xe lai, giống lai",
+"example": "He drives a hybrid to save petrol.",
+"topic": "Energy"
+},
+{
+"word": "turbine",
+"pos": "noun",
+"vi": "tuabin",
+"example": "The wind turbine produces clean power.",
+"topic": "Energy"
+},
+{
+"word": "vehicle",
+"pos": "noun",
+"vi": "phương tiện giao thông",
+"example": "Each vehicle must pass a safety check.",
+"topic": "Energy"
+},
+{
+"word": "alternative",
+"pos": "adj",
+"vi": "thay thế",
+"example": "We need alternative sources of energy.",
+"topic": "Energy"
+},
+{
+"word": "efficient",
+"pos": "adj",
+"vi": "hiệu quả",
+"example": "LED lamps are more efficient than old bulbs.",
+"topic": "Energy"
+},
+{
+"word": "nuclear",
+"pos": "adj",
+"vi": "thuộc hạt nhân",
+"example": "Some countries use nuclear power.",
+"topic": "Energy"
+},
+{
+"word": "rechargeable",
+"pos": "adj",
+"vi": "có thể sạc lại",
+"example": "Rechargeable batteries save money.",
+"topic": "Energy"
+},
+{
+"word": "renewable",
+"pos": "adj",
+"vi": "tái tạo được",
+"example": "Wind and solar are renewable energy.",
+"topic": "Energy"
+},
+{
+"word": "conserve",
+"pos": "verb",
+"vi": "tiết kiệm, bảo tồn",
+"example": "We should conserve water.",
+"topic": "Energy"
+},
+{
+"word": "consume",
+"pos": "verb",
+"vi": "tiêu thụ",
+"example": "Big cities consume a lot of energy.",
+"topic": "Energy"
+},
+{
+"word": "convert",
+"pos": "verb",
+"vi": "chuyển đổi",
+"example": "Solar panels convert sunlight into power.",
+"topic": "Energy"
+},
+{
+"word": "deplete",
+"pos": "verb",
+"vi": "làm cạn kiệt",
+"example": "We deplete natural resources too fast.",
+"topic": "Energy"
+},
+{
+"word": "emit",
+"pos": "verb",
+"vi": "thải ra",
+"example": "Old cars emit a lot of smoke.",
+"topic": "Energy"
+},
+{
+"word": "preserve",
+"pos": "verb",
+"vi": "bảo tồn",
+"example": "We must preserve our forests.",
+"topic": "Energy"
+},
+{
+"word": "absorb",
+"pos": "verb",
+"vi": "hấp thụ",
+"example": "Plants absorb carbon dioxide.",
+"topic": "Energy"
+},
+{
+"word": "drastic",
+"pos": "adj",
+"vi": "quyết liệt, mạnh",
+"example": "We need drastic action to cut pollution.",
+"topic": "Energy"
+},
+{
+"word": "advertisement",
+"pos": "noun",
+"vi": "quảng cáo",
+"example": "I saw an advertisement for the new phone.",
+"topic": "Business"
+},
+{
+"word": "advertising",
+"pos": "noun",
+"vi": "ngành quảng cáo",
+"example": "She works in advertising.",
+"topic": "Business"
+},
+{
+"word": "campaign",
+"pos": "noun",
+"vi": "chiến dịch",
+"example": "The company started a new campaign.",
+"topic": "Business"
+},
+{
+"word": "candidate",
+"pos": "noun",
+"vi": "ứng viên",
+"example": "The candidate gave a good answer.",
+"topic": "Business"
+},
+{
+"word": "career",
+"pos": "noun",
+"vi": "sự nghiệp",
+"example": "She wants a career in medicine.",
+"topic": "Business"
+},
+{
+"word": "client",
+"pos": "noun",
+"vi": "khách hàng",
+"example": "The manager met a new client.",
+"topic": "Business"
+},
+{
+"word": "consumer",
+"pos": "noun",
+"vi": "người tiêu dùng",
+"example": "Consumers want cheaper products.",
+"topic": "Business"
+},
+{
+"word": "earnings",
+"pos": "noun",
+"vi": "thu nhập",
+"example": "His earnings rose by ten percent.",
+"topic": "Business"
+},
+{
+"word": "employee",
+"pos": "noun",
+"vi": "nhân viên",
+"example": "The company has fifty employees.",
+"topic": "Business"
+},
+{
+"word": "employment",
+"pos": "noun",
+"vi": "việc làm",
+"example": "Employment is rising in the city.",
+"topic": "Business"
+},
+{
+"word": "job satisfaction",
+"pos": "noun",
+"vi": "sự hài lòng với công việc",
+"example": "Job satisfaction is more important than salary.",
+"topic": "Business"
+},
+{
+"word": "management",
+"pos": "noun",
+"vi": "ban quản lý",
+"example": "The management made a new rule.",
+"topic": "Business"
+},
+{
+"word": "market",
+"pos": "noun",
+"vi": "thị trường",
+"example": "The market for electric cars is growing.",
+"topic": "Business"
+},
+{
+"word": "packaging",
+"pos": "noun",
+"vi": "bao bì",
+"example": "Plastic packaging is bad for the environment.",
+"topic": "Business"
+},
+{
+"word": "perk",
+"pos": "noun",
+"vi": "đặc quyền, phúc lợi",
+"example": "Free lunch is one of the perks of this job.",
+"topic": "Business"
+},
+{
+"word": "product",
+"pos": "noun",
+"vi": "sản phẩm",
+"example": "This product is made in Vietnam.",
+"topic": "Business"
+},
+{
+"word": "profession",
+"pos": "noun",
+"vi": "nghề nghiệp",
+"example": "Teaching is a respected profession.",
+"topic": "Business"
+},
+{
+"word": "qualifications",
+"pos": "noun",
+"vi": "bằng cấp",
+"example": "You need good qualifications for this job.",
+"topic": "Business"
+},
+{
+"word": "retirement",
+"pos": "noun",
+"vi": "sự nghỉ hưu",
+"example": "He is looking forward to retirement.",
+"topic": "Business"
+},
+{
+"word": "shares",
+"pos": "noun",
+"vi": "cổ phiếu",
+"example": "He bought shares in a bank.",
+"topic": "Business"
+},
+{
+"word": "shift work",
+"pos": "noun",
+"vi": "làm việc theo ca",
+"example": "Shift work can be tiring.",
+"topic": "Business"
+},
+{
+"word": "staff",
+"pos": "noun",
+"vi": "đội ngũ nhân viên",
+"example": "The hotel staff are very helpful.",
+"topic": "Business"
+},
+{
+"word": "supervisor",
+"pos": "noun",
+"vi": "người giám sát",
+"example": "My supervisor checks my work every day.",
+"topic": "Business"
+},
+{
+"word": "target",
+"pos": "noun",
+"vi": "chỉ tiêu, mục tiêu",
+"example": "We reached our sales target.",
+"topic": "Business"
+},
+{
+"word": "trade",
+"pos": "noun",
+"vi": "thương mại",
+"example": "Trade between the two countries is growing.",
+"topic": "Business"
+},
+{
+"word": "unemployment",
+"pos": "noun",
+"vi": "tình trạng thất nghiệp",
+"example": "Unemployment is high among young people.",
+"topic": "Business"
+},
+{
+"word": "wages",
+"pos": "noun",
+"vi": "tiền lương",
+"example": "The wages in this factory are low.",
+"topic": "Business"
+},
+{
+"word": "workforce",
+"pos": "noun",
+"vi": "lực lượng lao động",
+"example": "The workforce is getting older.",
+"topic": "Business"
+},
+{
+"word": "demanding",
+"pos": "adj",
+"vi": "đòi hỏi cao",
+"example": "She has a demanding job.",
+"topic": "Business"
+},
+{
+"word": "monotonous",
+"pos": "adj",
+"vi": "đơn điệu",
+"example": "The work is monotonous.",
+"topic": "Business"
+},
+{
+"word": "part-time",
+"pos": "adj",
+"vi": "bán thời gian",
+"example": "I have a part-time job.",
+"topic": "Business"
+},
+{
+"word": "retail",
+"pos": "adj",
+"vi": "bán lẻ",
+"example": "She works in the retail industry.",
+"topic": "Business"
+},
+{
+"word": "redundant",
+"pos": "adj",
+"vi": "bị cho thôi việc",
+"example": "Fifty workers were made redundant.",
+"topic": "Business"
+},
+{
+"word": "unskilled",
+"pos": "adj",
+"vi": "không có tay nghề",
+"example": "Unskilled workers earn less.",
+"topic": "Business"
+},
+{
+"word": "persuade",
+"pos": "verb",
+"vi": "thuyết phục",
+"example": "Advertisements try to persuade you to buy things.",
+"topic": "Business"
+},
+{
+"word": "authority",
+"pos": "noun",
+"vi": "chính quyền, thẩm quyền",
+"example": "The local authority built a new park.",
+"topic": "Law and crime"
+},
+{
+"word": "burglary",
+"pos": "noun",
+"vi": "vụ trộm đột nhập",
+"example": "There was a burglary in our street last night.",
+"topic": "Law and crime"
+},
+{
+"word": "crime",
+"pos": "noun",
+"vi": "tội phạm",
+"example": "Crime has fallen in the city.",
+"topic": "Law and crime"
+},
+{
+"word": "crime rate",
+"pos": "noun phrase",
+"vi": "tỷ lệ tội phạm",
+"example": "The crime rate is lower this year.",
+"topic": "Law and crime"
+},
+{
+"word": "criminal",
+"pos": "noun",
+"vi": "tội phạm",
+"example": "The police caught the criminal.",
+"topic": "Law and crime"
+},
+{
+"word": "deterrent",
+"pos": "noun",
+"vi": "biện pháp ngăn chặn",
+"example": "Heavy fines are a good deterrent.",
+"topic": "Law and crime"
+},
+{
+"word": "fraud",
+"pos": "noun",
+"vi": "gian lận",
+"example": "He was jailed for fraud.",
+"topic": "Law and crime"
+},
+{
+"word": "imprisonment",
+"pos": "noun",
+"vi": "án tù",
+"example": "The judge gave him two years imprisonment.",
+"topic": "Law and crime"
+},
+{
+"word": "judge",
+"pos": "noun",
+"vi": "thẩm phán",
+"example": "The judge listened carefully.",
+"topic": "Law and crime"
+},
+{
+"word": "jury",
+"pos": "noun",
+"vi": "bồi thẩm đoàn",
+"example": "The jury found him not guilty.",
+"topic": "Law and crime"
+},
+{
+"word": "kidnapping",
+"pos": "noun",
+"vi": "vụ bắt cóc",
+"example": "Kidnapping is a serious crime.",
+"topic": "Law and crime"
+},
+{
+"word": "lawyer",
+"pos": "noun",
+"vi": "luật sư",
+"example": "She wants to become a lawyer.",
+"topic": "Law and crime"
+},
+{
+"word": "motive",
+"pos": "noun",
+"vi": "động cơ",
+"example": "The police could not find a motive.",
+"topic": "Law and crime"
+},
+{
+"word": "murder",
+"pos": "noun",
+"vi": "vụ giết người",
+"example": "The murder shocked the town.",
+"topic": "Law and crime"
+},
+{
+"word": "offence",
+"pos": "noun",
+"vi": "tội, hành vi vi phạm",
+"example": "Speeding is a traffic offence.",
+"topic": "Law and crime"
+},
+{
+"word": "prevention",
+"pos": "noun",
+"vi": "sự phòng ngừa",
+"example": "Prevention is better than cure.",
+"topic": "Law and crime"
+},
+{
+"word": "prison",
+"pos": "noun",
+"vi": "nhà tù",
+"example": "He spent five years in prison.",
+"topic": "Law and crime"
+},
+{
+"word": "prisoner",
+"pos": "noun",
+"vi": "tù nhân",
+"example": "The prisoner escaped last night.",
+"topic": "Law and crime"
+},
+{
+"word": "punishment",
+"pos": "noun",
+"vi": "hình phạt",
+"example": "The punishment should fit the crime.",
+"topic": "Law and crime"
+},
+{
+"word": "smuggling",
+"pos": "noun",
+"vi": "nạn buôn lậu",
+"example": "Smuggling is a problem at the border.",
+"topic": "Law and crime"
+},
+{
+"word": "vandalism",
+"pos": "noun",
+"vi": "hành vi phá hoại",
+"example": "Vandalism costs the city a lot of money.",
+"topic": "Law and crime"
+},
+{
+"word": "victim",
+"pos": "noun",
+"vi": "nạn nhân",
+"example": "The victim called the police.",
+"topic": "Law and crime"
+},
+{
+"word": "violation",
+"pos": "noun",
+"vi": "sự vi phạm",
+"example": "Parking here is a violation of the law.",
+"topic": "Law and crime"
+},
+{
+"word": "guilty",
+"pos": "adj",
+"vi": "có tội",
+"example": "The jury found him guilty.",
+"topic": "Law and crime"
+},
+{
+"word": "innocent",
+"pos": "adj",
+"vi": "vô tội",
+"example": "He says he is innocent.",
+"topic": "Law and crime"
+},
+{
+"word": "harsh",
+"pos": "adj",
+"vi": "khắc nghiệt, nghiêm khắc",
+"example": "The punishment was too harsh.",
+"topic": "Law and crime"
+},
+{
+"word": "law-abiding",
+"pos": "adj",
+"vi": "tuân thủ pháp luật",
+"example": "Most people are law-abiding.",
+"topic": "Law and crime"
+},
+{
+"word": "abolish",
+"pos": "verb",
+"vi": "bãi bỏ",
+"example": "Some countries want to abolish the death penalty.",
+"topic": "Law and crime"
+},
+{
+"word": "deter",
+"pos": "verb",
+"vi": "ngăn cản",
+"example": "Strong laws deter crime.",
+"topic": "Law and crime"
+},
+{
+"word": "enforce",
+"pos": "verb",
+"vi": "thi hành",
+"example": "The police enforce the law.",
+"topic": "Law and crime"
+},
+{
+"word": "punish",
+"pos": "verb",
+"vi": "trừng phạt",
+"example": "Parents should not punish children too hard.",
+"topic": "Law and crime"
+},
+{
+"word": "violate",
+"pos": "verb",
+"vi": "vi phạm",
+"example": "Drivers who violate the law pay a fine.",
+"topic": "Law and crime"
+},
+{
+"word": "author",
+"pos": "noun",
+"vi": "tác giả",
+"example": "The author signed my book.",
+"topic": "Media"
+},
+{
+"word": "bias",
+"pos": "noun",
+"vi": "sự thiên vị",
+"example": "The report showed a clear bias.",
+"topic": "Media"
+},
+{
+"word": "censorship",
+"pos": "noun",
+"vi": "sự kiểm duyệt",
+"example": "Censorship limits free speech.",
+"topic": "Media"
+},
+{
+"word": "current affairs",
+"pos": "noun",
+"vi": "thời sự",
+"example": "I watch a programme about current affairs.",
+"topic": "Media"
+},
+{
+"word": "editor",
+"pos": "noun",
+"vi": "biên tập viên",
+"example": "The editor checked the article.",
+"topic": "Media"
+},
+{
+"word": "fame",
+"pos": "noun",
+"vi": "danh tiếng",
+"example": "Fame can change a person's life.",
+"topic": "Media"
+},
+{
+"word": "free press",
+"pos": "noun",
+"vi": "báo chí tự do",
+"example": "A free press is important in a democracy.",
+"topic": "Media"
+},
+{
+"word": "journalism",
+"pos": "noun",
+"vi": "nghề báo",
+"example": "She studied journalism at university.",
+"topic": "Media"
+},
+{
+"word": "mass media",
+"pos": "noun",
+"vi": "truyền thông đại chúng",
+"example": "Mass media influences public opinion.",
+"topic": "Media"
+},
+{
+"word": "media",
+"pos": "noun",
+"vi": "giới truyền thông",
+"example": "The media reported the news quickly.",
+"topic": "Media"
+},
+{
+"word": "network",
+"pos": "noun",
+"vi": "mạng lưới, đài truyền hình",
+"example": "The network will show the match live.",
+"topic": "Media"
+},
+{
+"word": "newspaper",
+"pos": "noun",
+"vi": "tờ báo",
+"example": "My father reads a newspaper every morning.",
+"topic": "Media"
+},
+{
+"word": "opinion",
+"pos": "noun",
+"vi": "ý kiến",
+"example": "In my opinion, the film was too long.",
+"topic": "Media"
+},
+{
+"word": "paparazzi",
+"pos": "noun",
+"vi": "thợ săn ảnh",
+"example": "The paparazzi followed the singer everywhere.",
+"topic": "Media"
+},
+{
+"word": "press",
+"pos": "noun",
+"vi": "báo chí",
+"example": "The press asked many questions.",
+"topic": "Media"
+},
+{
+"word": "privacy",
+"pos": "noun",
+"vi": "sự riêng tư",
+"example": "Everyone has the right to privacy.",
+"topic": "Media"
+},
+{
+"word": "publication",
+"pos": "noun",
+"vi": "ấn phẩm, sự xuất bản",
+"example": "The publication of the book was delayed.",
+"topic": "Media"
+},
+{
+"word": "publicity",
+"pos": "noun",
+"vi": "sự quảng bá",
+"example": "The film got a lot of publicity.",
+"topic": "Media"
+},
+{
+"word": "tabloid",
+"pos": "noun",
+"vi": "báo lá cải",
+"example": "The tabloid printed a false story.",
+"topic": "Media"
+},
+{
+"word": "biased",
+"pos": "adj",
+"vi": "thiên vị",
+"example": "The article was biased against the company.",
+"topic": "Media"
+},
+{
+"word": "celebrity",
+"pos": "noun",
+"vi": "người nổi tiếng",
+"example": "The celebrity signed autographs for fans.",
+"topic": "Media"
+},
+{
+"word": "controversial",
+"pos": "adj",
+"vi": "gây tranh cãi",
+"example": "The new law is controversial.",
+"topic": "Media"
+},
+{
+"word": "factual",
+"pos": "adj",
+"vi": "dựa trên sự thật",
+"example": "A news report should be factual.",
+"topic": "Media"
+},
+{
+"word": "informative",
+"pos": "adj",
+"vi": "cung cấp nhiều thông tin",
+"example": "The documentary was very informative.",
+"topic": "Media"
+},
+{
+"word": "mainstream",
+"pos": "adj",
+"vi": "chính thống, phổ biến",
+"example": "Mainstream media covers the main stories.",
+"topic": "Media"
+},
+{
+"word": "sensationalist",
+"pos": "adj",
+"vi": "giật gân",
+"example": "Sensationalist news is popular but not always true.",
+"topic": "Media"
+},
+{
+"word": "broadcast",
+"pos": "verb",
+"vi": "phát sóng",
+"example": "The match will be broadcast live on TV.",
+"topic": "Media"
+},
+{
+"word": "censor",
+"pos": "verb",
+"vi": "kiểm duyệt",
+"example": "The government decided to censor the film.",
+"topic": "Media"
+},
+{
+"word": "expose",
+"pos": "verb",
+"vi": "phơi bày",
+"example": "The journalist wanted to expose the truth.",
+"topic": "Media"
+},
+{
+"word": "inform",
+"pos": "verb",
+"vi": "thông báo",
+"example": "Please inform me of any changes.",
+"topic": "Media"
+},
+{
+"word": "investigate",
+"pos": "verb",
+"vi": "điều tra",
+"example": "Police investigate the cause of the fire.",
+"topic": "Media"
+},
+{
+"word": "publish",
+"pos": "verb",
+"vi": "xuất bản",
+"example": "They publish a magazine every month.",
+"topic": "Media"
+},
+{
+"word": "report",
+"pos": "verb",
+"vi": "đưa tin, báo cáo",
+"example": "Newspapers report the news every day.",
+"topic": "Media"
+},
+{
+"word": "actor",
+"pos": "noun",
+"vi": "nam diễn viên",
+"example": "The actor won an award.",
+"topic": "The arts"
+},
+{
+"word": "audience",
+"pos": "noun",
+"vi": "khán giả",
+"example": "The audience clapped for ten minutes.",
+"topic": "The arts"
+},
+{
+"word": "ballet",
+"pos": "noun",
+"vi": "múa ba lê",
+"example": "She has taken ballet lessons since she was five.",
+"topic": "The arts"
+},
+{
+"word": "concert",
+"pos": "noun",
+"vi": "buổi hòa nhạc",
+"example": "We went to a concert last night.",
+"topic": "The arts"
+},
+{
+"word": "crafts",
+"pos": "noun",
+"vi": "đồ thủ công",
+"example": "The market sells local crafts.",
+"topic": "The arts"
+},
+{
+"word": "creation",
+"pos": "noun",
+"vi": "sự sáng tạo, tác phẩm",
+"example": "The painting is his best creation.",
+"topic": "The arts"
+},
+{
+"word": "exhibition",
+"pos": "noun",
+"vi": "buổi triển lãm",
+"example": "The exhibition opens on Friday.",
+"topic": "The arts"
+},
+{
+"word": "expression",
+"pos": "noun",
+"vi": "sự biểu đạt",
+"example": "Dance is a form of expression.",
+"topic": "The arts"
+},
+{
+"word": "festival",
+"pos": "noun",
+"vi": "lễ hội",
+"example": "The music festival lasts three days.",
+"topic": "The arts"
+},
+{
+"word": "gallery",
+"pos": "noun",
+"vi": "phòng tranh",
+"example": "I visited an art gallery in Hanoi.",
+"topic": "The arts"
+},
+{
+"word": "inspiration",
+"pos": "noun",
+"vi": "nguồn cảm hứng",
+"example": "Nature is her main inspiration.",
+"topic": "The arts"
+},
+{
+"word": "literature",
+"pos": "noun",
+"vi": "văn học",
+"example": "She studies English literature.",
+"topic": "The arts"
+},
+{
+"word": "mood",
+"pos": "noun",
+"vi": "tâm trạng, không khí",
+"example": "Music can change your mood.",
+"topic": "The arts"
+},
+{
+"word": "musician",
+"pos": "noun",
+"vi": "nhạc sĩ",
+"example": "The musician plays three instruments.",
+"topic": "The arts"
+},
+{
+"word": "opera",
+"pos": "noun",
+"vi": "nhạc kịch opera",
+"example": "We saw an opera in Paris.",
+"topic": "The arts"
+},
+{
+"word": "orchestra",
+"pos": "noun",
+"vi": "dàn nhạc",
+"example": "The orchestra played beautifully.",
+"topic": "The arts"
+},
+{
+"word": "painting",
+"pos": "noun",
+"vi": "bức tranh",
+"example": "The painting hangs in the living room.",
+"topic": "The arts"
+},
+{
+"word": "performance",
+"pos": "noun",
+"vi": "buổi biểu diễn",
+"example": "The performance starts at eight.",
+"topic": "The arts"
+},
+{
+"word": "portrait",
+"pos": "noun",
+"vi": "chân dung",
+"example": "He painted a portrait of his mother.",
+"topic": "The arts"
+},
+{
+"word": "sculpture",
+"pos": "noun",
+"vi": "tác phẩm điêu khắc",
+"example": "The sculpture stands in the park.",
+"topic": "The arts"
+},
+{
+"word": "style",
+"pos": "noun",
+"vi": "phong cách",
+"example": "I like her style of writing.",
+"topic": "The arts"
+},
+{
+"word": "taste",
+"pos": "noun",
+"vi": "gu thẩm mỹ, vị",
+"example": "They have different taste in music.",
+"topic": "The arts"
+},
+{
+"word": "theatre",
+"pos": "noun",
+"vi": "nhà hát",
+"example": "We go to the theatre once a month.",
+"topic": "The arts"
+},
+{
+"word": "theme",
+"pos": "noun",
+"vi": "chủ đề",
+"example": "The theme of the film is friendship.",
+"topic": "The arts"
+},
+{
+"word": "venue",
+"pos": "noun",
+"vi": "địa điểm tổ chức",
+"example": "The concert venue holds five thousand people.",
+"topic": "The arts"
+},
+{
+"word": "classical",
+"pos": "adj",
+"vi": "cổ điển",
+"example": "I enjoy classical music.",
+"topic": "The arts"
+},
+{
+"word": "creative",
+"pos": "adj",
+"vi": "sáng tạo",
+"example": "She is a very creative person.",
+"topic": "The arts"
+},
+{
+"word": "cultural",
+"pos": "adj",
+"vi": "thuộc văn hóa",
+"example": "The city has many cultural events.",
+"topic": "The arts"
+},
+{
+"word": "emotional",
+"pos": "adj",
+"vi": "xúc động",
+"example": "The film was very emotional.",
+"topic": "The arts"
+},
+{
+"word": "passionate",
+"pos": "adj",
+"vi": "đam mê",
+"example": "He is passionate about music.",
+"topic": "The arts"
+},
+{
+"word": "popular",
+"pos": "adj",
+"vi": "phổ biến",
+"example": "Pop music is popular among young people.",
+"topic": "The arts"
+},
+{
+"word": "vivid",
+"pos": "adj",
+"vi": "sống động",
+"example": "The artist uses vivid colours.",
+"topic": "The arts"
+},
+{
+"word": "depict",
+"pos": "verb",
+"vi": "miêu tả",
+"example": "The painting depicts a village scene.",
+"topic": "The arts"
+},
+{
+"word": "perform",
+"pos": "verb",
+"vi": "biểu diễn",
+"example": "The band will perform tonight.",
+"topic": "The arts"
+},
+{
+"word": "provoke",
+"pos": "verb",
+"vi": "gây ra, khiêu khích",
+"example": "The film provokes strong feelings.",
+"topic": "The arts"
+},
+{
+"word": "enrich",
+"pos": "verb",
+"vi": "làm phong phú",
+"example": "Music can enrich our lives.",
+"topic": "The arts"
+}
+]

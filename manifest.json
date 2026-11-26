@@ -1,0 +1,17 @@
+{
+  "name": "IELTSe - Ôn luyện IELTS",
+  "short_name": "IELTSe",
+  "description": "Ôn từ vựng, ngữ pháp và luyện nói IELTS band 5.0",
+  "lang": "vi",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0a0e2e",
+  "theme_color": "#0a0e2e",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

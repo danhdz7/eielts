@@ -1,0 +1,58 @@
+[
+{"id":1,"title":"Introducing yourself","title_vi":"Làm quen","turns":[
+{"who":"A","en":"Hello, my name is Anna. Nice to meet you today.","vi":"Xin chào, tên tôi là Anna. Rất vui được gặp bạn hôm nay."},
+{"who":"B","en":"Hello Anna, my name is Minh. I am from Vietnam.","vi":"Chào Anna, tên tôi là Minh. Tôi đến từ Việt Nam."},
+{"who":"A","en":"Are you a student or do you work here?","vi":"Bạn là sinh viên hay bạn đang làm việc ở đây?"},
+{"who":"B","en":"I am a university student, and I study business.","vi":"Tôi là sinh viên đại học, và tôi học ngành kinh doanh."},
+{"who":"A","en":"That sounds very interesting. Do you like this city?","vi":"Nghe thật thú vị. Bạn có thích thành phố này không?"},
+{"who":"B","en":"Yes, I love it because the people are very friendly.","vi":"Có, tôi rất thích vì mọi người ở đây rất thân thiện."}]},
+{"id":2,"title":"Ordering food at a restaurant","title_vi":"Gọi món ở nhà hàng","turns":[
+{"who":"A","en":"Good evening, are you ready to order your food now?","vi":"Chào buổi tối, bạn đã sẵn sàng gọi món chưa?"},
+{"who":"B","en":"Yes, I would like to have the grilled chicken please.","vi":"Vâng, làm ơn cho tôi gọi món gà nướng."},
+{"who":"A","en":"Would you like rice or french fries with your chicken?","vi":"Bạn muốn ăn cơm hay khoai tây chiên cùng với gà?"},
+{"who":"B","en":"I would like steamed rice and some fresh vegetables please.","vi":"Làm ơn cho tôi cơm trắng và một ít rau tươi."},
+{"who":"A","en":"Sure, and what would you like to drink with that?","vi":"Được chứ, và bạn muốn uống gì kèm theo?"},
+{"who":"B","en":"Just a glass of cold water with lemon, thank you.","vi":"Chỉ cần một ly nước lạnh với chanh thôi, cảm ơn bạn."}]},
+{"id":3,"title":"Booking a hotel room","title_vi":"Đặt phòng khách sạn","turns":[
+{"who":"A","en":"Good morning, Sunrise Hotel. How can I help you today?","vi":"Chào buổi sáng, khách sạn Sunrise đây. Tôi có thể giúp gì cho bạn?"},
+{"who":"B","en":"Hello, I want to book a room for two nights.","vi":"Xin chào, tôi muốn đặt một phòng trong hai đêm."},
+{"who":"A","en":"Would you prefer a single room or a double room?","vi":"Bạn thích phòng đơn hay phòng đôi hơn?"},
+{"who":"B","en":"A single room with a nice window view, please.","vi":"Làm ơn cho tôi một phòng đơn có cửa sổ nhìn ra cảnh đẹp."},
+{"who":"A","en":"We have one available for fifty dollars per night.","vi":"Chúng tôi có một phòng trống với giá năm mươi đô la mỗi đêm."},
+{"who":"B","en":"That price is good. I will take that room please.","vi":"Giá đó tốt đấy. Làm ơn cho tôi đặt phòng đó."}]},
+{"id":4,"title":"Asking for directions","title_vi":"Hỏi đường","turns":[
+{"who":"A","en":"Excuse me, do you need some help finding a place?","vi":"Xin lỗi, bạn có cần giúp tìm đường đến đâu không?"},
+{"who":"B","en":"Yes, please. Can you tell me where the bus station is?","vi":"Vâng, làm ơn. Bạn có thể chỉ giúp tôi bến xe buýt ở đâu không?"},
+{"who":"A","en":"Go straight ahead for two blocks, then turn left.","vi":"Đi thẳng phía trước hai dãy nhà, sau đó rẽ trái."},
+{"who":"B","en":"Is the bus station near the big blue supermarket?","vi":"Bến xe buýt có ở gần siêu thị lớn màu xanh không?"},
+{"who":"A","en":"Yes, it is right across the street from that supermarket.","vi":"Đúng rồi, nó nằm ngay bên kia đường đối diện siêu thị đó."},
+{"who":"B","en":"Thank you so much for your kind help today.","vi":"Cảm ơn bạn rất nhiều vì sự giúp đỡ nhiệt tình hôm nay."}]},
+{"id":5,"title":"Shopping for clothes","title_vi":"Mua sắm quần áo","turns":[
+{"who":"A","en":"Welcome to our shop. What are you looking for today?","vi":"Chào mừng đến cửa hàng của chúng tôi. Hôm nay bạn tìm mua gì?"},
+{"who":"B","en":"I am looking for a blue shirt for my work.","vi":"Tôi đang tìm một chiếc áo sơ mi xanh để đi làm."},
+{"who":"A","en":"What size do you usually wear for formal shirts?","vi":"Bạn thường mặc cỡ nào cho áo sơ mi công sở?"},
+{"who":"B","en":"I usually wear medium. Can I try this one on?","vi":"Tôi thường mặc cỡ vừa. Tôi có thể thử chiếc này không?"},
+{"who":"A","en":"Of course, the fitting room is right over there.","vi":"Tất nhiên rồi, phòng thử đồ ở ngay đằng kia."},
+{"who":"B","en":"Thank you, I will go and try it on now.","vi":"Cảm ơn bạn, tôi sẽ đi thử nó ngay bây giờ."}]},
+{"id":6,"title":"At the doctor's","title_vi":"Đi khám bác sĩ","turns":[
+{"who":"A","en":"Good afternoon, what seems to be the problem today?","vi":"Chào buổi chiều, hôm nay bạn gặp vấn đề gì về sức khỏe?"},
+{"who":"B","en":"I have a bad headache and a sore throat.","vi":"Tôi bị đau đầu dữ dội và đau họng."},
+{"who":"A","en":"How long have you been feeling like this?","vi":"Bạn đã cảm thấy như vậy được bao lâu rồi?"},
+{"who":"B","en":"It started two days ago, and I feel very tired.","vi":"Nó bắt đầu từ hai ngày trước, và tôi thấy rất mệt."},
+{"who":"A","en":"You have a mild flu. You should rest and drink water.","vi":"Bạn bị cảm cúm nhẹ. Bạn nên nghỉ ngơi và uống nhiều nước."},
+{"who":"B","en":"Thank you, doctor. Should I take any medicine for this?","vi":"Cảm ơn bác sĩ. Tôi có cần uống thuốc gì cho bệnh này không?"}]},
+{"id":7,"title":"Job interview","title_vi":"Phỏng vấn xin việc","turns":[
+{"who":"A","en":"Good morning, please tell me a little about yourself.","vi":"Chào buổi sáng, vui lòng giới thiệu một chút về bản thân bạn."},
+{"who":"B","en":"I am a hard worker and I learn very fast.","vi":"Tôi là người chăm chỉ và tôi học hỏi rất nhanh."},
+{"who":"A","en":"Why do you want to work for our company?","vi":"Tại sao bạn muốn làm việc cho công ty chúng tôi?"},
+{"who":"B","en":"Your company has a great team and good training programs.","vi":"Công ty bạn có đội ngũ tuyệt vời và các chương trình đào tạo tốt."},
+{"who":"A","en":"What is your biggest strength in a team environment?","vi":"Điểm mạnh lớn nhất của bạn khi làm việc nhóm là gì?"},
+{"who":"B","en":"I communicate well and always finish my tasks on time.","vi":"Tôi giao tiếp tốt và luôn hoàn thành nhiệm vụ đúng hạn."}]},
+{"id":8,"title":"Talking about hobbies","title_vi":"Nói về sở thích","turns":[
+{"who":"A","en":"What do you usually do in your free time?","vi":"Bạn thường làm gì vào thời gian rảnh?"},
+{"who":"B","en":"I really enjoy reading books and listening to soft music.","vi":"Tôi thực sự thích đọc sách và nghe nhạc nhẹ."},
+{"who":"A","en":"What kind of books do you like to read most?","vi":"Bạn thích đọc thể loại sách nào nhất?"},
+{"who":"B","en":"I like short stories because they are easy to finish.","vi":"Tôi thích truyện ngắn vì chúng dễ đọc xong."},
+{"who":"A","en":"Do you also play any sports on the weekend?","vi":"Bạn có chơi môn thể thao nào vào cuối tuần không?"},
+{"who":"B","en":"Yes, I play badminton with my friends every Sunday morning.","vi":"Có, tôi chơi cầu lông với bạn bè vào mỗi sáng Chủ nhật."}]}
+]
