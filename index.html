@@ -17,6 +17,14 @@
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="manifest" href="manifest.json">
+<script>
+  // Bắt sự kiện cài app thật sớm (Chrome bắn ngay khi trang tải, trước khi code app chạy)
+  window.__bip = null;
+  window.addEventListener("beforeinstallprompt", function (e) { e.preventDefault(); window.__bip = e; });
+  if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost")) {
+    navigator.serviceWorker.register("sw.js").catch(function () {});
+  }
+</script>
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="eIELTS">
@@ -7812,9 +7820,9 @@
   }
 
   /* ===================== Tải app (PWA) ===================== */
-  var installEvt = null;
-  window.addEventListener("beforeinstallprompt", function (e) { e.preventDefault(); installEvt = e; paintInstall(); });
-  window.addEventListener("appinstalled", function () { installEvt = null; toast("Đã cài eIELTS vào máy."); paintInstall(); });
+  var installEvt = window.__bip || null;
+  window.addEventListener("beforeinstallprompt", function (e) { e.preventDefault(); installEvt = e; window.__bip = e; paintInstall(); });
+  window.addEventListener("appinstalled", function () { installEvt = null; window.__bip = null; write("ielts_installed", true); toast("Đã cài eIELTS vào máy."); paintInstall(); });
   function isStandalone() {
     try { return window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone === true; } catch (e) { return false; }
   }
@@ -7823,22 +7831,49 @@
   }
   function doInstall() {
     sfx.tap();
+    installEvt = installEvt || window.__bip;
     if (installEvt) {
-      installEvt.prompt();
-      installEvt.userChoice.then(function () { installEvt = null; paintInstall(); }).catch(function () {});
+      var ev = installEvt;
+      ev.prompt();
+      ev.userChoice.then(function (c) {
+        installEvt = null; window.__bip = null;
+        if (c && c.outcome === "accepted") { write("ielts_installed", true); toast("Đang cài eIELTS… biểu tượng sẽ có trên màn hình chính."); }
+        paintInstall();
+      }).catch(function () {});
       return;
     }
+    // Chrome đôi khi bắn sự kiện chậm: chờ một chút rồi thử lại trước khi hiện hướng dẫn
+    if (!doInstall.waited) {
+      doInstall.waited = true;
+      showLoading("Đang chuẩn bị cài đặt…", function () {});
+      setTimeout(function () { $("loadWrap").classList.remove("on"); if (window.__bip) { installEvt = window.__bip; installReady(); } else installHelp(); }, 1500);
+      return;
+    }
+    installHelp();
+  }
+  function installReady() {
+    // cần một lần bấm mới thì Chrome mới cho hiện hộp cài đặt
+    openSheet(function (box) {
+      box.appendChild(mk("div", "cap", "Tải app"));
+      var h = mk("h2", "", "Sẵn sàng cài eIELTS"); h.style.fontSize = "1.35rem"; box.appendChild(h);
+      var b = mk("button", "btn-primary", "📲 Cài ngay"); b.type = "button"; b.style.marginTop = "12px";
+      b.addEventListener("click", function () { closeSheet(); doInstall(); });
+      box.appendChild(b);
+    });
+  }
+  function installHelp() {
     var ios = /iphone|ipad|ipod/i.test(navigator.userAgent);
     openSheet(function (box) {
       box.appendChild(mk("div", "cap", "Tải app"));
       var h = mk("h2", "", "Cài eIELTS vào màn hình chính"); h.style.fontSize = "1.35rem"; box.appendChild(h);
       var steps = ios
         ? ["Mở trang này bằng Safari.", "Bấm nút Chia sẻ (ô vuông có mũi tên lên) ở thanh dưới.", "Chọn “Thêm vào MH chính”, rồi bấm Thêm."]
-        : ["Mở trang này bằng Chrome.", "Bấm nút ⋮ ở góc trên bên phải.", "Chọn “Cài đặt ứng dụng” hoặc “Thêm vào màn hình chính”."];
+        : ["Bấm nút ⋮ ở góc trên bên phải Chrome.", "Chọn “Thêm vào màn hình chính”.", "Chọn “Cài đặt” (không chọn “Tạo lối tắt”), rồi bấm Cài đặt lần nữa."];
       var ol = mk("ol", "insteps");
       steps.forEach(function (s) { ol.appendChild(mk("li", "", s)); });
       box.appendChild(ol);
       box.appendChild(el("p", "muted", "Cài xong, eIELTS mở như một app riêng và học được cả khi không có mạng."));
+      if (!ios) box.appendChild(el("p", "dim", "Nếu menu không có mục cài đặt: có thể máy đã cài eIELTS rồi (tìm biểu tượng hành tinh trên màn hình chính), hoặc bạn đang mở trong trình duyệt của Facebook/Zalo — hãy bấm ⋮ → Mở bằng Chrome."));
     });
   }
   function installButton(cls) {
