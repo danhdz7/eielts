@@ -705,6 +705,16 @@
   .msg>.avatar>.avimg{display:none!important}
   .pbig>.avcam{position:absolute!important;right:-3px!important;bottom:-3px!important;left:auto!important;top:auto!important;width:24px!important;height:24px!important}
 
+  .phead .aved{display:inline-flex;align-items:center;gap:4px;margin-top:8px;padding:6px 12px!important;border-radius:999px!important;border:1px solid rgba(255,255,255,.2)!important;box-shadow:none!important;background:rgba(255,255,255,.08)!important;color:var(--mut)!important;font-weight:600;font-size:.82rem!important;line-height:1.2;cursor:pointer;width:max-content;min-height:0!important}
+  .aved:active{transform:scale(.97)}
+  html[data-theme="light"] .aved{border-color:rgba(0,0,0,.15);background:rgba(0,0,0,.04)}
+  .phead .pn{display:flex;flex-direction:column;min-width:0}
+  .avview{position:fixed;inset:0;z-index:9999;background:rgba(5,7,20,.92);display:grid;place-items:center;padding:24px;animation:avfade .18s ease}
+  .avview img{width:min(82vw,440px);max-height:78vh;aspect-ratio:1;object-fit:cover;border-radius:50%;box-shadow:0 0 0 3px rgba(255,255,255,.25),0 10px 40px rgba(0,0,0,.6)}
+  .avview img.ic{object-fit:contain;background:#1b2046;padding:40px;box-sizing:border-box}
+  .avview .avx{position:absolute;top:calc(14px + env(safe-area-inset-top));right:14px;width:42px;height:42px;border-radius:50%;border:0;background:rgba(255,255,255,.14);color:#fff;font-size:1.2rem;cursor:pointer}
+  @keyframes avfade{from{opacity:0}to{opacity:1}}
+
   /* ===================== Nền vũ trụ ===================== */
   #bgfx{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
   /* màn mờ phủ lên nền để chữ trên thẻ luôn đọc được */
@@ -2996,13 +3006,15 @@
     var pb = makeOrb(mk("div", "pbig", ""), null, ["#9db4ff", "#3b2a9c", "#8f74ff"]);
     pb.appendChild(mk("span", "", (p.name || "e")[0].toUpperCase()));
     applyAvatar(pb);
-    var cam = mk("span", "avcam", "✎"); cam.setAttribute("data-noi3", "1"); pb.appendChild(cam);
-    pb.setAttribute("role", "button"); pb.setAttribute("aria-label", "Đổi ảnh đại diện"); pb.style.cursor = "pointer";
-    pb.addEventListener("click", function () { sfx.tap(); openAvatarPicker(); });
+    pb.setAttribute("role", "button"); pb.setAttribute("aria-label", "Xem hoặc đổi ảnh đại diện"); pb.style.cursor = "pointer";
+    pb.addEventListener("click", function () { sfx.tap(); avatarMenu(); });
     head.appendChild(pb);
     var pn = mk("div", "pn");
     pn.appendChild(mk("b", "", p.name || "Bạn"));
     pn.appendChild(mk("small", "", p.email || (p.provider === "guest" ? "Dùng không cần tài khoản" : "Tài khoản eIELTS")));
+    var ed = mk("button", "aved", "✎ Đổi ảnh"); ed.type = "button"; ed.setAttribute("data-noi3", "1");
+    ed.addEventListener("click", function () { sfx.tap(); openAvatarPicker(); });
+    pn.appendChild(ed);
     head.appendChild(pn);
     card.appendChild(head);
 
@@ -5420,6 +5432,30 @@
     };
     fr.readAsDataURL(file);
   }
+  function viewAvatar() {
+    var a = getAvatar(); if (!a || !a.src) return;
+    var ov = mk("div", "avview"); ov.setAttribute("role", "dialog");
+    var im = document.createElement("img"); im.src = a.src; im.alt = "Ảnh đại diện"; im.className = a.t === "photo" ? "ph" : "ic";
+    ov.appendChild(im);
+    var x = mk("button", "avx", "✕"); x.type = "button"; x.setAttribute("aria-label", "Đóng"); x.setAttribute("data-noi3", "1"); ov.appendChild(x);
+    function close() { if (ov.parentNode) ov.parentNode.removeChild(ov); document.removeEventListener("keydown", onKey); }
+    function onKey(e) { if (e.key === "Escape") close(); }
+    ov.addEventListener("click", close); document.addEventListener("keydown", onKey);
+    document.body.appendChild(ov);
+  }
+  function avatarMenu() {
+    var a = getAvatar();
+    if (!a || !a.src) { openAvatarPicker(); return; }
+    openSheet(function (box) {
+      box.appendChild(mk("div", "cap", "Hồ sơ"));
+      var h = mk("h2", "", "Ảnh đại diện"); h.style.fontSize = "1.45rem"; box.appendChild(h);
+      var v = mk("button", "btn-primary", "Xem ảnh"); v.type = "button"; v.style.marginTop = "12px";
+      v.addEventListener("click", function () { closeSheet(); sfx.tap(); setTimeout(viewAvatar, 150); });
+      var e = mk("button", "btn-line", "Đổi ảnh"); e.type = "button"; e.style.marginTop = "10px";
+      e.addEventListener("click", function () { closeSheet(); sfx.tap(); setTimeout(openAvatarPicker, 250); });
+      box.appendChild(v); box.appendChild(e);
+    });
+  }
   function openAvatarPicker() {
     openSheet(function (box) {
       box.appendChild(mk("div", "cap", "Hồ sơ"));
@@ -7047,7 +7083,11 @@
     var prof = getProfile() || {};
     prof.name = info.name || prof.name || "Bạn"; prof.email = info.email || ""; prof.provider = info.provider; prof.joined = prof.joined || today();
     setProfile(prof);
-    if (info.picture) write("ielts_avatar", { t: "photo", src: info.picture });
+    if (info.picture) {
+      var pic = String(info.picture);
+      if (/googleusercontent\.com/.test(pic)) pic = /=s\d+(-c)?$/.test(pic) ? pic.replace(/=s\d+(-c)?$/, "=s512-c") : pic + "=s512-c";
+      write("ielts_avatar", { t: "photo", src: pic });
+    }
     try { paintAllAvatars(); } catch (e) {}
     sfx.ok(); toast("Đã đăng nhập bằng " + (info.provider === "google" ? "Google" : "Facebook") + ": " + (info.email || info.name));
     if (prof.goalBand) enterApp(); else finishAuth(prof);
