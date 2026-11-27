@@ -1098,6 +1098,13 @@
   #screen-main .pane.active{padding-bottom:calc(110px + env(safe-area-inset-bottom))}
   #screen-main #pane-learn.active{padding-bottom:calc(180px + env(safe-area-inset-bottom))}
   #screen-main #pane-learn.active.gmode{padding-bottom:calc(110px + env(safe-area-inset-bottom))}
+  .agree{display:flex;gap:10px;align-items:flex-start;font-size:.8rem;line-height:1.45;color:var(--mut);margin:12px 0 4px;font-weight:600}
+  .agree input{width:18px;height:18px;flex:0 0 18px;margin-top:2px;accent-color:#5ea2ff}
+  .authlnk{display:block;width:100%;text-align:center;margin-top:12px;background:none;border:0;color:#8fb4ff;font:inherit;font-weight:700}
+  .gslot{display:flex;justify-content:center;margin:16px 0 6px;min-height:48px}
+  .import-msg.ok{color:#7ee2a8}
+  .dcard .scimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .schero{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:20px;margin:2px 0 12px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
 </style>
 </head>
 <body>
@@ -1131,23 +1138,44 @@
           <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.5-3.91 3.77-3.91 1.09 0 2.24.2 2.24.2v2.46H15.2c-1.24 0-1.63.78-1.63 1.57v1.89h2.78l-.45 2.91h-2.33V22c4.78-.79 8.43-4.93 8.43-9.94z"/></svg>
           Tiếp tục với Facebook
         </button>
-        <button class="sso ms" id="ssoMail" type="button">✉️ Dùng email</button>
+        <button class="sso ms" id="ssoMail" type="button">✉️ Đăng nhập tài khoản eIELTS</button>
+        <button class="sso ms" id="ssoNew" type="button">✨ Tạo tài khoản eIELTS mới</button>
         <div class="or">hoặc</div>
         <button class="btn-line" id="ssoGuest" type="button">Dùng ngay, không cần tài khoản</button>
-        <p class="dim" style="text-align:center;margin-top:16px;line-height:1.5">Tiến độ được lưu trên chính máy này.</p>
+        <p class="dim" style="text-align:center;margin-top:16px;line-height:1.5">Tài khoản và tiến độ được lưu trên chính máy này. Mật khẩu được mã hoá, không gửi đi đâu.</p>
       </div>
     </div>
 
     <div id="authStep2" style="display:none">
       <button class="xbtn" id="authBack" type="button" aria-label="Quay lại">‹</button>
       <h1 style="margin-top:14px">Tạo tài khoản eIELTS</h1>
-      <p class="muted">Tài khoản lưu trên máy này, không gửi đi đâu cả.</p>
+      <p class="muted">Dùng để đăng nhập lại và giữ tiến độ trên máy này.</p>
       <label for="auName">Tên hiển thị</label>
       <input id="auName" type="text" autocomplete="name" placeholder="Ví dụ: Công Danh">
       <label for="auMail">Email</label>
       <input id="auMail" type="email" autocomplete="email" placeholder="ban@email.com">
+      <label for="auPass">Mật khẩu</label>
+      <input id="auPass" type="password" autocomplete="new-password" placeholder="Ít nhất 6 ký tự">
+      <label for="auPass2">Nhập lại mật khẩu</label>
+      <input id="auPass2" type="password" autocomplete="new-password" placeholder="Nhập lại mật khẩu">
+      <label class="agree"><input type="checkbox" id="auAgree"> Tôi hiểu tài khoản được lưu trên máy này (mật khẩu mã hoá). Đổi máy hoặc xoá dữ liệu trình duyệt thì cần sao lưu trước.</label>
       <div class="import-msg" id="auMsg" style="display:none"></div>
-      <button class="btn-primary" id="auGo" type="button">Bắt đầu học</button>
+      <button class="btn-primary" id="auGo" type="button">Tạo tài khoản</button>
+      <button class="lnk authlnk" id="toLogin" type="button">Đã có tài khoản? Đăng nhập</button>
+    </div>
+
+    <div id="authStep4" style="display:none">
+      <button class="xbtn" id="authBack2" type="button" aria-label="Quay lại">‹</button>
+      <h1 style="margin-top:14px">Đăng nhập eIELTS</h1>
+      <p class="muted">Dùng email và mật khẩu bạn đã tạo trên máy này.</p>
+      <label for="liMail">Email</label>
+      <input id="liMail" type="email" autocomplete="email" placeholder="ban@email.com">
+      <label for="liPass">Mật khẩu</label>
+      <input id="liPass" type="password" autocomplete="current-password" placeholder="Mật khẩu">
+      <div class="import-msg" id="liMsg" style="display:none"></div>
+      <button class="btn-primary" id="liGo" type="button">Đăng nhập</button>
+      <button class="lnk authlnk" id="liForgot" type="button">Quên mật khẩu?</button>
+      <button class="lnk authlnk" id="toRegister" type="button">Chưa có tài khoản? Tạo mới</button>
     </div>
 
     <div id="authStep3" style="display:none">
@@ -2629,6 +2657,14 @@
   }
   function levelOf(n) { return n <= 6 ? ["Dễ", ""] : n <= 10 ? ["Vừa", "m"] : ["Khó", "h"]; }
 
+  var SC_IMGS = { s1: 1, s2: 1, s3: 1, s4: 1, s5: 1, s6: 1, d1: 1, d2: 1, d3: 1, d4: 1, d5: 1, d6: 1, d7: 1, d8: 1 };
+  var SC_ALIAS = { sb1: "s2" };
+  function sceneKey(id) { return SC_ALIAS[id] || id; }
+  function sceneImg(id, fb) {
+    id = sceneKey(id);
+    if (!SC_IMGS[id]) return sceneSVG(fb);
+    return '<img class="scimg" data-noi3="1" alt="" loading="lazy" src="sc-' + id + '.webp" onerror="this.remove()">';
+  }
   function renderTalkTab() {
     heroTalk();
     var LV = [["all", "Tất cả"], ["easy", "Dễ"], ["mid", "Vừa"], ["hard", "Khó"]];
@@ -2647,7 +2683,7 @@
       if (!keep(s.turns.length)) return;
       shown++;
       var c = mk("button", "dcard"); c.type = "button"; c.style.setProperty("--i", i);
-      c.insertAdjacentHTML("afterbegin", sceneSVG(i + 3));
+      c.insertAdjacentHTML("afterbegin", sceneImg(String(s.id || ("s" + (i + 1))), i + 3));
       c.appendChild(mk("span", "shade"));
       var lv = levelOf(s.turns.length);
       c.appendChild(el("span", "lv " + lv[1], "<i></i>" + lv[0] + " · chọn câu trả lời"));
@@ -2660,7 +2696,7 @@
       if (!keep(d.turns.length)) return;
       shown++;
       var c = mk("button", "dcard"); c.type = "button"; c.style.setProperty("--i", i);
-      c.insertAdjacentHTML("afterbegin", sceneSVG(i));
+      c.insertAdjacentHTML("afterbegin", sceneImg("d" + (d.id || (i + 1)), i));
       c.appendChild(mk("span", "shade"));
       var lv = levelOf(d.turns.length);
       c.appendChild(el("span", "lv " + lv[1], "<i></i>" + lv[0] + " · nói theo mẫu"));
@@ -2772,7 +2808,7 @@
 
   /* ============ Đăng nhập / mở đầu ============ */
   function authShow(step) {
-    ["authStep1", "authStep2", "authStep3"].forEach(function (id, i) {
+    ["authStep1", "authStep2", "authStep3", "authStep4"].forEach(function (id, i) {
       $(id).style.display = (i + 1) === step ? "block" : "none";
     });
     show("auth");
@@ -2789,14 +2825,24 @@
     $("goalMin").value = String(p.goalMin || 10);
   }
   function bindAuth() {
-    $("ssoGoogle").addEventListener("click", function () { ssoNotice("Google"); });
-    $("ssoFb").addEventListener("click", function () { ssoNotice("Facebook"); });
-    $("ssoMail").addEventListener("click", function () { sfx.tap(); authShow(2); });
+    $("ssoGoogle").addEventListener("click", googleLogin);
+    $("ssoFb").addEventListener("click", fbLogin);
+    $("ssoMail").addEventListener("click", function () { sfx.tap(); authShow(accList().length ? 4 : 2); });
+    $("ssoNew").addEventListener("click", function () { sfx.tap(); authShow(2); });
+    $("toLogin").addEventListener("click", function () { sfx.tap(); authShow(4); });
+    $("toRegister").addEventListener("click", function () { sfx.tap(); authShow(2); });
+    $("authBack2").addEventListener("click", function () { sfx.tap(); authShow(1); });
+    $("liGo").addEventListener("click", doLogin);
+    $("liPass").addEventListener("keydown", function (e) { if (e.key === "Enter") doLogin(); });
+    $("liForgot").addEventListener("click", function () {
+      askDlg({ title: "Quên mật khẩu", text: "eIELTS không có máy chủ nên không gửi email đặt lại mật khẩu được. Bạn có thể tạo tài khoản mới, tiến độ học trên máy này vẫn còn nguyên.", ok: "Tạo tài khoản mới", cancel: "Đóng", onOk: function () { authShow(2); } });
+    });
     $("ssoGuest").addEventListener("click", function () {
       sfx.tap(); finishAuth({ name: "Bạn", email: "", provider: "guest", joined: today() });
     });
     $("authBack").addEventListener("click", function () { sfx.tap(); authShow(1); });
-    $("auGo").addEventListener("click", function () {
+    $("auGo").addEventListener("click", doRegister);
+    $("auGo").addEventListener("click_old", function () {
       var n = $("auName").value.trim(), m = $("auMail").value.trim(), msg = $("auMsg");
       if (n.length < 2) { msg.className = "import-msg bad"; msg.style.display = "block"; msg.textContent = "Nhập tên hiển thị giúp mình nhé."; return; }
       if (m && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(m)) { msg.className = "import-msg bad"; msg.style.display = "block"; msg.textContent = "Email chưa đúng dạng."; return; }
@@ -4652,6 +4698,8 @@
 
   function openScenarioSheet(s) {
     openSheet(function (box) {
+      var sid = sceneKey(String(s.id || ""));
+      if (SC_IMGS[sid]) { var hi = document.createElement("img"); hi.className = "schero"; hi.alt = ""; hi.src = "sc-" + sid + ".webp"; hi.setAttribute("data-noi3", "1"); box.appendChild(hi); }
       var h = mk("div");
       h.appendChild(mk("div", "cap", "Tình huống · " + (s.level || "A2") + " · " + (s.minutes || 5) + " phút"));
       h.appendChild(mk("h2", "", s.title_vi || s.title));
@@ -5108,7 +5156,7 @@
   }
 
   /* ============ Sao lưu và khôi phục tiến độ ============ */
-  var BK_KEYS = ["ielts_profile", "ielts_avatar", "ielts_lookup", "ielts_stats", "ielts_srs", "ielts_best", "ielts_lessons", "ielts_bands",
+  var BK_KEYS = ["ielts_profile", "ielts_avatar", "ielts_lookup", "ielts_accounts", "ielts_mydeck", "ielts_gskip", "ielts_stats", "ielts_srs", "ielts_best", "ielts_lessons", "ielts_bands",
     "ielts_wrong", "ielts_saved", "ielts_spoken", "ielts_streakmax", "ielts_pron", "ielts_flu",
     "ielts_tipsread", "ielts_extra", "ielts_voice", "ielts_tutor", "ielts_theme", "ielts_tr",
     "ielts_spd", "ielts_sound", "ielts_weak", "ielts_level"];
@@ -6798,6 +6846,138 @@
       c.appendChild(b);
     });
     box.appendChild(c);
+  }
+  /* ================================================================
+     Tài khoản eIELTS: tạo tài khoản có mật khẩu (băm PBKDF2), đăng nhập,
+     Google (Google Identity Services) và Facebook khi đã có mã ứng dụng.
+     Không có máy chủ: tài khoản lưu trên máy này.
+     ================================================================ */
+  var GOOGLE_CLIENT_ID = "";   // điền Client ID của Google Cloud để bật đăng nhập Google thật
+  var FB_APP_ID = "";          // điền App ID của Meta for Developers để bật đăng nhập Facebook thật
+
+  function accList() { return read("ielts_accounts", []) || []; }
+  function accSave(a) { write("ielts_accounts", a); }
+  function b64(buf) { var s = "", b = new Uint8Array(buf); for (var i = 0; i < b.length; i++) s += String.fromCharCode(b[i]); return btoa(s); }
+  function unb64(s) { var r = atob(s), b = new Uint8Array(r.length); for (var i = 0; i < r.length; i++) b[i] = r.charCodeAt(i); return b; }
+  function hashPass(pass, saltB64) {
+    var enc = new TextEncoder();
+    var salt = saltB64 ? unb64(saltB64) : crypto.getRandomValues(new Uint8Array(16));
+    return crypto.subtle.importKey("raw", enc.encode(pass), "PBKDF2", false, ["deriveBits"]).then(function (k) {
+      return crypto.subtle.deriveBits({ name: "PBKDF2", salt: salt, iterations: 120000, hash: "SHA-256" }, k, 256);
+    }).then(function (bits) { return { salt: b64(salt), hash: b64(bits) }; });
+  }
+  function authMsg(id, txt, ok) {
+    var m = $(id); if (!m) return;
+    m.className = "import-msg " + (ok ? "ok" : "bad"); m.style.display = txt ? "block" : "none"; m.textContent = txt || "";
+  }
+  function validEmail(m) { return /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(m); }
+
+  function doRegister() {
+    var n = $("auName").value.trim(), m = $("auMail").value.trim().toLowerCase(),
+      p = $("auPass").value, p2 = $("auPass2").value;
+    if (n.length < 2) return authMsg("auMsg", "Nhập tên hiển thị (ít nhất 2 ký tự).");
+    if (!validEmail(m)) return authMsg("auMsg", "Email chưa đúng dạng.");
+    if (p.length < 6) return authMsg("auMsg", "Mật khẩu cần ít nhất 6 ký tự.");
+    if (p !== p2) return authMsg("auMsg", "Hai lần nhập mật khẩu chưa khớp.");
+    if (!$("auAgree").checked) return authMsg("auMsg", "Bạn cần đồng ý với cách lưu dữ liệu ở dưới.");
+    if (accList().some(function (a) { return a.email === m; })) return authMsg("auMsg", "Email này đã có tài khoản trên máy. Hãy đăng nhập.");
+    if (!(window.crypto && crypto.subtle)) return authMsg("auMsg", "Trình duyệt này không hỗ trợ mã hoá mật khẩu. Hãy mở bằng Chrome mới.");
+    $("auGo").disabled = true;
+    hashPass(p).then(function (h) {
+      var a = accList(); a.push({ email: m, name: n, salt: h.salt, hash: h.hash, created: today() }); accSave(a);
+      $("auGo").disabled = false; $("auPass").value = $("auPass2").value = "";
+      sfx.ok(); finishAuth({ name: n, email: m, provider: "eielts", joined: today() });
+    }).catch(function () { $("auGo").disabled = false; authMsg("auMsg", "Có lỗi khi tạo tài khoản, thử lại nhé."); });
+  }
+  function doLogin() {
+    var m = $("liMail").value.trim().toLowerCase(), p = $("liPass").value;
+    var acc = accList().filter(function (a) { return a.email === m; })[0];
+    if (!acc) return authMsg("liMsg", "Chưa có tài khoản với email này trên máy. Hãy tạo tài khoản mới.");
+    if (!(window.crypto && crypto.subtle)) return authMsg("liMsg", "Trình duyệt này không hỗ trợ đăng nhập an toàn.");
+    $("liGo").disabled = true;
+    hashPass(p, acc.salt).then(function (h) {
+      $("liGo").disabled = false;
+      if (h.hash !== acc.hash) { sfx.bad(); return authMsg("liMsg", "Mật khẩu chưa đúng."); }
+      $("liPass").value = ""; sfx.ok();
+      var prof = getProfile() || {};
+      prof.name = acc.name; prof.email = acc.email; prof.provider = "eielts"; prof.joined = prof.joined || acc.created;
+      setProfile(prof);
+      if (prof.goalBand) enterApp(); else finishAuth(prof);
+    });
+  }
+
+  /* ---------- Google ---------- */
+  function loadScript(src) {
+    return new Promise(function (res, rej) {
+      var s = document.createElement("script"); s.src = src; s.async = true; s.onload = res; s.onerror = rej; document.head.appendChild(s);
+    });
+  }
+  function jwtPayload(t) {
+    try { var p = t.split(".")[1].replace(/-/g, "+").replace(/_/g, "/"); return JSON.parse(decodeURIComponent(escape(atob(p)))); } catch (e) { return null; }
+  }
+  function socialDone(info) {
+    var prof = getProfile() || {};
+    prof.name = info.name || prof.name || "Bạn"; prof.email = info.email || ""; prof.provider = info.provider; prof.joined = prof.joined || today();
+    setProfile(prof);
+    if (info.picture) write("ielts_avatar", { t: "photo", src: info.picture });
+    sfx.ok(); toast("Đã đăng nhập bằng " + (info.provider === "google" ? "Google" : "Facebook") + ": " + (info.email || info.name));
+    if (prof.goalBand) enterApp(); else finishAuth(prof);
+  }
+  function setupPending(which) {
+    openSheet(function (box) {
+      box.appendChild(mk("div", "cap", "Đăng nhập " + which));
+      var h = mk("h2", "", "Đang được thiết lập"); h.style.fontSize = "1.4rem"; box.appendChild(h);
+      box.appendChild(el("p", "muted", which === "Google"
+        ? "Đăng nhập Google cần mã ứng dụng do chủ app đăng ký với Google. Khi bật xong, bấm nút này sẽ hiện danh sách tài khoản Gmail của bạn để chọn."
+        : "Đăng nhập Facebook cần ứng dụng do chủ app đăng ký với Meta. Khi bật xong, bấm nút này sẽ hiện bảng xin phép của Facebook như các app khác."));
+      box.appendChild(el("p", "muted", "Trong lúc chờ, bạn có thể tạo tài khoản eIELTS bằng email và mật khẩu."));
+      var b = mk("button", "btn-primary", "Tạo tài khoản eIELTS"); b.type = "button";
+      b.addEventListener("click", function () { closeSheet(); sfx.tap(); authShow(2); });
+      box.appendChild(b);
+    });
+  }
+  function googleLogin() {
+    sfx.tap();
+    if (!GOOGLE_CLIENT_ID) { setupPending("Google"); return; }
+    if (!navigator.onLine) { toast("Cần có mạng để đăng nhập Google."); return; }
+    showLoading("Đang mở Google…", function () {});
+    loadScript("https://accounts.google.com/gsi/client").then(function () {
+      $("loadWrap").classList.remove("on");
+      google.accounts.id.initialize({
+        client_id: GOOGLE_CLIENT_ID, ux_mode: "popup",
+        callback: function (r) {
+          var p = jwtPayload(r.credential);
+          if (!p || !p.email) { toast("Không đọc được thông tin tài khoản Google."); return; }
+          socialDone({ provider: "google", name: p.name, email: p.email, picture: p.picture });
+        }
+      });
+      openSheet(function (box) {
+        box.appendChild(mk("div", "cap", "Đăng nhập"));
+        var h = mk("h2", "", "Chọn tài khoản Google"); h.style.fontSize = "1.4rem"; box.appendChild(h);
+        box.appendChild(el("p", "muted", "eIELTS chỉ nhận tên, email và ảnh đại diện để hiện trong hồ sơ, lưu trên máy này."));
+        var slot = mk("div", "gslot"); box.appendChild(slot);
+        google.accounts.id.renderButton(slot, { theme: "filled_blue", size: "large", shape: "pill", text: "continue_with", width: 300, locale: "vi" });
+      });
+      google.accounts.id.prompt();
+    }).catch(function () { $("loadWrap").classList.remove("on"); toast("Không tải được Google. Kiểm tra mạng rồi thử lại."); });
+  }
+
+  /* ---------- Facebook ---------- */
+  function fbLogin() {
+    sfx.tap();
+    if (!FB_APP_ID) { setupPending("Facebook"); return; }
+    if (!navigator.onLine) { toast("Cần có mạng để đăng nhập Facebook."); return; }
+    var go = function () {
+      FB.login(function (r) {
+        if (!r.authResponse) { toast("Bạn đã huỷ đăng nhập Facebook."); return; }
+        FB.api("/me", { fields: "name,email,picture.type(large)" }, function (u) {
+          socialDone({ provider: "facebook", name: u.name, email: u.email || "", picture: u.picture && u.picture.data && u.picture.data.url });
+        });
+      }, { scope: "public_profile,email" });
+    };
+    if (window.FB) { go(); return; }
+    window.fbAsyncInit = function () { FB.init({ appId: FB_APP_ID, cookie: false, xfbml: false, version: "v19.0" }); go(); };
+    loadScript("https://connect.facebook.net/vi_VN/sdk.js").catch(function () { toast("Không tải được Facebook. Kiểm tra mạng rồi thử lại."); });
   }
 
   function renderQuestion() {
