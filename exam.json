@@ -1,0 +1,1255 @@
+{
+ "reading": [
+  {
+   "id": "r1",
+   "title": "Learning Outside the Traditional Classroom",
+   "topic": "Education",
+   "text": "For many years, school education has followed a simple pattern. Students sit in rows, listen to their teacher, and write notes in exercise books. However, a growing number of schools today are moving lessons outside the classroom. Teachers now organize regular visits to local museums, city parks, and science centers so that learners can connect textbook ideas with the real world. In some schools, students also grow vegetables in a school garden or interview local shop owners for social studies projects.\n\nEducational researchers have found several clear benefits to this approach. When students take part in hands-on activities, they usually feel more interested in the subject and remember information for a longer time. Working together on outdoor tasks also builds teamwork and communication skills, which are difficult to practice during quiet individual reading. In addition, students who feel shy or bored in a normal classroom often become more confident and active when they learn in a different environment.\n\nDespite these advantages, outdoor learning is not always easy to organize. Teachers need extra time to plan trips safely, and schools sometimes face tight budgets for transport and entrance tickets. Sudden bad weather can also force a class to cancel its plans at the last minute. Because of these challenges, most experts do not suggest replacing traditional lessons completely. Instead, they recommend a balanced schedule that combines clear classroom instruction with meaningful outdoor experiences. When both methods work together, students can develop strong academic knowledge while also learning practical skills that prepare them for adult life.",
+   "questions": [
+    {
+     "type": "tfng",
+     "q": "Outdoor learning helps students remember what they study for a longer period.",
+     "answer": "TRUE",
+     "why": "Đoạn hai nêu rõ khi tham gia hoạt động thực tế, học sinh nhớ thông tin lâu hơn."
+    },
+    {
+     "type": "tfng",
+     "q": "Most education experts believe traditional classroom lessons should be completely removed.",
+     "answer": "FALSE",
+     "why": "Đoạn ba khẳng định hầu hết chuyên gia không đề xuất thay thế hoàn toàn tiết học truyền thống."
+    },
+    {
+     "type": "tfng",
+     "q": "Parents usually prefer to join their children on school museum trips.",
+     "answer": "NOT GIVEN",
+     "why": "Bài đọc không đề cập đến việc phụ huynh có thích đi cùng con hay không."
+    },
+    {
+     "type": "mcq",
+     "q": "Which activity is mentioned as an example of learning outside the classroom?",
+     "options": [
+      "Growing vegetables in a school garden",
+      "Watching history films at home",
+      "Taking online math tests",
+      "Writing long essays in the library"
+     ],
+     "answer": 0,
+     "why": "Đoạn một nhắc đến việc học sinh trồng rau trong vườn trường như một hoạt động ngoài lớp học."
+    },
+    {
+     "type": "mcq",
+     "q": "According to the second paragraph, how does outdoor learning affect shy students?",
+     "options": [
+      "They prefer to work alone",
+      "They often become more confident",
+      "They finish homework faster",
+      "They ask fewer questions"
+     ],
+     "answer": 1,
+     "why": "Đoạn hai nói học sinh nhút nhát thường trở nên tự tin và năng động hơn trong môi trường mới."
+    },
+    {
+     "type": "mcq",
+     "q": "What is one difficulty schools face when planning outdoor trips?",
+     "options": [
+      "Students refuse to travel by bus",
+      "Museums do not allow school groups",
+      "Limited budgets for transport and tickets",
+      "Textbooks are too heavy to carry"
+     ],
+     "answer": 2,
+     "why": "Đoạn ba đề cập các trường đôi khi gặp khó khăn về ngân sách hạn hẹp cho đi lại và vé vào cửa."
+    },
+    {
+     "type": "gap",
+     "q": "Working together on outdoor tasks helps students improve teamwork and ____ skills.",
+     "answer": "communication",
+     "why": "Đoạn hai ghi rõ hoạt động ngoài trời giúp xây dựng kỹ năng làm việc nhóm và giao tiếp (communication)."
+    },
+    {
+     "type": "gap",
+     "q": "A class may have to cancel an outdoor trip suddenly because of ____.",
+     "answer": "bad weather",
+     "why": "Đoạn ba cho biết thời tiết xấu bất ngờ (bad weather) có thể khiến lớp học phải hủy kế hoạch."
+    }
+   ]
+  },
+  {
+   "id": "r2",
+   "title": "Simple Ways Cities Are Reducing Plastic Waste",
+   "topic": "Environment",
+   "text": "Single-use plastic is one of the biggest environmental problems in modern cities. Every day, millions of plastic bags, drink bottles, and food containers are used for only a few minutes before being thrown away. Because plastic takes hundreds of years to break down, much of this rubbish ends up in landfills, rivers, and oceans, where it harms wildlife and pollutes natural habitats. In response, many city governments are introducing simple but effective programs to reduce daily plastic waste.\n\nOne popular solution is installing free water refill stations in public parks, train stations, and shopping streets. When people can easily fill their own reusable bottles, they buy far fewer plastic drinks. Several cities have also banned free plastic bags in supermarkets, encouraging shoppers to bring cloth bags from home. In addition, many local cafes now offer a small discount to customers who bring their own travel mugs instead of asking for disposable cups.\n\nAnother useful method is the bottle deposit system, which has already worked well in several European countries. Under this system, shoppers pay a small extra fee when buying a bottled drink and receive that money back when they return the empty bottle to a collection machine. Although some small business owners initially worry about the higher cost of eco-friendly packaging, most residents support these green rules. Changing everyday habits takes patience, yet cleaner streets and healthier urban rivers show that small community actions can make a real difference.",
+   "questions": [
+    {
+     "type": "tfng",
+     "q": "Most single-use plastic items are used for only a short time before being thrown away.",
+     "answer": "TRUE",
+     "why": "Đoạn một cho biết hàng triệu túi, chai và hộp nhựa chỉ được dùng vài phút rồi bị vứt bỏ."
+    },
+    {
+     "type": "tfng",
+     "q": "All small business owners happily pay more for eco-friendly packaging.",
+     "answer": "FALSE",
+     "why": "Đoạn ba nói một số chủ doanh nghiệp nhỏ ban đầu lo lắng về chi phí cao hơn của bao bì thân thiện môi trường."
+    },
+    {
+     "type": "tfng",
+     "q": "Water refill stations are more expensive to build than recycling machines.",
+     "answer": "NOT GIVEN",
+     "why": "Bài đọc không so sánh chi phí xây dựng trạm lấy nước với máy thu gom tái chế."
+    },
+    {
+     "type": "mcq",
+     "q": "Why do many cities install free water refill stations in public places?",
+     "options": [
+      "To attract more foreign tourists",
+      "To help people buy fewer plastic drink bottles",
+      "To lower the price of supermarket food",
+      "To keep city parks cool in summer"
+     ],
+     "answer": 1,
+     "why": "Đoạn hai giải thích khi mọi người dễ dàng lấy nước vào bình cá nhân, họ mua ít chai nhựa hơn."
+    },
+    {
+     "type": "mcq",
+     "q": "What do many local cafes offer to customers who bring reusable mugs?",
+     "options": [
+      "A free cloth bag",
+      "A faster checkout line",
+      "A small discount",
+      "An extra bottle of water"
+     ],
+     "answer": 2,
+     "why": "Đoạn hai nêu rõ nhiều quán cà phê giảm giá nhỏ cho khách mang theo cốc cá nhân."
+    },
+    {
+     "type": "mcq",
+     "q": "How does the bottle deposit system work?",
+     "options": [
+      "Shoppers get a small fee back when they return empty bottles",
+      "Supermarkets collect old plastic bags every Sunday",
+      "Customers pay a monthly tax for rubbish collection",
+      "Cities give free drinks to people who clean rivers"
+     ],
+     "answer": 0,
+     "why": "Đoạn ba giải thích người mua trả thêm phí nhỏ và nhận lại tiền khi trả chai rỗng vào máy thu gom."
+    },
+    {
+     "type": "gap",
+     "q": "Banning free plastic bags in supermarkets encourages shoppers to bring ____ from home.",
+     "answer": "cloth bags",
+     "why": "Đoạn hai cho biết lệnh cấm túi nhựa miễn phí khuyến khích người mua mang túi vải (cloth bags) từ nhà."
+    },
+    {
+     "type": "gap",
+     "q": "Cleaner streets and healthier ____ prove that small community efforts are effective.",
+     "answer": "urban rivers",
+     "why": "Câu cuối đoạn ba nhắc đến đường phố sạch hơn và các con sông đô thị (urban rivers) khỏe mạnh hơn."
+    }
+   ]
+  },
+  {
+   "id": "r3",
+   "title": "How Smart Homes Help Everyday Life",
+   "topic": "Technology",
+   "text": "Ten years ago, smart home technology seemed like an expensive luxury for rich families. Today, smart devices are much more affordable and can be found in ordinary apartments and houses around the world. Common examples include smart lights, heating controls, door locks, and security cameras. Most of these tools connect to the home internet and can be controlled easily through a smartphone app or simple voice commands.\n\nOne of the main reasons people buy smart home devices is convenience. For instance, if you leave for work and forget to turn off the air conditioner, you can switch it off from your phone in seconds. Smart thermostats can also learn a family's daily routine and lower the heating when nobody is at home, which helps reduce monthly electricity bills. In addition, smart technology offers valuable support for elderly people living alone. Motion sensors and voice assistants can remind them to take medicine or quickly call a family member during an emergency.\n\nHowever, smart homes also bring a few concerns that buyers should consider carefully. Setting up several connected devices can be confusing for people who are not comfortable with technology, and many tools stop working properly if the internet connection drops. Privacy is another important issue, because devices with microphones and cameras collect personal information. Experts advise users to choose trusted brands, update their software regularly, and use strong passwords so they can enjoy the comfort of a smart home safely.",
+   "questions": [
+    {
+     "type": "tfng",
+     "q": "Smart home devices are cheaper today than they were ten years ago.",
+     "answer": "TRUE",
+     "why": "Đoạn một cho biết ngày nay thiết bị nhà thông minh dễ mua hơn nhiều so với mười năm trước."
+    },
+    {
+     "type": "tfng",
+     "q": "Smart devices continue to work normally even when the internet connection fails.",
+     "answer": "FALSE",
+     "why": "Đoạn ba nói nhiều thiết bị ngừng hoạt động đúng cách nếu kết nối internet bị mất."
+    },
+    {
+     "type": "tfng",
+     "q": "Most governments require families to install smart thermostats in new houses.",
+     "answer": "NOT GIVEN",
+     "why": "Bài đọc không đề cập đến bất kỳ quy định nào của chính phủ về bộ điều nhiệt thông minh."
+    },
+    {
+     "type": "mcq",
+     "q": "How do smart thermostats help families save money?",
+     "options": [
+      "They repair broken air conditioners automatically",
+      "They lower the heating when the house is empty",
+      "They compare electricity companies online",
+      "They turn off all television screens at night"
+     ],
+     "answer": 1,
+     "why": "Đoạn hai nêu rõ bộ điều nhiệt thông minh giảm hệ thống sưởi khi không có ai ở nhà, giúp giảm hóa đơn điện."
+    },
+    {
+     "type": "mcq",
+     "q": "In what way can smart home tools assist elderly residents?",
+     "options": [
+      "By cooking hot meals every evening",
+      "By driving them to hospital appointments",
+      "By reminding them to take medicine",
+      "By paying their monthly rent online"
+     ],
+     "answer": 2,
+     "why": "Đoạn hai đề cập cảm biến chuyển động và trợ lý giọng nói có thể nhắc người già uống thuốc."
+    },
+    {
+     "type": "mcq",
+     "q": "Why is privacy a concern with some smart home devices?",
+     "options": [
+      "They share electricity bills with neighbors",
+      "They have microphones and cameras that gather personal data",
+      "They require users to post photos on social media",
+      "They cannot be turned off at night"
+     ],
+     "answer": 1,
+     "why": "Đoạn ba giải thích các thiết bị có micro và camera thu thập thông tin cá nhân nên gây lo ngại về quyền riêng tư."
+    },
+    {
+     "type": "gap",
+     "q": "Most smart tools can be managed using a smartphone app or ____.",
+     "answer": "voice commands",
+     "why": "Đoạn một cho biết thiết bị thông minh được điều khiển qua ứng dụng điện thoại hoặc khẩu lệnh (voice commands)."
+    },
+    {
+     "type": "gap",
+     "q": "To stay safe, experts recommend updating software regularly and creating ____.",
+     "answer": "strong passwords",
+     "why": "Câu cuối đoạn ba khuyên người dùng cập nhật phần mềm thường xuyên và dùng mật khẩu mạnh (strong passwords)."
+    }
+   ]
+  },
+  {
+   "id": "r4",
+   "title": "Why Good Sleep Matters More Than We Think",
+   "topic": "Health",
+   "text": "In today's fast-paced world, many adults and teenagers treat sleep as something they can easily cut back on. When work deadlines, school exams, or household chores pile up, people often stay awake late at night to finish everything. Others spend hours scrolling on their smartphones or watching videos in bed. As a result, a large number of people regularly get less than seven hours of sleep, even though most adults need between seven and nine hours each night to stay healthy.\n\nScientists warn that poor sleep affects much more than just feeling tired the next morning. During deep sleep, the brain organizes memories and repairs the body's cells. When people do not get enough rest, their concentration drops, they make more mistakes at work or school, and their mood can become impatient or anxious. Over a long period, a lack of sleep also weakens the immune system, making it easier to catch common colds and other illnesses.\n\nFortunately, improving sleep quality does not usually require medicine. Health specialists suggest going to bed and waking up at the same time every day, even on weekends, so the body builds a steady rhythm. Avoiding caffeine in the late afternoon and keeping the bedroom dark, cool, and quiet are also very helpful habits. Most importantly, doctors recommend turning off bright screens at least one hour before bedtime, because blue light tricks the brain into thinking it is still daytime. Even small adjustments to an evening routine can bring much better energy and focus.",
+   "questions": [
+    {
+     "type": "tfng",
+     "q": "Most adults require between seven and nine hours of sleep each night.",
+     "answer": "TRUE",
+     "why": "Đoạn một nêu rõ hầu hết người trưởng thành cần từ bảy đến chín tiếng ngủ mỗi đêm."
+    },
+    {
+     "type": "tfng",
+     "q": "Health specialists recommend sleeping much later on weekends to catch up on rest.",
+     "answer": "FALSE",
+     "why": "Đoạn ba khuyên nên đi ngủ và thức dậy cùng một giờ mỗi ngày, kể cả cuối tuần."
+    },
+    {
+     "type": "tfng",
+     "q": "Drinking warm milk before bed helps people fall asleep faster.",
+     "answer": "NOT GIVEN",
+     "why": "Bài đọc không hề nhắc đến việc uống sữa ấm trước khi ngủ."
+    },
+    {
+     "type": "mcq",
+     "q": "What happens in the brain during deep sleep?",
+     "options": [
+      "It organizes memories",
+      "It produces blue light",
+      "It removes all stress permanently",
+      "It increases the need for caffeine"
+     ],
+     "answer": 0,
+     "why": "Đoạn hai nói rằng trong giấc ngủ sâu, não bộ sắp xếp lại trí nhớ và phục hồi tế bào cơ thể."
+    },
+    {
+     "type": "mcq",
+     "q": "What is a long-term effect of not getting enough sleep?",
+     "options": [
+      "Stronger eyesight at night",
+      "A weaker immune system",
+      "Better exam results",
+      "Faster hair growth"
+     ],
+     "answer": 1,
+     "why": "Đoạn hai cho biết thiếu ngủ kéo dài làm suy yếu hệ miễn dịch, dễ mắc cảm lạnh và bệnh khác."
+    },
+    {
+     "type": "mcq",
+     "q": "Why do doctors advise turning off phones before bedtime?",
+     "options": [
+      "To save battery power overnight",
+      "To avoid waking up family members",
+      "Because blue light makes the brain think it is daytime",
+      "Because reading in the dark hurts the neck"
+     ],
+     "answer": 2,
+     "why": "Đoạn ba giải thích ánh sáng xanh đánh lừa não bộ khiến não nghĩ rằng trời vẫn đang là ban ngày."
+    },
+    {
+     "type": "gap",
+     "q": "People who lack sleep may feel more impatient or ____ during the day.",
+     "answer": "anxious",
+     "why": "Đoạn hai nêu tâm trạng người thiếu ngủ có thể trở nên thiếu kiên nhẫn hoặc lo âu (anxious)."
+    },
+    {
+     "type": "gap",
+     "q": "To sleep better, people should avoid ____ in the late afternoon.",
+     "answer": "caffeine",
+     "why": "Đoạn ba khuyên nên tránh caffeine vào cuối buổi chiều để dễ ngủ hơn."
+    }
+   ]
+  },
+  {
+   "id": "r5",
+   "title": "The Rise of Slow Travel",
+   "topic": "Travel",
+   "text": "For decades, a typical holiday meant trying to see as many famous places as possible in a short time. Tourists often rushed from one landmark to another, taking quick photos and spending hours waiting at airports or sitting on tour buses. By the end of the trip, many people returned home feeling more exhausted than before they left. In recent years, however, a different style of holiday called slow travel has become increasingly popular among travelers of all ages.\n\nSlow travel encourages visitors to stay in one town or region for a longer period instead of visiting five or six cities in a single week. Rather than following a strict sightseeing checklist, slow travelers take time to walk through quiet neighborhoods, shop at local food markets, and eat at small family-run restaurants. Many choose to rent an apartment where they can cook with fresh regional ingredients and talk with neighbors. Using local trains or bicycles instead of taxis also allows them to notice everyday details that hurried tourists usually miss.\n\nThis relaxed approach offers benefits for both travelers and the places they visit. Staying longer in one area often costs less because weekly accommodation is cheaper and people take fewer expensive flights. Fewer flights also mean lower carbon emissions, making slow travel kinder to the environment. Furthermore, spending money at small local shops and cafes supports the local economy directly. For many people, the greatest reward is returning home with real memories and a deeper understanding of another culture.",
+   "questions": [
+    {
+     "type": "tfng",
+     "q": "Traditional busy holidays sometimes left tourists feeling tired when they got home.",
+     "answer": "TRUE",
+     "why": "Đoạn một cho biết nhiều người trở về nhà cảm thấy kiệt sức hơn cả trước khi đi du lịch."
+    },
+    {
+     "type": "tfng",
+     "q": "Slow travel is only popular with retired people.",
+     "answer": "FALSE",
+     "why": "Đoạn một nói rõ du lịch chậm ngày càng phổ biến với du khách ở mọi lứa tuổi."
+    },
+    {
+     "type": "tfng",
+     "q": "Most slow travelers learn the local language before arriving at their destination.",
+     "answer": "NOT GIVEN",
+     "why": "Bài đọc không đề cập đến việc du khách chậm có học ngôn ngữ địa phương trước chuyến đi hay không."
+    },
+    {
+     "type": "mcq",
+     "q": "What do slow travelers often do instead of rushing through a sightseeing list?",
+     "options": [
+      "Stay inside large luxury hotels all day",
+      "Shop at local markets and explore quiet neighborhoods",
+      "Book five short flights in one week",
+      "Join large international tour buses"
+     ],
+     "answer": 1,
+     "why": "Đoạn hai mô tả du khách chậm đi dạo qua các khu phố yên tĩnh và mua sắm ở chợ địa phương."
+    },
+    {
+     "type": "mcq",
+     "q": "Why is slow travel often cheaper than traditional tourism?",
+     "options": [
+      "Museums give free tickets to slow travelers",
+      "Weekly accommodation costs less and fewer flights are needed",
+      "Local trains do not charge foreign visitors",
+      "Family-run restaurants offer free meals"
+     ],
+     "answer": 1,
+     "why": "Đoạn ba giải thích thuê chỗ ở theo tuần rẻ hơn và du khách ít phải mua các chuyến bay đắt đỏ."
+    },
+    {
+     "type": "mcq",
+     "q": "How does slow travel help the environment?",
+     "options": [
+      "It reduces carbon emissions by using fewer flights",
+      "It bans tourists from entering national parks",
+      "It requires every traveler to plant trees",
+      "It closes down old city airports"
+     ],
+     "answer": 0,
+     "why": "Đoạn ba nêu rõ ít chuyến bay hơn đồng nghĩa với lượng khí thải carbon thấp hơn."
+    },
+    {
+     "type": "gap",
+     "q": "Many slow travelers rent an apartment so they can cook with fresh ____.",
+     "answer": "regional ingredients",
+     "why": "Đoạn hai nói họ thuê căn hộ để nấu ăn với nguyên liệu địa phương tươi ngon (regional ingredients)."
+    },
+    {
+     "type": "gap",
+     "q": "Buying goods from small local shops and cafes directly helps the ____.",
+     "answer": "local economy",
+     "why": "Đoạn ba cho biết chi tiêu tại các cửa hàng và quán cà phê nhỏ giúp hỗ trợ kinh tế địa phương (local economy)."
+    }
+   ]
+  },
+  {
+   "id": "r101",
+   "title": "Working from home",
+   "topic": "Work",
+   "text": "Đoạn A\nTen years ago, most office staff travelled to the same building every weekday. Today a large number of companies let their employees work from home for part of the week. Cheap laptops, fast internet and simple video software have made this possible for jobs that only need a computer and a telephone.\n\nĐoạn B\nStaff who work at home usually say the biggest gain is time. A worker who used to spend two hours a day travelling now has those hours back. Many people use the extra time for sleep, exercise or family meals, and they report that they feel less tired by Friday. Companies also save money, because a smaller office is cheaper to rent and to heat.\n\nĐoạn C\nHowever, the change brings new difficulties. New employees learn a job partly by watching the people around them, and that is hard to copy on a screen. Some workers say they feel lonely, or that they never really stop working because the laptop is always on the kitchen table. Managers also find it harder to notice when someone is struggling.\n\nĐoạn D\nFor these reasons, most large firms have chosen a middle path. Staff come to the office two or three days a week for meetings and training, and work at home on the other days. Few companies now expect everyone in the building five days a week, and few expect nobody there at all.",
+   "headings": [
+    "i. Why the office is now cheaper to run",
+    "ii. A mixed arrangement wins",
+    "iii. What made the change possible",
+    "iv. The problems nobody expected",
+    "v. Hours given back to the worker",
+    "vi. Training courses for managers",
+    "vii. The cost of fast internet"
+   ],
+   "questions": [
+    {
+     "type": "heading",
+     "q": "Đoạn A",
+     "answer": "iii",
+     "why": "Đoạn A nói về laptop rẻ, internet nhanh và phần mềm gọi video — tức là những thứ làm cho việc này trở nên khả thi."
+    },
+    {
+     "type": "heading",
+     "q": "Đoạn B",
+     "answer": "v",
+     "why": "Cả đoạn nói về thời gian đi lại được trả lại cho người lao động."
+    },
+    {
+     "type": "heading",
+     "q": "Đoạn C",
+     "answer": "iv",
+     "why": "Đoạn C liệt kê các khó khăn: khó học việc, cô đơn, không dứt ra được."
+    },
+    {
+     "type": "heading",
+     "q": "Đoạn D",
+     "answer": "ii",
+     "why": "Đoạn D mô tả cách làm dung hoà: vài ngày ở văn phòng, vài ngày ở nhà."
+    },
+    {
+     "type": "tfng",
+     "q": "Companies spend less on their offices when fewer staff come in.",
+     "answer": "TRUE",
+     "why": "Đoạn B: văn phòng nhỏ hơn thì tiền thuê và tiền sưởi rẻ hơn."
+    },
+    {
+     "type": "tfng",
+     "q": "Most large firms now ask all staff to work from home every day.",
+     "answer": "FALSE",
+     "why": "Đoạn D nói rất ít công ty mong muốn không có ai ở văn phòng."
+    },
+    {
+     "type": "mcq",
+     "q": "According to the passage, why is it hard for new employees to work at home?",
+     "options": [
+      "They do not have a laptop",
+      "They learn by watching colleagues",
+      "They are given too much work",
+      "They dislike video software"
+     ],
+     "answer": 1,
+     "why": "Đoạn C: người mới học việc một phần nhờ quan sát người xung quanh."
+    },
+    {
+     "type": "gap",
+     "q": "Workers say the biggest gain from staying at home is ____.",
+     "answer": "time",
+     "why": "Đoạn B mở đầu bằng: the biggest gain is time."
+    }
+   ]
+  },
+  {
+   "id": "r102",
+   "title": "The city that planted trees",
+   "topic": "Environment",
+   "text": "Đoạn A\nIn summer, a street of concrete and parked cars can be eight degrees hotter than a park two hundred metres away. City councils call this the heat island effect, and in hot countries it pushes up electricity bills and sends older people to hospital.\n\nĐoạn B\nOne city decided to answer the problem with trees. Over six years it planted forty thousand of them along main roads, in school yards and in car parks. Species were chosen for wide crowns and for roots that do not lift pavements, and each young tree was given a water pipe for its first three summers.\n\nĐoạn C\nMeasurements taken afterwards showed that streets with mature trees were between three and five degrees cooler at midday. Shops on those streets reported more customers in the afternoon, and air quality readings improved slightly, although traffic had not fallen.\n\nĐoạn D\nThe programme was not free. Planting and watering cost about eleven million dollars, and roughly one tree in eight died in its first two years. Even so, the council calculated that lower spending on air conditioning in public buildings would repay the cost within fifteen years.",
+   "headings": [
+    "i. A plan built around trees",
+    "ii. Hospitals under pressure",
+    "iii. What the figures showed afterwards",
+    "iv. Counting the cost",
+    "v. Why some streets get so hot",
+    "vi. Choosing between water and shade",
+    "vii. New rules for car parks"
+   ],
+   "questions": [
+    {
+     "type": "heading",
+     "q": "Đoạn A",
+     "answer": "v",
+     "why": "Đoạn A giải thích hiệu ứng đảo nhiệt, tức là vì sao phố xá nóng hơn."
+    },
+    {
+     "type": "heading",
+     "q": "Đoạn B",
+     "answer": "i",
+     "why": "Đoạn B mô tả chương trình trồng cây và cách chọn giống."
+    },
+    {
+     "type": "heading",
+     "q": "Đoạn C",
+     "answer": "iii",
+     "why": "Đoạn C đưa ra số đo nhiệt độ và kết quả quan sát được."
+    },
+    {
+     "type": "heading",
+     "q": "Đoạn D",
+     "answer": "iv",
+     "why": "Đoạn D nói về chi phí và thời gian hoàn vốn."
+    },
+    {
+     "type": "tfng",
+     "q": "Every tree planted in the programme survived.",
+     "answer": "FALSE",
+     "why": "Đoạn D: khoảng một trong tám cây chết trong hai năm đầu."
+    },
+    {
+     "type": "tfng",
+     "q": "Traffic on the planted streets decreased during the programme.",
+     "answer": "FALSE",
+     "why": "Đoạn C nói rõ lượng xe cộ không giảm."
+    },
+    {
+     "type": "mcq",
+     "q": "Why were particular species chosen?",
+     "options": [
+      "They grow very quickly",
+      "They need no water",
+      "Their roots do not damage pavements",
+      "They lose their leaves in winter"
+     ],
+     "answer": 2,
+     "why": "Đoạn B: chọn cây tán rộng và rễ không làm bong vỉa hè."
+    },
+    {
+     "type": "gap",
+     "q": "The council expects the programme to pay for itself within ____ years.",
+     "answer": "fifteen",
+     "why": "Đoạn D: hoàn vốn trong vòng mười lăm năm."
+    }
+   ]
+  },
+  {
+   "id": "r103",
+   "title": "Reading on paper and on screens",
+   "topic": "Technology",
+   "text": "Đoạn A\nStudents today read far more on screens than on paper. Textbooks are expensive and heavy, while a tablet holds a whole term of material and can be searched in seconds. Many schools have therefore moved most of their reading online.\n\nĐoạn B\nResearchers have compared the two in dozens of experiments. For short texts, readers understand paper and screen about equally well. The difference appears with longer and harder texts: on a screen, readers tend to scroll quickly, remember the order of ideas less well, and overestimate how much they have understood.\n\nĐoạn C\nPart of the explanation seems to be physical. A paper book gives the hands and eyes a map of where a fact sits, near the start of a chapter or at the bottom of a left-hand page. A scrolling screen removes that map. Notifications on the same device make the problem worse by breaking attention every few minutes.\n\nĐoạn D\nNone of this means schools should go back to paper for everything. Readers who slow down, take notes by hand and turn off notifications score almost the same on screen as on paper. The device matters less than the habits around it.",
+   "headings": [
+    "i. Why screens took over in schools",
+    "ii. Habits matter more than the device",
+    "iii. A possible explanation",
+    "iv. What the experiments found",
+    "v. The falling price of tablets",
+    "vi. Teachers who refuse to change",
+    "vii. Notes taken by hand are always better"
+   ],
+   "questions": [
+    {
+     "type": "heading",
+     "q": "Đoạn A",
+     "answer": "i",
+     "why": "Đoạn A nói vì sao trường học chuyển sang đọc trên màn hình."
+    },
+    {
+     "type": "heading",
+     "q": "Đoạn B",
+     "answer": "iv",
+     "why": "Đoạn B tóm tắt kết quả của các thí nghiệm so sánh."
+    },
+    {
+     "type": "heading",
+     "q": "Đoạn C",
+     "answer": "iii",
+     "why": "Đoạn C đưa ra cách lí giải cho khác biệt đó."
+    },
+    {
+     "type": "heading",
+     "q": "Đoạn D",
+     "answer": "ii",
+     "why": "Đoạn D kết luận thói quen đọc quan trọng hơn thiết bị."
+    },
+    {
+     "type": "tfng",
+     "q": "For short texts, paper and screens give similar results.",
+     "answer": "TRUE",
+     "why": "Đoạn B: với văn bản ngắn, hai hình thức hiểu ngang nhau."
+    },
+    {
+     "type": "tfng",
+     "q": "Screen readers usually know exactly how much they have understood.",
+     "answer": "FALSE",
+     "why": "Đoạn B: họ đánh giá quá cao mức độ mình hiểu."
+    },
+    {
+     "type": "mcq",
+     "q": "What does a paper book give readers, according to the passage?",
+     "options": [
+      "A faster search function",
+      "A sense of where information sits",
+      "Cheaper material",
+      "Fewer pages to read"
+     ],
+     "answer": 1,
+     "why": "Đoạn C: sách giấy cho người đọc một tấm bản đồ về vị trí thông tin."
+    },
+    {
+     "type": "gap",
+     "q": "Readers do almost as well on screen if they turn off ____.",
+     "answer": "notifications",
+     "why": "Đoạn D: tắt thông báo thì điểm gần như ngang nhau."
+    }
+   ]
+  },
+  {
+   "id": "r104",
+   "title": "Why sleep matters more than you think",
+   "topic": "Health",
+   "text": "Đoạn A\nMost adults need between seven and nine hours of sleep, yet surveys in many countries find that a third of workers regularly get less than six. Late shifts, long journeys home and bright screens at midnight all play a part.\n\nĐoạn B\nSleep is not simply rest. During the night the brain repeats the patterns it formed during the day, which is how a new skill or a new word becomes permanent. The body also releases hormones that repair muscle and control appetite, which is why tired people often eat more than they intend to.\n\nĐoạn C\nThe effects of losing sleep appear quickly. After one short night, reaction times slow and people make more mistakes in simple arithmetic. After a week of six-hour nights, performance can resemble that of someone who has not slept at all for two days, and yet most people in that state insist they feel fine.\n\nĐoạn D\nThe advice from sleep clinics is dull but effective: keep the same waking time every day, including at weekends; leave the phone in another room; and treat the last hour before bed as part of the night rather than part of the evening.",
+   "headings": [
+    "i. Advice that is simple to follow",
+    "ii. What the brain and body do at night",
+    "iii. How quickly the damage shows",
+    "iv. How many people sleep too little",
+    "v. Medicines that help people sleep",
+    "vi. Shift work and the law",
+    "vii. Why weekends are the worst nights"
+   ],
+   "questions": [
+    {
+     "type": "heading",
+     "q": "Đoạn A",
+     "answer": "iv",
+     "why": "Đoạn A đưa con số về tỉ lệ người ngủ không đủ."
+    },
+    {
+     "type": "heading",
+     "q": "Đoạn B",
+     "answer": "ii",
+     "why": "Đoạn B mô tả việc não và cơ thể làm trong lúc ngủ."
+    },
+    {
+     "type": "heading",
+     "q": "Đoạn C",
+     "answer": "iii",
+     "why": "Đoạn C nói hậu quả xuất hiện nhanh thế nào."
+    },
+    {
+     "type": "heading",
+     "q": "Đoạn D",
+     "answer": "i",
+     "why": "Đoạn D là lời khuyên dễ làm theo."
+    },
+    {
+     "type": "tfng",
+     "q": "People who have slept six hours a night for a week usually realise how badly they are performing.",
+     "answer": "FALSE",
+     "why": "Đoạn C: phần lớn vẫn khẳng định họ thấy bình thường."
+    },
+    {
+     "type": "tfng",
+     "q": "Hormones released during sleep affect how hungry people feel.",
+     "answer": "TRUE",
+     "why": "Đoạn B: hormone tiết ra khi ngủ điều hoà cảm giác thèm ăn."
+    },
+    {
+     "type": "mcq",
+     "q": "What do sleep clinics recommend about weekends?",
+     "options": [
+      "Sleeping much later than usual",
+      "Waking at the same time as on workdays",
+      "Avoiding sleep in the afternoon",
+      "Using the phone only in bed"
+     ],
+     "answer": 1,
+     "why": "Đoạn D: giữ giờ thức dậy giống nhau mọi ngày, kể cả cuối tuần."
+    },
+    {
+     "type": "gap",
+     "q": "Most adults need between seven and ____ hours of sleep.",
+     "answer": "nine",
+     "why": "Đoạn A: từ bảy đến chín tiếng."
+    }
+   ]
+  }
+ ],
+ "listening": [
+  {
+   "id": "l1",
+   "title": "Registering for an Evening Language Course",
+   "topic": "Education",
+   "script": [
+    {
+     "who": "A",
+     "text": "Good afternoon, City Language Center. How can I help you today?"
+    },
+    {
+     "who": "B",
+     "text": "Hi, I would like to ask about your evening Spanish course for beginners."
+    },
+    {
+     "who": "A",
+     "text": "Of course. Our next beginner class starts on October twelfth and runs for eight weeks."
+    },
+    {
+     "who": "B",
+     "text": "That sounds great. Which days of the week do the classes take place?"
+    },
+    {
+     "who": "A",
+     "text": "They are on Tuesdays and Thursdays, from six thirty to eight in the evening."
+    },
+    {
+     "who": "B",
+     "text": "Perfect, I finish work at five thirty, so I can easily get there on time. How much is the course?"
+    },
+    {
+     "who": "A",
+     "text": "The full fee is one hundred and forty dollars, and that includes the course textbook."
+    },
+    {
+     "who": "B",
+     "text": "Do you offer any discount? I am a part-time university student."
+    },
+    {
+     "who": "A",
+     "text": "Yes, students get a ten percent discount if they show a valid student card when registering."
+    },
+    {
+     "who": "B",
+     "text": "Wonderful. How many students are usually in one class?"
+    },
+    {
+     "who": "A",
+     "text": "We keep groups small, with a maximum of twelve learners so everyone gets plenty of speaking practice."
+    },
+    {
+     "who": "B",
+     "text": "I like that. Where is the classroom located?"
+    },
+    {
+     "who": "A",
+     "text": "It is in Room two zero four on the second floor, right next to the library."
+    },
+    {
+     "who": "B",
+     "text": "Thank you. I will come by tomorrow morning with my student card to sign up."
+    }
+   ],
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What level of Spanish course is the caller interested in?",
+     "options": [
+      "Beginner",
+      "Intermediate",
+      "Advanced",
+      "Business"
+     ],
+     "answer": 0,
+     "why": "Người gọi nói rõ muốn hỏi về khóa tiếng Tây Ban Nha buổi tối cho người mới bắt đầu."
+    },
+    {
+     "type": "mcq",
+     "q": "What is included in the course fee?",
+     "options": [
+      "A notebook and pen",
+      "The course textbook",
+      "Online private tutoring",
+      "A parking pass"
+     ],
+     "answer": 1,
+     "why": "Nhân viên cho biết học phí 140 đô la đã bao gồm sách giáo khoa của khóa học."
+    },
+    {
+     "type": "mcq",
+     "q": "Why does the center keep class sizes small?",
+     "options": [
+      "The rooms do not have enough chairs",
+      "Teachers prefer shorter lessons",
+      "Students get more speaking practice",
+      "The textbook is only for twelve people"
+     ],
+     "answer": 2,
+     "why": "Nhân viên giải thích lớp nhỏ tối đa 12 người để mọi học viên có nhiều thời gian luyện nói."
+    },
+    {
+     "type": "gap",
+     "q": "The Spanish course runs for ____ weeks.",
+     "answer": "eight",
+     "why": "Nhân viên nói khóa học kéo dài tám (eight) tuần."
+    },
+    {
+     "type": "gap",
+     "q": "Students receive a ten percent discount if they bring a valid ____.",
+     "answer": "student card",
+     "why": "Nhân viên yêu cầu xuất trình thẻ sinh viên (student card) hợp lệ để nhận giảm giá."
+    },
+    {
+     "type": "gap",
+     "q": "The classroom is on the second floor next to the ____.",
+     "answer": "library",
+     "why": "Nhân viên chỉ dẫn phòng 204 nằm ở tầng hai, ngay cạnh thư viện (library)."
+    }
+   ]
+  },
+  {
+   "id": "l2",
+   "title": "Joining a Weekend Beach Clean-up",
+   "topic": "Environment",
+   "script": [
+    {
+     "who": "A",
+     "text": "Hello, Green Coast Volunteers. Maya speaking."
+    },
+    {
+     "who": "B",
+     "text": "Hi Maya, I saw your poster about the beach clean-up this Sunday and I want to join."
+    },
+    {
+     "who": "A",
+     "text": "We would love to have you! Have you volunteered with us before?"
+    },
+    {
+     "who": "B",
+     "text": "No, this will be my first time. Where exactly do we meet?"
+    },
+    {
+     "who": "A",
+     "text": "We are meeting at the north parking lot at Green Bay Beach at eight in the morning."
+    },
+    {
+     "who": "B",
+     "text": "Eight o'clock is fine. How long does the clean-up usually last?"
+    },
+    {
+     "who": "A",
+     "text": "About three hours, so we should finish around eleven o'clock."
+    },
+    {
+     "who": "B",
+     "text": "Do I need to bring my own rubbish bags or cleaning tools?"
+    },
+    {
+     "who": "A",
+     "text": "No need. Our team will provide strong gloves and large recycling bags for everyone."
+    },
+    {
+     "who": "B",
+     "text": "Great. Is there anything special I should wear or bring?"
+    },
+    {
+     "who": "A",
+     "text": "Please wear closed shoes to protect your feet from sharp shells, and bring a reusable water bottle."
+    },
+    {
+     "who": "B",
+     "text": "Got it. What happens if it rains heavily on Sunday morning?"
+    },
+    {
+     "who": "A",
+     "text": "If the weather is unsafe, we will send a text message by seven AM to move the event to next weekend. Also, we serve free sandwiches after the clean-up."
+    },
+    {
+     "who": "B",
+     "text": "That sounds well organized. Let me give you my name and phone number."
+    }
+   ],
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Where will the volunteers meet on Sunday morning?",
+     "options": [
+      "At the main bus station",
+      "At the north parking lot",
+      "Outside the beach cafe",
+      "Near the town library"
+     ],
+     "answer": 1,
+     "why": "Maya nói mọi người sẽ tập trung ở bãi đỗ xe phía bắc (north parking lot) tại Green Bay Beach."
+    },
+    {
+     "type": "mcq",
+     "q": "Why should volunteers wear closed shoes?",
+     "options": [
+      "The sand is very cold",
+      "To walk faster on the road",
+      "To protect their feet from sharp shells",
+      "Because the event rules require boots"
+     ],
+     "answer": 2,
+     "why": "Maya nhắc mang giày kín mũi để bảo vệ chân khỏi vỏ sò sắc nhọn."
+    },
+    {
+     "type": "mcq",
+     "q": "How will volunteers know if the event is moved due to heavy rain?",
+     "options": [
+      "They will receive a text message",
+      "They must check a newspaper",
+      "A radio station will announce it",
+      "Maya will call them on Saturday night"
+     ],
+     "answer": 0,
+     "why": "Maya cho biết nhóm sẽ gửi tin nhắn văn bản trước 7 giờ sáng nếu thời tiết không an toàn."
+    },
+    {
+     "type": "gap",
+     "q": "The beach clean-up event lasts about ____ hours.",
+     "answer": "three",
+     "why": "Maya nói buổi dọn rác kéo dài khoảng ba (three) tiếng."
+    },
+    {
+     "type": "gap",
+     "q": "The organizers will provide strong ____ and large recycling bags.",
+     "answer": "gloves",
+     "why": "Maya cho biết ban tổ chức sẽ phát găng tay (gloves) chắc chắn và túi tái chế lớn."
+    },
+    {
+     "type": "gap",
+     "q": "Volunteers will receive free ____ after finishing the clean-up.",
+     "answer": "sandwiches",
+     "why": "Maya nhắc rằng nhóm sẽ phục vụ bánh mì kẹp (sandwiches) miễn phí sau buổi dọn rác."
+    }
+   ]
+  },
+  {
+   "id": "l3",
+   "title": "Getting a Laptop Repaired",
+   "topic": "Technology",
+   "script": [
+    {
+     "who": "A",
+     "text": "Welcome to QuickFix Tech Shop. What seems to be the problem with your laptop?"
+    },
+    {
+     "who": "B",
+     "text": "Hi, the battery runs out after only twenty minutes, even when I charge it fully."
+    },
+    {
+     "who": "A",
+     "text": "I see. How old is the laptop?"
+    },
+    {
+     "who": "B",
+     "text": "I bought it about four years ago. Also, the spacebar on the keyboard sometimes sticks."
+    },
+    {
+     "who": "A",
+     "text": "Let me take a quick look. Yes, the battery definitely needs to be replaced, and there is probably dust under the keyboard."
+    },
+    {
+     "who": "B",
+     "text": "Can you fix both issues? And how much will it cost?"
+    },
+    {
+     "who": "A",
+     "text": "A new battery is sixty-five dollars, and I can clean the keyboard for free while the laptop is open."
+    },
+    {
+     "who": "B",
+     "text": "That is very fair. How long will the repair take?"
+    },
+    {
+     "who": "A",
+     "text": "We have to order the battery from our warehouse, so it will take two working days."
+    },
+    {
+     "who": "B",
+     "text": "Today is Tuesday, so I can pick it up on Thursday afternoon?"
+    },
+    {
+     "who": "A",
+     "text": "Exactly, any time after two PM on Thursday. Have you backed up your personal files?"
+    },
+    {
+     "who": "B",
+     "text": "Yes, I saved all my documents on an external drive last night."
+    },
+    {
+     "who": "A",
+     "text": "Great, that is always smart. Your new battery will also come with a six-month warranty."
+    },
+    {
+     "who": "B",
+     "text": "Awesome, here is the laptop. Please call me when it is ready."
+    }
+   ],
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What is the main problem with the customer's laptop?",
+     "options": [
+      "The screen is cracked",
+      "The battery drains very quickly",
+      "The speakers have no sound",
+      "It cannot connect to Wi-Fi"
+     ],
+     "answer": 1,
+     "why": "Khách hàng nói pin hết chỉ sau hai mươi phút dù đã sạc đầy."
+    },
+    {
+     "type": "mcq",
+     "q": "How much will the customer pay to have the keyboard cleaned?",
+     "options": [
+      "Nothing",
+      "Twenty dollars",
+      "Forty dollars",
+      "Sixty-five dollars"
+     ],
+     "answer": 0,
+     "why": "Kỹ thuật viên nói sẽ vệ sinh bàn phím miễn phí khi mở máy thay pin."
+    },
+    {
+     "type": "mcq",
+     "q": "Why will the repair take two working days?",
+     "options": [
+      "The technician is on holiday tomorrow",
+      "The shop is very busy this week",
+      "The new battery must be ordered from a warehouse",
+      "The keyboard needs a special glue to dry"
+     ],
+     "answer": 2,
+     "why": "Kỹ thuật viên giải thích cửa hàng phải đặt pin mới từ kho hàng."
+    },
+    {
+     "type": "gap",
+     "q": "The customer bought the laptop about ____ years ago.",
+     "answer": "four",
+     "why": "Khách hàng cho biết mình đã mua chiếc máy tính xách tay khoảng bốn (four) năm trước."
+    },
+    {
+     "type": "gap",
+     "q": "The customer backed up all documents on an ____ last night.",
+     "answer": "external drive",
+     "why": "Khách hàng nói đã lưu toàn bộ tài liệu vào ổ cứng ngoài (external drive) tối hôm qua."
+    },
+    {
+     "type": "gap",
+     "q": "The replacement battery includes a ____ warranty.",
+     "answer": "six-month",
+     "why": "Kỹ thuật viên thông báo pin mới có thời gian bảo hành sáu tháng (six-month)."
+    }
+   ]
+  },
+  {
+   "id": "l4",
+   "title": "Asking About a Local Fitness Center",
+   "topic": "Health",
+   "script": [
+    {
+     "who": "A",
+     "text": "Good morning, welcome to Riverview Fitness Center. Are you looking to become a member?"
+    },
+    {
+     "who": "B",
+     "text": "Yes, I just moved to this neighborhood and I want to start exercising regularly."
+    },
+    {
+     "who": "A",
+     "text": "Great! We are open every day from six in the morning until ten at night."
+    },
+    {
+     "who": "B",
+     "text": "That is convenient. Do you have a swimming pool as well as a gym?"
+    },
+    {
+     "who": "A",
+     "text": "Yes, we have a twenty-five-meter indoor pool, though please note the pool closes at nine PM for cleaning."
+    },
+    {
+     "who": "B",
+     "text": "Good to know. What about group classes like yoga?"
+    },
+    {
+     "who": "A",
+     "text": "We hold beginner yoga classes on Mondays and Wednesdays at seven PM, and they are included in the membership."
+    },
+    {
+     "who": "B",
+     "text": "How much does a monthly membership cost?"
+    },
+    {
+     "who": "A",
+     "text": "It is forty-five dollars per month, with no long-term contract required."
+    },
+    {
+     "who": "B",
+     "text": "Do new members get any help with using the machines?"
+    },
+    {
+     "who": "A",
+     "text": "Yes, every new member receives a free fitness check and a short training plan during their first week."
+    },
+    {
+     "who": "B",
+     "text": "That would be really helpful. Are there lockers in the changing rooms?"
+    },
+    {
+     "who": "A",
+     "text": "There are plenty of lockers, but you will need to bring your own small padlock."
+    },
+    {
+     "who": "B",
+     "text": "Thanks for all the information. I would like to sign up today."
+    }
+   ],
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Why does the swimming pool close at nine PM?",
+     "options": [
+      "For swimming lessons",
+      "For cleaning",
+      "To save electricity",
+      "Because the staff leave early"
+     ],
+     "answer": 1,
+     "why": "Nhân viên nói hồ bơi đóng cửa lúc 9 giờ tối để vệ sinh."
+    },
+    {
+     "type": "mcq",
+     "q": "When are the beginner yoga classes held?",
+     "options": [
+      "Tuesdays and Thursdays",
+      "Fridays and Saturdays",
+      "Mondays and Wednesdays",
+      "Every morning at six"
+     ],
+     "answer": 2,
+     "why": "Nhân viên cho biết lớp yoga cho người mới diễn ra vào thứ Hai và thứ Tư lúc 7 giờ tối."
+    },
+    {
+     "type": "mcq",
+     "q": "What is true about the monthly membership?",
+     "options": [
+      "It does not require a long-term contract",
+      "Yoga classes cost extra money",
+      "It only allows weekend visits",
+      "Members must pay for a full year"
+     ],
+     "answer": 0,
+     "why": "Nhân viên khẳng định gói hội viên 45 đô la mỗi tháng không yêu cầu hợp đồng dài hạn."
+    },
+    {
+     "type": "gap",
+     "q": "The fitness center opens every day at ____ in the morning.",
+     "answer": "six",
+     "why": "Nhân viên cho biết trung tâm mở cửa hàng ngày từ sáu (six) giờ sáng."
+    },
+    {
+     "type": "gap",
+     "q": "New members receive a free ____ during their first week.",
+     "answer": "fitness check",
+     "why": "Nhân viên nói hội viên mới được kiểm tra thể lực (fitness check) miễn phí trong tuần đầu."
+    },
+    {
+     "type": "gap",
+     "q": "To use the lockers, visitors must bring their own small ____.",
+     "answer": "padlock",
+     "why": "Nhân viên lưu ý khách cần tự mang theo ổ khóa nhỏ (padlock) để dùng tủ đồ."
+    }
+   ]
+  },
+  {
+   "id": "l5",
+   "title": "Booking a Guided City Walking Tour",
+   "topic": "Travel",
+   "script": [
+    {
+     "who": "A",
+     "text": "Hello, Old Town Walking Tours. How may I assist you?"
+    },
+    {
+     "who": "B",
+     "text": "Hi, my partner and I would like to book the historic walking tour for tomorrow morning."
+    },
+    {
+     "who": "A",
+     "text": "Certainly. We still have spaces available. Our morning tour begins at nine thirty AM."
+    },
+    {
+     "who": "B",
+     "text": "Where does the guide meet the group?"
+    },
+    {
+     "who": "A",
+     "text": "Right outside the main entrance of the central library. Look for a guide holding a bright yellow flag."
+    },
+    {
+     "who": "B",
+     "text": "Easy to find! How long does the walk take?"
+    },
+    {
+     "who": "A",
+     "text": "It lasts two and a half hours, at a comfortable pace with plenty of stops for photos."
+    },
+    {
+     "who": "B",
+     "text": "How big are the tour groups? We prefer smaller groups."
+    },
+    {
+     "who": "A",
+     "text": "We limit each group to a maximum of fifteen people so everyone can hear the guide clearly."
+    },
+    {
+     "who": "B",
+     "text": "That sounds ideal. What is the ticket price?"
+    },
+    {
+     "who": "A",
+     "text": "It is eighteen dollars per adult, and that includes a cup of local coffee at the old market."
+    },
+    {
+     "who": "B",
+     "text": "Nice! What if it rains tomorrow? The forecast looks cloudy."
+    },
+    {
+     "who": "A",
+     "text": "The tour still runs in light rain, and we provide free umbrellas if you need one."
+    },
+    {
+     "who": "B",
+     "text": "Great, please book two adult tickets under the name Daniel Park."
+    }
+   ],
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "How can tourists recognize the tour guide?",
+     "options": [
+      "By a red hat",
+      "By a bright yellow flag",
+      "By a blue jacket",
+      "By a large backpack"
+     ],
+     "answer": 1,
+     "why": "Nhân viên bảo khách tìm hướng dẫn viên cầm lá cờ màu vàng tươi."
+    },
+    {
+     "type": "mcq",
+     "q": "What is included in the eighteen-dollar ticket price?",
+     "options": [
+      "A museum entrance ticket",
+      "A map of the subway",
+      "A cup of local coffee",
+      "A traditional lunch"
+     ],
+     "answer": 2,
+     "why": "Nhân viên cho biết giá vé 18 đô la đã bao gồm một ly cà phê địa phương tại chợ cũ."
+    },
+    {
+     "type": "mcq",
+     "q": "What happens if there is light rain during the tour?",
+     "options": [
+      "The tour continues and free umbrellas are provided",
+      "The tour moves inside a bus",
+      "Customers receive a full refund",
+      "The walk is shortened to one hour"
+     ],
+     "answer": 0,
+     "why": "Nhân viên nói tour vẫn diễn ra khi mưa nhẹ và có cung cấp ô miễn phí."
+    },
+    {
+     "type": "gap",
+     "q": "The tour group meets outside the main entrance of the ____.",
+     "answer": "central library",
+     "why": "Nhân viên hẹn đoàn tập trung ngay trước cổng chính thư viện trung tâm (central library)."
+    },
+    {
+     "type": "gap",
+     "q": "Each walking group has a maximum of ____ people.",
+     "answer": "fifteen",
+     "why": "Nhân viên nói mỗi nhóm giới hạn tối đa mười lăm (fifteen) người."
+    },
+    {
+     "type": "gap",
+     "q": "The customer books two adult tickets under the name ____.",
+     "answer": "Daniel Park",
+     "why": "Ở lượt cuối, khách hàng đặt hai vé người lớn dưới tên Daniel Park."
+    }
+   ]
+  }
+ ]
+}
