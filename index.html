@@ -1094,6 +1094,10 @@
   .tree{max-width:60%}
   .vchip .sp.i3host{width:30px!important;height:30px!important;flex:0 0 30px;display:grid;place-items:center}
   .vchip .sp .i3.g{width:22px!important;height:22px!important}
+  /* khoảng trống cuối mỗi tab để mục cuối không bị thanh tab che */
+  #screen-main .pane.active{padding-bottom:calc(110px + env(safe-area-inset-bottom))}
+  #screen-main #pane-learn.active{padding-bottom:calc(180px + env(safe-area-inset-bottom))}
+  #screen-main #pane-learn.active.gmode{padding-bottom:calc(110px + env(safe-area-inset-bottom))}
 </style>
 </head>
 <body>
@@ -2420,6 +2424,7 @@
     var lm = state.learnMode || "vocab";
     Array.prototype.forEach.call($("learnSeg").children, function (b) { b.classList.toggle("on", b.dataset.l === lm); });
     $("gramBox").style.display = lm === "gram" ? "" : "none";
+    $("pane-learn").classList.toggle("gmode", lm === "gram");
     ["pathBar", "unitBox"].forEach(function (id) { $(id).style.display = lm === "gram" ? "none" : ""; });
     if (lm === "gram") { $("unitList").style.display = "none"; $("stickyCta").style.display = "none"; renderGramPath($("gramBox")); return; }
     var p = getProfile() || {}, done = getLessonDone();
