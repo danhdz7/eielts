@@ -1195,6 +1195,104 @@
   .weeknote{display:flex;flex-direction:column;gap:2px;padding:10px 12px;border-radius:14px;background:rgba(74,222,128,.10);border:1px solid rgba(74,222,128,.25);margin-bottom:10px}
   .weeknote b{font-size:.9rem} .weeknote span{font-size:.8rem;color:#c9d3ff;line-height:1.4}
   .lintnote{margin-top:10px;font-size:.78rem}
+
+  /* ===== Logo ảnh bìa ở màn đăng nhập ===== */
+  .logo.logoimg{background:none!important;box-shadow:none!important;width:112px;height:112px;padding:0;border-radius:28px;overflow:hidden;
+    filter:drop-shadow(0 10px 28px rgba(124,92,255,.45));animation:logobob 5s ease-in-out infinite}
+  .logo.logoimg img{width:100%;height:100%;display:block;border-radius:28px;object-fit:cover}
+  .logo.logoimg span{display:none}
+  @keyframes logobob{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-8px) rotate(-2deg)}}
+
+  /* ===== Chọn ngôn ngữ ===== */
+  #authStep1{position:relative}
+  .authlang{position:absolute;top:-6px;right:0;z-index:2}
+  .langpill{display:inline-flex;gap:2px;padding:3px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(10px)}
+  .langpill button{border:0;background:transparent;color:var(--mut);font:700 .78rem/1 inherit;padding:7px 11px;border-radius:999px;cursor:pointer;min-height:0}
+  .langpill button.on{background:#fff;color:#1b1f4a}
+  html[data-theme="light"] .langpill{background:rgba(0,0,0,.05);border-color:rgba(0,0,0,.12)}
+  html[data-theme="light"] .langpill button.on{background:#4f46e5;color:#fff}
+  html.i18n-wait body{visibility:hidden}
+
+  /* ===== Tải app ===== */
+  .installbtn{width:100%}
+  .insteps{margin:12px 0 4px 1.2em;padding:0;line-height:1.6}
+  .insteps li{margin:6px 0}
+
+  /* ===== Đánh giá ===== */
+  .rstars{display:flex;justify-content:center;gap:8px;margin:16px 0 4px}
+  .rstar{width:50px;height:50px;border:0;background:none;font-size:2.4rem;line-height:1;color:rgba(255,255,255,.22);cursor:pointer;transition:transform .15s,color .15s;padding:0}
+  .rstar.on{color:#ffc93c;text-shadow:0 0 18px rgba(255,201,60,.55)}
+  .rstar:active{transform:scale(1.25)}
+  html[data-theme="light"] .rstar{color:rgba(0,0,0,.18)}
+  .rlab{text-align:center;font-weight:700;min-height:1.4em;color:#ffc93c}
+  .rcomment{width:100%;margin-top:12px;resize:vertical;min-height:76px;box-sizing:border-box}
+
+  /* ===== Giới thiệu lần đầu ===== */
+  .introwrap{position:fixed;inset:0;z-index:9000;display:flex;flex-direction:column;padding:calc(16px + env(safe-area-inset-top)) 22px calc(22px + env(safe-area-inset-bottom));
+    background:radial-gradient(120% 80% at 50% 0%,#2b2470 0%,#121640 55%,#070b24 100%);color:#fff;animation:ifade .3s ease}
+  .introwrap.out{animation:ifadeout .26s ease forwards}
+  @keyframes ifade{from{opacity:0}to{opacity:1}}
+  @keyframes ifadeout{to{opacity:0;transform:scale(1.02)}}
+  .itop{display:flex;justify-content:space-between;align-items:center}
+  .iskip{border:0;background:rgba(255,255,255,.1);color:#fff;font:600 .9rem/1 inherit;padding:10px 16px;border-radius:999px;cursor:pointer}
+  .istage{flex:1;display:grid;place-items:center;overflow:hidden}
+  .islide{text-align:center;max-width:420px;padding:0 6px}
+  .islide.fwd{animation:islin .32s cubic-bezier(.2,.8,.2,1)}
+  .islide.back{animation:islinb .32s cubic-bezier(.2,.8,.2,1)}
+  @keyframes islin{from{opacity:0;transform:translateX(40px)}to{opacity:1;transform:none}}
+  @keyframes islinb{from{opacity:0;transform:translateX(-40px)}to{opacity:1;transform:none}}
+  .islide .ilogo{width:150px;height:150px;border-radius:36px;box-shadow:0 18px 50px rgba(124,92,255,.5);animation:logobob 5s ease-in-out infinite}
+  .islide .iico{width:132px;height:132px;object-fit:contain;filter:drop-shadow(0 14px 30px rgba(0,0,0,.45));animation:logobob 4.4s ease-in-out infinite}
+  .islide h2{font-size:1.7rem;margin:26px 0 10px;line-height:1.2}
+  .islide p{color:#c9cdf2;font-size:1.04rem;line-height:1.6;margin:0}
+  .idots{display:flex;justify-content:center;gap:8px;margin:10px 0 18px}
+  .idots i{width:8px;height:8px;border-radius:99px;background:rgba(255,255,255,.25);transition:width .25s,background .25s}
+  .idots i.on{width:24px;background:#fff}
+  .inext{width:100%}
+
+  /* ===== Nền chuyển động mạnh hơn ===== */
+  #bgfx .px{will-change:transform;transition:transform .08s linear}
+  .drift{animation:drift 18s ease-in-out infinite alternate!important}
+  @keyframes drift{0%{transform:translate3d(0,0,0) rotate(0)}50%{transform:translate3d(-26px,18px,0) rotate(-3deg)}100%{transform:translate3d(10px,-12px,0) rotate(2deg)}}
+  .drift2{animation:drift2 24s ease-in-out infinite alternate!important}
+  @keyframes drift2{0%{transform:translate3d(0,0,0)}100%{transform:translate3d(22px,-26px,0)}}
+  .planet-ring.r2{animation:ringspin 14s linear infinite}
+  @keyframes ringspin{to{stroke-dashoffset:-638}}
+  .nebmove{animation:nebm 30s ease-in-out infinite alternate}
+  @keyframes nebm{from{transform:translate3d(0,0,0) scale(1)}to{transform:translate3d(-30px,20px,0) scale(1.08)}}
+  .galspin{transform-origin:200px 430px;animation:galspin 60s ease-in-out infinite alternate}
+  @keyframes galspin{from{transform:rotate(-4deg)}to{transform:rotate(4deg)}}
+  .shoot{animation-duration:6.5s!important}
+
+  /* ===== Icon nhún nhẹ + hiện dần khi lướt ===== */
+  .pane .rc-ico,.pane .ti,.pane .si,.pane .scimg{animation:icobob 4.6s ease-in-out infinite;animation-delay:calc(var(--i,0) * -0.7s)}
+  @keyframes icobob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+  .rv{opacity:0;transform:translateY(26px) scale(.98)}
+  .rv.rv-in{opacity:1;transform:none;transition:opacity .5s ease,transform .6s cubic-bezier(.2,.8,.2,1)}
+  @media (prefers-reduced-motion: reduce){
+    .rv{opacity:1;transform:none}
+    .pane .rc-ico,.pane .ti,.pane .si,.pane .scimg,.logo.logoimg,.islide img{animation:none!important}
+  }
+
+  /* ===== Band 4 kỹ năng ===== */
+  .bandpanel{margin-top:12px}
+  .bphead{display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .bphead h2{margin:0 0 2px}
+  .bphead small{display:block;font-size:.8rem}
+  .bpov{flex:0 0 auto;text-align:center;min-width:92px;padding:10px 12px;border-radius:18px;
+    background:linear-gradient(145deg,#7c5cff,#4f7cff);box-shadow:0 8px 24px rgba(92,92,255,.4);color:#fff}
+  .bpov b{display:block;font-size:2rem;line-height:1}
+  .bpov small{font-size:.72rem;opacity:.9}
+  .bpgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:14px}
+  .bptile{position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;gap:2px;padding:12px 4px 14px;border-radius:16px;
+    border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);color:inherit;cursor:pointer;min-height:0}
+  .bptile .bpi{font-size:1.3rem}
+  .bptile b{font-size:1.35rem;line-height:1.1}
+  .bptile small{font-size:.76rem;color:var(--mut)}
+  .bptile em{font-style:normal;font-size:.68rem;color:#8fb4ff;margin-top:2px}
+  .bptile .bpbar{position:absolute;left:0;bottom:0;height:4px;width:var(--w);background:linear-gradient(90deg,#34d399,#60a5fa)}
+  .bptile.empty b{opacity:.5}
+  html[data-theme="light"] .bptile{border-color:rgba(0,0,0,.1);background:rgba(0,0,0,.03)}
 </style>
 </head>
 <body>
@@ -1209,13 +1307,18 @@
 <div id="uiDialog" class="uidlg"><div class="dlgbox" id="uiDlgBox"></div></div>
 <div id="loadWrap" class="loadwrap"><div class="mas" id="loadMascot">🦉</div><div id="loadText" class="muted">Đang mở bài…</div><div class="lb"><i></i></div></div>
 
+<form name="rating" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input type="hidden" name="form-name" value="rating"><input name="bot-field"><input name="stars"><textarea name="comment"></textarea><input name="lang"><input name="page">
+</form>
+
 <div class="app">
 
 <!-- ===================== Đăng nhập / mở đầu ===================== -->
 <section id="screen-auth" class="screen">
   <div class="authwrap">
     <div id="authStep1">
-      <div class="logo"><span>e</span></div>
+      <div class="authlang" id="authLang"></div>
+      <div class="logo logoimg"><img src="icon-512.png" alt="eIELTS" width="104" height="104"></div>
       <h1 style="text-align:center">eIELTS</h1>
       <p class="muted" style="text-align:center;margin-top:6px">Ôn từ vựng, ngữ pháp, nghe và nói. Mục tiêu band 5.0.</p>
 
@@ -1232,6 +1335,7 @@
         <button class="sso ms" id="ssoNew" type="button">✨ Tạo tài khoản eIELTS mới</button>
         <div class="or">hoặc</div>
         <button class="btn-line" id="ssoGuest" type="button">Dùng ngay, không cần tài khoản</button>
+        <div id="authInstall" style="margin-top:10px"></div>
         <p class="dim polink" style="text-align:center;margin-top:10px;font-size:.85rem">Khi tiếp tục, bạn đồng ý với <a href="privacy.html" target="_blank" rel="noopener">Chính sách quyền riêng tư</a>.</p>
         <p class="dim" style="text-align:center;margin-top:16px;line-height:1.5">Tài khoản và tiến độ được lưu trên chính máy này. Mật khẩu được mã hoá, không gửi đi đâu.</p>
       </div>
@@ -1300,7 +1404,7 @@
       <span class="st" id="stStreak" title="Ngày liên tiếp">
         <img class="i3 gi" src="i-fire.webp" alt="">
         <b id="streakNum">0</b></span>
-      <span class="st" title="Điểm XP">
+      <span class="st" title="Điểm EXP">
         <img class="i3 gi" src="i-gem.webp" alt="">
         <b id="xpNum">0</b></span>
       <span class="st" title="Band gần nhất">
@@ -2948,7 +3052,7 @@
       p.goalBand = $("goalBand").value; p.goalMin = parseInt($("goalMin").value, 10) || 10;
       setProfile(p); sfx.win(); confetti(26);
       enterApp();
-      setTimeout(function () {
+      afterIntro(function () {
         if (read("ielts_level", null)) return;
         askDlg({
           title: "Làm bài kiểm tra đầu vào?",
@@ -2956,7 +3060,7 @@
           ok: "Làm ngay", cancel: "Để sau",
           onOk: function () { chooseEntry(); }
         });
-      }, 900);
+      });
     });
   }
 
@@ -2965,9 +3069,9 @@
     { id: "s3", i: "🔥", n: "3 ngày liên tiếp", d: "Giữ lửa 3 ngày", f: function (c) { return c.streakMax >= 3; } },
     { id: "s7", i: "🗓️", n: "Một tuần đều", d: "7 ngày liên tiếp", f: function (c) { return c.streakMax >= 7; } },
     { id: "s30", i: "🏅", n: "Một tháng", d: "30 ngày liên tiếp", f: function (c) { return c.streakMax >= 30; } },
-    { id: "x1", i: "⭐", n: "100 XP", d: "Khởi động", f: function (c) { return c.xp >= 100; } },
-    { id: "x2", i: "🌟", n: "1.000 XP", d: "Chăm chỉ", f: function (c) { return c.xp >= 1000; } },
-    { id: "x3", i: "💫", n: "5.000 XP", d: "Bền bỉ", f: function (c) { return c.xp >= 5000; } },
+    { id: "x1", i: "⭐", n: "100 EXP", d: "Khởi động", f: function (c) { return c.xp >= 100; } },
+    { id: "x2", i: "🌟", n: "1.000 EXP", d: "Chăm chỉ", f: function (c) { return c.xp >= 1000; } },
+    { id: "x3", i: "💫", n: "5.000 EXP", d: "Bền bỉ", f: function (c) { return c.xp >= 5000; } },
     { id: "w1", i: "🧠", n: "50 từ thuộc", d: "Nhớ được 50 từ", f: function (c) { return c.mastered >= 50; } },
     { id: "w2", i: "📚", n: "200 từ thuộc", d: "Nhớ được 200 từ", f: function (c) { return c.mastered >= 200; } },
     { id: "u1", i: "🏁", n: "Xong 1 unit", d: "Hoàn thành unit đầu", f: function (c) { return c.units >= 1; } },
@@ -3022,17 +3126,18 @@
     var lb = mk("div", "lvbar");
     var lr = mk("div", "lvrow");
     lr.appendChild(mk("b", "", "Cấp " + lvl));
-    lr.appendChild(mk("span", "", into + " / 200 XP"));
+    lr.appendChild(mk("span", "", into + " / 200 EXP"));
     lb.appendChild(lr);
     var pg = el("div", "hero-prog", "<div></div>");
     lb.appendChild(pg); card.appendChild(lb);
     setTimeout(function () { pg.firstChild.style.width = (into / 200 * 100) + "%"; }, 60);
     body.appendChild(card);
+    body.appendChild(bandPanel());
 
     var ctx = achContext();
     var t3 = mk("div", "tiles3");
     [[fmtDur(s.secs || 0), "Thời gian học"], [currentStreak(), "Ngày liên tiếp"], [s.lessons || 0, "Bài đã làm"],
-     [s.xp || 0, "Tổng XP"], [ctx.mastered, "Từ đã thuộc"], [getBands().length, "Lần thi thử"]]
+     [s.xp || 0, "Tổng EXP"], [ctx.mastered, "Từ đã thuộc"], [getBands().length, "Lần thi thử"]]
       .forEach(function (x, i) {
         var c = mk("div", "stile"); c.style.setProperty("--i", i);
         var b = mk("b", "", String(x[0]));
@@ -3053,6 +3158,7 @@
     set.appendChild(mk("h2", "", "Cài đặt"));
     set.appendChild(setRow("🗣️ Gia sư AI", currentTutor().n, function () { openSettings("tutor"); }));
     set.appendChild(setRow("🎚️ Tốc độ đọc", (vPrefs.rate || .95).toFixed(2) + "×", function () { openSettings("voice"); }));
+    set.appendChild(setRow("🌐 Ngôn ngữ / Language", LANG === "en" ? "English" : "Tiếng Việt", function () { langSheet(); }));
     set.appendChild(setRow("🌓 Giao diện", themeMode() === "light" ? "Sáng" : themeMode() === "system" ? "Theo máy" : "Tối", function () { openSettings("theme"); }));
     set.appendChild(setRow("文A Hiện tiếng Việt", trOn() ? "Bật" : "Tắt", function () {
       write("ielts_tr", !trOn()); applyTr(); renderProfile();
@@ -3067,6 +3173,9 @@
     set.appendChild(setRow("💾 Sao lưu & khôi phục", "", function () { backupScreen(); }));
     set.appendChild(setRow("🧭 Kiểm tra đầu vào", (read("ielts_level", null) || {}).k || "Chưa làm", function () { chooseEntry(); }));
     set.appendChild(setRow("📤 Chia sẻ tiến độ", "", function () { shareProgress(); }));
+    if (!isStandalone()) set.appendChild(setRow("📲 Tải app về máy", "", function () { doInstall(); }));
+    set.appendChild(setRow("⭐ Đánh giá app", (rateState().stars ? rateState().stars + " sao" : ""), function () { rateSheet(true); }));
+    set.appendChild(setRow("👋 Xem lại phần giới thiệu", "", function () { showIntro(true); }));
     var out = setRow("🚪 Đăng xuất", "", function () {
       askDlg({
         title: "Đăng xuất?", text: "Tiến độ học vẫn được giữ trên máy này.",
@@ -3082,7 +3191,7 @@
     var rs = mk("button", "btn-line", "Xóa toàn bộ tiến độ"); rs.type = "button";
     rs.addEventListener("click", function () {
       askDlg({
-        title: "Xóa toàn bộ tiến độ?", text: "XP, streak, thẻ từ, bộ sưu tập và kết quả thi thử sẽ mất, không lấy lại được.",
+        title: "Xóa toàn bộ tiến độ?", text: "EXP, streak, thẻ từ, bộ sưu tập và kết quả thi thử sẽ mất, không lấy lại được.",
         ok: "Giữ lại", cancel: "Xóa hết",
         onCancel: function () {
           ["ielts_stats", "ielts_srs", "ielts_best", "ielts_lessons", "ielts_bands", "ielts_wrong",
@@ -3117,7 +3226,7 @@
 
   function shareProgress() {
     var s = getStats(), ctx = achContext();
-    var txt = "Mình đang học IELTS trên eIELTS: " + (s.xp || 0) + " XP, chuỗi " + currentStreak() +
+    var txt = "Mình đang học IELTS trên eIELTS: " + (s.xp || 0) + " EXP, chuỗi " + currentStreak() +
       " ngày, " + ctx.mastered + " từ đã thuộc, tổng " + fmtDur(s.secs || 0) + " học.";
     if (navigator.share) { navigator.share({ text: txt }).catch(function () {}); return; }
     try {
@@ -3146,7 +3255,7 @@
   function renderProfProg(body) {
     var s = getStats(), days = s.days || {};
     var card = mk("div", "card");
-    card.appendChild(mk("h2", "", "XP 7 ngày gần đây"));
+    card.appendChild(mk("h2", "", "EXP 7 ngày gần đây"));
     var box = mk("div", "chartbox"), names = ["T2", "T3", "T4", "T5", "T6", "T7", "CN"];
     var now = new Date(), dow = (now.getDay() + 6) % 7, vals = [];
     for (var i = 0; i < 7; i++) {
@@ -5108,27 +5217,27 @@
       '<radialGradient id="pl3" cx="36%" cy="30%"><stop offset="0" class="p3a"/><stop offset="1" class="p3b"/></radialGradient>' +
       '</defs>' +
       '<rect width="' + W + '" height="' + H + '" fill="url(#sky)"/>' +
-      '<g class="neb">' +
+      '<g class="px" data-k=".06"><g class="neb nebmove">' +
       '<ellipse class="n1" cx="60" cy="110" rx="150" ry="110"/>' +
       '<ellipse class="n2" cx="360" cy="60" rx="150" ry="120"/>' +
       '<ellipse class="n3" cx="200" cy="470" rx="230" ry="150"/>' +
       '<ellipse class="n4" cx="40" cy="840" rx="200" ry="140"/>' +
-      '</g>' +
+      '</g></g>' +
       // dải ngân hà mờ vắt chéo, nhìn xuyên qua các thẻ
-      '<g class="galaxy" opacity=".34">' +
+      '<g class="px" data-k=".1"><g class="galaxy galspin" opacity=".34">' +
       '<ellipse class="gx1" cx="200" cy="430" rx="310" ry="96" transform="rotate(-24 200 430)"/>' +
       '<ellipse class="gx2" cx="200" cy="430" rx="248" ry="54" transform="rotate(-24 200 430)"/>' +
-      '</g>' +
-      '<g>' + s.join("") + '</g>' +
+      '</g></g>' +
+      '<g class="px" data-k=".03">' + s.join("") + '</g>' +
       // hành tinh lớn có vành, góc dưới phải
-      '<g class="drift" opacity=".7" transform="translate(348 806)">' +
+      '<g class="px" data-k=".22"><g><g class="drift" opacity=".7">' +
       '<ellipse class="planet-ring r1" cx="0" cy="0" rx="146" ry="37" transform="rotate(-21)" stroke-width="9"/>' +
       '<circle cx="0" cy="0" r="92" fill="url(#pl1)"/>' +
       '<ellipse class="planet-ring r2" cx="0" cy="0" rx="146" ry="37" transform="rotate(-21)" stroke-width="9" stroke-dasharray="178 460"/>' +
-      '</g>' +
+      '</g></g></g>' +
       // hành tinh nhỏ trên trái
-      '<g class="drift2" opacity=".55"><circle cx="-6" cy="138" r="40" fill="url(#pl2)"/>' +
-      '<circle cx="392" cy="486" r="15" fill="url(#pl3)"/></g>' +
+      '<g class="px" data-k=".34"><g class="drift2" opacity=".55"><circle cx="-6" cy="138" r="40" fill="url(#pl2)"/>' +
+      '<circle cx="392" cy="486" r="15" fill="url(#pl3)"/></g></g>' +
       // sao băng
       '<g class="shoot" transform="translate(360 150)"><path d="M0 0 L58 -36" class="shootline" stroke-width="2" stroke-linecap="round"/>' +
       '<circle cx="0" cy="0" r="2.2" fill="#fff"/></g>' +
@@ -5305,7 +5414,7 @@
     var c = mk("div", "card");
     c.appendChild(el("p", "muted", "Tiến độ học chỉ nằm trong trình duyệt này. Xoá dữ liệu trình duyệt hoặc đổi máy là mất. Hãy sao lưu ra file để giữ lại."));
     var st = getStats();
-    c.appendChild(el("div", "info", "Hiện có: <b>" + (st.xp || 0) + " XP</b> · chuỗi " + currentStreak() + " ngày · " +
+    c.appendChild(el("div", "info", "Hiện có: <b>" + (st.xp || 0) + " EXP</b> · chuỗi " + currentStreak() + " ngày · " +
       Object.keys(getSrs()).length + " thẻ từ · " + getBands().length + " lần thi thử · " + fmtDur(st.secs || 0) + " học."));
 
     var dl = mk("button", "btn-primary", "⬇ Tải file sao lưu"); dl.type = "button";
@@ -5361,7 +5470,7 @@
     var msg = mk("div", "import-msg"); c2.appendChild(msg);
     function doImport(txt) {
       askDlg({
-        title: "Ghi đè tiến độ hiện tại?", text: "Toàn bộ XP, thẻ từ và kết quả đang có sẽ bị thay bằng dữ liệu trong file.",
+        title: "Ghi đè tiến độ hiện tại?", text: "Toàn bộ EXP, thẻ từ và kết quả đang có sẽ bị thay bằng dữ liệu trong file.",
         ok: "Huỷ", cancel: "Khôi phục",
         onCancel: function () {
           var err = importProgress(txt);
@@ -6536,7 +6645,7 @@
       state.score++; state.combo++;
       if (state.combo > state.maxCombo) state.maxCombo = state.combo;
       gain = XP_PER_CORRECT + (state.combo >= 3 ? XP_COMBO_BONUS : 0);
-      state.xp += gain; floatXP(btn.parentNode, "+" + gain + " XP");
+      state.xp += gain; floatXP(btn.parentNode, "+" + gain + " EXP");
       sfx.ok(); buzz(15);
       if (state.combo >= 3) { sfx.combo(); if (state.combo % 3 === 0) confetti(28); }
     } else {
@@ -6881,7 +6990,7 @@
   function treeHTML() {
     var s = getStats(), t = treeStage(s.xp || 0);
     return '<div class="tree"><span class="tsvg">' + treeSVG(t.i) + '</span><span class="ttx"><b>' + t.name + '</b><small>' +
-      (t.next ? "Còn " + t.left.toLocaleString("vi-VN") + " XP để đạt " + t.next : "Đã đạt cấp tối đa · " + (s.xp || 0).toLocaleString("vi-VN") + " XP") +
+      (t.next ? "Còn " + t.left.toLocaleString("vi-VN") + " EXP để đạt " + t.next : "Đã đạt cấp tối đa · " + (s.xp || 0).toLocaleString("vi-VN") + " EXP") +
       '</small><span class="tbar"><i style="width:' + t.pct + '%"></i></span></span></div>';
   }
   function treeSheet() {
@@ -6889,13 +6998,13 @@
       var s = getStats(), t = treeStage(s.xp || 0);
       box.appendChild(mk("div", "cap", "Cây học tập"));
       var h = mk("h2", "", t.name); h.style.fontSize = "1.45rem"; box.appendChild(h);
-      box.appendChild(el("p", "muted", "Mỗi câu đúng, mỗi bài hoàn thành đều cộng XP cho cây. Cây lớn dần qua 6 giai đoạn."));
+      box.appendChild(el("p", "muted", "Mỗi câu đúng, mỗi bài hoàn thành đều cộng EXP cho cây. Cây lớn dần qua 6 giai đoạn."));
       var g = mk("div", "treegrid");
       TREE.forEach(function (x, i) {
         var c = mk("div", "treecell" + (i <= t.i ? " on" : "") + (i === t.i ? " cur" : ""));
         var sv = mk("span", "tsvg"); sv.innerHTML = treeSVG(i); c.appendChild(sv);
         c.appendChild(mk("b", "", String(i + 1).padStart(2, "0") + " · " + x.n));
-        c.appendChild(mk("small", "", x.xp.toLocaleString("vi-VN") + " XP"));
+        c.appendChild(mk("small", "", x.xp.toLocaleString("vi-VN") + " EXP"));
         g.appendChild(c);
       });
       box.appendChild(g);
@@ -6973,7 +7082,7 @@
       ["🎙️", "Phân tích giọng nói", "Nói tự do rồi xem tốc độ, từ đệm, quãng ngắt", ["#ffb0c8", "#7a1c3e", "#ff6f9a"], function () { openAnalyzer(); }],
       ["🔤", "Cặp âm dễ nhầm", "12 bộ âm người Việt hay đọc sai", ["#8fe6ff", "#0f5068", "#3fc6ee"], function () { selectTab("practice"); }],
       ["📋", "Bộ thẻ ôn tập", getDeck().length + " câu bạn đã đánh dấu “+ Ôn tập”", ["#ffcf9e", "#6e3a10", "#ff9f45"], function () { deckSheet(); }],
-      ["🌱", "Cây học tập", "Xem 6 giai đoạn của cây và XP cần để lên cấp", ["#b6f29b", "#2b5f17", "#7fd36a"], function () { treeSheet(); }]
+      ["🌱", "Cây học tập", "Xem 6 giai đoạn của cây và EXP cần để lên cấp", ["#b6f29b", "#2b5f17", "#7fd36a"], function () { treeSheet(); }]
     ];
     var hint = mk("p", "muted lintnote", "Lưu ý: chấm Writing trong app là rà soát theo kho lỗi mẫu và đếm cấu trúc, không phải AI chấm. Hãy dùng như một người soát bài đầu tiên.");
     T.forEach(function (x) { body.appendChild(rowCard(x[0], x[1], x[2], "", x[4], x[3])); });
@@ -7486,6 +7595,412 @@
     if (a <= 4) return { t: "Đang vào guồng", m: "Bạn học " + a + "/7 ngày. Thêm 1 bài shadowing hoặc 1 đoạn Writing để tăng tốc nhé." };
     return { t: "Phong độ rất đều!", m: "Bạn học " + a + "/7 ngày. " + (lw ? "Thử sửa lại bài viết gần nhất để thấy mình tiến bộ." : "Thử viết 1 bài Task 2 ngắn để giữ nhịp.") };
   }
+  /* ===================== Ngôn ngữ (Việt / Anh) ===================== */
+  // Bộ dịch chạy lúc hiển thị: thay chữ giao diện tiếng Việt bằng tiếng Anh theo i18n_en.json.
+  // Nội dung học (nghĩa từ, đáp án, câu mẫu) nằm trong vùng I18N_SKIP nên không bị dịch,
+  // để không lộ đáp án và để người Việt vẫn thấy nghĩa tiếng Việt.
+  var LANG = (function () { try { return JSON.parse(localStorage.getItem("ielts_lang")) || "vi"; } catch (e) { return "vi"; } })();
+  // từ đơn hay đứng đầu chuỗi ghép với số/biến
+  var I18N_WORDS = { "Còn": "", "Ôn": "Review", "Chào": "Hi", "Học": "Learn", "Nghe": "Listen", "Nói": "Speak", "Đọc": "Read", "Viết": "Write", "phút": "min", "ngày": "days", "câu": "questions", "từ": "words", "bài": "lessons", "thẻ": "cards", "cụm": "phrases", "lần": "times", "giây": "sec", "Bạn": "you", "mục tiêu": "goal", "Vừa": "Medium", "Dễ": "Easy", "Khó": "Hard", "lượt": "turns" };
+  var I18N_WRE = new RegExp("(?<![\\p{L}\\p{N}])(?:" + Object.keys(I18N_WORDS).sort(function (a, b) { return b.length - a.length; }).join("|") + ")(?![\\p{L}\\p{N}])", "gu");
+  var I18N = null, I18N_RE = null, I18N_ORIG = new WeakMap(), I18N_ATTR = ["placeholder", "aria-label", "title"];
+  var I18N_SKIP = "script,style,textarea,input,select,svg,[data-noi18n],#options,#questionText,#cdWord,#cdVi,#cdEx,#cdPos,.sentence,.bubble2,.vi,.shen,.shvi,.shipa,.lw,.lg,.fvi,.fex,.wordchip,.vchip,mark,.avview,.gslot,.toast-raw";
+  function i18nEsc(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
+  function i18nPrep(d) {
+    I18N = d || {};
+    // mảnh ghép (chuỗi bị cắt quanh biến) chỉ dùng khi đủ dài, tránh thay nhầm một từ đơn
+    var keys = Object.keys(I18N).filter(function (k) { return k.length >= 4 && /\s/.test(k); })
+      .sort(function (a, b) { return b.length - a.length; });
+    try {
+      I18N_RE = keys.length ? new RegExp("(?<![\\p{L}\\p{N}])(?:" + keys.map(i18nEsc).join("|") + ")(?![\\p{L}\\p{N}])", "gu") : null;
+    } catch (e) { I18N_RE = null; }
+  }
+  var I18N_ASCII = { T2: "Mon", T3: "Tue", T4: "Wed", T5: "Thu", T6: "Fri", T7: "Sat", CN: "Sun" };
+  function i18nStr(s) {
+    if (!I18N || !s) return s;
+    var tt = s.trim();
+    if (I18N_ASCII[tt]) return s.replace(tt, I18N_ASCII[tt]);
+    var lead = s.match(/^\s*/)[0], trail = s.match(/\s*$/)[0], core = s.trim();
+    if (!core) return s;
+    if (I18N[core]) return lead + I18N[core] + trail;
+    // bỏ dấu câu cuối để khớp (ví dụ "Đã lưu" + "!")
+    var m = core.match(/^(.*?)([.!?:…·]+)$/);
+    if (m && I18N[m[1].trim()]) return lead + I18N[m[1].trim()] + m[2] + trail;
+    // "Cấp 3", "12 phút", "Còn 5"…: chữ + số hoặc số + chữ
+    var mn = core.match(/^(\D+?)\s+([\d.,/]+)$/);
+    if (mn && I18N[mn[1].trim()]) return lead + I18N[mn[1].trim()] + " " + mn[2] + trail;
+    mn = core.match(/^([\d.,/]+)\s+(\D+)$/);
+    if (mn && I18N[mn[2].trim()]) return lead + mn[1] + " " + I18N[mn[2].trim()] + trail;
+    if (!/[^\x00-\x7F]/.test(core)) return s;
+    // biểu tượng ở đầu chuỗi ("✉️ Đăng nhập…"): tách ra rồi tra phần chữ
+    var me = core.match(/^([^\p{L}\p{N}"“'(]+)(\p{L}.*)$/u);
+    if (me && I18N[me[2].trim()]) return lead + me[1] + I18N[me[2].trim()] + trail;
+    // chuỗi dài là nội dung bài học/bài viết: giữ nguyên, không dịch từng mảnh
+    if (core.length > 70) return s;
+    if (!I18N_RE) I18N_RE = /(?!)/g;
+    I18N_RE.lastIndex = 0;
+    var out = core.replace(I18N_RE, function (x) { return I18N[x] || x; });
+    var viLeft = (out.match(/\S*[^\x00-\x7F]\S*/g) || []).length;
+    // chỉ thay từng từ khi gần như đã dịch xong, hoặc chuỗi có số ("Ôn 15 thẻ"); tránh làm rối tiêu đề nội dung
+    if (viLeft && (viLeft <= 2 || /\d/.test(core))) {
+      I18N_WRE.lastIndex = 0;
+      out = out.replace(I18N_WRE, function (x) { return I18N_WORDS[x]; }).replace(/\s{2,}/g, " ").trim();
+    }
+    return lead + out + trail;
+  }
+  function i18nSkip(node) {
+    var e = node.nodeType === 1 ? node : node.parentElement;
+    return !e || !!(e.closest && e.closest(I18N_SKIP));
+  }
+  function i18nNode(root) {
+    if (LANG !== "en" || !I18N || !root) return;
+    if (root.nodeType === 3) { i18nText(root); return; }
+    if (root.nodeType !== 1 || i18nSkip(root)) return;
+    var w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT | NodeFilter.SHOW_ELEMENT, {
+      acceptNode: function (n) {
+        if (n.nodeType === 1) return n.matches(I18N_SKIP) ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_SKIP;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var list = [], n;
+    while ((n = w.nextNode())) list.push(n);
+    list.forEach(i18nText);
+    var els = root.querySelectorAll ? root.querySelectorAll("[placeholder],[aria-label],[title]") : [];
+    Array.prototype.forEach.call(els, i18nAttrs);
+    if (root.hasAttribute) i18nAttrs(root);
+  }
+  function i18nText(t) {
+    var v = t.nodeValue;
+    if (!v || i18nSkip(t)) return;
+    if (!/[^\x00-\x7F]/.test(v) && !I18N_ASCII[v.trim()]) return;
+    var nv = i18nStr(v);
+    if (nv !== v) { I18N_ORIG.set(t, v); t.nodeValue = nv; }
+  }
+  function i18nAttrs(e) {
+    if (i18nSkip(e)) return;
+    I18N_ATTR.forEach(function (a) {
+      var v = e.getAttribute && e.getAttribute(a);
+      if (v && /[^\x00-\x7F]/.test(v)) { var nv = i18nStr(v); if (nv !== v) e.setAttribute(a, nv); }
+    });
+  }
+  var i18nObs = null, i18nQ = [], i18nPending = false;
+  function i18nFlush() {
+    i18nPending = false;
+    var q = i18nQ; i18nQ = [];
+    if (i18nObs) i18nObs.disconnect();
+    q.forEach(i18nNode);
+    if (i18nObs) i18nObs.observe(document.body, { childList: true, subtree: true, characterData: true, attributes: true, attributeFilter: I18N_ATTR });
+  }
+  function i18nStart() {
+    if (LANG !== "en") return;
+    document.documentElement.lang = "en";
+    document.documentElement.classList.add("i18n-wait");
+    var done = false;
+    function go(d) {
+      if (done) return; done = true;
+      i18nPrep(d);
+      i18nNode(document.body);
+      if (document.title) document.title = "eIELTS – Free IELTS practice, target band 5.0";
+      document.documentElement.classList.remove("i18n-wait");
+      if (!window.MutationObserver) return;
+      i18nObs = new MutationObserver(function (ms) {
+        ms.forEach(function (m) {
+          if (m.type === "childList") Array.prototype.forEach.call(m.addedNodes, function (x) { i18nQ.push(x); });
+          else i18nQ.push(m.target);
+        });
+        if (!i18nPending) { i18nPending = true; (window.queueMicrotask || setTimeout)(i18nFlush); }
+      });
+      i18nObs.observe(document.body, { childList: true, subtree: true, characterData: true, attributes: true, attributeFilter: I18N_ATTR });
+    }
+    setTimeout(function () { go(I18N || {}); }, 2500);
+    fetch("i18n_en.json").then(function (r) { return r.ok ? r.json() : {}; }).then(go).catch(function () { go({}); });
+  }
+  function setLang(l) {
+    if (l === LANG) return;
+    write("ielts_lang", l);
+    location.reload();
+  }
+  function langPill() {
+    var w = mk("div", "langpill"); w.setAttribute("data-noi18n", "1"); w.setAttribute("role", "group"); w.setAttribute("aria-label", "Language");
+    [["vi", "VI"], ["en", "EN"]].forEach(function (x) {
+      var b = mk("button", LANG === x[0] ? "on" : "", x[1]); b.type = "button"; b.setAttribute("data-noi3", "1");
+      b.addEventListener("click", function () { sfx.tap(); setLang(x[0]); });
+      w.appendChild(b);
+    });
+    return w;
+  }
+  function langSheet() {
+    openSheet(function (box) {
+      box.appendChild(mk("div", "cap", "Cài đặt"));
+      var h = mk("h2", "", "Ngôn ngữ / Language"); h.style.fontSize = "1.4rem"; box.appendChild(h);
+      [["vi", "🇻🇳 Tiếng Việt"], ["en", "🇬🇧 English"]].forEach(function (x) {
+        var b = mk("button", LANG === x[0] ? "btn-primary" : "btn-line", x[1]); b.type = "button"; b.style.marginTop = "10px";
+        b.setAttribute("data-noi18n", "1");
+        b.addEventListener("click", function () { closeSheet(); setLang(x[0]); });
+        box.appendChild(b);
+      });
+      box.appendChild(el("p", "muted", "Nghĩa của từ và lời giải vẫn giữ tiếng Việt để bạn dễ học."));
+    });
+  }
+
+  /* ===================== Tải app (PWA) ===================== */
+  var installEvt = null;
+  window.addEventListener("beforeinstallprompt", function (e) { e.preventDefault(); installEvt = e; paintInstall(); });
+  window.addEventListener("appinstalled", function () { installEvt = null; toast("Đã cài eIELTS vào máy."); paintInstall(); });
+  function isStandalone() {
+    try { return window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone === true; } catch (e) { return false; }
+  }
+  function paintInstall() {
+    Array.prototype.forEach.call(document.querySelectorAll(".installbtn"), function (b) { b.style.display = isStandalone() ? "none" : ""; });
+  }
+  function doInstall() {
+    sfx.tap();
+    if (installEvt) {
+      installEvt.prompt();
+      installEvt.userChoice.then(function () { installEvt = null; paintInstall(); }).catch(function () {});
+      return;
+    }
+    var ios = /iphone|ipad|ipod/i.test(navigator.userAgent);
+    openSheet(function (box) {
+      box.appendChild(mk("div", "cap", "Tải app"));
+      var h = mk("h2", "", "Cài eIELTS vào màn hình chính"); h.style.fontSize = "1.35rem"; box.appendChild(h);
+      var steps = ios
+        ? ["Mở trang này bằng Safari.", "Bấm nút Chia sẻ (ô vuông có mũi tên lên) ở thanh dưới.", "Chọn “Thêm vào MH chính”, rồi bấm Thêm."]
+        : ["Mở trang này bằng Chrome.", "Bấm nút ⋮ ở góc trên bên phải.", "Chọn “Cài đặt ứng dụng” hoặc “Thêm vào màn hình chính”."];
+      var ol = mk("ol", "insteps");
+      steps.forEach(function (s) { ol.appendChild(mk("li", "", s)); });
+      box.appendChild(ol);
+      box.appendChild(el("p", "muted", "Cài xong, eIELTS mở như một app riêng và học được cả khi không có mạng."));
+    });
+  }
+  function installButton(cls) {
+    var b = mk("button", "installbtn " + (cls || ""), "📲 Tải app về máy"); b.type = "button"; b.setAttribute("data-noi3", "1");
+    b.addEventListener("click", doInstall);
+    if (isStandalone()) b.style.display = "none";
+    return b;
+  }
+
+  /* ===================== Đánh giá 5 sao ===================== */
+  function rateState() { return read("ielts_rate", {}) || {}; }
+  function rateLater() { var r = rateState(); r.later = Date.now(); write("ielts_rate", r); }
+  function sendRating(stars, comment) {
+    var body = new URLSearchParams({ "form-name": "rating", stars: String(stars), comment: comment || "", lang: LANG, page: "app" }).toString();
+    return fetch("/", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: body })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return true; });
+  }
+  function flushRating() {
+    var r = rateState();
+    if (!r.queued || !navigator.onLine) return;
+    sendRating(r.stars, r.comment).then(function () { r.queued = false; r.sent = true; write("ielts_rate", r); }).catch(function () {});
+  }
+  function rateSheet(manual) {
+    var pick = 0;
+    openSheet(function (box) {
+      box.appendChild(mk("div", "cap", "Đánh giá"));
+      var h = mk("h2", "", "Bạn thấy eIELTS thế nào?"); h.style.fontSize = "1.4rem"; box.appendChild(h);
+      box.appendChild(el("p", "muted", "Chạm vào số sao. Góp ý của bạn giúp app tốt hơn."));
+      var row = mk("div", "rstars"); row.setAttribute("role", "radiogroup"); row.setAttribute("aria-label", "Số sao");
+      var lab = mk("div", "rlab", "");
+      var LAB = ["", "Chưa tốt", "Tạm được", "Ổn", "Tốt", "Rất tuyệt!"];
+      var btns = [];
+      for (var i = 1; i <= 5; i++) (function (n) {
+        var b = mk("button", "rstar", "★"); b.type = "button"; b.setAttribute("aria-label", n + " sao"); b.setAttribute("data-noi3", "1");
+        b.addEventListener("click", function () {
+          pick = n; sfx.tap();
+          btns.forEach(function (x, j) { x.classList.toggle("on", j < n); });
+          lab.textContent = LAB[n]; send.disabled = false;
+        });
+        btns.push(b); row.appendChild(b);
+      })(i);
+      box.appendChild(row); box.appendChild(lab);
+      var ta = document.createElement("textarea"); ta.className = "tinput rcomment"; ta.rows = 3; ta.maxLength = 500;
+      ta.placeholder = "Bình luận (không bắt buộc)";
+      box.appendChild(ta);
+      var send = mk("button", "btn-primary", "Gửi đánh giá"); send.type = "button"; send.disabled = true; send.style.marginTop = "12px";
+      send.addEventListener("click", function () {
+        if (!pick) return;
+        var r = rateState(); r.stars = pick; r.comment = ta.value.trim(); r.date = today(); r.done = true; r.queued = true; write("ielts_rate", r);
+        closeSheet(); sfx.ok();
+        toast(pick >= 4 ? "Cảm ơn bạn đã đánh giá " + pick + " sao! 💜" : "Cảm ơn góp ý của bạn, mình sẽ cải thiện.");
+        flushRating();
+      });
+      box.appendChild(send);
+      if (!manual) {
+        var later = mk("button", "lnk", "Để sau"); later.type = "button"; later.style.marginTop = "8px";
+        later.addEventListener("click", function () { rateLater(); closeSheet(); });
+        box.appendChild(later);
+      }
+      box.appendChild(el("p", "dim", "Số sao và bình luận được gửi ẩn danh về nhà phát triển, không kèm tên hay email."));
+    });
+  }
+  function maybeAskRating() {
+    var r = rateState();
+    if (r.done) { flushRating(); return; }
+    if (r.later && Date.now() - r.later < 3 * 864e5) return;
+    setTimeout(function () {
+      if (sheetOpen || document.body.classList.contains("in-lesson") || $("introWrap")) { maybeAskRatingSoon(); return; }
+      if (!$("screen-main") || !$("screen-main").classList.contains("active")) return;
+      rateSheet(false);
+    }, 45000);
+  }
+  function maybeAskRatingSoon() { setTimeout(maybeAskRating, 20000); }
+
+  /* ===================== Giới thiệu lần đầu ===================== */
+  var INTRO = [
+    { img: "icon-512.png", t: "Chào mừng đến eIELTS", d: "Học IELTS miễn phí, mỗi ngày vài phút. Mục tiêu band 5.0, học cả khi không có mạng." },
+    { img: "i-book.webp", t: "Học theo lộ trình", d: "Tab Học có từ vựng theo chủ đề và ngữ pháp CEFR. Làm xong bài này thì mở bài tiếp theo." },
+    { img: "i-mic.webp", t: "Luyện nói như thật", d: "Tab Nói có tình huống quán cà phê, sân bay… Bạn nói vào micro, app tô xanh từ đúng, đỏ từ sai." },
+    { img: "i-cards.webp", t: "Ôn đúng lúc sắp quên", d: "Thẻ từ và cụm từ tự nhắc ôn. Khám phá có kho ý tưởng Writing, shadowing và công cụ tra từ." },
+    { img: "i-trophy.webp", t: "Biết mình đang ở đâu", d: "Thi thử 4 kỹ năng để có band ước lượng. Hồ sơ hiện điểm từng kỹ năng, EXP và chuỗi ngày học." }
+  ];
+  var introWaiters = [];
+  // chạy fn sau khi người dùng đóng phần giới thiệu (hoặc ngay, nếu đã xem rồi)
+  function afterIntro(fn) {
+    if (read("ielts_intro", false) && !$("introWrap")) { setTimeout(fn, 600); return; }
+    introWaiters.push(fn);
+  }
+  function showIntro(force) {
+    if (!force && read("ielts_intro", false)) return;
+    if ($("introWrap")) return;
+    var i = 0;
+    var wrap = mk("div", "introwrap"); wrap.id = "introWrap"; wrap.setAttribute("role", "dialog"); wrap.setAttribute("aria-modal", "true");
+    var top = mk("div", "itop");
+    top.appendChild(langPill());
+    var skip = mk("button", "iskip", "Bỏ qua"); skip.type = "button"; top.appendChild(skip);
+    wrap.appendChild(top);
+    var stage = mk("div", "istage"); wrap.appendChild(stage);
+    var dots = mk("div", "idots"); wrap.appendChild(dots);
+    var next = mk("button", "btn-primary inext", "Tiếp tục"); next.type = "button"; wrap.appendChild(next);
+    INTRO.forEach(function () { dots.appendChild(mk("i")); });
+    function paint(dir) {
+      var s = INTRO[i];
+      stage.innerHTML = "";
+      var c = mk("div", "islide " + (dir || ""));
+      var im = document.createElement("img"); im.src = s.img; im.alt = ""; im.className = i ? "iico" : "ilogo";
+      c.appendChild(im);
+      c.appendChild(mk("h2", "", s.t));
+      c.appendChild(mk("p", "", s.d));
+      stage.appendChild(c);
+      Array.prototype.forEach.call(dots.children, function (d, j) { d.classList.toggle("on", j === i); });
+      next.textContent = i === INTRO.length - 1 ? "Bắt đầu học" : "Tiếp tục";
+      skip.style.visibility = i === INTRO.length - 1 ? "hidden" : "";
+    }
+    function close() {
+      write("ielts_intro", true);
+      wrap.classList.add("out");
+      setTimeout(function () {
+        if (wrap.parentNode) wrap.parentNode.removeChild(wrap);
+        var w = introWaiters; introWaiters = [];
+        w.forEach(function (f) { setTimeout(f, 350); });
+      }, 260);
+    }
+    next.addEventListener("click", function () { sfx.tap(); if (i < INTRO.length - 1) { i++; paint("fwd"); } else close(); });
+    skip.addEventListener("click", function () { sfx.tap(); close(); });
+    var sx = null;
+    stage.addEventListener("touchstart", function (e) { sx = e.touches[0].clientX; }, { passive: true });
+    stage.addEventListener("touchend", function (e) {
+      if (sx == null) return;
+      var dx = e.changedTouches[0].clientX - sx; sx = null;
+      if (dx < -40 && i < INTRO.length - 1) { i++; paint("fwd"); }
+      else if (dx > 40 && i > 0) { i--; paint("back"); }
+    }, { passive: true });
+    document.body.appendChild(wrap);
+    paint();
+  }
+
+  /* ===================== Chuyển động: nền theo cuộn, hiện dần khi lướt ===================== */
+  var pxEls = [], pxTick = false;
+  function motionStart() {
+    if (reduced) return;
+    pxEls = Array.prototype.slice.call(document.querySelectorAll("#bgfx .px"));
+    function onScroll() {
+      if (pxTick) return; pxTick = true;
+      requestAnimationFrame(function () {
+        pxTick = false;
+        var y = window.scrollY || 0;
+        pxEls.forEach(function (g) { g.style.transform = "translate3d(0," + (-y * Number(g.getAttribute("data-k") || 0)).toFixed(1) + "px,0)"; });
+        document.documentElement.style.setProperty("--sy", Math.min(1, y / 600).toFixed(3));
+      });
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    if (!("IntersectionObserver" in window)) return;
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("rv-in"); io.unobserve(e.target); } });
+    }, { rootMargin: "0px 0px -6% 0px", threshold: 0.06 });
+    var SEL = ".pane .card,.pane .rowcard,.pane .lesson,.pane .unitcard,.pane .stile,.pane .dial,.pane .dcard,.pane .skill,.pane .tile";
+    function watch(root) {
+      Array.prototype.forEach.call((root || document).querySelectorAll(SEL), function (n) {
+        if (n.__rv) return; n.__rv = true;
+        var r = n.getBoundingClientRect();
+        if (r.top < innerHeight && r.bottom > 0) return; // đã thấy trên màn hình thì giữ nguyên
+        n.classList.add("rv"); io.observe(n);
+      });
+    }
+    watch();
+    if (window.MutationObserver) {
+      var t = null;
+      new MutationObserver(function () { clearTimeout(t); t = setTimeout(function () { watch(); }, 60); })
+        .observe($("tabPanes") || document.body, { childList: true, subtree: true });
+    }
+  }
+
+  /* ===================== Band 4 kỹ năng ở Hồ sơ ===================== */
+  var BAND_SK = [["listen", "Nghe", "🎧"], ["read", "Đọc", "📖"], ["write", "Viết", "✍️"], ["speak", "Nói", "🗣️"]];
+  function latestBands() {
+    var b = getBands(), out = {};
+    for (var i = b.length - 1; i >= 0; i--) {
+      var r = b[i];
+      if (r.kind === "full" && r.detail) BAND_SK.forEach(function (s) { if (out[s[0]] == null && r.detail[s[0]] != null) out[s[0]] = { v: r.detail[s[0]], d: r.date }; });
+      else if (/^(listen|read|speak)$/.test(r.kind) && out[r.kind] == null) out[r.kind] = { v: r.overall, d: r.date };
+      else if (r.kind === "write" && out.write == null) out.write = { v: r.overall, d: r.date };
+    }
+    return out;
+  }
+  function ieltsRound(x) {
+    var f = x - Math.floor(x);
+    return f < 0.25 ? Math.floor(x) : f < 0.75 ? Math.floor(x) + 0.5 : Math.ceil(x);
+  }
+  function cefrOfBand(b) { return b >= 7 ? "C1" : b >= 5.5 ? "B2" : b >= 4 ? "B1" : b >= 3 ? "A2" : "A1"; }
+  function bandPanel() {
+    var lb = latestBands(), have = BAND_SK.filter(function (s) { return lb[s[0]]; });
+    var card = mk("div", "card bandpanel");
+    var hd = mk("div", "bphead");
+    var left = mk("div");
+    left.appendChild(mk("h2", "", "Trình độ IELTS của bạn"));
+    left.appendChild(mk("small", "muted", have.length === 4 ? "Band tổng = trung bình 4 kỹ năng, làm tròn như thi thật" : "Thi thử đủ 4 kỹ năng để có band tổng"));
+    hd.appendChild(left);
+    var ov = mk("div", "bpov");
+    if (have.length === 4) {
+      var sum = 0; BAND_SK.forEach(function (s) { sum += lb[s[0]].v; });
+      var o = ieltsRound(sum / 4);
+      ov.appendChild(mk("b", "", o.toFixed(1)));
+      ov.appendChild(mk("small", "", "Overall · " + cefrOfBand(o)));
+    } else {
+      ov.appendChild(mk("b", "", "--"));
+      ov.appendChild(mk("small", "", "Overall"));
+    }
+    hd.appendChild(ov);
+    card.appendChild(hd);
+    var g = mk("div", "bpgrid");
+    BAND_SK.forEach(function (s) {
+      var x = lb[s[0]];
+      var t = mk("button", "bptile" + (x ? "" : " empty")); t.type = "button";
+      t.appendChild(mk("span", "bpi", s[2]));
+      t.appendChild(mk("b", "", x ? x.v.toFixed(1) : "--"));
+      t.appendChild(mk("small", "", s[1]));
+      if (x) { var pct = Math.max(4, Math.min(100, (x.v / 9) * 100)); var bar = mk("i", "bpbar"); bar.style.setProperty("--w", pct + "%"); t.appendChild(bar); }
+      else t.appendChild(mk("em", "", "Làm bài"));
+      t.addEventListener("click", function () { sfx.tap(); startSkill(s[0]); });
+      g.appendChild(t);
+    });
+    card.appendChild(g);
+    var go = mk("button", "btn-line", have.length ? "Thi thử lại để cập nhật" : "Thi thử 4 kỹ năng"); go.type = "button"; go.style.marginTop = "12px";
+    go.addEventListener("click", function () { sfx.tap(); startFullTest(); });
+    card.appendChild(go);
+    card.appendChild(el("p", "dim", "Điểm lấy từ bài thi thử gần nhất trong app, chỉ là ước lượng, không phải điểm IELTS chính thức."));
+    return card;
+  }
 
   function renderQuestion() {
     var q = state.list[state.index];
@@ -7552,7 +8067,7 @@
       if (state.combo > state.maxCombo) state.maxCombo = state.combo;
       gain = XP_PER_CORRECT + (state.combo >= 3 ? XP_COMBO_BONUS : 0);
       state.xp += gain;
-      floatXP(btn, "+" + gain + " XP");
+      floatXP(btn, "+" + gain + " EXP");
       sfx.ok(); buzz(15);
       if (state.combo >= 3) { sfx.combo(); if (state.combo % 3 === 0) confetti(28); }
     } else {
@@ -7602,7 +8117,7 @@
             : "Đừng nản. Xem lại rồi làm lại nhé.";
     $("finalMsg").textContent = pct + "% - " + msg;
     $("resultTitle").textContent = pct >= 80 ? "Xuất sắc! 🏆" : pct >= 50 ? "Làm tốt lắm! 💪" : "Cố lên nào! 🌱";
-    $("xpGain").textContent = "+" + o.xp + " XP" + (o.maxCombo >= 3 ? "  ·  chuỗi dài nhất 🔥 " + o.maxCombo : "");
+    $("xpGain").textContent = "+" + o.xp + " EXP" + (o.maxCombo >= 3 ? "  ·  chuỗi dài nhất 🔥 " + o.maxCombo : "");
 
     var starCount = pct >= 80 ? 3 : pct >= 50 ? 2 : 1;
     var stars = $("stars"); stars.innerHTML = "";
@@ -8056,12 +8571,22 @@
     var s = getStats(), st = currentStreak();
     if (st > read("ielts_streakmax", 0)) write("ielts_streakmax", st);
     selectTab(read("ielts_tab", "learn"), true);
+    if (!read("ielts_intro", false)) setTimeout(function () { showIntro(); }, 300);
+    maybeAskRating();
   }
   function bindShell() {
     Array.prototype.forEach.call(document.querySelectorAll(".tab"), function (b) {
-      b.addEventListener("click", function () { sfx.tap(); selectTab(b.dataset.tab); });
+      b.addEventListener("click", function () {
+        sfx.tap();
+        // Bấm nút ở thanh dưới luôn mở mục con đầu tiên của tab đó
+        var t = b.dataset.tab;
+        if (t === "profile") state.profSeg = "me";
+        else if (t === "discover") state.discSeg = "vocab";
+        else if (t === "learn") state.learnMode = "vocab";
+        selectTab(t);
+      });
     });
-    $("avaBtn").addEventListener("click", function () { sfx.tap(); selectTab("profile"); });
+    $("avaBtn").addEventListener("click", function () { sfx.tap(); state.profSeg = "me"; selectTab("profile"); });
     $("pathBar").addEventListener("click", function () { sfx.tap(); renderUnitList(); });
     Array.prototype.forEach.call($("learnSeg").children, function (b) {
       b.addEventListener("click", function () { sfx.tap(); state.learnMode = b.dataset.l; renderLearn(); });
@@ -8085,13 +8610,16 @@
     b.style.display = "block";
   }
   function boot() {
+    i18nStart();
     updateSoundBtn();
-    buildBackdrop();
+    buildBackdrop(); motionStart();
     applyTheme(themeMode()); applyTr();
     bindAuth(); bindShell(); bindRunners(); bindBand(); bindLegacy();
     bindAnalyzer(); bindBranch(); bindTips(); bindUx(); bindPairs(); bindStress(); bindLookup(); i3start();
     show(getProfile() ? "main" : "auth");
     if (!getProfile()) authShow(1);
+    var lp = $("authLang"); if (lp) lp.appendChild(langPill());
+    var ib = $("authInstall"); if (ib) ib.appendChild(installButton("sso ms"));
     loadAll().then(function () {
       if (getProfile()) enterApp();
     }).catch(function (e) {
