@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chính sách quyền riêng tư · eIELTS</title>
+<meta name="description" content="eIELTS lưu dữ liệu học tập ngay trên máy bạn, không có máy chủ thu thập dữ liệu.">
+<link rel="canonical" href="https://eielts.netlify.app/privacy.html">
+<link rel="icon" href="icon-192.png">
+<style>
+  :root { color-scheme: light dark; --bg:#f7f8fc; --fg:#1b1f2e; --mut:#5b6178; --card:#fff; --line:#e3e6f0; --acc:#5b5bf0; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#0f1226; --fg:#eef0ff; --mut:#a7acc8; --card:#181c38; --line:#2a2f55; --acc:#9b9bff; } }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+  main { max-width:720px; margin:0 auto; padding:28px 20px 60px; }
+  h1 { font-size:1.7rem; line-height:1.25; margin:.2em 0 .2em; }
+  h2 { font-size:1.15rem; margin:1.8em 0 .4em; }
+  p, li { color:var(--fg); }
+  .mut { color:var(--mut); font-size:.92rem; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:14px 16px; margin:14px 0; }
+  ul { padding-left:1.2em; } li { margin:.3em 0; }
+  a { color:var(--acc); }
+  code { background:var(--line); padding:1px 5px; border-radius:5px; font-size:.9em; }
+  .back { display:inline-block; margin-bottom:10px; text-decoration:none; font-weight:600; }
+</style>
+</head>
+<body>
+<main>
+  <a class="back" href="./">‹ Về eIELTS</a>
+  <h1>Chính sách quyền riêng tư</h1>
+  <p class="mut">Áp dụng cho ứng dụng web eIELTS tại https://eielts.netlify.app · Cập nhật ngày 27/11/2026</p>
+
+  <div class="card"><b>Tóm tắt:</b> eIELTS không có máy chủ lưu dữ liệu người dùng. Tài khoản, tiến độ học, từ đã lưu và bài viết của bạn chỉ nằm trong bộ nhớ trình duyệt trên chính máy bạn. Chúng tôi không bán, không chia sẻ và không dùng dữ liệu của bạn để quảng cáo.</div>
+
+  <h2>1. Dữ liệu được lưu</h2>
+  <ul>
+    <li><b>Hồ sơ:</b> tên hiển thị, email (nếu bạn nhập hoặc đăng nhập bằng Google/Facebook), ảnh đại diện bạn chọn, mục tiêu band.</li>
+    <li><b>Tài khoản eIELTS:</b> mật khẩu không được lưu dạng chữ; app chỉ lưu bản mã hoá một chiều (PBKDF2-SHA256, 120.000 vòng, có salt riêng).</li>
+    <li><b>Tiến độ học:</b> điểm bài làm, từ vựng và cụm từ đã lưu, lịch ôn tập, chuỗi ngày học, bài Writing gần nhất.</li>
+  </ul>
+  <p>Tất cả được lưu trong <code>localStorage</code> của trình duyệt trên máy bạn. Không có bản sao nào được gửi về máy chủ của eIELTS.</p>
+
+  <h2>2. Đăng nhập bằng Google hoặc Facebook</h2>
+  <p>Khi bạn chọn đăng nhập bằng Google hoặc Facebook, cửa sổ đăng nhập do chính Google/Facebook hiển thị. eIELTS chỉ nhận <b>tên, email và ảnh đại diện công khai</b> để tạo hồ sơ trên máy bạn. eIELTS không nhận mật khẩu Google/Facebook, không đăng bài, không đọc danh bạ hay bạn bè.</p>
+  <p>Việc dùng các dịch vụ này tuân theo chính sách của <a href="https://policies.google.com/privacy" rel="noopener">Google</a> và <a href="https://www.facebook.com/privacy/policy" rel="noopener">Meta</a>. Thư viện đăng nhập của họ chỉ được tải khi bạn bấm nút đăng nhập tương ứng.</p>
+
+  <h2>3. Micro và nhận diện giọng nói</h2>
+  <p>Các bài luyện nói dùng tính năng nhận diện giọng nói có sẵn của trình duyệt. App chỉ bật micro khi bạn bấm nút 🎤. Tuỳ trình duyệt, âm thanh có thể được trình duyệt gửi tới dịch vụ nhận diện của nhà sản xuất trình duyệt (ví dụ Google với Chrome) để chuyển thành chữ. eIELTS không ghi âm và không lưu âm thanh.</p>
+
+  <h2>4. Chia sẻ dữ liệu</h2>
+  <p>eIELTS không chia sẻ, bán hay chuyển dữ liệu của bạn cho bên thứ ba. App không dùng quảng cáo và không dùng công cụ theo dõi.</p>
+
+  <h2 id="xoa-du-lieu">5. Cách xoá dữ liệu</h2>
+  <p>Vì dữ liệu chỉ nằm trên máy bạn, bạn có thể tự xoá toàn bộ bất cứ lúc nào:</p>
+  <ul>
+    <li><b>Trong app:</b> vào Hồ sơ → kéo xuống cuối → bấm "Xoá tài khoản và toàn bộ dữ liệu".</li>
+    <li><b>Trong trình duyệt:</b> mở Cài đặt → Quyền riêng tư → Xoá dữ liệu duyệt web → chọn "Cookie và dữ liệu trang web" cho eielts.netlify.app.</li>
+    <li><b>Nếu đã đăng nhập bằng Facebook:</b> vào Facebook → Cài đặt → Ứng dụng và trang web → chọn eIELTS → Gỡ. Nếu đã đăng nhập bằng Google: vào myaccount.google.com/connections → eIELTS → Xoá quyền truy cập.</li>
+  </ul>
+  <p>Sau khi xoá, eIELTS không còn giữ bất kỳ bản sao nào vì không có máy chủ lưu trữ.</p>
+
+  <h2>6. Trẻ em</h2>
+  <p>eIELTS dành cho người học tiếng Anh nói chung và không cố ý thu thập thông tin của trẻ dưới 13 tuổi.</p>
+
+  <h2>7. Liên hệ</h2>
+  <p>Mọi câu hỏi về quyền riêng tư, vui lòng gửi email tới <a href="mailto:danhtran0701@gmail.com">danhtran0701@gmail.com</a>.</p>
+</main>
+</body>
+</html>

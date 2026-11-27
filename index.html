@@ -1218,6 +1218,7 @@
         <button class="sso ms" id="ssoNew" type="button">✨ Tạo tài khoản eIELTS mới</button>
         <div class="or">hoặc</div>
         <button class="btn-line" id="ssoGuest" type="button">Dùng ngay, không cần tài khoản</button>
+        <p class="dim polink" style="text-align:center;margin-top:10px;font-size:.85rem">Khi tiếp tục, bạn đồng ý với <a href="privacy.html" target="_blank" rel="noopener">Chính sách quyền riêng tư</a>.</p>
         <p class="dim" style="text-align:center;margin-top:16px;line-height:1.5">Tài khoản và tiến độ được lưu trên chính máy này. Mật khẩu được mã hoá, không gửi đi đâu.</p>
       </div>
     </div>
@@ -3076,7 +3077,25 @@
       });
     });
     danger.appendChild(rs);
+    var wipe = mk("button", "btn-line", "Xoá tài khoản và toàn bộ dữ liệu"); wipe.type = "button"; wipe.style.marginTop = "8px";
+    wipe.addEventListener("click", function () {
+      askDlg({
+        title: "Xoá tài khoản và mọi dữ liệu?", text: "Hồ sơ, tài khoản eIELTS trên máy này, ảnh đại diện và toàn bộ tiến độ sẽ bị xoá vĩnh viễn.",
+        ok: "Giữ lại", cancel: "Xoá vĩnh viễn",
+        onCancel: function () {
+          try {
+            Object.keys(localStorage).filter(function (k) { return k.indexOf("ielts_") === 0; })
+              .forEach(function (k) { localStorage.removeItem(k); });
+          } catch (e) {}
+          try { if (window.google && google.accounts && google.accounts.id) google.accounts.id.disableAutoSelect(); } catch (e) {}
+          location.reload();
+        }
+      });
+    });
+    danger.appendChild(wipe);
     body.appendChild(danger);
+    var pol = el("p", "dim", '<a href="privacy.html" target="_blank" rel="noopener">Chính sách quyền riêng tư</a>');
+    body.appendChild(pol);
     body.appendChild(el("p", "dim", "eIELTS · lưu trên máy này. Nội dung: " + state.words.length + " từ · " + (state.all.length + state.genFill.length) + " câu · " + (state.scenarios || []).length + " tình huống."));
   }
 
@@ -6953,7 +6972,7 @@
      Google (Google Identity Services) và Facebook khi đã có mã ứng dụng.
      Không có máy chủ: tài khoản lưu trên máy này.
      ================================================================ */
-  var GOOGLE_CLIENT_ID = "";   // điền Client ID của Google Cloud để bật đăng nhập Google thật
+  var GOOGLE_CLIENT_ID = "521002316108-3tcni7ri8ln88j40g66mqc0cql6kkraf.apps.googleusercontent.com";   // điền Client ID của Google Cloud để bật đăng nhập Google thật
   var FB_APP_ID = "";          // điền App ID của Meta for Developers để bật đăng nhập Facebook thật
 
   function accList() { return read("ielts_accounts", []) || []; }
