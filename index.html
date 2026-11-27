@@ -1374,6 +1374,12 @@
     font-weight:700;font-size:.85rem;background:rgba(0,0,0,.55);color:#fff;padding:5px 12px;border-radius:999px;pointer-events:none}
   body.an-rec .anstop{display:block}
   body.an-rec .aninfo{display:none}
+  .reslink{display:block;margin-top:10px;padding:13px 14px;border:1px solid var(--line);border-radius:14px;color:var(--ink);text-decoration:none;background:rgba(255,255,255,.03)}
+  .reslink:active{background:rgba(255,255,255,.07)}
+  .reslink .rl-t{display:flex;align-items:center;gap:8px;font-size:1.02rem}
+  .reslink .rl-i{font-size:1.2rem}
+  .reslink .rl-tag{margin-top:3px;font-size:.78rem;font-weight:700;color:var(--mut)}
+  .reslink .rl-d{margin-top:5px;font-size:.9rem;line-height:1.4;color:var(--mut)}
 </style>
 </head>
 <body>
@@ -3314,6 +3320,7 @@
     set.appendChild(setRow("🎯 Band mục tiêu", p.goalBand || "5.0", function () { openSettings("goal"); }));
     set.appendChild(setRow("⏱️ Mục tiêu mỗi ngày", (p.goalMin || 10) + " phút", function () { openSettings("goal"); }));
     set.appendChild(setRow("✏️ Đổi tên hiển thị", p.name || "Bạn", function () { openSettings("name"); }));
+    set.appendChild(setRow("📚 Tài liệu học thêm miễn phí", "", function () { studyLinksSheet(); }));
     set.appendChild(setRow("✨ Thêm bài từ Gemini", "", function () { show("import"); importStat(); }));
     set.appendChild(setRow("💾 Sao lưu & khôi phục", "", function () { backupScreen(); }));
     set.appendChild(setRow("🧭 Kiểm tra đầu vào", (read("ielts_level", null) || {}).k || "Chưa làm", function () { chooseEntry(); }));
@@ -7971,6 +7978,33 @@
         box.appendChild(b);
       });
       box.appendChild(el("p", "muted", "Nghĩa của từ và lời giải vẫn giữ tiếng Việt để bạn dễ học."));
+    });
+  }
+
+  /* ===================== Tài liệu học thêm miễn phí ===================== */
+  var STUDY_LINKS = [
+    ["🎧", "VOA Learning English", "https://learningenglish.voanews.com/", "Nghe · Đọc · A1–B1", "Bài học có video, hội thoại nói chậm và bản chép lời. Hợp để nghe hằng ngày."],
+    ["📘", "British Council LearnEnglish", "https://learnenglish.britishcouncil.org/", "Cả 4 kỹ năng · A1–B2", "Bài nghe, đọc, ngữ pháp, từ vựng theo cấp độ, miễn phí. Chỉ dùng cá nhân."],
+    ["📖", "Cambridge Dictionary", "https://dictionary.cambridge.org/", "Tra từ · mọi cấp độ", "Từ điển Anh–Anh có phát âm Anh/Mỹ và nhiều cụm từ đi kèm."],
+    ["📰", "Simple English Wikipedia", "https://simple.wikipedia.org/", "Đọc · A2–B1", "Bách khoa toàn thư viết bằng từ và câu đơn giản. Đọc chủ đề bạn thích."],
+    ["💬", "Tatoeba", "https://tatoeba.org/", "Câu mẫu · mọi cấp độ", "Kho câu ví dụ Anh–Việt, nhiều câu có giọng đọc thật. Tra từ rồi xem câu mẫu."],
+    ["🎙️", "LibriVox + Project Gutenberg", "https://librivox.org/", "Nghe · Đọc theo · B1+", "Sách nói miễn phí do tình nguyện viên đọc, kèm văn bản ở Project Gutenberg để đọc theo."]
+  ];
+  function studyLinksSheet() {
+    openSheet(function (box) {
+      box.appendChild(mk("div", "cap", "Học thêm"));
+      var h = mk("h2", "", "Tài liệu học thêm miễn phí"); h.style.fontSize = "1.4rem"; box.appendChild(h);
+      box.appendChild(el("p", "muted", "Các trang dưới đây cần có mạng và thuộc bên thứ ba. App chỉ dẫn link, không sao chép nội dung của họ."));
+      STUDY_LINKS.forEach(function (x) {
+        var a = mk("a", "reslink"); a.href = x[2]; a.target = "_blank"; a.rel = "noopener noreferrer";
+        var t = mk("div", "rl-t"); t.appendChild(mk("span", "rl-i", x[0]));
+        var nm = mk("b", "", x[1]); nm.setAttribute("data-noi18n", "1"); t.appendChild(nm);
+        a.appendChild(t);
+        a.appendChild(mk("div", "rl-tag", x[3]));
+        a.appendChild(mk("div", "rl-d", x[4]));
+        a.addEventListener("click", function () { sfx.tap(); });
+        box.appendChild(a);
+      });
     });
   }
 
