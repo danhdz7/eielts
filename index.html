@@ -1358,6 +1358,22 @@
   .spdim{margin-top:8px;font-size:.74rem;color:var(--mut);line-height:1.4}
   html[data-theme="light"] .spanel{background:rgba(0,0,0,.035);border-color:rgba(0,0,0,.1)}
   html[data-theme="light"] .spbar i{background:rgba(0,0,0,.1)}
+
+  /* ===== Micro: không chớp, không nhảy bố cục ===== */
+  .recbig,.mic{position:relative!important;isolation:isolate}
+  .recbig.rec::before,.mic.rec::before,.mic.rec::after{inset:-4px!important;pointer-events:none;z-index:-1}
+  @keyframes ripple{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.35);opacity:0}}
+  #anLive,#spHeard2{min-height:4.6em;max-height:4.6em;overflow:hidden;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical}
+  #anHint,#spHint2{min-height:2.8em}
+  /* đang ghi: khoá chọn chủ đề, nút dừng nổi cố định ở đáy để luôn bấm được */
+  body.an-rec #anTopic{pointer-events:none;opacity:.55}
+  body.an-rec #anRec{position:fixed!important;left:50%;bottom:calc(26px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:60;
+    width:88px;height:88px;box-shadow:0 10px 30px rgba(232,68,91,.55),0 0 0 6px rgba(255,255,255,.12)}
+  body.an-rec #screen-analyzer{padding-bottom:170px}
+  .anstop{display:none;position:fixed;left:50%;bottom:calc(120px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:60;
+    font-weight:700;font-size:.85rem;background:rgba(0,0,0,.55);color:#fff;padding:5px 12px;border-radius:999px;pointer-events:none}
+  body.an-rec .anstop{display:block}
+  body.an-rec .aninfo{display:none}
 </style>
 </head>
 <body>
@@ -1841,11 +1857,12 @@
       <p class="muted" id="anPrompt" style="margin:10px 0 0;line-height:1.55"></p>
     </div>
     <div style="text-align:center;margin-top:22px">
-      <button id="anRec" class="recbig" type="button" aria-label="Bắt đầu ghi">🎤</button>
+      <button id="anRec" class="recbig" type="button" data-noi3 aria-label="Bắt đầu ghi">🎤</button>
+      <div class="anstop">Bấm nút đỏ để dừng</div>
       <div class="mic-hint" id="anHint">Bấm để bắt đầu nói</div>
       <div class="heard" id="anLive"></div>
     </div>
-    <div class="info">Máy chỉ nghe được lời bạn nói, không gửi đi đâu. Cần Chrome và cho phép micro.</div>
+    <div class="info aninfo">App không ghi âm. Chrome dùng dịch vụ nhận diện giọng nói của Google để chuyển lời bạn nói thành chữ. Cần Chrome và cho phép micro.</div>
   </div>
   <div id="anResult" style="display:none"></div>
 </section>
@@ -2374,6 +2391,7 @@
   function show(name) {
     stopSpeaking(); stopListening();
     SCREENS.forEach(function (n) { $("screen-" + n).classList.toggle("active", n === name); });
+    if (name !== "analyzer") document.body.classList.remove("an-rec");
     document.body.classList.toggle("in-lesson", !!LESSON_SCREENS[name]);
     document.body.classList.toggle("scr-bandres", name === "bandres");
     if (name !== "quiz") hideSheet();
@@ -4807,16 +4825,16 @@
           else it += res[0].transcript;
         }
         if (it) { pending = it; if (onInterim) onInterim(it); }
-        // im lặng 1,5 giây trong phiên này: chốt đoạn và mở phiên mới
+        // máy tự kết thúc phiên khi người nói ngừng; chỉ chốt nếu im quá 4 giây mà phiên chưa đóng
         clearTimeout(r.__q);
-        r.__q = setTimeout(function () { finishOne(); }, 1500);
+        r.__q = setTimeout(function () { finishOne(); }, 4000);
       };
       function finishOne() {
         if (ended) return; ended = true;
         clearTimeout(r.__q); clearTimeout(r.__w);
         try { r.onresult = r.onerror = r.onend = null; r.abort(); } catch (x) {}
         commit();
-        if (!stopped) setTimeout(startOne, 300);
+        if (!stopped) setTimeout(startOne, 150);
       }
       r.onerror = function (e) {
         var er = e && e.error;
@@ -4826,7 +4844,7 @@
       };
       r.onend = function () { finishOne(); };
       // phiên treo quá 9 giây (Android hay bị): bỏ và mở phiên mới
-      r.__w = setTimeout(function () { finishOne(); }, 9000);
+      r.__w = setTimeout(function () { finishOne(); }, 15000);
       try { r.start(); } catch (x) { ended = true; fails++; if (fails > 3) { stopped = true; onEnd("start"); } else setTimeout(startOne, 600); }
     }
     watch = setInterval(function () {
@@ -5008,7 +5026,8 @@
     an.recording = false;
     if (an.ctl) { an.ctl.stop(); an.ctl = null; }
     clearInterval(an.tick);
-    $("anRec").classList.remove("rec"); $("anRec").textContent = "🎤";
+    $("anRec").classList.remove("rec"); $("anRec").textContent = "🎤"; $("anRec").setAttribute("aria-label", "Bắt đầu ghi");
+    document.body.classList.remove("an-rec");
     var ms = Date.now() - an.t0;
     if (!an.segs.length) { $("anHint").textContent = "Không nghe được gì. Thử lại gần micro hơn nhé."; return; }
     if (ms < 8000) {
@@ -5033,7 +5052,10 @@
         return;
       }
       an.recording = true; an.segs = []; an.t0 = Date.now();
-      $("anRec").classList.add("rec"); $("anRec").textContent = "⏹";
+      $("anRec").classList.add("rec"); $("anRec").textContent = "⏹"; $("anRec").setAttribute("aria-label", "Dừng ghi");
+      document.body.classList.add("an-rec");
+      // cuộn một lần để chữ đang nghe nằm phía trên nút dừng (sau đó bố cục đứng yên)
+      setTimeout(function () { try { var rr = $("anLive").getBoundingClientRect(); var d = rr.bottom - (window.innerHeight - 150); if (d > 0) window.scrollBy(0, d); } catch (e) {} }, 60);
       $("anHint").textContent = "Đang nghe… bấm lại để dừng";
       $("anLive").textContent = "";
       an.tick = setInterval(function () {
@@ -5053,7 +5075,7 @@
           var box = $("anHint");
           box.textContent = "Đang nghe… " + words(an.segs.map(function (s) { return s.text; }).join(" ")).length + " từ";
         },
-        function (err) { if (err && an && an.recording) { an.recording = false; clearInterval(an.tick); $("anRec").classList.remove("rec"); $("anRec").textContent = "🎤"; $("anHint").textContent = errMsg(err); } },
+        function (err) { if (err && an && an.recording) { an.recording = false; clearInterval(an.tick); document.body.classList.remove("an-rec"); $("anRec").classList.remove("rec"); $("anRec").textContent = "🎤"; $("anHint").textContent = errMsg(err); } },
         function () {
           if (!an || !an.recording) return;
           if (!an.segs.length) $("anHint").textContent = "Chưa nghe thấy tiếng nói. Nói to, rõ, cách micro khoảng một gang tay… (bấm lại để dừng)";
