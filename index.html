@@ -4381,6 +4381,8 @@
     });
     $("spMic2").addEventListener("click", function () {
       var it = st2 && st2.list[st2.i]; if (!it) return;
+      // đang nghe mà bấm lại: dừng và chấm
+      if (ctl && ctl.stop && $("spMic2").classList.contains("rec")) { ctl.stop(); return; }
       if (!SR || !window.isSecureContext) {
         st2.res.push({ band: 0, skip: true });
         $("spRes2").className = "spk-result show mid";
@@ -4400,7 +4402,22 @@
           $("spHint2").classList.toggle("good", sec >= 60);
         }, 1000);
       }
-      ctl = listenOnce(function (t) { $("spHeard2").textContent = "“" + t + "”"; }, function (err, alts) {
+      // câu trả lời dài (30 giây – 2 phút): nghe liên tục tới khi bấm dừng, gom từng đoạn
+      var segsTxt = [], doneOnce = false;
+      function finishAns(err) {
+        if (doneOnce) return; doneOnce = true;
+        var alts = segsTxt.length ? [segsTxt.join(" ")] : [];
+        onAns(err, alts);
+      }
+      var lc = listenLong(
+        function (t) { $("spHeard2").textContent = "“" + segsTxt.concat([t]).join(" ").slice(-220) + "”"; },
+        function (txt) { segsTxt.push(txt); $("spHeard2").textContent = "“" + segsTxt.join(" ").slice(-220) + "”"; },
+        function (err) { finishAns(err); },
+        function () { if (!segsTxt.length) $("spHint2").textContent = "Chưa nghe thấy tiếng nói. Nói to, rõ hơn… (bấm micro để dừng)"; }
+      );
+      if (it.part !== 2) $("spHint2").textContent = "Đang nghe… nói xong bấm micro để dừng";
+      ctl = { stop: function () { if (lc) lc.stop(); finishAns(); }, abort: function () { doneOnce = true; if (lc) lc.stop(); } };
+      function onAns(err, alts) {
         $("spMic2").classList.remove("rec"); ctl = null;
         if (talkT) { clearInterval(talkT); talkT = null; }
         $("spHint2").className = "mic-hint";
@@ -4417,7 +4434,7 @@
         st2.res.push(r);
         sfx.ok();
         $("spNext2").style.display = "block";
-      });
+      }
     });
     $("spNext2").addEventListener("click", function () {
       sfx.tap();
@@ -4767,27 +4784,63 @@
   ];
   var an = null;
 
-  function listenLong(onInterim, onSegment, onEnd) {
+  // Android Chrome làm hỏng chế độ continuous (không trả kết quả, không báo final).
+  // Cách chắc chắn: nối nhiều phiên nghe ngắn liên tiếp; phiên nào chỉ có câu tạm thì vẫn giữ câu tạm.
+  function listenLong(onInterim, onSegment, onEnd, onSilent) {
     if (!SR) { onEnd("no-sr"); return null; }
-    var r = new SR(), stopped = false;
-    r.lang = (vPrefs.accent === "uk" ? "en-GB" : vPrefs.accent === "au" ? "en-AU" : "en-US");
-    r.interimResults = true; r.maxAlternatives = 1; r.continuous = true;
-    r.onresult = function (e) {
-      for (var i = e.resultIndex; i < e.results.length; i++) {
-        var res = e.results[i];
-        if (res.isFinal) onSegment(res[0].transcript, Date.now());
-        else if (onInterim) onInterim(res[0].transcript);
+    var stopped = false, cur = null, pending = "", lastHeard = Date.now(), fails = 0, watch = null;
+    function commit() {
+      if (pending.trim()) { onSegment(pending.trim(), Date.now()); pending = ""; }
+    }
+    function startOne() {
+      if (stopped) return;
+      var r = new SR(), ended = false, gotAny = false;
+      r.lang = (vPrefs.accent === "uk" ? "en-GB" : vPrefs.accent === "au" ? "en-AU" : "en-US");
+      r.interimResults = true; r.maxAlternatives = 1; r.continuous = false;
+      cur = r;
+      r.onresult = function (e) {
+        gotAny = true; lastHeard = Date.now(); fails = 0;
+        var it = "";
+        for (var i = e.resultIndex; i < e.results.length; i++) {
+          var res = e.results[i];
+          if (res.isFinal) { pending = ""; onSegment(res[0].transcript, Date.now()); }
+          else it += res[0].transcript;
+        }
+        if (it) { pending = it; if (onInterim) onInterim(it); }
+        // im lặng 1,5 giây trong phiên này: chốt đoạn và mở phiên mới
+        clearTimeout(r.__q);
+        r.__q = setTimeout(function () { finishOne(); }, 1500);
+      };
+      function finishOne() {
+        if (ended) return; ended = true;
+        clearTimeout(r.__q); clearTimeout(r.__w);
+        try { r.onresult = r.onerror = r.onend = null; r.abort(); } catch (x) {}
+        commit();
+        if (!stopped) setTimeout(startOne, 300);
+      }
+      r.onerror = function (e) {
+        var er = e && e.error;
+        if (er === "no-speech" || er === "aborted" || er === "network") { finishOne(); return; }
+        if ((er === "not-allowed" || er === "audio-capture") && fails < 2) { fails++; ended = true; setTimeout(startOne, 600); return; }
+        if (!stopped) { stopped = true; commit(); onEnd(er); }
+      };
+      r.onend = function () { finishOne(); };
+      // phiên treo quá 9 giây (Android hay bị): bỏ và mở phiên mới
+      r.__w = setTimeout(function () { finishOne(); }, 9000);
+      try { r.start(); } catch (x) { ended = true; fails++; if (fails > 3) { stopped = true; onEnd("start"); } else setTimeout(startOne, 600); }
+    }
+    watch = setInterval(function () {
+      if (stopped) { clearInterval(watch); return; }
+      if (onSilent && Date.now() - lastHeard > 7000) { onSilent(); lastHeard = Date.now(); }
+    }, 1000);
+    startOne();
+    return {
+      stop: function () {
+        if (stopped) return; stopped = true; clearInterval(watch);
+        try { if (cur) { cur.onresult = cur.onerror = cur.onend = null; cur.abort(); } } catch (x) {}
+        commit();
       }
     };
-    r.onerror = function (e) { if (!stopped) { stopped = true; onEnd(e && e.error); } };
-    r.onend = function () {
-      if (stopped) return;
-      // Chrome tự ngắt sau vài giây im lặng: nối lại cho tới khi người dùng bấm dừng
-      if (an && an.recording) { try { r.start(); return; } catch (e) {} }
-      stopped = true; onEnd();
-    };
-    try { r.start(); } catch (e) { onEnd("start"); return null; }
-    return { stop: function () { stopped = true; try { r.stop(); } catch (e) {} } };
   }
 
   function analyseSpeech(segs, ms) {
@@ -5000,7 +5053,11 @@
           var box = $("anHint");
           box.textContent = "Đang nghe… " + words(an.segs.map(function (s) { return s.text; }).join(" ")).length + " từ";
         },
-        function (err) { if (err && an && an.recording) { an.recording = false; clearInterval(an.tick); $("anRec").classList.remove("rec"); $("anRec").textContent = "🎤"; $("anHint").textContent = errMsg(err); } }
+        function (err) { if (err && an && an.recording) { an.recording = false; clearInterval(an.tick); $("anRec").classList.remove("rec"); $("anRec").textContent = "🎤"; $("anHint").textContent = errMsg(err); } },
+        function () {
+          if (!an || !an.recording) return;
+          if (!an.segs.length) $("anHint").textContent = "Chưa nghe thấy tiếng nói. Nói to, rõ, cách micro khoảng một gang tay… (bấm lại để dừng)";
+        }
       );
     });
   }
@@ -9090,7 +9147,7 @@
   } catch (e) {}
 
   window.__ielts = {
-    attempt: attempt, listenOnce: listenOnce,
+    attempt: attempt, listenOnce: listenOnce, startSpeakTest: startSpeakTest,
     coach: { lintText: lintText, colHome: colHome, shadowHome: shadowHome, ideaSheet: ideaSheet, todayPlan: typeof todayPlan === 'function' ? todayPlan : null, n: function () { return [LINT.length, COLS.length, SHADOW.length, IDEAS.length, LINT.filter(function (r) { return !r.re; }).length]; } },
     scoreSpeech: scoreSpeech, state: state, parseImport: parseImport, genMeaning: genMeaning,
     analyseWriting: analyseWriting, pctToBand: pctToBand, scoreOpenSpeech: scoreOpenSpeech,
