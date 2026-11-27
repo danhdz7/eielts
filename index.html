@@ -1105,6 +1105,82 @@
   .import-msg.ok{color:#7ee2a8}
   .dcard .scimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
   .schero{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:20px;margin:2px 0 12px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+  /* ===== trợ giảng ===== */
+  .lintessay{line-height:1.75;font-size:.92rem;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:14px;padding:12px;margin:8px 0}
+  mark.lint{background:none;color:inherit;border-bottom:2.5px solid;cursor:pointer;padding:0 1px;border-radius:3px}
+  mark.lint.grammar{border-color:#ff6b81;background:rgba(255,107,129,.14)}
+  mark.lint.vinglish{border-color:#ffb347;background:rgba(255,179,71,.14)}
+  mark.lint.style{border-color:#ffd84a;background:rgba(255,216,74,.10)}
+  .lintleg{display:flex;gap:12px;font-size:.72rem;font-weight:700;color:var(--mut);margin-bottom:8px}
+  .lintleg span::before{content:"";display:inline-block;width:10px;height:3px;margin-right:5px;vertical-align:middle;border-radius:2px}
+  .lintleg .grammar::before{background:#ff6b81} .lintleg .vinglish::before{background:#ffb347} .lintleg .style::before{background:#ffd84a}
+  .lintlist{display:flex;flex-direction:column;gap:8px}
+  .lintrow{border-radius:12px;padding:10px 12px;background:rgba(255,255,255,.05);border-left:3px solid #ff6b81;transition:box-shadow .3s}
+  .lintrow.vinglish{border-left-color:#ffb347} .lintrow.style{border-left-color:#ffd84a}
+  .lintrow.flash{box-shadow:0 0 0 2px #8fb4ff}
+  .lintrow em{font-style:normal;font-size:.66rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--mut)}
+  .lintrow .lw{font-size:.9rem;margin:2px 0}
+  .lintrow .lw s{color:#ff9aa8} .lintrow .lw b{color:#7ee2a8}
+  .lintrow small{display:block;font-size:.78rem;color:#c9d3ff;line-height:1.4}
+  .lintrow .lg{font-size:.78rem;color:var(--mut);margin-top:3px}
+  .ideabtn{margin-top:8px}
+  .ideasel{width:100%;margin:6px 0 10px}
+  .ideaq{font-weight:700;font-size:.92rem;line-height:1.45;margin:4px 0 10px;padding:10px 12px;border-radius:12px;background:rgba(94,162,255,.12)}
+  .ideacard{border-radius:16px;padding:12px;margin-bottom:10px;background:rgba(255,255,255,.05);border:1px solid var(--line)}
+  .ideacard em{font-style:normal;font-size:.66rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:#7ee2a8}
+  .ideacard.con em{color:#ff9db0}
+  .ideacard>b{display:block;margin:2px 0 6px;font-size:.92rem}
+  .ideacard .b45{font-size:.84rem;color:var(--mut);margin-bottom:8px}
+  .ideacard .b60{font-size:.88rem;line-height:1.5;margin-top:4px}
+  .ideacard .b60 mark{background:rgba(94,162,255,.25);color:#fff;border-radius:4px;padding:0 2px}
+  .ideacard .b60 small{display:block;color:#c9d3ff;font-size:.76rem;margin-top:4px}
+  .ideacard .hide{display:none}
+  .ideahl{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+  .colbar{display:flex;align-items:center;gap:10px;justify-content:space-between;padding:12px;border-radius:16px;background:rgba(94,162,255,.12);margin:8px 0 12px}
+  .colbar small{display:block;color:var(--mut);font-size:.74rem}
+  .btn-primary.sm{width:auto;padding:9px 16px;margin:0;font-size:.85rem}
+  .colgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .colcard{border-radius:16px;padding:12px;background:rgba(255,255,255,.05);border:1px solid var(--line);display:flex;flex-direction:column;gap:4px}
+  .colcard>b{font-size:.92rem} .colcard>small{font-size:.72rem;color:var(--mut)}
+  .colprog{height:5px;border-radius:99px;background:rgba(255,255,255,.12);display:flex;overflow:hidden;margin-top:4px}
+  .colprog i{display:block;height:100%} .colprog i.m{background:#4ade80} .colprog i.l{background:#5ea2ff}
+  .colnums{display:flex;flex-wrap:wrap;gap:6px;font-size:.64rem;color:var(--mut);font-weight:700}
+  .colnums .m{color:#7ee2a8} .colnums .l{color:#8fb4ff}
+  .colacts{display:flex;gap:6px;margin-top:6px}
+  .colacts button{flex:1;padding:7px 4px;border-radius:10px;border:1px solid var(--line);background:rgba(255,255,255,.06);color:inherit;font:inherit;font-size:.74rem;font-weight:800}
+  .colacts button.on{background:rgba(94,162,255,.25);border-color:rgba(94,162,255,.5)}
+  .colrow{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-top:1px solid var(--line)}
+  .colrow .sp{flex:0 0 32px;height:32px;border-radius:50%;border:0;background:rgba(255,255,255,.08);color:inherit}
+  .colrow .ct{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+  .colrow .ct b{font-size:.92rem} .colrow small{font-size:.78rem;color:#c9d3ff}
+  .colrow small.ipa{color:var(--mut);font-family:ui-monospace,monospace;font-size:.74rem}
+  .colrow small.rep s{color:#ff9aa8} .colrow small.ex{color:var(--mut);font-style:italic}
+  .lvtag{font-style:normal;font-size:.62rem;padding:1px 6px;border-radius:6px;background:rgba(255,255,255,.12);vertical-align:middle}
+  .shprog{font-size:.76rem;font-weight:800;color:var(--mut);margin:4px 0 8px}
+  .shcard{border-radius:18px;padding:16px;background:linear-gradient(150deg,rgba(94,162,255,.16),rgba(143,116,255,.12));border:1px solid rgba(143,180,255,.3)}
+  .shen{font-size:1.12rem;font-weight:700;line-height:1.7}
+  .shw{cursor:pointer;border-radius:6px;padding:1px 2px}
+  .shw.key{border:1.5px solid rgba(255,216,74,.7)}
+  .shw.ok{color:#7ee2a8} .shw.bad{color:#ff9aa8;text-decoration:underline wavy rgba(255,107,129,.7)}
+  .shipa{font-family:ui-monospace,monospace;font-size:.8rem;color:#c9d3ff;margin-top:8px;line-height:1.5}
+  .shvi{font-size:.86rem;color:#d7dcff;margin-top:8px}
+  .shcard.novi .shvi{display:none}
+  .shpop{margin-top:10px;padding:12px;border-radius:14px;background:#141a4a;border:1px solid var(--line)}
+  .shpop .pt{display:flex;align-items:center;gap:8px} .shpop .pt b{font-size:1rem}
+  .shpop .sp{width:30px;height:30px;border-radius:50%;border:0;background:rgba(255,255,255,.08);color:inherit}
+  .shpop small.ipa{display:block;color:var(--mut);font-family:ui-monospace,monospace}
+  .shres{min-height:24px;margin:10px 2px;font-size:.88rem}
+  .shres b.good{color:#7ee2a8} .shres b.mid{color:#ffd84a} .shres b.low{color:#ff9aa8}
+  .shctl{display:flex;align-items:center;justify-content:center;gap:12px;margin:6px 0 4px}
+  .shctl button{border:0;color:#fff;font:inherit}
+  .shnav{width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.08);font-size:1.4rem!important}
+  .shbtn{width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.12);font-size:1.2rem!important}
+  .shmic{width:66px;height:66px;border-radius:50%;background:linear-gradient(150deg,#5ea2ff,#8f74ff);font-size:1.6rem!important;box-shadow:0 8px 22px rgba(94,162,255,.45)}
+  .shmic.rec{background:linear-gradient(150deg,#ff6b81,#ff9a5a);animation:pulseMic 1s infinite}
+  @keyframes pulseMic{50%{transform:scale(1.07)}}
+  .weeknote{display:flex;flex-direction:column;gap:2px;padding:10px 12px;border-radius:14px;background:rgba(74,222,128,.10);border:1px solid rgba(74,222,128,.25);margin-bottom:10px}
+  .weeknote b{font-size:.9rem} .weeknote span{font-size:.8rem;color:#c9d3ff;line-height:1.4}
+  .lintnote{margin-top:10px;font-size:.78rem}
 </style>
 </head>
 <body>
@@ -2135,7 +2211,7 @@
       loadIconPal(r[3]);
       state.task1 = mergeT1(r[4]);
       loadExtra();
-      return loadGram();
+      return loadGram().then(loadCoach);
     }).then(function () { buildBank(); buildUnits(); });
   }
   function loadExtra() {
@@ -2601,6 +2677,8 @@
       if (ww.length < 3) { toast("Luyện nói vài câu trước đã nhé."); return; }
       startLesson({ kind: "cards", topic: "all", only: ww, size: Math.min(15, ww.length), name: "Phát âm cần luyện", key: "p:weak" });
     }));
+    box.appendChild(rowCard("🎧", "Shadowing từng câu", SHADOW.length + " bài nói mẫu Part 1–2 · IPA, dịch, bấm từ để tra", "MỚI", function () { shadowHome(); }));
+    box.appendChild(rowCard("🧩", "Cụm từ ăn điểm (Collocations)", COLS.length + " cụm theo " + colTopics().length + " chủ đề · tự nhắc ôn", "MỚI", function () { colHome(); }));
     box.appendChild(rowCard("📋", "Bộ thẻ ôn tập", getDeck().length ? getDeck().length + " câu bạn đã bấm “+ Ôn tập”" : "Bấm “+ Ôn tập” sau mỗi câu để đưa vào đây", "MỚI", function () { deckSheet(); }));
     var wrong = read("ielts_wrong", []);
     box.appendChild(rowCard("🔁", "Ôn lại câu sai", wrong.length ? wrong.length + " câu bạn từng làm sai" : "Chưa có câu sai nào được lưu", "", function () {
@@ -3855,11 +3933,12 @@
       });
     });
   }
-  function startWrite(task) {
+  function startWrite(task, pre) {
     task = task === 1 ? 1 : 2;
     var list = task === 1 ? (state.task1 || []) : state.exam.writing;
     if (!list.length) { toast("Chưa có đề cho phần này."); return; }
     var w = list[Math.floor(Math.random() * list.length)];
+    if (pre && pre.prompt) { var same = list.filter(function (x) { return x.prompt === pre.prompt; })[0]; if (same) w = same; }
     var mins = task === 1 ? 20 : 40, minw = task === 1 ? 150 : 250;
     wr = { w: w, task: task, minw: minw, left: mins * 60, stop: false };
     $("wrTask").textContent = "Task " + task + (w.title ? " · " + w.title : "");
@@ -3874,8 +3953,13 @@
       w.keyphrases.slice(0, 8).forEach(function (k) { kp.appendChild(mk("span", "", k)); });
       kb.appendChild(kp);
     }
-    $("wrText").value = "";
-    $("wrWords").textContent = "0 từ";
+    if (task === 2 && IDEAS.length) {
+      var ib = mk("button", "chip-btn ideabtn", "💡 Ý tưởng & câu nâng cấp (trợ giảng)"); ib.type = "button"; ib.setAttribute("data-noi3", "1");
+      ib.addEventListener("click", function () { sfx.tap(); ideaSheet(ideaIndexFor(w.prompt)); });
+      kb.appendChild(ib);
+    }
+    $("wrText").value = pre && pre.text ? pre.text : "";
+    $("wrWords").textContent = wordCount($("wrText").value) + " từ";
     $("wrTarget").textContent = "cần ít nhất " + minw + " từ";
     $("wrSubmit").style.display = "";
     show("write"); startTimer();
@@ -3936,6 +4020,8 @@
       note: "App chỉ đo được độ dài, bố cục, từ nối và vốn từ. Nó chưa chấm được ngữ pháp và chất lượng lập luận, nên điểm này tối đa là 6.5 và chỉ để bạn theo dõi tiến bộ.",
       again: function () { startWrite((wr && wr.task) || 2); }
     });
+    var nErr = lintReport(t);
+    saveLastWrite(t, (wr && wr.task) || 2, wr && wr.w, nErr);
   }
 
   /* ============ Nói ============ */
@@ -6817,29 +6903,44 @@
       ["✍️", "Chấm IELTS Writing Task 2", "Dán đề và bài viết, nhận band ước lượng và gợi ý sửa", ["#ffd98f", "#7d5310", "#ffc247"], function () { showLoading("Đang mở đề…", function () { startWrite(2); }); }],
       ["📊", "Chấm IELTS Writing Task 1", "Mô tả biểu đồ, chấm theo số từ, từ nối, từ mô tả xu hướng", ["#8fc4ff", "#163a86", "#5ea2ff"], function () { showLoading("Đang mở đề…", function () { startWrite(1); }); }],
       ["🔍", "Tra cứu từ vựng", "Nghĩa, phát âm, ví dụ và đọc lại để luyện", ["#8ef0b8", "#12603f", "#45d495"], function () { openLookup(); }],
+      ["💡", "Kho ý tưởng Writing Task 2", IDEAS.length + " đề · câu band 4.5 và câu nâng cấp band 6.0 để đối chiếu", ["#fff1a8", "#6b5a10", "#ffd84a"], function () { ideaSheet(0); }],
+      ["🧩", "Cụm từ ăn điểm", COLS.length + " collocations theo chủ đề", ["#b6f29b", "#2b5f17", "#7fd36a"], function () { colHome(); }],
+      ["🎧", "Shadowing từng câu", SHADOW.length + " bài nói mẫu có IPA và bản dịch", ["#8fe6ff", "#0f5068", "#3fc6ee"], function () { shadowHome(); }],
       ["📘", "Sổ tay ngữ pháp", "Lý thuyết " + (state.gram || []).length + " bài, có tìm kiếm và lọc theo chặng", ["#c0b0ff", "#2d1a74", "#8f74ff"], function () { notebookSheet(); }],
       ["🎙️", "Phân tích giọng nói", "Nói tự do rồi xem tốc độ, từ đệm, quãng ngắt", ["#ffb0c8", "#7a1c3e", "#ff6f9a"], function () { openAnalyzer(); }],
       ["🔤", "Cặp âm dễ nhầm", "12 bộ âm người Việt hay đọc sai", ["#8fe6ff", "#0f5068", "#3fc6ee"], function () { selectTab("practice"); }],
       ["📋", "Bộ thẻ ôn tập", getDeck().length + " câu bạn đã đánh dấu “+ Ôn tập”", ["#ffcf9e", "#6e3a10", "#ff9f45"], function () { deckSheet(); }],
       ["🌱", "Cây học tập", "Xem 6 giai đoạn của cây và XP cần để lên cấp", ["#b6f29b", "#2b5f17", "#7fd36a"], function () { treeSheet(); }]
     ];
+    var hint = mk("p", "muted lintnote", "Lưu ý: chấm Writing trong app là rà soát theo kho lỗi mẫu và đếm cấu trúc, không phải AI chấm. Hãy dùng như một người soát bài đầu tiên.");
     T.forEach(function (x) { body.appendChild(rowCard(x[0], x[1], x[2], "", x[4], x[3])); });
+    body.appendChild(hint);
     stagger(body);
   }
 
   /* ============ Hôm nay học gì ============ */
   function todayPlan(box) {
     var items = [];
+    var lw = read("ielts_lastwrite", null);
+    if (lw && lw.date !== today()) items.push(["✍️", "Sửa lại bài viết ngày " + lw.date.slice(8, 10) + "/" + lw.date.slice(5, 7) + (lw.errors ? " · " + lw.errors + " lỗi" : ""), function () { showLoading("Đang mở bài viết…", function () { startWrite(lw.task || 2, lw); }); }]);
+    var cdue = COLS.length ? colDueAll().length : 0;
+    if (cdue) items.push(["🧩", "Ôn " + Math.min(20, cdue) + " cụm từ đến hạn", function () { colLearn(colDueAll(), "Ôn cụm từ", "col:due", 20); }]);
     var due = dueCount();
     if (due > 0) items.push(["🃏", "Ôn " + Math.min(15, due) + " thẻ đến hạn", function () { startLesson({ kind: "cards", topic: "all", size: 15, name: "Thẻ từ", key: "p:cards" }); }]);
     var gn = gramNext();
     if (gn) items.push(["📘", "Ngữ pháp: " + shortTopic(gn.topic), function () { gramSheet(gn); }]);
     var dk = getDeck().length;
     if (dk) items.push(["📋", "Bộ ôn tập · " + dk + " câu", function () { startDeck(); }]);
+    if (SHADOW.length) {
+      var sd = read("ielts_shadow", {}) || {}, nx = SHADOW.filter(function (s) { return !sd[s.id]; })[0] || SHADOW[0];
+      items.push(["🎧", "Shadowing: " + nx.title, function () { shadowOpen(nx); }]);
+    }
     if (!items.length) return;
     var c = mk("div", "todayplan");
+    var wn = weeklyNote();
+    c.appendChild(el("div", "weeknote", "<b>" + esc(wn.t) + "</b><span>" + esc(wn.m) + "</span>"));
     c.appendChild(mk("div", "cap", "Hôm nay học gì · khoảng 10 phút"));
-    items.slice(0, 3).forEach(function (x) {
+    items.slice(0, 4).forEach(function (x) {
       var b = mk("button", "tprow"); b.type = "button";
       b.appendChild(mk("span", "tpi", x[0])); b.appendChild(mk("b", "", x[1])); b.appendChild(mk("span", "rc-go", "›"));
       b.addEventListener("click", function () { sfx.tap(); x[2](); });
@@ -6978,6 +7079,344 @@
     if (window.FB) { go(); return; }
     window.fbAsyncInit = function () { FB.init({ appId: FB_APP_ID, cookie: false, xfbml: false, version: "v19.0" }); go(); };
     loadScript("https://connect.facebook.net/vi_VN/sdk.js").catch(function () { toast("Không tải được Facebook. Kiểm tra mạng rồi thử lại."); });
+  }
+  /* ================================================================
+     Trợ giảng offline: rà soát lỗi Writing, cụm từ theo chủ đề,
+     shadowing từng câu, kho ý tưởng Writing, nhận xét tuần.
+     Không có AI: mọi gợi ý đến từ dữ liệu soạn sẵn, ghi rõ trên giao diện.
+     ================================================================ */
+  var LINT = [], COLS = [], SHADOW = [], IDEAS = [];
+  function loadCoach() {
+    return Promise.all([getJSON("lint.json"), getJSON("collocations.json"), getJSON("shadowing.json"), getJSON("ideas.json")]).then(function (r) {
+      LINT = (Array.isArray(r[0]) ? r[0] : []).map(function (x) {
+        try { x.re = new RegExp(x.pattern, (x.flags || "gi").indexOf("g") >= 0 ? (x.flags || "gi") : (x.flags || "") + "g"); } catch (e) { x.re = null; }
+        return x;
+      }).filter(function (x) { return x.re; });
+      COLS = Array.isArray(r[1]) ? r[1].filter(function (c) { return c && c.phrase && c.topic; }) : [];
+      SHADOW = Array.isArray(r[2]) ? r[2].filter(function (s) { return s && Array.isArray(s.sentences) && s.sentences.length; }) : [];
+      IDEAS = Array.isArray(r[3]) ? r[3].filter(function (s) { return s && Array.isArray(s.ideas); }) : [];
+    });
+  }
+  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+
+  /* ============ Rà soát lỗi Writing ============ */
+  function lintText(t) {
+    var hits = [];
+    LINT.forEach(function (r) {
+      if (!r.re) return;
+      r.re.lastIndex = 0; var m, guard = 0;
+      while ((m = r.re.exec(t)) && guard++ < 30) {
+        if (!m[0].length) { r.re.lastIndex++; continue; }
+        hits.push({ s: m.index, e: m.index + m[0].length, r: r, txt: m[0] });
+      }
+    });
+    hits.sort(function (a, b) { return a.s - b.s || (b.e - b.s) - (a.e - a.s); });
+    var out = [], end = -1;
+    hits.forEach(function (h) { if (h.s >= end) { out.push(h); end = h.e; } });
+    return out;
+  }
+  var LINT_NAME = { grammar: "Ngữ pháp", vinglish: "Dịch kiểu tiếng Việt", style: "Từ yếu, nên nâng cấp" };
+  function lintReport(t) {
+    var old = $("brLint"); if (old) old.parentNode.removeChild(old);
+    if (!LINT.length || !String(t || "").trim()) return 0;
+    var hits = lintText(t);
+    var card = mk("div", "card lintcard"); card.id = "brLint"; card.style.marginTop = "12px";
+    card.appendChild(mk("h2", "", "Rà soát lỗi thường gặp" + (hits.length ? " (" + hits.length + ")" : "")));
+    card.appendChild(el("p", "muted", "So với kho " + LINT.length + " lỗi người Việt hay mắc. Đây là công cụ rà soát theo mẫu, không phải AI chấm, nên có thể bỏ sót lỗi khác."));
+    if (!hits.length) { card.appendChild(el("p", "", "Không thấy lỗi nào trong kho mẫu. Tốt lắm! Hãy đọc lại một lượt để soát chính tả.")); }
+    else {
+      var html = "", pos = 0;
+      hits.forEach(function (h, i) {
+        html += esc(t.slice(pos, h.s)) + '<mark class="lint ' + (h.r.type || "grammar") + '" data-i="' + i + '">' + esc(h.txt) + "</mark>";
+        pos = h.e;
+      });
+      html += esc(t.slice(pos));
+      var essay = mk("div", "lintessay"); essay.innerHTML = html.replace(/\n/g, "<br>");
+      card.appendChild(essay);
+      var leg = mk("div", "lintleg");
+      leg.innerHTML = '<span class="grammar">Ngữ pháp</span><span class="vinglish">Dịch kiểu Việt</span><span class="style">Từ yếu</span>';
+      card.appendChild(leg);
+      var list = mk("div", "lintlist");
+      hits.forEach(function (h, i) {
+        var row = mk("div", "lintrow " + (h.r.type || "grammar")); row.id = "lint" + i;
+        row.appendChild(mk("em", "", LINT_NAME[h.r.type] || "Lỗi"));
+        row.appendChild(el("div", "lw", "<s>" + esc(h.txt) + "</s> → <b>" + esc(h.r.fix || "") + "</b>"));
+        if (h.r.why) row.appendChild(mk("small", "", h.r.why));
+        if (h.r.good) row.appendChild(el("div", "lg", "Ví dụ đúng: " + esc(h.r.good)));
+        list.appendChild(row);
+      });
+      card.appendChild(list);
+      essay.addEventListener("click", function (e) {
+        var m = e.target.closest && e.target.closest("mark.lint"); if (!m) return;
+        var row = $("lint" + m.dataset.i); if (!row) return;
+        row.scrollIntoView({ behavior: "smooth", block: "center" }); row.classList.add("flash"); setTimeout(function () { row.classList.remove("flash"); }, 1200);
+      });
+    }
+    var det = $("brDetail"); det.parentNode.insertBefore(card, det.nextSibling);
+    return hits.length;
+  }
+  function saveLastWrite(t, task, w, nErr) {
+    if (wordCount(t) < 30) return;
+    write("ielts_lastwrite", { text: t, date: today(), task: task, prompt: w && w.prompt, title: w && w.title, errors: nErr || 0 });
+  }
+
+  /* ============ Kho ý tưởng Writing Task 2 ============ */
+  function ideaSheet(pick) {
+    if (!IDEAS.length) { toast("Kho ý tưởng chưa tải xong."); return; }
+    var cur = pick != null ? pick : 0;
+    openSheet(function (box) {
+      box.appendChild(mk("div", "cap", "Trợ giảng Writing · không phải AI"));
+      var h = mk("h2", "", "Kho ý tưởng & câu nâng cấp"); h.style.fontSize = "1.4rem"; box.appendChild(h);
+      box.appendChild(el("p", "muted", "Tự viết câu của bạn theo ý tiếng Việt trước, rồi bấm xem câu band 6.0 để đối chiếu và sửa bài mình."));
+      var sel = document.createElement("select"); sel.className = "ideasel";
+      IDEAS.forEach(function (p, i) { var o = document.createElement("option"); o.value = i; o.textContent = (p.topic || "") + " · " + String(p.question || "").slice(0, 70) + "…"; sel.appendChild(o); });
+      sel.value = cur; box.appendChild(sel);
+      var body = mk("div"); box.appendChild(body);
+      function paint() {
+        clear(body);
+        var p = IDEAS[cur];
+        body.appendChild(el("div", "ideaq", esc(p.question)));
+        p.ideas.forEach(function (it) {
+          var c = mk("div", "ideacard " + (/dis|disadv/.test(it.side) ? "con" : "pro"));
+          c.appendChild(mk("em", "", /dis/.test(it.side) ? "Phản đối / bất lợi" : "Đồng ý / lợi ích"));
+          c.appendChild(mk("b", "", it.vi));
+          c.appendChild(el("div", "b45", "Band 4.5: " + esc(it.band45)));
+          var hid = mk("div", "b60 hide");
+          var s60 = esc(it.band60);
+          (it.highlight || []).forEach(function (hl) { s60 = s60.split(esc(hl)).join("<mark>" + esc(hl) + "</mark>"); });
+          hid.innerHTML = "Band 6.0: " + s60 + (it.why ? '<small>' + esc(it.why) + "</small>" : "");
+          var row = mk("div", "ideahl");
+          (it.highlight || []).forEach(function (hl) { var ch = mk("span", "vchip"); ch.appendChild(mk("span", "", hl)); ch.appendChild(saveButton(hl, { w: hl, vi: it.vi, topic: p.topic, ex: it.band60 })); row.appendChild(ch); });
+          hid.appendChild(row);
+          var btn = mk("button", "chip-btn", "Xem câu nâng cấp"); btn.type = "button"; btn.setAttribute("data-noi3", "1");
+          btn.addEventListener("click", function () { hid.classList.remove("hide"); btn.style.display = "none"; sfx.tap(); speak(it.band60, {}); });
+          c.appendChild(btn); c.appendChild(hid);
+          body.appendChild(c);
+        });
+      }
+      sel.addEventListener("change", function () { cur = parseInt(sel.value, 10) || 0; paint(); });
+      paint();
+    });
+  }
+  function ideaIndexFor(prompt) {
+    var p = String(prompt || "").toLowerCase(), best = -1, bs = 0;
+    IDEAS.forEach(function (x, i) {
+      var t = String(x.topic || "").toLowerCase(), s = 0;
+      if (t && p.indexOf(t.split(" ")[0]) >= 0) s += 3;
+      String(x.question || "").toLowerCase().split(/\W+/).forEach(function (w) { if (w.length > 5 && p.indexOf(w) >= 0) s++; });
+      if (s > bs) { bs = s; best = i; }
+    });
+    return best >= 0 ? best : 0;
+  }
+
+  /* ============ Cụm từ theo chủ đề (collocations) ============ */
+  function colTopics() {
+    var m = {}, order = [];
+    COLS.forEach(function (c) { if (!m[c.topic]) { m[c.topic] = []; order.push(c.topic); } m[c.topic].push(c); });
+    return order.map(function (t) { return { topic: t, items: m[t] }; });
+  }
+  function colWord(c) { return { w: c.phrase, vi: c.vi, ex: c.example, ipa: c.ipa, pos: "", topic: c.topic }; }
+  function colStat(items) {
+    var srs = getSrs(), now = Date.now(), r = { mastered: 0, learning: 0, fresh: 0, due: 0 };
+    items.forEach(function (c) {
+      var e = srs[c.phrase.toLowerCase()];
+      if (!e) { r.fresh++; return; }
+      if ((e.box || 0) >= 3) r.mastered++; else r.learning++;
+      if (e.due <= now) r.due++;
+    });
+    return r;
+  }
+  function colDueAll() {
+    var srs = getSrs(), now = Date.now();
+    return COLS.filter(function (c) { var e = srs[c.phrase.toLowerCase()]; return e && e.due <= now; });
+  }
+  function colLearn(items, name, key, n) {
+    var srs = getSrs(), now = Date.now();
+    var due = items.filter(function (c) { var e = srs[c.phrase.toLowerCase()]; return e && e.due <= now; });
+    var fresh = items.filter(function (c) { return !srs[c.phrase.toLowerCase()]; });
+    var list = due.concat(fresh).slice(0, n || 10);
+    if (!list.length) { toast("Chủ đề này chưa có cụm đến hạn. Quay lại sau nhé!"); return; }
+    startLesson({ kind: "cards", topic: "all", only: list.map(colWord), size: list.length, name: name, key: key });
+  }
+  function colHome() {
+    if (!COLS.length) { toast("Kho cụm từ chưa tải xong."); return; }
+    openSheet(function (box) {
+      box.appendChild(mk("div", "cap", "Collocations · cụm từ đi cùng nhau"));
+      var h = mk("h2", "", "Cụm từ ăn điểm"); h.style.fontSize = "1.4rem"; box.appendChild(h);
+      box.appendChild(el("p", "muted", "Band 5–6 cần dùng cụm tự nhiên như <b>cause air pollution</b> thay vì <s>make air dirty</s>. Học theo chủ đề, cụm nào đã học sẽ tự nhắc ôn đúng hạn."));
+      var dueAll = colDueAll();
+      var top = mk("div", "colbar");
+      top.appendChild(el("div", "", "<b>" + dueAll.length + " cụm cần ôn</b><small>ở tất cả chủ đề · " + COLS.length + " cụm</small>"));
+      var rb = mk("button", "btn-primary sm", "Ôn " + Math.min(20, dueAll.length)); rb.type = "button"; rb.disabled = !dueAll.length;
+      rb.addEventListener("click", function () { closeSheet(); colLearn(dueAll, "Ôn cụm từ", "col:due", 20); });
+      top.appendChild(rb); box.appendChild(top);
+      var g = mk("div", "colgrid");
+      colTopics().forEach(function (tp) {
+        var s = colStat(tp.items), n = tp.items.length;
+        var c = mk("div", "colcard");
+        c.appendChild(mk("b", "", tp.topic)); c.appendChild(mk("small", "", n + " cụm"));
+        var bar = mk("div", "colprog");
+        bar.innerHTML = '<i class="m" style="width:' + (s.mastered / n * 100) + '%"></i><i class="l" style="width:' + (s.learning / n * 100) + '%"></i>';
+        c.appendChild(bar);
+        c.appendChild(el("div", "colnums", '<span class="m">' + s.mastered + " thuộc</span><span class=\"l\">" + s.learning + " đang học</span><span>" + s.fresh + " mới</span>"));
+        var acts = mk("div", "colacts");
+        var v = mk("button", "", "Xem cụm"); v.type = "button";
+        v.addEventListener("click", function () { sfx.tap(); closeSheet(); setTimeout(function () { colList(tp); }, 250); });
+        var l = mk("button", "on", s.due ? "Ôn " + s.due : "Học 10"); l.type = "button";
+        l.addEventListener("click", function () { closeSheet(); sfx.tap(); colLearn(tp.items, "Cụm từ · " + tp.topic, "col:" + tp.topic, 10); });
+        acts.appendChild(v); acts.appendChild(l); c.appendChild(acts);
+        g.appendChild(c);
+      });
+      box.appendChild(g);
+    });
+  }
+  function colList(tp) {
+    openSheet(function (box) {
+      box.appendChild(mk("div", "cap", "Collocations"));
+      var h = mk("h2", "", tp.topic + " · " + tp.items.length + " cụm"); h.style.fontSize = "1.4rem"; box.appendChild(h);
+      var l = mk("button", "btn-primary", "Học 10 cụm"); l.type = "button";
+      l.addEventListener("click", function () { closeSheet(); colLearn(tp.items, "Cụm từ · " + tp.topic, "col:" + tp.topic, 10); });
+      box.appendChild(l);
+      tp.items.forEach(function (c) {
+        var r = mk("div", "colrow");
+        var sp = mk("button", "sp", "🔊"); sp.type = "button"; sp.setAttribute("data-noi3", "1");
+        sp.addEventListener("click", function () { speak(c.phrase, { force: true }); });
+        r.appendChild(sp);
+        var t = mk("div", "ct");
+        t.appendChild(el("b", "", esc(c.phrase) + (c.level ? ' <i class="lvtag">' + esc(c.level) + "</i>" : "")));
+        if (c.ipa) t.appendChild(mk("small", "ipa", c.ipa));
+        t.appendChild(mk("small", "", c.vi));
+        if (c.replaces) t.appendChild(el("small", "rep", "Thay cho: <s>" + esc(c.replaces) + "</s>"));
+        if (c.example) t.appendChild(mk("small", "ex", c.example));
+        r.appendChild(t); r.appendChild(saveButton(c.phrase, colWord(c)));
+        box.appendChild(r);
+      });
+    });
+  }
+
+  /* ============ Shadowing từng câu ============ */
+  var sh = null;
+  function shadowHome() {
+    if (!SHADOW.length) { toast("Bài shadowing chưa tải xong."); return; }
+    var done = read("ielts_shadow", {}) || {};
+    openSheet(function (box) {
+      box.appendChild(mk("div", "cap", "Shadowing · nghe rồi nói lại từng câu"));
+      var h = mk("h2", "", "Luyện nói theo câu mẫu"); h.style.fontSize = "1.4rem"; box.appendChild(h);
+      box.appendChild(el("p", "muted", "Mỗi câu có phiên âm IPA và bản dịch. Bấm vào một từ để xem nghĩa và lưu. Bấm micro để nói lại, app tô xanh từ đúng, đỏ từ sai."));
+      [1, 2].forEach(function (part) {
+        box.appendChild(mk("div", "cap", "Speaking Part " + part));
+        SHADOW.filter(function (s) { return Number(s.part) === part; }).forEach(function (s) {
+          var b = mk("button", "nbrow"); b.type = "button";
+          b.appendChild(mk("span", "nblv", "P" + part));
+          var t = mk("span", "dt"); t.appendChild(mk("b", "", s.title)); t.appendChild(mk("small", "", s.sentences.length + " câu" + (done[s.id] ? " · tốt nhất " + done[s.id] + "%" : "")));
+          b.appendChild(t); b.appendChild(mk("span", "rc-go", "›"));
+          b.addEventListener("click", function () { closeSheet(); sfx.tap(); setTimeout(function () { shadowOpen(s); }, 250); });
+          box.appendChild(b);
+        });
+      });
+    });
+  }
+  function wordInfo(w) {
+    var k = w.toLowerCase().replace(/[^a-z'-]/g, "");
+    var hit = state.words.filter(function (x) { return x.w.toLowerCase() === k; })[0];
+    if (!hit) hit = COLS.filter(function (c) { return c.phrase.toLowerCase() === k; })[0];
+    return { k: k, hit: hit };
+  }
+  function shadowOpen(s) {
+    sh = { s: s, i: 0, scores: {} };
+    openSheet(function (box) {
+      box.classList.add("shbox");
+      box.appendChild(mk("div", "cap", "Part " + s.part + " · " + s.topic));
+      var h = mk("h2", "", s.title); h.style.fontSize = "1.3rem"; box.appendChild(h);
+      if (s.question) box.appendChild(el("p", "muted", "Giám khảo: <i>" + esc(s.question) + "</i>"));
+      var prog = mk("div", "shprog"); box.appendChild(prog);
+      var card = mk("div", "shcard"); box.appendChild(card);
+      var pop = mk("div", "shpop"); pop.style.display = "none"; box.appendChild(pop);
+      var res = mk("div", "shres"); box.appendChild(res);
+      var ctl = mk("div", "shctl");
+      function btn(lbl, cls, fn) { var b = mk("button", cls, lbl); b.type = "button"; b.setAttribute("data-noi3", "1"); b.addEventListener("click", fn); ctl.appendChild(b); return b; }
+      btn("‹", "shnav", function () { if (sh.i > 0) { sh.i--; paint(); } });
+      btn("🔁", "shbtn", function () { speak(cur().en, { force: true }); });
+      btn("🐢", "shbtn", function () { speak(cur().en, { force: true, rate: 0.7 }); });
+      var mic = btn("🎤", "shmic", function () { record(); });
+      btn("›", "shnav", function () { if (sh.i < s.sentences.length - 1) { sh.i++; paint(); } else finish(); });
+      box.appendChild(ctl);
+      var tr = mk("label", "agree"); tr.innerHTML = '<input type="checkbox" checked> Hiện bản dịch tiếng Việt';
+      box.appendChild(tr);
+      tr.querySelector("input").addEventListener("change", function (e) { card.classList.toggle("novi", !e.target.checked); });
+      function cur() { return s.sentences[sh.i]; }
+      function paint(marks) {
+        var c = cur();
+        prog.textContent = "Câu " + (sh.i + 1) + " / " + s.sentences.length;
+        var toks = c.en.split(/\s+/), keys = (c.keys || []).join(" ").toLowerCase();
+        var html = toks.map(function (t, i) {
+          var clean = t.toLowerCase().replace(/[^a-z'-]/g, "");
+          var cls = "shw" + (keys.indexOf(clean) >= 0 && clean.length > 2 ? " key" : "") + (marks ? (marks[i] ? " ok" : " bad") : "");
+          return '<span class="' + cls + '" data-w="' + esc(t) + '">' + esc(t) + "</span>";
+        }).join(" ");
+        card.innerHTML = '<div class="shen">' + html + "</div>" + (c.ipa ? '<div class="shipa">' + esc(c.ipa) + "</div>" : "") + '<div class="shvi">' + esc(c.vi || "") + "</div>";
+        pop.style.display = "none";
+        if (!marks) clear(res);
+      }
+      card.addEventListener("click", function (e) {
+        var w = e.target.closest && e.target.closest(".shw"); if (!w) return;
+        var info = wordInfo(w.dataset.w); if (!info.k) return;
+        speak(info.k, { force: true });
+        clear(pop); pop.style.display = "block";
+        var top = mk("div", "pt"); top.appendChild(mk("b", "", info.k));
+        var sp = mk("button", "sp", "🔊"); sp.type = "button"; sp.setAttribute("data-noi3", "1"); sp.addEventListener("click", function () { speak(info.k, { force: true }); });
+        top.appendChild(sp); pop.appendChild(top);
+        if (info.hit) {
+          if (info.hit.ipa) pop.appendChild(mk("small", "ipa", info.hit.ipa));
+          pop.appendChild(mk("div", "", (info.hit.pos ? "(" + info.hit.pos + ") " : "") + (info.hit.vi || "")));
+          pop.appendChild(saveButton(info.k, info.hit.w ? info.hit : colWord(info.hit)));
+        } else {
+          pop.appendChild(mk("div", "muted", "Từ này chưa có trong kho của app."));
+          var lk = mk("button", "chip-btn", "Lưu để tra sau"); lk.type = "button";
+          lk.addEventListener("click", function () { var d = read("ielts_lookup_later", []) || []; if (d.indexOf(info.k) < 0) d.push(info.k); write("ielts_lookup_later", d); toast("Đã lưu “" + info.k + "”"); });
+          pop.appendChild(lk);
+        }
+      });
+      function record() {
+        if (listening) { stopListening(); return; }
+        mic.classList.add("rec"); res.textContent = "Đang nghe… nói lại câu trên";
+        ctlRef = listenOnce(function (it) { res.textContent = "“" + it + "”"; }, function (err, alts) {
+          mic.classList.remove("rec");
+          if (err && !(alts && alts.length)) { res.textContent = errMsg(err); return; }
+          var best = null;
+          (alts || []).forEach(function (a) { var r = scoreSpeech(cur().en, a); if (!best || r.pct > best.pct) { best = r; best.said = a; } });
+          if (!best) { res.textContent = "Chưa nghe rõ, thử lại nhé."; return; }
+          sh.scores[sh.i] = Math.max(sh.scores[sh.i] || 0, best.pct);
+          paint(best.marks);
+          res.innerHTML = '<b class="' + (best.pct >= 80 ? "good" : best.pct >= 50 ? "mid" : "low") + '">' + best.pct + "%</b> · " + best.ok + "/" + best.total + " từ đúng" + (best.pct >= 80 ? " · Tốt lắm!" : " · Nghe lại rồi thử thêm lần nữa");
+          (best.pct >= 80 ? sfx.ok : sfx.bad)();
+        });
+      }
+      var ctlRef = null;
+      function finish() {
+        var vals = Object.keys(sh.scores).map(function (k) { return sh.scores[k]; });
+        var avg = vals.length ? Math.round(vals.reduce(function (a, b) { return a + b; }, 0) / s.sentences.length) : 0;
+        var d = read("ielts_shadow", {}) || {}; d[s.id] = Math.max(d[s.id] || 0, avg); write("ielts_shadow", d);
+        addProgress(10 + vals.length * 3);
+        closeSheet(); toast("Xong bài shadowing · điểm trung bình " + avg + "%"); confetti(24);
+      }
+      paint();
+      setTimeout(function () { speak(cur().en, { force: true }); }, 500);
+    });
+  }
+
+  /* ============ Nhận xét tuần ============ */
+  function activeDays7() {
+    var days = getStats().days || {}, n = 0, now = new Date();
+    for (var i = 0; i < 7; i++) { if ((days[dkey(new Date(now.getFullYear(), now.getMonth(), now.getDate() - i))] || 0) > 0) n++; }
+    return n;
+  }
+  function weeklyNote() {
+    var a = activeDays7(), lw = read("ielts_lastwrite", null);
+    if (a === 0) return { t: "Chào mừng quay lại!", m: "Tuần qua bạn chưa học buổi nào. Hôm nay chỉ cần 5 phút: ôn vài thẻ từ để lấy lại nhịp." };
+    if (a <= 2) return { t: "Tuần này hơi chững lại", m: "Bạn học " + a + "/7 ngày. Kế hoạch hôm nay đã được rút gọn, làm xong 2 mục đầu là đủ." };
+    if (a <= 4) return { t: "Đang vào guồng", m: "Bạn học " + a + "/7 ngày. Thêm 1 bài shadowing hoặc 1 đoạn Writing để tăng tốc nhé." };
+    return { t: "Phong độ rất đều!", m: "Bạn học " + a + "/7 ngày. " + (lw ? "Thử sửa lại bài viết gần nhất để thấy mình tiến bộ." : "Thử viết 1 bài Task 2 ngắn để giữ nhịp.") };
   }
 
   function renderQuestion() {
@@ -7601,6 +8040,7 @@
   } catch (e) {}
 
   window.__ielts = {
+    coach: { lintText: lintText, colHome: colHome, shadowHome: shadowHome, ideaSheet: ideaSheet, todayPlan: typeof todayPlan === 'function' ? todayPlan : null, n: function () { return [LINT.length, COLS.length, SHADOW.length, IDEAS.length, LINT.filter(function (r) { return !r.re; }).length]; } },
     scoreSpeech: scoreSpeech, state: state, parseImport: parseImport, genMeaning: genMeaning,
     analyseWriting: analyseWriting, pctToBand: pctToBand, scoreOpenSpeech: scoreOpenSpeech,
     buildUnits: buildUnits, lessonsFor: lessonsFor, enVoices: enVoices, voiceScore: voiceScore,
