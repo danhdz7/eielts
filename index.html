@@ -9168,7 +9168,7 @@
   }
   // Trả về true nếu giọng AI nhận việc đọc; false thì speak() dùng giọng của máy
   window.__aiSpeak = function (text, o, end, token, cb) {
-    if (!ai.tts) { if (ai.status !== "loading") aiLoad(); return false; }
+    if (!ai.tts) { if (ai.status !== "loading" && read("ielts_ai", 0)) aiLoad(); return false; }
     var voice = o.aiVoice || vPrefs.ai, speed = Math.max(.6, Math.min(1.3, o.rate || vPrefs.rate || .95));
     var parts = aiChunks(text);
     if (!parts.length) { end(); return true; }
@@ -9198,6 +9198,20 @@
     next();
     return true;
   };
+
+  // Tự tải giọng AI ở nền (bỏ qua khi đang dùng 4G/5G hoặc bật tiết kiệm dữ liệu, lúc đó chờ người dùng bấm tải)
+  function aiAuto() {
+    if (ai.tts || ai.loading) return;
+    var c = navigator.connection || {};
+    if (!read("ielts_ai", 0) && (c.saveData || c.type === "cellular")) return;
+    var tries = 0;
+    (function go() {
+      aiLoad(function (err) {
+        if (err) { if (++tries < 3) setTimeout(go, 45000 * tries); return; }
+        if (!read("ielts_ai_toast", 0)) { write("ielts_ai_toast", 1); toast("Giọng AI đã sẵn sàng 🎙️"); }
+      });
+    })();
+  }
 
   function renderQuestion() {
     var q = state.list[state.index];
@@ -9770,7 +9784,8 @@
     $("bootStatus").style.display = "none";
     $("tabPanes").style.display = "block";
     if (!$("fab")) { initFab(); initVoiceBtn(); }
-    if (vPrefs.engine === "ai" && vPrefs.ai) setTimeout(function () { aiLoad(); }, 2500);
+    if (!vPrefs.engine) { vPrefs.engine = "ai"; vPrefs.ai = "af_heart"; write("ielts_voice", vPrefs); }
+    if (vPrefs.engine === "ai" && vPrefs.ai) setTimeout(function () { aiAuto(); }, 3000);
     show("main");
     refreshTop();
     var s = getStats(), st = currentStreak();
