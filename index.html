@@ -1447,6 +1447,12 @@
   .fabit .fl{position:absolute;top:100%;margin-top:2px;font-size:.62rem;font-weight:800;white-space:nowrap;text-shadow:0 1px 3px rgba(0,0,0,.8);color:#fff}
   html[data-theme="light"] .fabit{background:#fff;color:#1a2250}
   html[data-theme="light"] .vbtn{color:#1a2250}
+  .aicard{padding:12px 14px;border-radius:14px;background:rgba(96,165,250,.12);border:1px solid var(--line)}
+  .aicard p{margin:0 0 10px;font-size:.88rem;line-height:1.45}
+  .aiprog{padding:10px 2px}
+  .aibar{height:10px;border-radius:999px;background:rgba(255,255,255,.14);overflow:hidden}
+  .aibar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#45d495,#37c6ff);transition:width .3s}
+  .aiprog small{display:block;margin-top:6px;opacity:.8}
 </style>
 </head>
 <body>
@@ -2220,6 +2226,7 @@
   function stopSpeaking() {
     speakToken++;
     try { window.speechSynthesis.cancel(); } catch (e) {}
+    if (window.__aiStop) window.__aiStop();
     curUtter = null;
     Array.prototype.forEach.call(document.querySelectorAll(".playing"), function (x) { x.classList.remove("playing"); });
   }
@@ -2231,6 +2238,10 @@
       if (cb && myToken === speakToken) cb();
     }
     if (!soundOn && !o.force) { if (cb) cb(); return false; }
+    if (!o.voice && !o.noai && window.__aiSpeak && (o.aiVoice || (vPrefs.engine === "ai" && vPrefs.ai))) {
+      try { window.speechSynthesis.cancel(); } catch (e) {}
+      if (window.__aiSpeak(text, o, end, myToken, cb)) return true;
+    }
     if (!hasTTS) { if (cb) setTimeout(function () { if (myToken === speakToken) cb(); }, 1200); return false; }
     try {
       window.speechSynthesis.cancel();
@@ -3575,6 +3586,7 @@
 
   /* ============ Cài đặt chi tiết ============ */
   function voiceLabel() {
+    if (vPrefs.engine === "ai" && vPrefs.ai) return aiVoiceName(vPrefs.ai);
     if (vPrefs.name) return vPrefs.name.replace(/^Microsoft |^Google /, "");
     var v = pickVoice(); return v ? v.name.replace(/^Microsoft |^Google /, "") : "Mặc định";
   }
@@ -4804,6 +4816,7 @@
   function applyTutor(t) {
     write("ielts_tutor", t.id);
     vPrefs.accent = t.acc === "auto" ? "auto" : t.acc;
+    vPrefs.engine = "device";
     if (!t.manual) {
       var v = tutorVoice(t);
       vPrefs.name = v ? v.name : ""; vPrefs.uri = v ? voiceKey(v) : "";
@@ -8817,9 +8830,12 @@
     loadVoices();
     var all = enVoices().slice().sort(function (a, b) { return ((a.lang || "") + (a.name || "")).localeCompare((b.lang || "") + (b.name || "")); });
     var cur = pickVoice(false), curKey = cur ? voiceKey(cur) : "";
+    var useAI = vPrefs.engine === "ai" && !!vPrefs.ai;
 
     host.appendChild(mk("div", "cap", "Giọng đang dùng"));
-    var now = el("div", "vnow", "<b>" + esc(cur ? voiceNice(cur) : "Chưa có giọng") + "</b><small>" + esc(cur ? "Giọng " + accLabel(cur.lang) : "") + "</small>");
+    var now = useAI
+      ? el("div", "vnow", "<b>" + esc(aiVoiceName(vPrefs.ai)) + "</b><small>Giọng AI" + (ai.tts ? "" : " · đang chuẩn bị, tạm dùng giọng máy") + "</small>")
+      : el("div", "vnow", "<b>" + esc(cur ? voiceNice(cur) : "Chưa có giọng") + "</b><small>" + esc(cur ? "Giọng của máy · " + accLabel(cur.lang) : "") + "</small>");
     host.appendChild(now);
 
     // Tốc độ + độ cao: áp dụng cho mọi giọng, nghe thử ngay khi thả tay
@@ -8835,14 +8851,64 @@
       host.appendChild(r); host.appendChild(rl);
     }
     slider("Tốc độ đọc", "rate", 0.6, 1.3, 0.95, "Chậm", "Nhanh", function (x) { return x.toFixed(2) + "×"; });
-    slider("Độ trầm / cao", "pitch", 0.7, 1.3, 1, "Trầm", "Cao", function (x) { return x.toFixed(2); });
+    if (useAI) host.appendChild(el("div", "info", "Giọng AI chỉ chỉnh được tốc độ."));
+    else slider("Độ trầm / cao", "pitch", 0.7, 1.3, 1, "Trầm", "Cao", function (x) { return x.toFixed(2); });
 
-    host.appendChild(mk("div", "cap vcap", "Giọng có trên máy (" + all.length + ")"));
+    // ---- Giọng AI ----
+    host.appendChild(mk("div", "cap vcap", "Giọng AI · " + AI_VOICES.length + " giọng (khuyên dùng)"));
+    host.__prog = null;
+    if (ai.status === "ready") {
+      AI_VOICES.forEach(function (v) {
+        var row = mk("button", "rowcard vrow"); row.type = "button";
+        var on = useAI && vPrefs.ai === v[0];
+        if (on) row.classList.add("vsel");
+        row.appendChild(mk("span", "rc-ico", on ? "✅" : "🤖"));
+        var tx = mk("span", "rc-txt");
+        var nb = mk("b", "", v[1]);
+        if (on) nb.appendChild(mk("span", "tagnew", "ĐANG DÙNG"));
+        tx.appendChild(nb); tx.appendChild(mk("small", "", v[2] + " · " + v[3]));
+        row.appendChild(tx);
+        var play = mk("span", "rc-go", "▶"); play.setAttribute("data-noi3", "1");
+        play.addEventListener("click", function (e) {
+          e.stopPropagation(); sfx.tap();
+          speak(VOICE_SAMPLE, { force: true, aiVoice: v[0], rate: vPrefs.rate, el: play });
+        });
+        row.appendChild(play);
+        row.addEventListener("click", function () {
+          sfx.ok(); vPrefs.engine = "ai"; vPrefs.ai = v[0]; write("ielts_tutor", "f"); voiceSaveNow();
+          toast("Đã chọn giọng " + v[1]);
+          speak("Great. I will read your lessons with this voice.", { force: true });
+          renderVoicePanel(host);
+        });
+        host.appendChild(row);
+      });
+    } else if (ai.status === "loading") {
+      var pbox = el("div", "aiprog", "<div class=\"aibar\"><i></i></div><small></small>");
+      host.appendChild(pbox); host.__prog = pbox;
+      var upd = function () { pbox.firstChild.firstChild.style.width = ai.pct + "%"; pbox.lastChild.textContent = "Đang tải giọng AI… " + ai.pct + "% (chỉ tải một lần, đừng đóng trang)"; };
+      upd(); host.__prog.__upd = upd;
+    } else {
+      var ac = mk("div", "aicard");
+      ac.appendChild(el("p", "", "Giọng AI (Kokoro) cho <b>" + AI_VOICES.length + " giọng Mỹ và Anh</b>, nam nữ, trẻ đến lớn tuổi, nghe tự nhiên và <b>khác nhau thật sự</b>, không phụ thuộc điện thoại. Tải một lần khoảng <b>110 MB</b>, sau đó dùng được cả khi không có mạng."));
+      if (ai.status === "error") ac.appendChild(el("div", "note", "Tải chưa được: " + esc(ai.err || "lỗi mạng") + ". Thử lại khi có Wi-Fi ổn định."));
+      var ab = mk("button", "btn-primary", ai.status === "error" ? "Thử tải lại" : "⬇️ Tải giọng AI"); ab.type = "button";
+      ab.addEventListener("click", function () {
+        askDlg({ title: "Tải giọng AI?", text: "Cần khoảng 110 MB, nên dùng Wi-Fi. Chỉ tải một lần. Máy yếu có thể mất vài giây để đọc mỗi câu.", ok: "Tải", cancel: "Để sau",
+          onOk: function () { vPrefs.engine = "ai"; if (!vPrefs.ai) vPrefs.ai = "af_heart"; voiceSaveNow(); aiLoad(function (err) { if (!err) toast("Giọng AI đã sẵn sàng."); }); renderVoicePanel(host); } });
+      });
+      ac.appendChild(ab); host.appendChild(ac);
+    }
+    window.__aiUi = function () {
+      if (!host.parentNode) return;
+      if (ai.status === "loading" && host.__prog && host.__prog.__upd) host.__prog.__upd(); else renderVoicePanel(host);
+    };
+
+    host.appendChild(mk("div", "cap vcap", "Giọng của máy (" + all.length + ") · dự phòng"));
     if (!voices.length) host.appendChild(el("div", "note", "Đang tải danh sách giọng của máy…"));
     else if (!all.length) host.appendChild(el("div", "note", "Máy này chưa có giọng tiếng Anh nào. Trên Android, cài <b>Dịch vụ giọng nói của Google</b> rồi mở lại app."));
     all.forEach(function (v) {
       var row = mk("button", "rowcard vrow"); row.type = "button";
-      var on = voiceKey(v) === curKey;
+      var on = !useAI && voiceKey(v) === curKey;
       if (on) row.classList.add("vsel");
       row.appendChild(mk("span", "rc-ico", on ? "✅" : "🗣️"));
       var tx = mk("span", "rc-txt");
@@ -8859,7 +8925,7 @@
       row.appendChild(play);
       row.addEventListener("click", function () {
         sfx.ok();
-        vPrefs.name = v.name; vPrefs.uri = voiceKey(v); vPrefs.accent = "auto";
+        vPrefs.name = v.name; vPrefs.uri = voiceKey(v); vPrefs.accent = "auto"; vPrefs.engine = "device";
         write("ielts_tutor", "f"); voiceSaveNow();
         toast("Đã chọn giọng " + voiceNice(v));
         speak("Great. I will read your lessons with this voice.", { force: true, voice: v });
@@ -8878,7 +8944,7 @@
       var v = tutorVoice(t);
       if (!v && voices.length) return;
       var row = mk("button", "rowcard vrow"); row.type = "button";
-      var on = cT.id === t.id && !cT.manual;
+      var on = !useAI && cT.id === t.id && !cT.manual;
       if (on) row.classList.add("vsel");
       row.appendChild(mk("span", "rc-ico", on ? "✅" : "🎚️"));
       var tx = mk("span", "rc-txt");
@@ -9016,6 +9082,122 @@
     window.__fabClose = function () { if (open) setOpen(false); };
     place();
   }
+  /* ============ Giọng AI (Kokoro-82M chạy ngay trong trình duyệt) ============ */
+  // Giọng của máy thường chỉ có 1–2 giọng tiếng Anh, nên app tải thêm mô hình giọng AI (một lần, dùng lại offline).
+  var AI_MODEL = "onnx-community/Kokoro-82M-v1.0-ONNX";
+  var AI_VOICES = [
+    ["af_heart", "Heart", "Nữ Mỹ", "Ấm, tự nhiên"],
+    ["af_bella", "Bella", "Nữ Mỹ", "Trẻ, sáng"],
+    ["af_sky", "Sky", "Nữ Mỹ", "Trẻ, nhẹ"],
+    ["af_nicole", "Nicole", "Nữ Mỹ", "Êm, nhỏ nhẹ"],
+    ["af_sarah", "Sarah", "Nữ Mỹ", "Rõ ràng"],
+    ["af_nova", "Nova", "Nữ Mỹ", "Năng động"],
+    ["am_michael", "Michael", "Nam Mỹ", "Chuẩn, dễ nghe"],
+    ["am_liam", "Liam", "Nam Mỹ", "Trẻ"],
+    ["am_adam", "Adam", "Nam Mỹ", "Trầm, chững chạc"],
+    ["am_onyx", "Onyx", "Nam Mỹ", "Rất trầm"],
+    ["am_puck", "Puck", "Nam Mỹ", "Linh hoạt"],
+    ["bf_emma", "Emma", "Nữ Anh", "Lịch sự, chuẩn"],
+    ["bf_isabella", "Isabella", "Nữ Anh", "Mềm mại"],
+    ["bf_alice", "Alice", "Nữ Anh", "Trưởng thành"],
+    ["bf_lily", "Lily", "Nữ Anh", "Trẻ, nhẹ"],
+    ["bm_daniel", "Daniel", "Nam Anh", "Rõ ràng"],
+    ["bm_lewis", "Lewis", "Nam Anh", "Điềm tĩnh"],
+    ["bm_george", "George", "Nam Anh", "Trầm, lớn tuổi"],
+    ["bm_fable", "Fable", "Nam Anh", "Kể chuyện"]
+  ];
+  var ai = { tts: null, status: "idle", pct: 0, err: "", loading: false, waiters: [], q: Promise.resolve(), cache: {}, order: [] };
+  var aiAudio = null, aiUrl = null;
+  function aiVoiceInfo(id) { return AI_VOICES.filter(function (v) { return v[0] === id; })[0] || null; }
+  function aiVoiceName(id) { var v = aiVoiceInfo(id); return v ? v[1] + " · " + v[2] : ""; }
+  function aiNotify() { try { if (window.__aiUi) window.__aiUi(); } catch (e) {} }
+  window.__aiStop = function () {
+    if (aiAudio) { try { aiAudio.onended = null; aiAudio.onerror = null; aiAudio.pause(); } catch (e) {} aiAudio = null; }
+    if (aiUrl) { try { URL.revokeObjectURL(aiUrl); } catch (e) {} aiUrl = null; }
+  };
+  function aiLoad(done) {
+    if (ai.tts) { if (done) done(null); return; }
+    if (done) ai.waiters.push(done);
+    if (ai.loading) return;
+    ai.loading = true; ai.status = "loading"; ai.err = ""; ai.pct = 0;
+    var files = {};
+    aiNotify();
+    function finish(err) {
+      ai.loading = false; ai.status = err ? "error" : "ready"; ai.err = err ? String(err.message || err) : "";
+      if (!err) { ai.pct = 100; write("ielts_ai", 1); try { if (navigator.storage && navigator.storage.persist) navigator.storage.persist(); } catch (e) {} }
+      var w = ai.waiters; ai.waiters = []; w.forEach(function (f) { try { f(err || null); } catch (e) {} });
+      aiNotify();
+    }
+    import("./kokoro.web.js").then(function (m) {
+      return m.KokoroTTS.from_pretrained(AI_MODEL, {
+        dtype: "q8", device: "wasm",
+        progress_callback: function (p) {
+          if (!p || !p.file || !p.total) return;
+          files[p.file] = { l: p.loaded || 0, t: p.total };
+          var L = 0, T = 0; Object.keys(files).forEach(function (k) { L += files[k].l; T += files[k].t; });
+          var pc = T ? Math.min(99, Math.round(L * 100 / T)) : 0;
+          if (pc !== ai.pct) { ai.pct = pc; aiNotify(); }
+        }
+      });
+    }).then(function (tts) { ai.tts = tts; finish(null); }, function (e) { console.error(e); finish(e); });
+  }
+  function aiChunks(text) {
+    var t = String(text).replace(/\s+/g, " ").trim();
+    if (!t) return [];
+    var parts = t.match(/[^.!?;]+[.!?;]*\s*/g) || [t], out = [], cur = "";
+    parts.forEach(function (p) {
+      if ((cur + p).length > 220 && cur) { out.push(cur.trim()); cur = p; } else cur += p;
+    });
+    if (cur.trim()) out.push(cur.trim());
+    return out;
+  }
+  function aiGen(text, voice, speed) {
+    var key = voice + "|" + speed.toFixed(2) + "|" + text;
+    if (ai.cache[key]) return Promise.resolve(ai.cache[key]);
+    var p = ai.q.then(function () {
+      if (ai.cache[key]) return ai.cache[key];
+      return ai.tts.generate(text, { voice: voice, speed: speed }).then(function (a) {
+        var blob = a.toBlob();
+        ai.cache[key] = blob; ai.order.push(key);
+        if (ai.order.length > 60) delete ai.cache[ai.order.shift()];
+        return blob;
+      });
+    });
+    ai.q = p.then(function () {}, function () {});
+    return p;
+  }
+  // Trả về true nếu giọng AI nhận việc đọc; false thì speak() dùng giọng của máy
+  window.__aiSpeak = function (text, o, end, token, cb) {
+    if (!ai.tts) { if (ai.status !== "loading") aiLoad(); return false; }
+    var voice = o.aiVoice || vPrefs.ai, speed = Math.max(.6, Math.min(1.3, o.rate || vPrefs.rate || .95));
+    var parts = aiChunks(text);
+    if (!parts.length) { end(); return true; }
+    if (o.el) o.el.classList.add("playing");
+    var i = 0, failed = false;
+    function fallback(e) {
+      if (failed || token !== speakToken) return; failed = true;
+      console.error(e); toast("Giọng AI lỗi, tạm dùng giọng của máy.");
+      var o2 = {}; Object.keys(o).forEach(function (k) { o2[k] = o[k]; }); o2.noai = true;
+      if (o.el) o.el.classList.remove("playing");
+      speak(text, o2, cb);
+    }
+    function next() {
+      if (token !== speakToken) return;
+      if (i >= parts.length) { end(); return; }
+      var cur = i++;
+      aiGen(parts[cur], voice, speed).then(function (blob) {
+        if (token !== speakToken) return;
+        window.__aiStop();
+        aiUrl = URL.createObjectURL(blob);
+        var a = new Audio(aiUrl); aiAudio = a;
+        a.onended = next; a.onerror = function () { fallback("audio"); };
+        var pr = a.play(); if (pr && pr.catch) pr.catch(fallback);
+        if (cur + 1 < parts.length) aiGen(parts[cur + 1], voice, speed).catch(function () {});
+      }).catch(fallback);
+    }
+    next();
+    return true;
+  };
 
   function renderQuestion() {
     var q = state.list[state.index];
@@ -9588,6 +9770,7 @@
     $("bootStatus").style.display = "none";
     $("tabPanes").style.display = "block";
     if (!$("fab")) { initFab(); initVoiceBtn(); }
+    if (vPrefs.engine === "ai" && vPrefs.ai) setTimeout(function () { aiLoad(); }, 2500);
     show("main");
     refreshTop();
     var s = getStats(), st = currentStreak();
