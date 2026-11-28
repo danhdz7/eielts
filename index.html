@@ -1409,6 +1409,44 @@
   .vazb.on{background:#fff;color:#14183f;border-color:#fff}
   html[data-theme="light"] .vwvi{color:#1f2a55}
   html[data-theme="light"] .vgstudy{color:#1d4ed8}
+
+  /* ===== Bảng giọng ===== */
+  .vpanel .cap{margin:2px 0 8px}
+  .vpanel .vcap{margin-top:18px}
+  .vnow{display:flex;flex-direction:column;gap:2px;padding:12px 14px;border-radius:14px;background:rgba(96,165,250,.14);border:1px solid var(--line)}
+  .vnow b{font-size:1.02rem}.vnow small{opacity:.7}
+  .vrow{margin-bottom:8px;padding:11px 12px}
+  .vrow.vsel{border-color:#45d495;box-shadow:0 0 0 1px #45d495 inset}
+  .vrow .rc-txt small{display:block;opacity:.72;font-size:.74rem;line-height:1.25;margin-top:2px}
+  .vsheet-h{margin:0 0 10px;font-size:1.08rem}
+  /* nút Giọng khi đang học (nằm cạnh nút âm thanh) */
+  .vbtn{position:fixed;top:calc(12px + env(safe-area-inset-top));right:58px;z-index:60;height:40px;padding:0 12px;border-radius:999px;
+    background:rgba(255,255,255,.1);border:1px solid var(--line);backdrop-filter:blur(8px);color:inherit;font-weight:800;font-size:.78rem;display:none}
+  body.in-lesson .vbtn{display:block}
+  body[data-scr="result"] .vbtn,body[data-scr="bandres"] .vbtn{display:none}
+  body.in-lesson .topbar{padding-right:128px}
+  /* bong bóng tiện ích */
+  .fab{position:fixed;z-index:45;width:54px;height:54px;display:none;touch-action:none;transition:left .25s var(--ez),top .25s var(--ez)}
+  .fab.drag{transition:none}
+  body[data-scr="main"] .fab{display:block}
+  .fabback{position:fixed;inset:0;z-index:44;background:rgba(4,6,22,.5);backdrop-filter:blur(2px);opacity:0;pointer-events:none;transition:opacity .22s}
+  .fabback.on{opacity:1;pointer-events:auto}
+  body[data-scr="main"] .fabback{display:block}
+  body:not([data-scr="main"]) .fabback{display:none}
+  .fabbtn{position:relative;z-index:2;width:54px;height:54px;border-radius:50%;border:0;padding:0;font-size:1.5rem;color:#fff;cursor:grab;
+    background:linear-gradient(145deg,#7c8cff,#4f6bff 55%,#37c6ff);box-shadow:0 8px 22px rgba(40,70,220,.5),0 0 0 3px rgba(255,255,255,.16);touch-action:none;
+    transition:transform .2s var(--sp)}
+  .fab.open .fabbtn{transform:rotate(90deg);background:linear-gradient(145deg,#ff7c9c,#ff4f6b)}
+  .fab.drag .fabbtn{transform:scale(1.12);cursor:grabbing}
+  .fabitems{position:absolute;left:0;top:0;width:54px;height:54px;z-index:1}
+  .fabit{position:absolute;left:4px;top:4px;width:46px;height:46px;border-radius:50%;border:1px solid var(--line2);padding:0;background:#1d2570;color:#fff;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;opacity:0;pointer-events:none;transform:translate(0,0) scale(.3);
+    transition:transform .3s var(--sp),opacity .2s;box-shadow:0 6px 16px rgba(0,0,0,.4)}
+  .fab.open .fabit{opacity:1;pointer-events:auto;transform:translate(var(--dx),var(--dy)) scale(1)}
+  .fabit .fi{font-size:1.25rem;line-height:1}
+  .fabit .fl{position:absolute;top:100%;margin-top:2px;font-size:.62rem;font-weight:800;white-space:nowrap;text-shadow:0 1px 3px rgba(0,0,0,.8);color:#fff}
+  html[data-theme="light"] .fabit{background:#fff;color:#1a2250}
+  html[data-theme="light"] .vbtn{color:#1a2250}
 </style>
 </head>
 <body>
@@ -2197,7 +2235,7 @@
     try {
       window.speechSynthesis.cancel();
       var u = new SpeechSynthesisUtterance(String(text));
-      var v = pickVoice(false);
+      var v = o.voice || pickVoice(false);
       if (v) { u.voice = v; u.lang = v.lang; } else { u.lang = "en-US"; }
       u.rate = o.rate || (vPrefs.rate || 0.95);
       u.pitch = o.pitch || vPrefs.pitch || 1;
@@ -2475,6 +2513,8 @@
     SCREENS.forEach(function (n) { $("screen-" + n).classList.toggle("active", n === name); });
     if (name !== "analyzer") document.body.classList.remove("an-rec");
     document.body.classList.toggle("in-lesson", !!LESSON_SCREENS[name]);
+    document.body.setAttribute("data-scr", name);
+    if (window.__fabClose) window.__fabClose();
     document.body.classList.toggle("scr-bandres", name === "bandres");
     if (name !== "quiz") hideSheet();
     window.scrollTo(0, 0);
@@ -3388,7 +3428,7 @@
 
     var set = mk("div", "card"); set.style.marginTop = "12px";
     set.appendChild(mk("h2", "", "Cài đặt"));
-    set.appendChild(setRow("🗣️ Gia sư AI", currentTutor().n, function () { openSettings("tutor"); }));
+    set.appendChild(setRow("🗣️ Giọng đọc", voiceLabel(), function () { openSettings("tutor"); }));
     set.appendChild(setRow("🎚️ Tốc độ đọc", (vPrefs.rate || .95).toFixed(2) + "×", function () { openSettings("voice"); }));
     set.appendChild(setRow("🌐 Ngôn ngữ / Language", LANG === "en" ? "English" : "Tiếng Việt", function () { langSheet(); }));
     set.appendChild(setRow("🌓 Giao diện", themeMode() === "light" ? "Sáng" : themeMode() === "system" ? "Theo máy" : "Tối", function () { openSettings("theme"); }));
@@ -3540,111 +3580,15 @@
   }
   function openSettings(which) {
     var body = clear($("setBody"));
-    $("setTitle").textContent = { tutor: "Gia sư AI", theme: "Giao diện", voice: "Giọng đọc", goal: "Mục tiêu" }[which] || "Tên hiển thị";
+    $("setTitle").textContent = { tutor: "Giọng đọc", theme: "Giao diện", voice: "Giọng đọc", goal: "Mục tiêu" }[which] || "Tên hiển thị";
     if (which === "backup") { backupScreen(); return; }
-    if (which === "tutor") {
-      var c0 = mk("div", "card");
-      c0.appendChild(el("p", "muted", "Chọn giọng đọc bạn thấy dễ nghe nhất. Đổi lúc nào cũng được."));
-      TUTORS.forEach(function (t) {
-        var row = mk("button", "rowcard"); row.type = "button";
-        var v = t.manual ? null : tutorVoice(t);
-        var avail = t.manual || !!v;
-        if (!avail && voices.length) row.style.opacity = ".45";
-        row.appendChild(mk("span", "rc-ico", t.manual ? "⚙️" : "🗣️"));
-        var tx = mk("span", "rc-txt");
-        var nb = mk("b", "", t.n);
-        if (currentTutor().id === t.id) nb.appendChild(mk("span", "tagnew", "ĐANG DÙNG"));
-        tx.appendChild(nb);
-        tx.appendChild(mk("small", "", !voices.length ? "Đang tải danh sách giọng của máy…"
-          : avail ? t.t + (v ? " · " + v.name.replace(/^Microsoft |^Google /, "") : "") : "Máy này chưa có giọng phù hợp"));
-        row.appendChild(tx);
-        var play = mk("span", "rc-go", "▶");
-        play.addEventListener("click", function (e) {
-          e.stopPropagation();
-          var keep = { name: vPrefs.name, uri: vPrefs.uri, accent: vPrefs.accent, rate: vPrefs.rate, pitch: vPrefs.pitch };
-          if (!t.manual && v) { vPrefs.name = v.name; vPrefs.uri = voiceKey(v); vPrefs.accent = t.acc; vPrefs.rate = t.rate; vPrefs.pitch = t.pitch || 1; }
-          speak("Hello, I am " + t.n + ". I will read your lessons today.", { force: true });
-          setTimeout(function () { if (currentTutor().id !== t.id) { Object.keys(keep).forEach(function (k) { vPrefs[k] = keep[k]; }); } }, 3200);
-        });
-        row.appendChild(play);
-        row.addEventListener("click", function () {
-          if (!avail && voices.length) { toast("Máy này chưa có giọng cho lựa chọn đó."); return; }
-          sfx.ok(); applyTutor(t);
-          if (t.manual) { openSettings("voice"); return; }
-          toast("Đã chọn giọng " + t.n);
-          speak("Great. I am " + t.n + ", and I will be your tutor.", { force: true });
-          openSettings("tutor");
-        });
-        c0.appendChild(row);
-      });
-      if (voices.length && !enVoices().length) c0.appendChild(el("div", "note", "Máy này chưa có giọng tiếng Anh nào. Trên Android, cài <b>Dịch vụ giọng nói của Google</b> rồi mở lại app."));
-      body.appendChild(c0);
-      window.__onVoices = function () { if ($("screen-settings").classList.contains("active") && $("setTitle").textContent === "Gia sư AI") openSettings("tutor"); };
-    } else if (which === "theme") {
-      var c1 = mk("div", "card");
-      c1.appendChild(el("label", "", "Giao diện"));
-      var seg = mk("div", "seg");
-      [["dark", "Tối"], ["light", "Sáng"], ["system", "Theo máy"]].forEach(function (x) {
-        var b = mk("button", themeMode() === x[0] ? "on" : "", x[1]); b.type = "button";
-        b.addEventListener("click", function () {
-          sfx.tap(); applyTheme(x[0]);
-          Array.prototype.forEach.call(seg.children, function (y) { y.classList.toggle("on", y.textContent === x[1]); });
-        });
-        seg.appendChild(b);
-      });
-      c1.appendChild(seg);
-      c1.appendChild(el("div", "info", "Chế độ Theo máy sẽ đổi theo cài đặt sáng tối của điện thoại."));
-      body.appendChild(c1);
-    } else if (which === "voice") {
-      var card = mk("div", "card");
-      card.appendChild(el("label", "", "Giọng"));
-      var acc = mk("select");
-      [["auto", "Tự chọn giọng tốt nhất"], ["us", "Giọng Mỹ"], ["uk", "Giọng Anh"], ["au", "Giọng Úc"]].forEach(function (o) {
-        var op = mk("option", "", o[1]); op.value = o[0]; acc.appendChild(op);
-      });
-      acc.value = vPrefs.accent || "auto";
-      card.appendChild(acc);
-
-      card.appendChild(el("label", "", "Chọn giọng cụ thể"));
-      var sel = mk("select");
-      function fillVoices() {
-        clear(sel);
-        var o0 = mk("option", "", "Tự động (" + (pickVoice() ? pickVoice().name : "—") + ")"); o0.value = ""; sel.appendChild(o0);
-        enVoices().forEach(function (v) {
-          var o = mk("option", "", v.name + "  (" + v.lang + ")" + (v.voiceURI && v.voiceURI !== v.name ? " · " + v.voiceURI.split(/[#/]/).pop() : "")); o.value = voiceKey(v); sel.appendChild(o);
-        });
-        sel.value = vPrefs.uri || "";
-        if (sel.value !== (vPrefs.uri || "")) sel.value = "";
-      }
-      fillVoices();
-      card.appendChild(sel);
-      if (!enVoices().length) card.appendChild(el("div", "note", "Máy này chưa có giọng tiếng Anh nào. Trên Android, cài <b>Dịch vụ giọng nói của Google</b> rồi mở lại app."));
-
-      card.appendChild(el("label", "", "Tốc độ đọc"));
-      var rate = document.createElement("input");
-      rate.type = "range"; rate.className = "range"; rate.min = "0.7"; rate.max = "1.2"; rate.step = "0.05";
-      rate.value = String(vPrefs.rate || 0.95);
-      var rl = mk("div", "wcount");
-      rl.appendChild(mk("span", "", "Chậm")); rl.appendChild(mk("span", "timer", (vPrefs.rate || .95).toFixed(2) + "×")); rl.appendChild(mk("span", "", "Nhanh"));
-      card.appendChild(rate); card.appendChild(rl);
-
-      var test = mk("button", "btn-ghost", "🔊 Nghe thử câu mẫu"); test.type = "button";
-      card.appendChild(test);
-      card.appendChild(el("div", "info", "Giọng đọc do máy của bạn cung cấp, app chỉ chọn giọng dễ nghe nhất. Giọng Google thường tự nhiên hơn giọng mặc định của Windows."));
-      body.appendChild(card);
-
-      function save() {
-        vPrefs.accent = acc.value; vPrefs.uri = sel.value;
-        var chosen = enVoices().filter(function (v) { return voiceKey(v) === sel.value; })[0];
-        vPrefs.name = chosen ? chosen.name : ""; vPrefs.pitch = 1; vPrefs.rate = parseFloat(rate.value) || .95;
-        write("ielts_voice", vPrefs);
-        rl.children[1].textContent = vPrefs.rate.toFixed(2) + "×";
-      }
-      acc.addEventListener("change", function () { save(); fillVoices(); speak("This is how I will read your lessons.", { force: true }); });
-      sel.addEventListener("change", function () { save(); speak("This is how I will read your lessons.", { force: true }); });
-      rate.addEventListener("input", save);
-      rate.addEventListener("change", function () { save(); speak("Listening practice helps you a lot.", { force: true }); });
-      test.addEventListener("click", function () { save(); speak("Good morning. Today we will practise some useful words for the exam.", { force: true, el: test }); });
+    if (which === "tutor" || which === "voice") {
+      var vc = mk("div", "card vpanel");
+      body.appendChild(vc);
+      renderVoicePanel(vc);
+      window.__onVoices = function () {
+        if ($("screen-settings").classList.contains("active") && vc.parentNode) renderVoicePanel(vc);
+      };
     } else if (which === "goal") {
       var p = getProfile() || {}, c2 = mk("div", "card");
       c2.appendChild(el("label", "", "Band mục tiêu"));
@@ -4833,11 +4777,11 @@
     { id: "c", n: "Oliver", t: "Giọng Anh · Nam · Lịch sự, chuẩn", acc: "uk", g: "m", pref: /\bmale|ryan|george|daniel|thomas|arthur|gbb|gbd|rjs/i, rate: .92, pitch: .93 },
     { id: "d", n: "Sophie", t: "Giọng Anh · Nữ · Nhẹ nhàng", acc: "uk", g: "f", pref: /female|sonia|libby|hazel|kate|serena|martha|gba|gbc|gbg/i, rate: .9, pitch: 1 },
     { id: "e", n: "Mia", t: "Giọng Úc · Nữ · Vui vẻ", acc: "au", g: "f", pref: /female|natasha|karen|aua|auc/i, rate: .95, pitch: 1 },
-    { id: "k", n: "Bé Lily", t: "Trẻ em · Band 0–4 · Giọng Mỹ nữ, chậm, tách từ rõ", acc: "us", g: "f", pref: /female|zira|aria|jenny|samantha|ava|allison|sfg|iob|iog|tpc|tpf|google/i, rate: .78, pitch: 1.3 },
-    { id: "s", n: "Sam", t: "Thanh niên · Band 4–5 · Giọng Mỹ nam, vừa chậm", acc: "us", g: "m", pref: /\bmale|guy|david|mark|ryan|alex|christopher|eric|iol|iom|tpd/i, rate: .88, pitch: 1.08 },
-    { id: "h", n: "Natasha", t: "Trưởng thành · Band 6 · Giọng Úc nữ, tốc độ chuẩn", acc: "au", g: "f", pref: /female|natasha|karen|aua|auc/i, rate: 1, pitch: 1 },
-    { id: "p", n: "Giáo sư George", t: "Lớn tuổi · Band 7+ · Giọng Anh nam trầm, nhịp tự nhiên", acc: "uk", g: "m", pref: /\bmale|ryan|george|daniel|thomas|arthur|gbb|gbd|rjs/i, rate: 1.03, pitch: .8 },
-    { id: "m", n: "Bà Margaret", t: "Lớn tuổi · Band 7+ · Giọng Anh nữ chững chạc", acc: "uk", g: "f", pref: /female|sonia|libby|hazel|kate|serena|martha|gba|gbc|gbg/i, rate: .98, pitch: .86 },
+    { id: "k", n: "Bé Lily", t: "Giọng trẻ em · Mỹ nữ · Chậm, tách từ rõ", acc: "us", g: "f", pref: /female|zira|aria|jenny|samantha|ava|allison|sfg|iob|iog|tpc|tpf|google/i, rate: .78, pitch: 1.3 },
+    { id: "s", n: "Sam", t: "Thanh niên · Mỹ nam · Vừa chậm", acc: "us", g: "m", pref: /\bmale|guy|david|mark|ryan|alex|christopher|eric|iol|iom|tpd/i, rate: .88, pitch: 1.08 },
+    { id: "h", n: "Natasha", t: "Trưởng thành · Úc nữ · Tốc độ chuẩn", acc: "au", g: "f", pref: /female|natasha|karen|aua|auc/i, rate: 1, pitch: 1 },
+    { id: "p", n: "Giáo sư George", t: "Lớn tuổi · Anh nam · Trầm, nhịp tự nhiên", acc: "uk", g: "m", pref: /\bmale|ryan|george|daniel|thomas|arthur|gbb|gbd|rjs/i, rate: 1.03, pitch: .8 },
+    { id: "m", n: "Bà Margaret", t: "Lớn tuổi · Anh nữ · Chững chạc", acc: "uk", g: "f", pref: /female|sonia|libby|hazel|kate|serena|martha|gba|gbc|gbg/i, rate: .98, pitch: .86 },
     { id: "f", n: "Tự chọn", t: "Chọn thủ công trong danh sách giọng của máy", acc: "auto", pref: /./, rate: .92, pitch: 1, manual: true }
   ];
   function tutorVoice(t) {
@@ -8851,6 +8795,227 @@
     stagger(body);
     try { window.scrollTo(0, keepScroll); } catch (e) {}
   }
+  /* ============ Bảng chọn giọng (dùng chung: Cài đặt, màn hình học, bong bóng) ============ */
+  function accLabel(lang) {
+    lang = lang || "";
+    if (/en[-_]US/i.test(lang)) return "Mỹ";
+    if (/en[-_]GB/i.test(lang)) return "Anh";
+    if (/en[-_]AU/i.test(lang)) return "Úc";
+    if (/en[-_]IN/i.test(lang)) return "Ấn Độ";
+    if (/en[-_]CA/i.test(lang)) return "Canada";
+    if (/en[-_]IE/i.test(lang)) return "Ireland";
+    if (/en[-_]ZA/i.test(lang)) return "Nam Phi";
+    return lang;
+  }
+  function voiceNice(v) { return (v.name || "").replace(/^Microsoft |^Google /, ""); }
+  var VOICE_SAMPLE = "Hello! This is how I sound. Let's practise English together.";
+  function voiceSaveNow() { write("ielts_voice", vPrefs); }
+
+  function renderVoicePanel(host) {
+    var sy = window.scrollY, ss = $("uiSheet").scrollTop;
+    clear(host);
+    loadVoices();
+    var all = enVoices().slice().sort(function (a, b) { return ((a.lang || "") + (a.name || "")).localeCompare((b.lang || "") + (b.name || "")); });
+    var cur = pickVoice(false), curKey = cur ? voiceKey(cur) : "";
+
+    host.appendChild(mk("div", "cap", "Giọng đang dùng"));
+    var now = el("div", "vnow", "<b>" + esc(cur ? voiceNice(cur) : "Chưa có giọng") + "</b><small>" + esc(cur ? "Giọng " + accLabel(cur.lang) : "") + "</small>");
+    host.appendChild(now);
+
+    // Tốc độ + độ cao: áp dụng cho mọi giọng, nghe thử ngay khi thả tay
+    function slider(label, key, min, max, def, lo, hi, fmt) {
+      host.appendChild(el("label", "", label));
+      var r = document.createElement("input");
+      r.type = "range"; r.className = "range"; r.min = String(min); r.max = String(max); r.step = "0.05";
+      r.value = String(vPrefs[key] || def);
+      var rl = mk("div", "wcount");
+      rl.appendChild(mk("span", "", lo)); var val = mk("span", "timer", fmt(parseFloat(r.value))); rl.appendChild(val); rl.appendChild(mk("span", "", hi));
+      r.addEventListener("input", function () { vPrefs[key] = parseFloat(r.value) || def; val.textContent = fmt(vPrefs[key]); voiceSaveNow(); });
+      r.addEventListener("change", function () { sfx.tap(); speak(VOICE_SAMPLE, { force: true }); });
+      host.appendChild(r); host.appendChild(rl);
+    }
+    slider("Tốc độ đọc", "rate", 0.6, 1.3, 0.95, "Chậm", "Nhanh", function (x) { return x.toFixed(2) + "×"; });
+    slider("Độ trầm / cao", "pitch", 0.7, 1.3, 1, "Trầm", "Cao", function (x) { return x.toFixed(2); });
+
+    host.appendChild(mk("div", "cap vcap", "Giọng có trên máy (" + all.length + ")"));
+    if (!voices.length) host.appendChild(el("div", "note", "Đang tải danh sách giọng của máy…"));
+    else if (!all.length) host.appendChild(el("div", "note", "Máy này chưa có giọng tiếng Anh nào. Trên Android, cài <b>Dịch vụ giọng nói của Google</b> rồi mở lại app."));
+    all.forEach(function (v) {
+      var row = mk("button", "rowcard vrow"); row.type = "button";
+      var on = voiceKey(v) === curKey;
+      if (on) row.classList.add("vsel");
+      row.appendChild(mk("span", "rc-ico", on ? "✅" : "🗣️"));
+      var tx = mk("span", "rc-txt");
+      var nb = mk("b", "", voiceNice(v));
+      if (on) nb.appendChild(mk("span", "tagnew", "ĐANG DÙNG"));
+      tx.appendChild(nb);
+      tx.appendChild(mk("small", "", "Giọng " + accLabel(v.lang) + " · " + (v.lang || "") + (v.localService === false ? " · online" : " · có sẵn")));
+      row.appendChild(tx);
+      var play = mk("span", "rc-go", "▶"); play.setAttribute("data-noi3", "1");
+      play.addEventListener("click", function (e) {
+        e.stopPropagation(); sfx.tap();
+        speak(VOICE_SAMPLE, { force: true, voice: v, rate: vPrefs.rate, pitch: vPrefs.pitch });
+      });
+      row.appendChild(play);
+      row.addEventListener("click", function () {
+        sfx.ok();
+        vPrefs.name = v.name; vPrefs.uri = voiceKey(v); vPrefs.accent = "auto";
+        write("ielts_tutor", "f"); voiceSaveNow();
+        toast("Đã chọn giọng " + voiceNice(v));
+        speak("Great. I will read your lessons with this voice.", { force: true, voice: v });
+        renderVoicePanel(host);
+      });
+      host.appendChild(row);
+    });
+    if (voices.length && all.length <= 3)
+      host.appendChild(el("div", "note", "Máy chỉ có " + all.length + " giọng tiếng Anh nên số lựa chọn ít. Muốn có thêm: vào Cài đặt điện thoại → Chuyển văn bản thành giọng nói → Google → Cài đặt dữ liệu giọng nói → Tiếng Anh, tải thêm giọng Mỹ, Anh, Úc rồi mở lại app."));
+
+    host.appendChild(mk("div", "cap vcap", "Phong cách đọc"));
+    host.appendChild(el("p", "muted", "Mỗi phong cách tự chọn một giọng hợp trên máy bạn và chỉnh tốc độ, độ trầm. Dùng được ở mọi band."));
+    var cT = currentTutor();
+    TUTORS.forEach(function (t) {
+      if (t.manual) return;
+      var v = tutorVoice(t);
+      if (!v && voices.length) return;
+      var row = mk("button", "rowcard vrow"); row.type = "button";
+      var on = cT.id === t.id && !cT.manual;
+      if (on) row.classList.add("vsel");
+      row.appendChild(mk("span", "rc-ico", on ? "✅" : "🎚️"));
+      var tx = mk("span", "rc-txt");
+      var nb = mk("b", "", t.n);
+      if (on) nb.appendChild(mk("span", "tagnew", "ĐANG DÙNG"));
+      tx.appendChild(nb);
+      tx.appendChild(mk("small", "", t.t + (v ? " · " + voiceNice(v) : "")));
+      row.appendChild(tx);
+      var play = mk("span", "rc-go", "▶"); play.setAttribute("data-noi3", "1");
+      play.addEventListener("click", function (e) {
+        e.stopPropagation(); sfx.tap();
+        speak("Hello, I am " + t.n + ". I will read your lessons today.", { force: true, voice: v, rate: t.rate, pitch: t.pitch || 1 });
+      });
+      row.appendChild(play);
+      row.addEventListener("click", function () {
+        sfx.ok(); applyTutor(t);
+        toast("Đã chọn " + t.n);
+        speak("Great. I am " + t.n + ", and I will be your tutor.", { force: true });
+        renderVoicePanel(host);
+      });
+      host.appendChild(row);
+    });
+    window.scrollTo(0, sy); $("uiSheet").scrollTop = ss;
+  }
+
+  function openVoiceSheet() {
+    openSheet(function (body) {
+      body.appendChild(mk("h3", "vsheet-h", "🗣️ Giọng đọc"));
+      var host = mk("div", "vpanel");
+      body.appendChild(host);
+      renderVoicePanel(host);
+      window.__onVoices = function () { if (host.parentNode && sheetOpen) renderVoicePanel(host); };
+    });
+  }
+
+  /* Nút "Giọng" ở góc trên khi đang học */
+  function initVoiceBtn() {
+    var b = mk("button", "vbtn", "🗣️ Giọng"); b.type = "button"; b.id = "voiceBtn";
+    b.setAttribute("aria-label", "Đổi giọng đọc"); b.setAttribute("data-noi3", "1");
+    b.addEventListener("click", function () { sfx.tap(); openVoiceSheet(); });
+    document.body.appendChild(b);
+  }
+
+  /* ============ Bong bóng tiện ích (kéo được, bấm xoè menu) ============ */
+  var FAB_ITEMS = [
+    ["🗣️", "Giọng", function () { openVoiceSheet(); }],
+    ["🔍", "Tra từ", function () { openLookup(); }],
+    ["🃏", "Ôn thẻ", function () { startLesson({ kind: "cards", topic: "all", size: 15, name: "Thẻ từ", key: "p:cards" }); }],
+    ["📚", "Từ vựng", function () { state.discSeg = "level"; selectTab("discover"); }],
+    ["🎙️", "Nói tự do", function () { openAnalyzer(); }],
+    ["⚙️", "Cài đặt", function () { state.profSeg = "me"; selectTab("profile"); }]
+  ];
+  function initFab() {
+    var pos = read("ielts_fab", null) || { side: "r", y: 0.55 };
+    var fab = mk("div", "fab"); fab.id = "fab";
+    var back = mk("div", "fabback");
+    var bub = mk("button", "fabbtn", "✨"); bub.type = "button"; bub.setAttribute("aria-label", "Tiện ích nhanh"); bub.setAttribute("data-noi3", "1");
+    var items = mk("div", "fabitems");
+    fab.appendChild(items); fab.appendChild(bub);
+    document.body.appendChild(back); document.body.appendChild(fab);
+    var SZ = 54, open = false;
+
+    function bounds() {
+      var w = window.innerWidth, h = window.innerHeight;
+      var top = 70, bot = h - 66 - 20 - SZ;           // chừa thanh tab dưới và thanh trên
+      return { w: w, h: h, top: top, bot: Math.max(top + 10, bot) };
+    }
+    function place() {
+      var b = bounds();
+      var y = Math.min(b.bot, Math.max(b.top, pos.y * b.h));
+      var x = pos.side === "l" ? 8 : b.w - SZ - 8;
+      fab.style.left = x + "px"; fab.style.top = y + "px";
+      fab.classList.toggle("l", pos.side === "l");
+    }
+    function layout() {
+      // xoè các nút thành hình quạt hướng vào giữa màn hình
+      var b = bounds(), cx = parseFloat(fab.style.left) + SZ / 2, cy = parseFloat(fab.style.top) + SZ / 2;
+      var R = 104, n = FAB_ITEMS.length;
+      var base = pos.side === "l" ? 0 : 180;                 // độ, 0 = sang phải
+      if (cy < 190) base += (pos.side === "l" ? -35 : 35);   // sát đỉnh: nghiêng xuống dưới
+      if (cy > b.h - 260) base += (pos.side === "l" ? 35 : -35);
+      var spread = 150;
+      Array.prototype.forEach.call(items.children, function (it, i) {
+        var a = (base - spread / 2 + spread * i / (n - 1)) * Math.PI / 180;
+        var dx = Math.cos(a) * R, dy = -Math.sin(a) * R;
+        dx = Math.min(b.w - 31 - cx, Math.max(31 - cx, dx));
+        dy = Math.min(b.h - 96 - cy, Math.max(31 - cy, dy));
+        it.style.setProperty("--dx", dx.toFixed(1) + "px"); it.style.setProperty("--dy", dy.toFixed(1) + "px");
+        it.style.transitionDelay = (i * 28) + "ms";
+      });
+    }
+    FAB_ITEMS.forEach(function (d) {
+      var it = mk("button", "fabit"); it.type = "button";
+      it.appendChild(mk("span", "fi", d[0])); it.lastChild.setAttribute("data-noi3", "1");
+      it.appendChild(mk("span", "fl", d[1]));
+      it.addEventListener("click", function (e) { e.stopPropagation(); sfx.tap(); setOpen(false); setTimeout(d[2], 120); });
+      items.appendChild(it);
+    });
+    function setOpen(v) {
+      open = v; if (v) layout();
+      fab.classList.toggle("open", v); back.classList.toggle("on", v);
+      bub.textContent = v ? "✕" : "✨";
+    }
+    back.addEventListener("click", function () { setOpen(false); });
+
+    // kéo thả bằng pointer events; di chuyển < 6px thì coi là bấm
+    var drag = null, justOpened = false;
+    bub.addEventListener("pointerdown", function (e) {
+      if (open) return;
+      drag = { id: e.pointerId, sx: e.clientX, sy: e.clientY, ox: parseFloat(fab.style.left), oy: parseFloat(fab.style.top), moved: false };
+      try { bub.setPointerCapture(e.pointerId); } catch (x) {}
+    });
+    bub.addEventListener("pointermove", function (e) {
+      if (!drag || e.pointerId !== drag.id) return;
+      var dx = e.clientX - drag.sx, dy = e.clientY - drag.sy;
+      if (!drag.moved && Math.abs(dx) + Math.abs(dy) < 6) return;
+      drag.moved = true; fab.classList.add("drag"); e.preventDefault();
+      var b = bounds();
+      fab.style.left = Math.min(b.w - SZ - 4, Math.max(4, drag.ox + dx)) + "px";
+      fab.style.top = Math.min(b.bot, Math.max(b.top, drag.oy + dy)) + "px";
+    });
+    function endDrag(e) {
+      if (!drag || (e && e.pointerId !== drag.id)) return;
+      var d = drag; drag = null; fab.classList.remove("drag");
+      if (d.moved) {
+        var b = bounds(), x = parseFloat(fab.style.left) + SZ / 2;
+        pos.side = x < b.w / 2 ? "l" : "r"; pos.y = parseFloat(fab.style.top) / b.h;
+        write("ielts_fab", pos); place();      // hít vào mép gần nhất
+      } else { sfx.tap(); if (!open) justOpened = true; setOpen(!open); }
+    }
+    bub.addEventListener("pointerup", endDrag);
+    bub.addEventListener("pointercancel", endDrag);
+    bub.addEventListener("click", function () { if (justOpened) { justOpened = false; return; } if (open) setOpen(false); });
+    window.addEventListener("resize", function () { place(); if (open) layout(); });
+    window.__fabClose = function () { if (open) setOpen(false); };
+    place();
+  }
 
   function renderQuestion() {
     var q = state.list[state.index];
@@ -9422,6 +9587,7 @@
   function enterApp() {
     $("bootStatus").style.display = "none";
     $("tabPanes").style.display = "block";
+    if (!$("fab")) { initFab(); initVoiceBtn(); }
     show("main");
     refreshTop();
     var s = getStats(), st = currentStreak();
