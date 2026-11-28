@@ -888,7 +888,7 @@
     "options": {
       "A": "digestion",
       "B": "breathing",
-      "C": "hydration",
+      "C": "relaxation",
       "D": "nutrition"
     },
     "answer": "D",
@@ -928,8 +928,8 @@
     "topic": "Health",
     "question": "Eating too much fast food and sitting all day can lead to ____.",
     "options": {
-      "A": "fatigue",
-      "B": "insomnia",
+      "A": "sunburn",
+      "B": "frostbite",
       "C": "obesity",
       "D": "dehydration"
     },
@@ -1715,7 +1715,7 @@
       "A": "search",
       "B": "click",
       "C": "charge",
-      "D": "update"
+      "D": "delete"
     },
     "answer": "C",
     "meaning_vi": "sạc pin",
@@ -2916,10 +2916,10 @@
     "topic": "Sports",
     "question": "All players must wear the official blue and white ____ during league matches.",
     "options": {
-      "A": "suit",
+      "A": "whistle",
       "B": "kit",
-      "C": "costume",
-      "D": "outfit"
+      "C": "trophy",
+      "D": "stadium"
     },
     "answer": "B",
     "meaning_vi": "đồng phục thi đấu thể thao",
@@ -2942,7 +2942,7 @@
   {
     "id": 211,
     "topic": "Sports",
-    "question": "Our team's ____ was very strong, so it was difficult for us to get past their defense.",
+    "question": "Our ____ in the final was very strong, so it was difficult for us to get past their defense.",
     "options": {
       "A": "partner",
       "B": "teammate",
@@ -4258,7 +4258,7 @@
   {
     "id": 305,
     "topic": "Grammar - Articles",
-    "question": "My cousin studies at ____ university in London.",
+    "question": "My cousin studies at ____ university in London, but I forgot its name.",
     "options": {
       "A": "no article",
       "B": "an",
@@ -5828,7 +5828,7 @@
     "topic": "Grammar - Perfect Tenses",
     "question": "It's the first time I ____ a horse.",
     "options": {
-      "A": "rode",
+      "A": "was riding",
       "B": "have ridden",
       "C": "ride",
       "D": "am riding"
@@ -5910,10 +5910,10 @@
   {
     "id": 423,
     "topic": "Grammar - Future Forms",
-    "question": "I think the exam ____ difficult.",
+    "question": "I think the exam next week ____ difficult.",
     "options": {
       "A": "will be",
-      "B": "is",
+      "B": "has been",
       "C": "was",
       "D": "is being"
     },
@@ -6010,10 +6010,10 @@
     "topic": "Grammar - Future Forms",
     "question": "They ____ married in June. The invitations are ready.",
     "options": {
-      "A": "get",
+      "A": "were getting",
       "B": "are getting",
       "C": "got",
-      "D": "will get"
+      "D": "had gotten"
     },
     "answer": "B",
     "meaning_vi": "Họ cưới vào tháng Sáu, thiệp mời đã sẵn sàng",
@@ -6573,7 +6573,7 @@
       "A": "loses",
       "B": "has lost",
       "C": "had lost",
-      "D": "lost"
+      "D": "was losing"
     },
     "answer": "C",
     "meaning_vi": "Anh ấy nói đã làm mất chìa khóa",
@@ -6794,7 +6794,7 @@
     "topic": "Grammar - Modals of Deduction",
     "question": "The keys aren't in my bag. I ____ have left them at the office.",
     "options": {
-      "A": "shouldn't",
+      "A": "can't",
       "B": "mustn't",
       "C": "needn't",
       "D": "might"

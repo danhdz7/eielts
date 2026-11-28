@@ -2608,7 +2608,7 @@
     return getJSON(QUESTIONS_FILE).then(function (q) {
       if (!q) throw new Error("no-questions");
       state.all = normalize(q);
-      return Promise.all([getJSON(DIALOGS_FILE), getJSON(WORDS_FILE), getJSON(EXAM_FILE), getJSON(SCEN_FILE), getJSON(T1_FILE)]);
+      return Promise.all([getJSON(DIALOGS_FILE), getJSON(WORDS_FILE), getJSON(EXAM_FILE), getJSON(SCEN_FILE), getJSON(T1_FILE), getJSON("fills.json"), getJSON("ban.json")]);
     }).then(function (r) {
       state.dialogs = normalizeDialogs(r[0] || []);
       state.fileWords = normalizeWords(r[1] || []);
@@ -2617,6 +2617,9 @@
       state.tips = mergeTips(r[3]);
       loadIconPal(r[3]);
       state.task1 = mergeT1(r[4]);
+      state.ban = (r[6] && typeof r[6] === "object") ? r[6] : {};
+      state.fills = null;
+      if (Array.isArray(r[5]) && r[5].length) { state.fills = {}; r[5].forEach(function (f) { if (f && f.w && f.q && f.a && f.d) state.fills[f.w] = f; }); }
       loadExtra();
       return loadGram().then(loadCoach);
     }).then(function () { buildBank(); buildUnits(); });
@@ -2645,6 +2648,11 @@
     if (g === "phrase") return isSentencePhrase(v) ? "phrase-sent" : "phrase-" + Math.min(3, v.split(/\s+/).length);
     return (g || "?") + (key === "w" ? "-" + Math.min(2, v.split(/\s+/).length) : "");
   }
+  // Từ gần nghĩa / cùng nghĩa tiếng Việt (ban.json) không được làm đáp án nhiễu, tránh hai đáp án cùng đúng
+  function isBanned(a, b) {
+    var ba = state.ban && state.ban[a], bb = state.ban && state.ban[b];
+    return !!((ba && ba.indexOf(b) >= 0) || (bb && bb.indexOf(a) >= 0));
+  }
   function pickDistractors(pool, item, key, n, strict) {
     var cand = shuffle(pool), out = [], seen = {};
     seen[String(item[key]).toLowerCase()] = 1;
@@ -2656,6 +2664,7 @@
       if (out.length >= n) return;
       var v = String(x[key] || "").trim(); if (!v) return;
       if (strict && !posGroup(x.pos)) return;
+      if (isBanned(item.w, x.w) || (item.vi && x.vi && String(item.vi).trim().toLowerCase() === String(x.vi).trim().toLowerCase())) return;
       var k = v.toLowerCase(); if (seen[k]) return;
       seen[k] = 1; out.push(v);
     });
@@ -2675,21 +2684,48 @@
     base.options = opts; base.answer = ans;
     return base;
   }
+  var PHRASAL = { "wake up": 1, "get up": 1, "get dressed": 1, "hang out": 1, "get along": 1, "keep in touch": 1, "fall in love": 1, "break up": 1, "move in": 1, "dress up": 1, "put on": 1, "deal with": 1, "dispose of": 1, "remain stable": 1, "level off": 1 };
+  function inflectS(v, g) {
+    var p = v.split(" "), i = g === "noun" ? p.length - 1 : 0, l = p[i];
+    if (/^(child|man|woman|person|foot|tooth|mouse|goose|sheep|fish|deer|life|knife|wife|leaf|half|wolf|shelf|thief|hero|potato|tomato|have|be)$/i.test(l)) return null;
+    if (g === "noun" && /(f|fe|o)$/i.test(l)) return null;
+    p[i] = /(s|x|z|ch|sh|o)$/i.test(l) ? l + "es" : /[^aeiou]y$/i.test(l) ? l.slice(0, -1) + "ies" : l + "s";
+    return p.join(" ");
+  }
+  function vowelSound(w) {
+    var t = String(w).trim().split(/\s+/)[0], l = t.toLowerCase();
+    if (/^(hour|honest|honou?r|heir)/.test(l)) return true;
+    if (/^(uni|use|usu|uti|eu|one|once|ubiq|ura|ute)/.test(l)) return false;
+    if (t.length > 1 && t === t.toUpperCase()) return "AEIOUFHLMNRSX".indexOf(t[0]) >= 0;
+    return "aeiou".indexOf(l[0]) >= 0;
+  }
+  function capFirst(x) { return x.charAt(0).toUpperCase() + x.slice(1); }
+  // Câu điền từ đã sinh sẵn và lọc kỹ (fills.json): đáp án nhiễu cố định, không đổi theo lần học
+  function fillFromFile(f) {
+    return makeQ({ id: "gf_" + f.w, topic: f.topic, question: f.q, meaning: f.vi, explain: "" }, f.a, f.d.slice());
+  }
+  // Dự phòng cho từ người dùng tự nhập (chưa có trong fills.json)
   function genFill(w, pool) {
     if (!w.ex) return null;
     var re = new RegExp("\\b(" + escRe(w.w) + ")(e?s)?\\b", "i");
     var m = re.exec(w.ex); if (!m) return null;
-    var suf = m[2] || "", d;
-    var g = posGroup(w.pos);
+    var suf = m[2] || "", d, g = posGroup(w.pos), idx = m.index;
     if (g === "phrase" || (g === "verb" && /\s/.test(w.w))) {
-      if (isSentencePhrase(w.w)) return null;           // câu giao tiếp trọn vẹn: học ở bài nghĩa, không đục lỗ
-      if (suf) return null;
-      d = verbForms(w.w);                                 // cụm động từ: kiểm tra đúng dạng, chỉ một đáp án đúng
+      if (!PHRASAL[w.w.toLowerCase()] || suf) return null;
+      d = verbForms(w.w);
     } else {
-      d = pickDistractors(pool, w, "w", 3, true).map(function (x) { return x + suf; });
+      if (suf && g !== "noun" && g !== "verb") return null;
+      var cap = /^[A-Z]/.test(w.w), before = w.ex.slice(0, idx).trim().split(/\s+/).pop().toLowerCase();
+      var art = (before === "a" || before === "an") ? before : "";
+      if (art && vowelSound(m[0]) !== (art === "an")) return null;
+      d = pickDistractors(pool, w, "w", 12, true).filter(function (x) { return /^[A-Z]/.test(x) === cap; }).map(function (x) {
+        return suf ? inflectS(x, g) : x;
+      }).filter(function (x) { return x && (!art || vowelSound(x) === (art === "an")) && w.ex.toLowerCase().indexOf(x.toLowerCase()) < 0; }).slice(0, 3);
     }
     if (d.length < 3) return null;
-    return makeQ({ id: "gf_" + w.w, topic: w.topic, question: w.ex.replace(re, "____"), meaning: w.vi, explain: "" }, m[0], d);
+    var ans = m[0], opts = [ans].concat(d);
+    if (/^[A-Z]/.test(ans) && !/^[A-Z]/.test(w.w)) opts = opts.map(capFirst);
+    return makeQ({ id: "gf_" + w.w, topic: w.topic, question: w.ex.replace(re, "____"), meaning: w.vi, explain: "" }, opts[0], opts.slice(1));
   }
   function genMeaning(w, pool, kind) {
     if (kind === "mean") {
@@ -2713,7 +2749,13 @@
     state.words = words;
     var own = state.fileWords.concat(state.extra.words), gen = [];
     var easy = words.filter(function (x) { return !isAdvWord(x); });   // đáp án nhiễu không lấy từ C1/C2
-    own.forEach(function (w) { if (isAdvWord(w)) return; var g = genFill(w, easy); if (g) gen.push(g); });
+    var pre = state.fills, fromFile = {};
+    state.fileWords.forEach(function (w) { fromFile[w.w] = 1; });
+    own.forEach(function (w) {
+      if (isAdvWord(w)) return;
+      var g = (pre && fromFile[w.w]) ? (pre[w.w] ? fillFromFile(pre[w.w]) : null) : genFill(w, easy);
+      if (g) gen.push(g);
+    });
     state.genFill = gen;
   }
 
