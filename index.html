@@ -6614,7 +6614,11 @@
     "natural world": "natural", "space": "space", "media": "media", "lifestyles": "lifestyle", "development": "development",
     "design and building": "building", "information technology": "infotech", "modern world": "modern", "urban life": "urban",
     "green issues": "green", "energy": "energy", "business": "business", "law and crime": "law", "the arts": "arts", "history": "history",
-    "keeping healthy": "healthy", "confusable word pairs": "pairs", "ielts writing task 1": "task1"
+    "keeping healthy": "healthy", "confusable word pairs": "pairs", "ielts writing task 1": "task1",
+    "daily life": "routine", "family and people": "family", "food and drink": "food", "health and body": "health", "work and jobs": "work",
+    "travel and transport": "transport", "places and housing": "housing", "shopping and money": "shopping", "nature and weather": "natural",
+    "technology and media": "technology", "society and law": "law", "feelings and character": "friends", "time and numbers": "routine",
+    "actions": "verbs", "describing things": "abc", "abstract ideas": "energy"
   };
   function topicKey(t) {
     var s = String(t || "").toLowerCase().replace(/^\s+|\s+$/g, "");
@@ -8005,6 +8009,8 @@
         a.addEventListener("click", function () { sfx.tap(); });
         box.appendChild(a);
       });
+      var cr = el("p", "muted", "Danh sách từ vựng theo bậc CEFR (A1–B2) trong app dựa trên CEFR-J Wordlist (Tono Laboratory, ĐH Ngoại ngữ Tokyo) theo giấy phép CC BY-SA 4.0. Nghĩa tiếng Việt và câu ví dụ do AI soạn, có thể còn sai sót.");
+      cr.style.fontSize = ".8rem"; cr.style.marginTop = "14px"; box.appendChild(cr);
     });
   }
 
