@@ -1004,7 +1004,7 @@
   .lseg{margin:0 0 12px}
 
   /* ===== lộ trình ngữ pháp ===== */
-  .glv{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px}
+  .glv{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:12px}
   .glvc{display:flex;flex-direction:column;align-items:flex-start;gap:1px;padding:10px 10px;border-radius:16px;border:1px solid var(--line);
     background:rgba(255,255,255,.05);color:inherit;font:inherit;text-align:left}
   .glvc b{font-size:1.1rem}
@@ -6742,7 +6742,8 @@
   var GLEVELS = [
     { k: "A1", n: "Sống sót", d: "Câu đơn, thì hiện tại, danh từ và mạo từ" },
     { k: "A2", n: "Ghép câu 5.0", d: "Quá khứ, tương lai, so sánh, từ nối" },
-    { k: "B1", n: "Hoàn thiện 5.0+", d: "Hoàn thành, bị động, mệnh đề, điều kiện" }
+    { k: "B1", n: "Hoàn thiện 5.0+", d: "Hoàn thành, bị động, mệnh đề, điều kiện" },
+    { k: "B2", n: "Chinh phục 6.0", d: "Điều kiện loại 3, mệnh đề quan hệ, đảo ngữ, câu ước" }
   ];
   var GRAM_FILE = "grammar.json", CEFR_FILE = "cefr.json";
 
@@ -6972,13 +6973,20 @@
   function gramOfLevel(k) { return (state.gram || []).filter(function (g) { return g.level === k; }); }
   function gramSkips() { return read("ielts_gskip", {}) || {}; }
   function gramOpen(g) {
-    var arr = state.gram || [], i = arr.indexOf(g);
-    if (i <= 0 || gramSkips()[g.level]) return true;
-    return gramPct(arr[i - 1]) >= 60;
+    var arr = gramOfLevel(g.level), i = arr.indexOf(g);
+    if (gramSkips()[g.level]) return true;
+    if (i > 0) return gramPct(arr[i - 1]) >= 60;
+    var li = -1;
+    GLEVELS.forEach(function (L, n) { if (L.k === g.level) li = n; });
+    if (li <= 0) return true;
+    var prev = gramOfLevel(GLEVELS[li - 1].k);
+    return !prev.length || gramPct(prev[prev.length - 1]) >= 60;
   }
   function gramNext() {
-    var arr = state.gram || [];
-    for (var i = 0; i < arr.length; i++) if (gramPct(arr[i]) < 60 && gramOpen(arr[i])) return arr[i];
+    for (var j = 0; j < GLEVELS.length; j++) {
+      var arr = gramOfLevel(GLEVELS[j].k);
+      for (var i = 0; i < arr.length; i++) if (gramPct(arr[i]) < 60 && gramOpen(arr[i])) return arr[i];
+    }
     return null;
   }
   function gramLevelStat(k) {
@@ -7160,7 +7168,7 @@
       inp.placeholder = "Tìm theo tên bài, công thức, ví dụ…";
       box.appendChild(inp);
       var fl = mk("div", "chips"), cur = { lv: "all" };
-      [["all", "Tất cả"], ["A1", "A1"], ["A2", "A2"], ["B1", "B1"]].forEach(function (x) {
+      [["all", "Tất cả"], ["A1", "A1"], ["A2", "A2"], ["B1", "B1"], ["B2", "B2"]].forEach(function (x) {
         var c = mk("button", "chip" + (x[0] === "all" ? " on" : ""), x[1]); c.type = "button";
         c.addEventListener("click", function () {
           cur.lv = x[0]; Array.prototype.forEach.call(fl.children, function (b) { b.classList.toggle("on", b === c); }); paint();
