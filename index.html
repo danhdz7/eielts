@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0b0f2b">
 <title>eIELTS – Học IELTS miễn phí, mục tiêu band 5.0</title>
-<meta name="description" content="eIELTS: app học IELTS miễn phí cho người Việt. Từ vựng theo chủ đề và trình độ A1–B2, ngữ pháp có lý thuyết, luyện nghe, nói, viết, thi thử 4 kỹ năng. Chạy cả khi offline.">
+<meta name="description" content="eIELTS: app học IELTS miễn phí cho người Việt. Từ vựng theo chủ đề và trình độ A1–C2, ngữ pháp có lý thuyết, luyện nghe, nói, viết, thi thử 4 kỹ năng. Chạy cả khi offline.">
 <meta name="keywords" content="eIELTS, học IELTS, IELTS miễn phí, IELTS band 5, từ vựng IELTS, ngữ pháp IELTS, luyện nói IELTS">
 <link rel="canonical" href="https://eielts.netlify.app/">
 <meta property="og:type" content="website">
@@ -2537,7 +2537,7 @@
     });
     state.words = words;
     var own = state.fileWords.concat(state.extra.words), gen = [];
-    own.forEach(function (w) { var g = genFill(w, words); if (g) gen.push(g); });
+    own.forEach(function (w) { if (isAdvWord(w)) return; var g = genFill(w, words); if (g) gen.push(g); });
     state.genFill = gen;
   }
 
@@ -2558,7 +2558,12 @@
     return topic === "all" ? all : all.filter(function (q) { return q.topic === topic; });
   }
   function wordsOf(topic) {
-    return topic === "all" ? state.words : state.words.filter(function (w) { return w.topic === topic; });
+    return state.words.filter(function (w) { return !isAdvWord(w) && (topic === "all" || w.topic === topic); });
+  }
+  /* Từ C1/C2 chỉ học trong mục "Từ vựng theo bậc", không trộn vào bài theo chủ đề */
+  function isAdvWord(w) {
+    var c = state.cefr || {}, l = c[w.w] || c[String(w.w).toLowerCase()];
+    return l === "C1" || l === "C2";
   }
   function speakablesOf(topic) {
     return itemsOf(topic).filter(function (q) { return /____/.test(q.question) && !isGrammar(q.topic); });
@@ -7256,14 +7261,14 @@
   }
   function renderLevels(body) {
     clear(body);
-    var LV = ["A1", "A2", "B1", "B2"], by = { A1: [], A2: [], B1: [], B2: [] }, none = 0;
+    var LV = ["A1", "A2", "B1", "B2", "C1", "C2"], by = { A1: [], A2: [], B1: [], B2: [], C1: [], C2: [] }, none = 0;
     state.words.forEach(function (w) { var l = cefrOf(w); if (by[l]) by[l].push(w); else none++; });
     var hd = mk("div", "ghead");
     hd.appendChild(mk("div", "cap", "Từ vựng theo bậc CEFR"));
     hd.appendChild(mk("p", "muted", "Kho từ chia theo trình độ (nhãn do Gemini phân loại, Claude kiểm tra). Học thẻ hoặc làm trắc nghiệm ngay theo từng bậc."));
     body.appendChild(hd);
-    var NAMES = { A1: "Cơ bản A1", A2: "Sơ cấp A2", B1: "Trung cấp B1", B2: "Khá B2" };
-    var PAL = { A1: ["#8ef0b8", "#12603f", "#45d495"], A2: ["#8fc4ff", "#163a86", "#5ea2ff"], B1: ["#ffd98f", "#7d5310", "#ffc247"], B2: ["#ffb0c8", "#7a1c3e", "#ff6f9a"] };
+    var NAMES = { A1: "Cơ bản A1", A2: "Sơ cấp A2", B1: "Trung cấp B1", B2: "Khá B2", C1: "Nâng cao C1", C2: "Thành thạo C2" };
+    var PAL = { A1: ["#8ef0b8", "#12603f", "#45d495"], A2: ["#8fc4ff", "#163a86", "#5ea2ff"], B1: ["#ffd98f", "#7d5310", "#ffc247"], B2: ["#ffb0c8", "#7a1c3e", "#ff6f9a"], C1: ["#c0b0ff", "#2d1a74", "#8f74ff"], C2: ["#8fe6ff", "#0f5068", "#3fc6ee"] };
     LV.forEach(function (k) {
       var arr = by[k];
       body.appendChild(rowCard("§abc", "Từ vựng " + NAMES[k], arr.length + " từ", "", function () { levelSheet(k, arr); }, PAL[k]));
@@ -8017,7 +8022,7 @@
         a.addEventListener("click", function () { sfx.tap(); });
         box.appendChild(a);
       });
-      var cr = el("p", "muted", "Danh sách từ vựng theo bậc CEFR (A1–B2) trong app dựa trên CEFR-J Wordlist (Tono Laboratory, ĐH Ngoại ngữ Tokyo) theo giấy phép CC BY-SA 4.0. Nghĩa tiếng Việt và câu ví dụ do AI soạn, có thể còn sai sót.");
+      var cr = el("p", "muted", "Danh sách từ vựng theo bậc CEFR (A1–C2) trong app dựa trên CEFR-J Wordlist (Tono Laboratory, ĐH Ngoại ngữ Tokyo) và Octanove Vocabulary Profile (C1/C2), cùng giấy phép CC BY-SA 4.0. Nghĩa tiếng Việt và câu ví dụ do AI soạn, có thể còn sai sót.");
       cr.style.fontSize = ".8rem"; cr.style.marginTop = "14px"; box.appendChild(cr);
     });
   }
