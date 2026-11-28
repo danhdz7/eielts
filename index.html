@@ -2615,18 +2615,45 @@
 
   /* ============ Dựng kho từ ============ */
   function escRe(s) { return String(s).replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
-  function pickDistractors(pool, item, key, n) {
+  // Nhóm từ loại gọn lại để so sánh (adj = adjective ...)
+  function posGroup(p) {
+    p = String(p || "").toLowerCase();
+    if (/^adj/.test(p)) return "adj"; if (/^adv/.test(p)) return "adv"; if (/^verb|^vern/.test(p)) return "verb";
+    if (/^prep/.test(p)) return "prep"; if (/^conj/.test(p)) return "conj"; if (/^noun/.test(p)) return "noun";
+    return p || "";
+  }
+  // Câu giao tiếp trọn vẹn (I'm tired, It's not bad ...) khác hẳn một từ hay cụm động từ
+  function isSentencePhrase(w) {
+    return /^(i|it|you|we|they|he|she|there|that|this|what|how|let's|don't|no)\b/i.test(w) || /['’](m|s|re|ll|ve|d|t)\b/i.test(w) || /[?!.,]/.test(w);
+  }
+  function shapeOf(x, key) {
+    var v = String(x.w || ""), g = posGroup(x.pos);
+    if (g === "phrase") return isSentencePhrase(v) ? "phrase-sent" : "phrase-" + Math.min(3, v.split(/\s+/).length);
+    return (g || "?") + (key === "w" ? "-" + Math.min(2, v.split(/\s+/).length) : "");
+  }
+  function pickDistractors(pool, item, key, n, strict) {
     var cand = shuffle(pool), out = [], seen = {};
     seen[String(item[key]).toLowerCase()] = 1;
-    var sameP = cand.filter(function (x) { return x !== item && item.pos && x.pos === item.pos; });
-    var rest = cand.filter(function (x) { return x !== item && !(item.pos && x.pos === item.pos); });
-    sameP.concat(rest).forEach(function (x) {
+    var sh = shapeOf(item, key), pg = posGroup(item.pos);
+    var best = cand.filter(function (x) { return x !== item && shapeOf(x, key) === sh; });
+    var mid = cand.filter(function (x) { return x !== item && pg && posGroup(x.pos) === pg && shapeOf(x, key) !== sh; });
+    var rest = strict ? [] : cand.filter(function (x) { return x !== item && !(pg && posGroup(x.pos) === pg); });
+    best.concat(mid).concat(rest).forEach(function (x) {
       if (out.length >= n) return;
       var v = String(x[key] || "").trim(); if (!v) return;
+      if (strict && !posGroup(x.pos)) return;
       var k = v.toLowerCase(); if (seen[k]) return;
       seen[k] = 1; out.push(v);
     });
     return out;
+  }
+  // Dạng đúng/sai của cụm động từ: get up -> gets up, getting up, to get up
+  function verbForms(base) {
+    var parts = base.split(/\s+/), v = parts[0], rest = parts.slice(1).join(" ");
+    var s = /(s|x|z|ch|sh|o)$/i.test(v) ? v + "es" : /[^aeiou]y$/i.test(v) ? v.slice(0, -1) + "ies" : v + "s";
+    var ing = /ie$/i.test(v) ? v.slice(0, -2) + "ying" : /[^e]e$/i.test(v) ? v.slice(0, -1) + "ing"
+      : (v.length <= 4 && /[^aeiou][aeiou][^aeiouwxy]$/i.test(v)) ? v + v.slice(-1) + "ing" : v + "ing";
+    return [s, ing, "to " + v].map(function (x) { return rest ? x + " " + rest : x; });
   }
   function makeQ(base, answerText, distractors) {
     var arr = shuffle([answerText].concat(distractors)), opts = {}, ans = "A";
@@ -2638,8 +2665,15 @@
     if (!w.ex) return null;
     var re = new RegExp("\\b(" + escRe(w.w) + ")(e?s)?\\b", "i");
     var m = re.exec(w.ex); if (!m) return null;
-    var suf = m[2] || "";
-    var d = pickDistractors(pool, w, "w", 3).map(function (x) { return x + suf; });
+    var suf = m[2] || "", d;
+    var g = posGroup(w.pos);
+    if (g === "phrase" || (g === "verb" && /\s/.test(w.w))) {
+      if (isSentencePhrase(w.w)) return null;           // câu giao tiếp trọn vẹn: học ở bài nghĩa, không đục lỗ
+      if (suf) return null;
+      d = verbForms(w.w);                                 // cụm động từ: kiểm tra đúng dạng, chỉ một đáp án đúng
+    } else {
+      d = pickDistractors(pool, w, "w", 3, true).map(function (x) { return x + suf; });
+    }
     if (d.length < 3) return null;
     return makeQ({ id: "gf_" + w.w, topic: w.topic, question: w.ex.replace(re, "____"), meaning: w.vi, explain: "" }, m[0], d);
   }
@@ -2664,7 +2698,8 @@
     });
     state.words = words;
     var own = state.fileWords.concat(state.extra.words), gen = [];
-    own.forEach(function (w) { if (isAdvWord(w)) return; var g = genFill(w, words); if (g) gen.push(g); });
+    var easy = words.filter(function (x) { return !isAdvWord(x); });   // đáp án nhiễu không lấy từ C1/C2
+    own.forEach(function (w) { if (isAdvWord(w)) return; var g = genFill(w, easy); if (g) gen.push(g); });
     state.genFill = gen;
   }
 
@@ -4816,7 +4851,7 @@
   function applyTutor(t) {
     write("ielts_tutor", t.id);
     vPrefs.accent = t.acc === "auto" ? "auto" : t.acc;
-    vPrefs.engine = "device";
+    vPrefs.engine = "device"; if (typeof aiUnload === "function") aiUnload();
     if (!t.manual) {
       var v = tutorVoice(t);
       vPrefs.name = v ? v.name : ""; vPrefs.uri = v ? voiceKey(v) : "";
@@ -8891,8 +8926,10 @@
       var ac = mk("div", "aicard");
       ac.appendChild(el("p", "", "Giọng AI (Kokoro) cho <b>" + AI_VOICES.length + " giọng Mỹ và Anh</b>, nam nữ, trẻ đến lớn tuổi, nghe tự nhiên và <b>khác nhau thật sự</b>, không phụ thuộc điện thoại. Tải một lần khoảng <b>110 MB</b>, sau đó dùng được cả khi không có mạng."));
       if (ai.status === "error") ac.appendChild(el("div", "note", "Tải chưa được: " + esc(ai.err || "lỗi mạng") + ". Thử lại khi có Wi-Fi ổn định."));
-      var ab = mk("button", "btn-primary", ai.status === "error" ? "Thử tải lại" : "⬇️ Tải giọng AI"); ab.type = "button";
+      var had = !!read("ielts_ai", 0);
+      var ab = mk("button", "btn-primary", ai.status === "error" ? "Thử tải lại" : had ? "Bật lại giọng AI" : "⬇️ Tải giọng AI"); ab.type = "button";
       ab.addEventListener("click", function () {
+        if (had) { vPrefs.engine = "ai"; if (!vPrefs.ai) vPrefs.ai = "af_heart"; voiceSaveNow(); aiLoad(function (err) { if (!err) toast("Giọng AI đã sẵn sàng."); }); renderVoicePanel(host); return; }
         askDlg({ title: "Tải giọng AI?", text: "Cần khoảng 110 MB, nên dùng Wi-Fi. Chỉ tải một lần. Máy yếu có thể mất vài giây để đọc mỗi câu.", ok: "Tải", cancel: "Để sau",
           onOk: function () { vPrefs.engine = "ai"; if (!vPrefs.ai) vPrefs.ai = "af_heart"; voiceSaveNow(); aiLoad(function (err) { if (!err) toast("Giọng AI đã sẵn sàng."); }); renderVoicePanel(host); } });
       });
@@ -8925,7 +8962,7 @@
       row.appendChild(play);
       row.addEventListener("click", function () {
         sfx.ok();
-        vPrefs.name = v.name; vPrefs.uri = voiceKey(v); vPrefs.accent = "auto"; vPrefs.engine = "device";
+        vPrefs.name = v.name; vPrefs.uri = voiceKey(v); vPrefs.accent = "auto"; vPrefs.engine = "device"; aiUnload();
         write("ielts_tutor", "f"); voiceSaveNow();
         toast("Đã chọn giọng " + voiceNice(v));
         speak("Great. I will read your lessons with this voice.", { force: true, voice: v });
@@ -9106,7 +9143,7 @@
     ["bm_george", "George", "Nam Anh", "Trầm, lớn tuổi"],
     ["bm_fable", "Fable", "Nam Anh", "Kể chuyện"]
   ];
-  var ai = { tts: null, status: "idle", pct: 0, err: "", loading: false, waiters: [], q: Promise.resolve(), cache: {}, order: [] };
+  var ai = { tts: null, status: "idle", pct: 0, err: "", loading: false, waiters: [], q: Promise.resolve(), cache: {}, order: [], w: null, pending: {}, seq: 0 };
   var aiAudio = null, aiUrl = null;
   function aiVoiceInfo(id) { return AI_VOICES.filter(function (v) { return v[0] === id; })[0] || null; }
   function aiVoiceName(id) { var v = aiVoiceInfo(id); return v ? v[1] + " · " + v[2] : ""; }
@@ -9124,22 +9161,35 @@
     aiNotify();
     function finish(err) {
       ai.loading = false; ai.status = err ? "error" : "ready"; ai.err = err ? String(err.message || err) : "";
-      if (!err) { ai.pct = 100; write("ielts_ai", 1); try { if (navigator.storage && navigator.storage.persist) navigator.storage.persist(); } catch (e) {} }
+      if (err) { try { if (ai.w) ai.w.terminate(); } catch (e) {} ai.w = null; }
+      else { ai.pct = 100; write("ielts_ai", 1); try { if (navigator.storage && navigator.storage.persist) navigator.storage.persist(); } catch (e) {} }
       var w = ai.waiters; ai.waiters = []; w.forEach(function (f) { try { f(err || null); } catch (e) {} });
       aiNotify();
     }
-    import("./kokoro.web.js").then(function (m) {
-      return m.KokoroTTS.from_pretrained(AI_MODEL, {
-        dtype: "q8", device: "wasm",
-        progress_callback: function (p) {
-          if (!p || !p.file || !p.total) return;
-          files[p.file] = { l: p.loaded || 0, t: p.total };
-          var L = 0, T = 0; Object.keys(files).forEach(function (k) { L += files[k].l; T += files[k].t; });
-          var pc = T ? Math.min(99, Math.round(L * 100 / T)) : 0;
-          if (pc !== ai.pct) { ai.pct = pc; aiNotify(); }
-        }
-      });
-    }).then(function (tts) { ai.tts = tts; finish(null); }, function (e) { console.error(e); finish(e); });
+    var w;
+    try { w = new Worker("kokoro.worker.js", { type: "module" }); } catch (e) { finish(e); return; }
+    ai.w = w; ai.pending = {};
+    w.onerror = function (e) { finish(new Error((e && e.message) || "worker")); };
+    w.onmessage = function (e) {
+      var m = e.data || {};
+      if (m.type === "progress") {
+        files[m.file] = { l: m.loaded, t: m.total };
+        var L = 0, T = 0; Object.keys(files).forEach(function (k) { L += files[k].l; T += files[k].t; });
+        var pc = T ? Math.min(99, Math.round(L * 100 / T)) : 0;
+        if (pc !== ai.pct) { ai.pct = pc; aiNotify(); }
+      } else if (m.type === "ready") { ai.tts = true; finish(null); }
+      else if (m.type === "loaderr") finish(new Error(m.error));
+      else if (m.type === "audio" || m.type === "generr") {
+        var p = ai.pending[m.id]; if (!p) return; delete ai.pending[m.id];
+        if (m.type === "audio") p.res(m.blob); else p.rej(new Error(m.error));
+      }
+    };
+    w.postMessage({ type: "load", model: AI_MODEL });
+  }
+  // Giải phóng bộ nhớ khi người dùng quay về giọng của máy (mô hình vẫn còn trong bộ nhớ đệm, lần sau nạp lại nhanh)
+  function aiUnload() {
+    try { if (ai.w) ai.w.terminate(); } catch (e) {}
+    ai.w = null; ai.tts = false; ai.loading = false; ai.status = "idle"; ai.pending = {}; ai.waiters = []; ai.q = Promise.resolve();
   }
   function aiChunks(text) {
     var t = String(text).replace(/\s+/g, " ").trim();
@@ -9156,8 +9206,10 @@
     if (ai.cache[key]) return Promise.resolve(ai.cache[key]);
     var p = ai.q.then(function () {
       if (ai.cache[key]) return ai.cache[key];
-      return ai.tts.generate(text, { voice: voice, speed: speed }).then(function (a) {
-        var blob = a.toBlob();
+      return new Promise(function (res, rej) {
+        var id = ++ai.seq; ai.pending[id] = { res: res, rej: rej };
+        ai.w.postMessage({ type: "gen", id: id, text: text, voice: voice, speed: speed });
+      }).then(function (blob) {
         ai.cache[key] = blob; ai.order.push(key);
         if (ai.order.length > 60) delete ai.cache[ai.order.shift()];
         return blob;
@@ -9204,6 +9256,7 @@
     if (ai.tts || ai.loading) return;
     var c = navigator.connection || {};
     if (!read("ielts_ai", 0) && (c.saveData || c.type === "cellular")) return;
+    if (!read("ielts_ai", 0) && navigator.deviceMemory && navigator.deviceMemory < 4) return;   // máy ít RAM: để người dùng tự chọn
     var tries = 0;
     (function go() {
       aiLoad(function (err) {
@@ -9546,7 +9599,7 @@
   function renderCard() {
     var w = cd.list[cd.i];
     stopSpeaking();
-    cd.flipped = false;
+    cd.flipped = false; cd.seen = false;
     $("flip").classList.remove("flipped");
     $("cdActions").style.visibility = "hidden";
     $("cdProgress").textContent = "Thẻ " + (cd.i + 1) + "/" + cd.list.length;
@@ -9568,12 +9621,12 @@
     if (!cd) return;
     cd.flipped = !cd.flipped;
     $("flip").classList.toggle("flipped", cd.flipped);
-    if (cd.flipped) $("cdActions").style.visibility = "visible";
+    if (cd.flipped) { cd.seen = true; $("cdActions").style.visibility = "visible"; }
     sfx.tap();
   }
 
   function rateCard(known) {
-    if (!cd || !cd.flipped) return;
+    if (!cd || !cd.seen) return;
     var w = cd.list[cd.i], srs = getSrs(), k = w.w.toLowerCase(), e = srs[k] || { box: 0 };
     if (known) {
       e.box = Math.min((e.box || 0) + 1, INTERVAL_DAYS.length - 1);
@@ -9785,7 +9838,7 @@
     $("tabPanes").style.display = "block";
     if (!$("fab")) { initFab(); initVoiceBtn(); }
     if (!vPrefs.engine) { vPrefs.engine = "ai"; vPrefs.ai = "af_heart"; write("ielts_voice", vPrefs); }
-    if (vPrefs.engine === "ai" && vPrefs.ai) setTimeout(function () { aiAuto(); }, 3000);
+    if (vPrefs.engine === "ai" && vPrefs.ai) setTimeout(function () { aiAuto(); }, 12000);
     show("main");
     refreshTop();
     var s = getStats(), st = currentStreak();
@@ -9840,6 +9893,15 @@
     if (!getProfile()) authShow(1);
     var lp = $("authLang"); if (lp) lp.appendChild(langPill());
     var ib = $("authInstall"); if (ib) ib.appendChild(installButton("sso ms"));
+    try { if (navigator.storage && navigator.storage.persist) navigator.storage.persist(); } catch (e) {}   // xin trình duyệt đừng tự xoá dữ liệu học
+    setTimeout(function () {
+      var bs = $("bootStatus");
+      if (bs && bs.style.display !== "none" && !(state.all && state.all.length)) {
+        bs.appendChild(el("p", "muted", "Mạng đang chậm hơn bình thường. Chờ thêm chút, hoặc bấm tải lại."));
+        var rb = mk("button", "btn-ghost", "Tải lại"); rb.type = "button"; rb.addEventListener("click", function () { location.reload(); });
+        bs.appendChild(rb);
+      }
+    }, 15000);
     loadAll().then(function () {
       if (getProfile()) enterApp();
     }).catch(function (e) {
