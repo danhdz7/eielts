@@ -1380,6 +1380,35 @@
   .reslink .rl-i{font-size:1.2rem}
   .reslink .rl-tag{margin-top:3px;font-size:.78rem;font-weight:700;color:var(--mut)}
   .reslink .rl-d{margin-top:5px;font-size:.9rem;line-height:1.4;color:var(--mut)}
+
+  /* ===== Mục Từ vựng ===== */
+  .vbands{margin-top:10px}
+  .vseg{margin-top:2px}
+  .vcount{margin:0 0 8px}
+  .vgroup{background:var(--surf);border:1px solid var(--line);border-radius:18px;margin:0 0 10px;overflow:hidden}
+  .vghead{display:flex;align-items:center;gap:12px;width:100%;padding:12px 14px;background:none;text-align:left;color:inherit}
+  .vghead.static{cursor:default}
+  .vgico{flex:0 0 40px;height:40px;border-radius:13px;display:grid;place-items:center;font-weight:800;background:linear-gradient(145deg,#c0b0ff,#8f74ff);color:#14183f}
+  .vgtx{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+  .vgtx b{font-size:1rem}
+  .vgtx small{color:var(--mut);font-size:.78rem}
+  .vgarrow{color:var(--mut);font-size:1.1rem}
+  .vgbody{padding:0 12px 12px}
+  .vgstudy{width:100%;margin:0 0 8px;padding:11px;border-radius:13px;background:rgba(94,162,255,.16);border:1px solid rgba(143,180,255,.4);color:#dbe6ff;font-weight:700}
+  .vwrow{display:flex;align-items:flex-start;gap:10px;padding:10px 4px;border-top:1px solid var(--line)}
+  .vwsp{flex:0 0 34px;height:34px;border-radius:10px;background:var(--surf2);border:1px solid var(--line);font-size:1rem}
+  .vwtx{flex:1;min-width:0}
+  .vwtop{display:flex;align-items:baseline;flex-wrap:wrap;gap:6px}
+  .vwtop b{font-size:1.02rem}
+  .vwtop em{font-style:italic;color:var(--mut);font-size:.8rem}
+  .vwlv{font-size:.66rem;font-weight:800;padding:1px 7px;border-radius:999px;background:rgba(255,255,255,.12);color:#cfd9ff}
+  .vwvi{color:#dbe3ff;font-size:.9rem;margin-top:2px}
+  .vwex{color:var(--mut);font-size:.8rem;margin-top:3px;font-style:italic;line-height:1.35}
+  .vaz{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px}
+  .vazb{width:34px;height:34px;border-radius:10px;background:var(--surf2);border:1px solid var(--line);color:#c3cdf0;font-weight:800}
+  .vazb.on{background:#fff;color:#14183f;border-color:#fff}
+  html[data-theme="light"] .vwvi{color:#1f2a55}
+  html[data-theme="light"] .vgstudy{color:#1d4ed8}
 </style>
 </head>
 <body>
@@ -1563,7 +1592,7 @@
       <div id="placeEntry" style="margin-top:12px"></div>
       <div class="seg" id="discSeg">
         <button type="button" class="on" data-d="vocab">Chủ đề</button>
-        <button type="button" data-d="level">Trình độ</button>
+        <button type="button" data-d="level">Từ vựng</button>
         <button type="button" data-d="gram">Ngữ pháp</button>
         <button type="button" data-d="tools">Công cụ</button>
         <button type="button" data-d="mine">Của tôi</button>
@@ -2187,6 +2216,47 @@
   // Android Chrome hay không trả kết quả "final" và không gọi onend: tự kết thúc khi người nói ngừng,
   // dùng câu tạm (interim) cuối cùng. Chỉ một phiên nghe tại một thời điểm.
   var curRec = null, lastRecEnd = 0;
+  // Chuẩn bị micro trước khi nhận giọng (sửa lỗi "Không nghe được gì" trên Chrome Android):
+  // dừng giọng đọc đang phát, mồi quyền micro bằng getUserMedia, đo thử tín hiệu rồi nhả micro hẳn.
+  // Nhờ vậy báo đúng nguyên nhân (bị chặn, bị app khác giữ, không có tín hiệu) thay vì một câu chung chung.
+  var micOk = false, micSilent = false, micLastErr = "";
+  function micPrep(cb) {
+    try { window.speechSynthesis && window.speechSynthesis.cancel(); } catch (e) {}
+    if (micOk) { cb(null); return; }
+    var md = navigator.mediaDevices;
+    if (!md || !md.getUserMedia) { cb(null); return; }
+    var settled = false, stream = null, ac = null, to = null;
+    function finish(err) {
+      if (settled) return; settled = true; clearTimeout(to);
+      try { if (stream) stream.getTracks().forEach(function (t) { t.stop(); }); } catch (e) {}
+      try { if (ac && ac.close) ac.close(); } catch (e) {}
+      micLastErr = err || "";
+      if (!err) micOk = true;
+      // chờ máy nhả micro hẳn rồi mới mở nhận giọng
+      setTimeout(function () { cb(err); }, 350);
+    }
+    to = setTimeout(function () { finish(null); }, 6000);
+    md.getUserMedia({ audio: { echoCancellation: true, noiseSuppression: true } }).then(function (st) {
+      stream = st;
+      var tracks = st.getAudioTracks();
+      if (!tracks.length || tracks[0].readyState !== "live") { finish("audio-capture"); return; }
+      if (tracks[0].muted) micSilent = true;
+      try {
+        var AC = window.AudioContext || window.webkitAudioContext;
+        if (!AC) { finish(null); return; }
+        ac = new AC(); var src = ac.createMediaStreamSource(st), an = ac.createAnalyser(); an.fftSize = 1024; src.connect(an);
+        var buf = new Float32Array(an.fftSize), peak = 0, n = 0;
+        var iv = setInterval(function () {
+          an.getFloatTimeDomainData(buf);
+          for (var i = 0; i < buf.length; i++) { var a = Math.abs(buf[i]); if (a > peak) peak = a; }
+          if (++n >= 6) { clearInterval(iv); micSilent = peak < 0.0002; finish(null); }
+        }, 100);
+      } catch (e) { finish(null); }
+    }).catch(function (e) {
+      var nm = e && e.name;
+      finish(nm === "NotAllowedError" || nm === "SecurityError" ? "not-allowed" : nm === "NotFoundError" ? "audio-capture" : nm === "NotReadableError" || nm === "AbortError" ? "busy" : "start");
+    });
+  }
   function listenOnce(onInterim, cb) {
     if (!SR) { cb("no-sr"); return null; }
     if (curRec) { try { curRec.abort(); } catch (e) {} curRec = null; }
@@ -2240,8 +2310,12 @@
       try { r.start(); listening = true; curRec = r; } catch (e) { done("start"); }
     }
     // vừa nghe xong thì chờ một chút cho máy nhả micro
-    var gap = Date.now() - lastRecEnd;
-    if (gap < 400) setTimeout(go, 400 - gap); else go();
+    micPrep(function (perr) {
+      if (finished) return;
+      if (perr) { done(perr); return; }
+      var gap = Date.now() - lastRecEnd;
+      if (gap < 400) setTimeout(go, 400 - gap); else go();
+    });
     return {
       stop: function () { try { r.stop(); } catch (e) {} setTimeout(function () { done(); }, 600); },
       finish: function () { done(); },
@@ -2254,16 +2328,18 @@
     Array.prototype.forEach.call(document.querySelectorAll(".mic.rec"), function (m) { m.classList.remove("rec"); });
   }
   function errMsg(err) {
+    if (err) micOk = false;   // lần sau mồi và đo lại micro
     if (err === "not-allowed" || err === "service-not-allowed") {
       try { if (window.__micHelp) setTimeout(window.__micHelp, 200); } catch (e) {}
       return "Chưa dùng được micro. Bấm micro lại; nếu vẫn lỗi, xem hướng dẫn vừa hiện.";
     }
     if (err === "aborted" || err === "start") return "Micro đang bận, đợi 1 giây rồi bấm lại nhé.";
-    if (err === "no-speech") return "Không nghe thấy gì. Thử lại gần micro hơn nhé.";
+    if (err === "busy") return "Micro đang bị app khác giữ (Zalo, Messenger, ghi màn hình…). Tắt app đó rồi bấm lại.";
+    if (err === "no-speech") return micSilent ? "Micro không có tín hiệu. Kiểm tra micro có bị tắt hoặc app khác đang giữ, rồi thử lại." : "Không nghe thấy gì. Thử lại gần micro hơn nhé.";
     if (err === "audio-capture") return "Không tìm thấy micro.";
     if (err === "network") return "Mất mạng nên không chấm được giọng.";
     if (err === "no-sr") return "Trình duyệt này chưa chấm được giọng nói. Hãy dùng Chrome.";
-    return "Chưa ghi được. Thử lại nhé.";
+    return "Chưa ghi được (mã lỗi: " + (err || "?") + "). Thử lại nhé.";
   }
   function setupMic(mic, hint) {
     if (!SR) {
@@ -3111,7 +3187,7 @@
       var nb = rowCard("📘", "Sổ tay ngữ pháp", "Đọc lại lý thuyết, tìm kiếm và lọc theo chặng", "", function () { notebookSheet(); }, ["#c0b0ff", "#2d1a74", "#8f74ff"]);
       body.insertBefore(nb, body.firstChild);
     }
-    else if (which === "level") renderLevels(body);
+    else if (which === "level") renderVocab(body);
     else if (which === "tools") renderTools(body);
     else {
       clear(body);
@@ -4757,6 +4833,11 @@
     { id: "c", n: "Oliver", t: "Giọng Anh · Nam · Lịch sự, chuẩn", acc: "uk", g: "m", pref: /\bmale|ryan|george|daniel|thomas|arthur|gbb|gbd|rjs/i, rate: .92, pitch: .93 },
     { id: "d", n: "Sophie", t: "Giọng Anh · Nữ · Nhẹ nhàng", acc: "uk", g: "f", pref: /female|sonia|libby|hazel|kate|serena|martha|gba|gbc|gbg/i, rate: .9, pitch: 1 },
     { id: "e", n: "Mia", t: "Giọng Úc · Nữ · Vui vẻ", acc: "au", g: "f", pref: /female|natasha|karen|aua|auc/i, rate: .95, pitch: 1 },
+    { id: "k", n: "Bé Lily", t: "Trẻ em · Band 0–4 · Giọng Mỹ nữ, chậm, tách từ rõ", acc: "us", g: "f", pref: /female|zira|aria|jenny|samantha|ava|allison|sfg|iob|iog|tpc|tpf|google/i, rate: .78, pitch: 1.3 },
+    { id: "s", n: "Sam", t: "Thanh niên · Band 4–5 · Giọng Mỹ nam, vừa chậm", acc: "us", g: "m", pref: /\bmale|guy|david|mark|ryan|alex|christopher|eric|iol|iom|tpd/i, rate: .88, pitch: 1.08 },
+    { id: "h", n: "Natasha", t: "Trưởng thành · Band 6 · Giọng Úc nữ, tốc độ chuẩn", acc: "au", g: "f", pref: /female|natasha|karen|aua|auc/i, rate: 1, pitch: 1 },
+    { id: "p", n: "Giáo sư George", t: "Lớn tuổi · Band 7+ · Giọng Anh nam trầm, nhịp tự nhiên", acc: "uk", g: "m", pref: /\bmale|ryan|george|daniel|thomas|arthur|gbb|gbd|rjs/i, rate: 1.03, pitch: .8 },
+    { id: "m", n: "Bà Margaret", t: "Lớn tuổi · Band 7+ · Giọng Anh nữ chững chạc", acc: "uk", g: "f", pref: /female|sonia|libby|hazel|kate|serena|martha|gba|gbc|gbg/i, rate: .98, pitch: .86 },
     { id: "f", n: "Tự chọn", t: "Chọn thủ công trong danh sách giọng của máy", acc: "auto", pref: /./, rate: .92, pitch: 1, manual: true }
   ];
   function tutorVoice(t) {
@@ -4863,7 +4944,11 @@
       if (stopped) { clearInterval(watch); return; }
       if (onSilent && Date.now() - lastHeard > 7000) { onSilent(); lastHeard = Date.now(); }
     }, 1000);
-    startOne();
+    micPrep(function (perr) {
+      if (stopped) return;
+      if (perr) { stopped = true; clearInterval(watch); onEnd(perr); return; }
+      startOne();
+    });
     return {
       stop: function () {
         if (stopped) return; stopped = true; clearInterval(watch);
@@ -5041,7 +5126,7 @@
     $("anRec").classList.remove("rec"); $("anRec").textContent = "🎤"; $("anRec").setAttribute("aria-label", "Bắt đầu ghi");
     document.body.classList.remove("an-rec");
     var ms = Date.now() - an.t0;
-    if (!an.segs.length) { $("anHint").textContent = "Không nghe được gì. Thử lại gần micro hơn nhé."; return; }
+    if (!an.segs.length) { $("anHint").textContent = errMsg("no-speech"); return; }
     if (ms < 8000) {
       $("anHint").textContent = "Mới " + Math.round(ms / 1000) + " giây. Hãy nói ít nhất 30 giây rồi dừng, bảng phân tích mới có ý nghĩa.";
       an.segs = [];
@@ -8593,6 +8678,179 @@
     p.appendChild(mk("div", "spdim", "Chấm bằng nhận diện giọng nói của máy: khớp từ, độ rõ, tốc độ. Ngữ điệu và nhấn âm chỉ là gợi ý, chưa chấm chính xác được."));
     if (ui.heard.nextSibling) host.insertBefore(p, ui.heard.nextSibling); else host.appendChild(p);
   };
+  /* ================================================================
+     Mục Từ vựng: xem theo band, theo chủ đề, theo bảng chữ cái,
+     có bộ lọc band và ô tìm kiếm
+     ================================================================ */
+  var VBANDS = [
+    { k: "4", n: "Band 3–4", d: "A1–A2 · Nền tảng", cefr: ["A1", "A2"], pal: ["#8ef0b8", "#12603f", "#45d495"] },
+    { k: "5", n: "Band 5", d: "B1 · Trung cấp", cefr: ["B1"], pal: ["#ffd98f", "#7d5310", "#ffc247"] },
+    { k: "6", n: "Band 6", d: "B2 · Khá", cefr: ["B2"], pal: ["#ffb0c8", "#7a1c3e", "#ff6f9a"] },
+    { k: "7", n: "Band 7+", d: "C1–C2 · Nâng cao", cefr: ["C1", "C2"], pal: ["#c0b0ff", "#2d1a74", "#8f74ff"] }
+  ];
+  var vstate = { mode: "band", band: "all", letter: "A", q: "", open: {}, more: {} };
+  var VPAGE = 60;
+
+  function vBandOf(w) {
+    var l = cefrOf(w);
+    for (var i = 0; i < VBANDS.length; i++) if (VBANDS[i].cefr.indexOf(l) >= 0) return VBANDS[i].k;
+    return "";
+  }
+  function vNorm(s) { return String(s || "").toLowerCase(); }
+  function vFiltered() {
+    var q = vNorm(vstate.q).trim(), b = vstate.band;
+    return state.words.filter(function (w) {
+      if (b !== "all" && vBandOf(w) !== b) return false;
+      if (q && vNorm(w.w).indexOf(q) < 0 && vNorm(w.vi).indexOf(q) < 0) return false;
+      return true;
+    });
+  }
+  function vSort(a, b) { var x = vNorm(a.w), y = vNorm(b.w); return x < y ? -1 : x > y ? 1 : 0; }
+  function vInitial(w) { var c = vNorm(w.w).charAt(0).toUpperCase(); return /[A-Z]/.test(c) ? c : "#"; }
+
+  function vWordRow(w) {
+    var row = mk("div", "vwrow");
+    var sp = mk("button", "vwsp", "🔊"); sp.type = "button"; sp.setAttribute("data-noi3", "1"); sp.setAttribute("aria-label", "Nghe phát âm");
+    sp.addEventListener("click", function (e) { e.stopPropagation(); speak(w.w, { force: true }); });
+    row.appendChild(sp);
+    var tx = mk("div", "vwtx");
+    var top = mk("div", "vwtop");
+    top.appendChild(mk("b", "", w.w));
+    if (w.pos) top.appendChild(mk("em", "", w.pos));
+    var l = cefrOf(w);
+    if (l) top.appendChild(mk("span", "vwlv", l));
+    tx.appendChild(top);
+    if (w.vi) tx.appendChild(mk("div", "vwvi", w.vi));
+    if (w.ex) tx.appendChild(mk("div", "vwex", w.ex));
+    row.appendChild(tx);
+    row.appendChild(saveButton(w.w, w));
+    return row;
+  }
+
+  // vẽ một nhóm từ, mỗi lần 60 từ, bấm "Xem thêm" để mở tiếp
+  function vWordList(host, list, key) {
+    var shown = vstate.more[key] || VPAGE;
+    list.slice(0, shown).forEach(function (w) { host.appendChild(vWordRow(w)); });
+    if (list.length > shown) {
+      var m = mk("button", "btn-line", "Xem thêm " + Math.min(VPAGE, list.length - shown) + " từ (còn " + (list.length - shown) + ")"); m.type = "button";
+      m.addEventListener("click", function () { sfx.tap(); vstate.more[key] = shown + VPAGE; renderVocab(vstate.body); });
+      host.appendChild(m);
+    }
+  }
+
+  function vGroup(body, key, title, sub, list, pal, icon) {
+    var open = !!vstate.open[key];
+    var card = mk("div", "vgroup" + (open ? " open" : ""));
+    var head = mk("button", "vghead"); head.type = "button";
+    var ic = mk("span", "vgico", icon || "📖"); if (pal) ic.style.background = "linear-gradient(145deg," + pal[0] + "," + pal[2] + ")";
+    ic.style.color = pal ? pal[1] : "#14183f";
+    head.appendChild(ic);
+    var t = mk("span", "vgtx"); t.appendChild(mk("b", "", title)); t.appendChild(mk("small", "", sub + " · " + list.length + " từ"));
+    head.appendChild(t);
+    head.appendChild(mk("span", "vgarrow", open ? "⌃" : "⌄"));
+    head.addEventListener("click", function () { sfx.tap(); vstate.open[key] = !open; renderVocab(vstate.body); });
+    card.appendChild(head);
+    if (open) {
+      var inner = mk("div", "vgbody");
+      if (list.length >= 4) {
+        var go = mk("button", "vgstudy", "🃏 Học 20 từ ngẫu nhiên trong nhóm này"); go.type = "button";
+        go.addEventListener("click", function () {
+          sfx.tap();
+          var pick = shuffle(list.slice()).slice(0, 20);
+          startLesson({ kind: "cards", topic: "all", only: pick, size: pick.length, name: title, key: "vocab:" + key });
+        });
+        inner.appendChild(go);
+      }
+      vWordList(inner, list, key);
+      card.appendChild(inner);
+    }
+    body.appendChild(card);
+  }
+
+  function renderVocab(body) {
+    vstate.body = body;
+    var keepScroll = window.pageYOffset;
+    clear(body);
+    var all = vFiltered();
+
+    var hd = mk("div", "ghead");
+    hd.appendChild(mk("div", "cap", "Từ vựng"));
+    hd.appendChild(mk("h2", "", state.words.length.toLocaleString("vi-VN") + " từ"));
+    hd.appendChild(mk("p", "muted", "Xem theo band, chủ đề hoặc bảng chữ cái. Band ước lượng từ bậc CEFR của từ, chỉ để tham khảo."));
+    body.appendChild(hd);
+
+    // tìm kiếm
+    var inp = document.createElement("input"); inp.type = "search"; inp.className = "tinput nbsearch";
+    inp.placeholder = "Tìm từ tiếng Anh hoặc nghĩa tiếng Việt…"; inp.value = vstate.q;
+    var tmr = null;
+    inp.addEventListener("input", function () {
+      clearTimeout(tmr);
+      tmr = setTimeout(function () { vstate.q = inp.value; vstate.more = {}; renderVocab(body); var again = body.querySelector(".nbsearch"); if (again) { again.focus(); try { again.setSelectionRange(again.value.length, again.value.length); } catch (e) {} } }, 350);
+    });
+    body.appendChild(inp);
+
+    // bộ lọc band
+    var counts = { all: 0 };
+    state.words.forEach(function (w) { counts.all++; var k = vBandOf(w); if (k) counts[k] = (counts[k] || 0) + 1; });
+    var fl = mk("div", "chips vbands");
+    [["all", "Tất cả band"]].concat(VBANDS.map(function (b) { return [b.k, b.n]; })).forEach(function (x) {
+      var c = mk("button", "chip" + (vstate.band === x[0] ? " on" : ""), x[1] + " · " + (counts[x[0]] || 0)); c.type = "button";
+      c.addEventListener("click", function () { sfx.tap(); vstate.band = x[0]; vstate.more = {}; renderVocab(body); });
+      fl.appendChild(c);
+    });
+    body.appendChild(fl);
+
+    // chế độ xem
+    var seg = mk("div", "seg vseg");
+    [["band", "Theo band"], ["topic", "Theo chủ đề"], ["az", "A–Z"]].forEach(function (x) {
+      var b = mk("button", vstate.mode === x[0] ? "on" : "", x[1]); b.type = "button";
+      b.addEventListener("click", function () { sfx.tap(); vstate.mode = x[0]; renderVocab(body); });
+      seg.appendChild(b);
+    });
+    body.appendChild(seg);
+
+    if (!all.length) {
+      body.appendChild(mk("div", "empty", vstate.q ? "Không tìm thấy từ nào khớp “" + vstate.q + "”." : "Chưa có từ ở mục này."));
+      return;
+    }
+    body.appendChild(mk("p", "dim vcount", all.length.toLocaleString("vi-VN") + " từ đang hiển thị"));
+
+    if (vstate.mode === "band") {
+      VBANDS.forEach(function (b) {
+        var list = all.filter(function (w) { return vBandOf(w) === b.k; }).sort(vSort);
+        if (list.length) vGroup(body, "b" + b.k, b.n, b.d, list, b.pal, "🎯");
+      });
+      var rest = all.filter(function (w) { return !vBandOf(w); }).sort(vSort);
+      if (rest.length) vGroup(body, "bx", "Chưa xếp band", "Từ bổ sung", rest, null, "📚");
+    } else if (vstate.mode === "topic") {
+      var by = {}, order = [];
+      all.forEach(function (w) { var t = w.topic || "Khác"; if (!by[t]) { by[t] = []; order.push(t); } by[t].push(w); });
+      order.sort(function (a, b) { return by[b].length - by[a].length; });
+      order.forEach(function (t) { vGroup(body, "t:" + t, shortTopic(t), "Chủ đề", by[t].sort(vSort), null, "🗂️"); });
+    } else {
+      var letters = {}, ls = [];
+      all.forEach(function (w) { var c = vInitial(w); if (!letters[c]) { letters[c] = []; ls.push(c); } letters[c].push(w); });
+      ls.sort();
+      if (!letters[vstate.letter]) vstate.letter = ls[0];
+      var az = mk("div", "vaz");
+      ls.forEach(function (c) {
+        var a = mk("button", "vazb" + (c === vstate.letter ? " on" : ""), c); a.type = "button";
+        a.addEventListener("click", function () { sfx.tap(); vstate.letter = c; renderVocab(body); });
+        az.appendChild(a);
+      });
+      body.appendChild(az);
+      var cur = letters[vstate.letter].sort(vSort);
+      var box = mk("div", "vgroup open");
+      var head = mk("div", "vghead static");
+      head.appendChild(mk("span", "vgico", vstate.letter));
+      var t = mk("span", "vgtx"); t.appendChild(mk("b", "", "Chữ " + vstate.letter)); t.appendChild(mk("small", "", cur.length + " từ"));
+      head.appendChild(t); box.appendChild(head);
+      var inner = mk("div", "vgbody"); vWordList(inner, cur, "az:" + vstate.letter); box.appendChild(inner);
+      body.appendChild(box);
+    }
+    stagger(body);
+    try { window.scrollTo(0, keepScroll); } catch (e) {}
+  }
 
   function renderQuestion() {
     var q = state.list[state.index];
